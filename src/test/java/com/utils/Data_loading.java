@@ -168,7 +168,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  System.out.println(prop.getProperty(username));
+    	  //System.out.println(prop.getProperty(username));
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {
@@ -194,7 +194,7 @@ public class Data_loading {
        	  prop.load(input);
 
        	  // get the property value and print it out
-       	  System.out.println(prop.getProperty(Data));
+       	  //System.out.println(prop.getProperty(Data));
        	 } catch (IOException ex) {
        	  ex.printStackTrace();
        	 } finally {
@@ -221,7 +221,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  System.out.println(prop.getProperty(password));
+    	  //System.out.println(prop.getProperty(password));
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {
@@ -243,7 +243,7 @@ public class Data_loading {
     	        //{
     	        //    projectDir = projectDir + "src/test/java/Config/";
     	       // }
-    	        System.out.println("Using base directory as: " + projectDir);
+    	        //System.out.println("Using base directory as: " + projectDir);
     	     return projectDir; 
     	     }
 
@@ -261,7 +261,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  System.out.println(prop.getProperty(Rtype));
+    	  //System.out.println(prop.getProperty(Rtype));
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {
@@ -289,7 +289,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  System.out.println(prop.getProperty(Rstatus));
+    	  //System.out.println(prop.getProperty(Rstatus));
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {

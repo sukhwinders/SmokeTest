@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="191623" started-at="2016-04-21T06:05:44Z" finished-at="2016-04-21T06:08:56Z">
+  <suite name="Default suite" duration-ms="197055" started-at="2016-04-21T07:30:00Z" finished-at="2016-04-21T07:33:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="191623" started-at="2016-04-21T06:05:44Z" finished-at="2016-04-21T06:08:56Z">
+    <test name="Default test" duration-ms="197055" started-at="2016-04-21T07:30:00Z" finished-at="2016-04-21T07:33:17Z">
       <class name="com.org.Example.myproject.AccountsconnectandsearchTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@649d209a]" name="beforeClass" is-config="true" duration-ms="13732" started-at="2016-04-21T11:35:44Z" finished-at="2016-04-21T11:35:58Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@66d33a]" name="beforeClass" is-config="true" duration-ms="9113" started-at="2016-04-21T13:00:00Z" finished-at="2016-04-21T13:00:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Auccount_verification()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@649d209a]" name="Auccount_verification" duration-ms="176076" started-at="2016-04-21T11:35:58Z" finished-at="2016-04-21T11:38:54Z">
+        <test-method status="PASS" signature="Auccount_verification()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@66d33a]" name="Auccount_verification" duration-ms="187801" started-at="2016-04-21T13:00:10Z" finished-at="2016-04-21T13:03:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Auccount_verification -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@649d209a]" name="afterClass" is-config="true" duration-ms="1776" started-at="2016-04-21T11:38:54Z" finished-at="2016-04-21T11:38:56Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@66d33a]" name="afterClass" is-config="true" duration-ms="126" started-at="2016-04-21T13:03:17Z" finished-at="2016-04-21T13:03:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
