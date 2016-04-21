@@ -2,6 +2,7 @@ package com.org.Example.myproject;
 
 import java.util.Date;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -50,6 +51,7 @@ public class Edit_TPgroupTest {
 		driver.findElement(By.id("password")).sendKeys(password1);
 		driver.findElement(By.id("Login")).click();
 		Thread.sleep(5000);
+		switchtoLightining();
 	    driver.findElement(By.cssSelector("div.r5")).click();
 	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Trading Partner Groups")).click();
@@ -58,14 +60,10 @@ public class Edit_TPgroupTest {
 	    driver.switchTo().frame(0);
 	    driver.findElement(By.id("txtGroupName")).clear();
 	    driver.findElement(By.id("txtGroupName")).sendKeys(Group);
-	    driver.findElement(By.id("cbTaga0461000003eSHgAAM")).click();
-	    driver.findElement(By.cssSelector("span.slds-checkbox--faux")).click();
-	    driver.findElement(By.id("tab-scoped-1__item")).click();
-	    new Select(driver.findElement(By.id("ddlAttrStatus"))).selectByVisibleText("Active");
-	    driver.findElement(By.id("tab-scoped-2__item")).click();
-	    new Select(driver.findElement(By.id("ddlAttrType"))).selectByVisibleText("Co-man");
-	    Thread.sleep(2000);
-	    driver.findElement(By.id("btnSave")).click();
+	   
+	    driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]")).click();
+	    driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
+	    
 	    driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 	    driver.navigate().refresh();
 	    driver.switchTo().defaultContent();
@@ -78,13 +76,34 @@ public class Edit_TPgroupTest {
 	   
 	   driver.findElement(By.cssSelector("div[title=\"Edit\"]")).click();
 	   driver.switchTo().frame(1);
-       driver.findElement(By.xpath("//a[@tabindex='1']")).click();
-       new Select(driver.findElement(By.id("ddlAttrStatus"))).selectByVisibleText("Pending");
-       driver.findElement(By.id("tab-scoped-2__item")).click();
-       new Select(driver.findElement(By.id("ddlAttrType"))).selectByVisibleText("Warehouse");
+       driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]")).click();
        driver.findElement(By.id("btnSave")).click();
        driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 	   
 	   	   
 }
+	public void switchtoLightining()  { 
+		  System.out.println("I am in clasic1");
+		  
+			if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+				System.out.println("I am in clasic");
+			         driver.findElement(By.id("userNavLabel")).click();
+			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+			          String parentWindow= driver.getWindowHandle();
+			          Set<String> allWindows = driver.getWindowHandles();
+			          for(String curWindow : allWindows){
+			              driver.switchTo().window(curWindow);
+			          //perform operation on popup
+			              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+			              driver.findElement(By.id("simpleDialog0button0")).click();
+			           // switch back to parent window
+			       driver.switchTo().window(parentWindow);
+			       
+			       driver.navigate().refresh();
+			          }
+			     }
+			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+			    	 System.out.println("I am in clasic2");
+			    	 driver.findElement(By.linkText("App Launcher")).click();
+			     }}	
 }

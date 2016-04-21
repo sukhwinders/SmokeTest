@@ -2,6 +2,7 @@ package com.org.Example.myproject;
 
 import java.util.Date;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -54,6 +55,7 @@ public class Tp_createrequestTest  {
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys(password1);
     driver.findElement(By.id("Login")).click();
+    switchtoLightining();
     driver.findElement(By.cssSelector("div.icon-waffle")).click();
     driver.findElement(By.linkText("ICIX")).click();
     driver.findElement(By.xpath("//a[contains(text(),'Requests')]")).click();
@@ -81,7 +83,8 @@ public class Tp_createrequestTest  {
     Thread.sleep(2000);
     driver.findElement(By.xpath("//input[@id='date']")).click();
     driver.findElement(By.xpath("//div[2]/button")).click();
-    driver.findElement(By.xpath("//span[contains(.,'1')]")).click();
+    Thread.sleep(3000);
+    driver.findElement(By.xpath("//span[contains(.,'12')]")).click();
     Thread.sleep(2000);
     driver.findElement(By.cssSelector("button.slds-button.slds-button--neutral")).click();
     driver.findElement(By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();
@@ -97,6 +100,30 @@ public class Tp_createrequestTest  {
     Thread.sleep(6000);
 
   }
+  public void switchtoLightining()  { 
+	  System.out.println("I am in clasic1");
+	  
+		if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+			System.out.println("I am in clasic");
+		         driver.findElement(By.id("userNavLabel")).click();
+		          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+		          String parentWindow= driver.getWindowHandle();
+		          Set<String> allWindows = driver.getWindowHandles();
+		          for(String curWindow : allWindows){
+		              driver.switchTo().window(curWindow);
+		          //perform operation on popup
+		              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+		              driver.findElement(By.id("simpleDialog0button0")).click();
+		           // switch back to parent window
+		       driver.switchTo().window(parentWindow);
+		       
+		       driver.navigate().refresh();
+		          }
+		     }
+		     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+		    	 System.out.println("I am in clasic2");
+		    	 driver.findElement(By.linkText("App Launcher")).click();
+		     }}	
   }
 
   

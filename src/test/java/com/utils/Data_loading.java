@@ -122,19 +122,9 @@ public class Data_loading {
 
     }
     
-    public void SFDClogin(String login, String password) throws Exception {
-    	  String SFDCloginXPATH = "//input[@id='username']";
-    	  String SFDCpasswordXPATH = "//input[@id='password']";
-    	  String SFDCLoginButtonXPATH = "//input[@id='Login']";
-    	  
-    	  //driver.get("login.salesforce.com");
-    	  driver.findElement(By.xpath(SFDCloginXPATH)).sendKeys(login);
-    	  driver.findElement(By.xpath(SFDCpasswordXPATH)).sendKeys(password);
-    	  driver.findElement(By.xpath(SFDCLoginButtonXPATH)).click();
-    	  Thread.sleep(3000);  
-    	    }
-    	    public void switchtoLightining(){
-    	     if(isElementPresent(driver, By.xpath("/html/body/div[1]/div[1]/table/tbody/tr/td[3]/div/div[2]/div/div/div[1]/span"))){
+   
+    	    public void switchtoLightining()throws Exception{
+    	     if(isElementPresent(driver, By.xpath("//span[@id='userNavLabel']"))){
     	         driver.findElement(By.id("userNavLabel")).click();
     	          driver.findElement(By.xpath("//a[text()='Switch to Lightning Experience']")).click();
     	          String parentWindow= driver.getWindowHandle();
@@ -148,9 +138,26 @@ public class Data_loading {
     	       driver.navigate().refresh();
     	          }
     	     }
+    	     else{
+    	    	 driver.findElement(By.cssSelector("div.r5")).click();
+    	     }
     	    }
+    	     public boolean isElementPresent(WebDriver driver, By bydriver)
+     	    {
+     	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+     	     try
+     	        {
+     	            driver.findElement(bydriver);
+     	            return true;
+     	        }
+     	        catch(NoSuchElementException e){
+     	            return false;
+     	        }
+
+     	}
     	    
-    	    public String getUserName (String username) {
+    	    
+    	    public static String getUserName (String username) {
     	     Properties prop = new Properties();
     	     InputStream input = null;      
     	    try {
@@ -203,7 +210,7 @@ public class Data_loading {
        	 return prop.getProperty(Data);
        	    }
 
-    	    public String getPassword(String password) {
+    	    public static String getPassword(String password) {
     	     Properties prop = new Properties();
     	     InputStream input = null;      
     	    try {
@@ -240,19 +247,7 @@ public class Data_loading {
     	     return projectDir; 
     	     }
 
-    	    public static boolean isElementPresent(WebDriver driver, By bydriver)
-    	    {
-    	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    	     try
-    	        {
-    	            driver.findElement(bydriver);
-    	            return true;
-    	        }
-    	        catch(NoSuchElementException e){
-    	            return false;
-    	        }
-
-    	}
+    	   
     	    
     	  //Added By sdei for fetching relationship type and status
     	    public String getRelationshipType (String Rtype) {

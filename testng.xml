@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" >
   <test name="Test">
     <classes>
+      <class name="com.org.Example.myproject.AccountsconnectandsearchTest"/>
       <class name="com.org.Example.myproject.Create_privateproductTest"/> 
       <class name="com.org.Example.myproject.CreateNew_TagTest"/>   
       <class name="com.org.Example.myproject.Connectto_TpartnerTest"/>   
-      <class name="com.org.Example.myproject.AccountsconnectandsearchTest"/>
       <class name="com.org.Example.myproject.ConnectToProductTest"/>
       <class name="com.org.Example.myproject.Create_PublicproductTest"/>
       <class name="com.org.Example.myproject.CreatenewformTest"/>
@@ -27,6 +27,7 @@
       <class name="com.org.Example.myproject.Upload_DocumentsTest"/>
       <class name="com.org.Example.myproject.UploadNew_documentTest"/>
       <class name="com.org.Example.myproject.QuestionSearch_ByAnswertypeTest"/>
+      <class name="com.org.Example.myproject.UploadNew_privatedocumentTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

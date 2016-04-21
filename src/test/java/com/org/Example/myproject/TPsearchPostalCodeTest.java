@@ -1,6 +1,8 @@
 package com.org.Example.myproject;
 
 import java.util.regex.Pattern;
+import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.*;
@@ -45,7 +47,7 @@ public class TPsearchPostalCodeTest  {
 	    driver.findElement(By.id("password")).sendKeys(password1);
 	    driver.findElement(By.id("Login")).click();
 	    Thread.sleep(5000);
-    
+	    switchtoLightining();
     driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).click();
     driver.findElement(By.linkText("ICIX")).click();
     driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
@@ -69,7 +71,30 @@ public class TPsearchPostalCodeTest  {
   public void tearDown() throws Exception {
     driver.quit();
     }
-  }
+  public void switchtoLightining()  { 
+	  System.out.println("I am in clasic1");
+	  
+		if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+			System.out.println("I am in clasic");
+		         driver.findElement(By.id("userNavLabel")).click();
+		          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+		          String parentWindow= driver.getWindowHandle();
+		          Set<String> allWindows = driver.getWindowHandles();
+		          for(String curWindow : allWindows){
+		              driver.switchTo().window(curWindow);
+		          //perform operation on popup
+		              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+		              driver.findElement(By.id("simpleDialog0button0")).click();
+		           // switch back to parent window
+		       driver.switchTo().window(parentWindow);
+		       
+		       driver.navigate().refresh();
+		          }
+		     }
+		     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+		    	 System.out.println("I am in clasic2");
+		    	 driver.findElement(By.linkText("App Launcher")).click();
+		     }}	}
 
 
 

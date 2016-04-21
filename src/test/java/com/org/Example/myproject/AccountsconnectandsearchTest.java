@@ -1,41 +1,42 @@
 package com.org.Example.myproject;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
-
-
 
 public class AccountsconnectandsearchTest {
 	  String firstwindow;
 	  WebDriver driver;
 	  String baseUrl; 
 	
-	
+	 
+	 
 	 Data_loading guitils = new Data_loading();
-	 String userName1 = guitils.getUserName("RequestorUsername");
-	 String password1 = guitils.getPassword("RequestorPassword");
-	 String Icixid = guitils.getDATA("icixid");
+	 String userName1 = Data_loading.getUserName("RequestorUsername");
+	 String password1 = Data_loading.getPassword("RequestorPassword");
+	 String Icixid    = guitils.getDATA("icixid");
 	 
   @Test
-  public void Auccount_verification() throws InterruptedException {
+  public void Auccount_verification() throws Exception {
+	
 	    driver.findElement(By.id("username")).clear();
 	    driver.findElement(By.id("username")).sendKeys(userName1);
 	    driver.findElement(By.id("password")).clear();
 	    driver.findElement(By.id("password")).sendKeys(password1);
 	    driver.findElement(By.id("Login")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(8000);
+	    
+	    switchtoLightining();
 	   
 	    driver.findElement(By.cssSelector("div.r5")).click();
 	    driver.findElement(By.linkText("ICIX")).click();
@@ -43,7 +44,7 @@ public class AccountsconnectandsearchTest {
 	    driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
 	    Thread.sleep(3000);
 	    //New button
-	    //driver.findElement(By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a")).click();
+	    
 	    driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    
@@ -62,7 +63,7 @@ public class AccountsconnectandsearchTest {
 	  baseUrl = "https://login.salesforce.com";      
       driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
   }
 
@@ -70,5 +71,30 @@ public class AccountsconnectandsearchTest {
   public void afterClass() {
 	  driver.quit();
   }
-
+  @SuppressWarnings("unchecked")
+public void switchtoLightining()  { 
+	  System.out.println("I am in clasic1");
+	  
+		if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+			System.out.println("I am in clasic");
+		         driver.findElement(By.id("userNavLabel")).click();
+		          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+		          String parentWindow= driver.getWindowHandle();
+		          Set<String> allWindows = driver.getWindowHandles();
+		          for(String curWindow : allWindows){
+		              driver.switchTo().window(curWindow);
+		          //perform operation on popup
+		              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+		              driver.findElement(By.id("simpleDialog0button0")).click();
+		           // switch back to parent window
+		       driver.switchTo().window(parentWindow);
+		       
+		       driver.navigate().refresh();
+		          }
+		     }
+		     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+		    	 System.out.println("I am in clasic2");
+		    	 driver.findElement(By.linkText("App Launcher")).click();
+		     }}	
+ 
 }

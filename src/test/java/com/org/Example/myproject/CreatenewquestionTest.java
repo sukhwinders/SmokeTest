@@ -1,6 +1,8 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
+import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -35,7 +37,7 @@ public class CreatenewquestionTest {
 		  baseUrl = "https://login.salesforce.com";      
 	      driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	  }
 
@@ -52,9 +54,11 @@ public class CreatenewquestionTest {
 		    driver.findElement(By.id("password")).clear();
 		    driver.findElement(By.id("password")).sendKeys(password1);
 		    driver.findElement(By.id("Login")).click();
+		    
+		    switchtoLightining();
 		    driver.findElement(By.linkText("App Launcher")).click();
-		    driver.findElement(By.cssSelector("a.appName")).click();
-		    driver.findElement(By.linkText("Form List")).click();
+		    driver.findElement(By.linkText("ICIX")).click();
+		    driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		    driver.switchTo().frame(0);
 		    // script for container template
 		    driver.findElement(By.name("j_id0:form:j_id7")).click();
@@ -70,11 +74,17 @@ public class CreatenewquestionTest {
 		    Thread.sleep(3000);
 		    //script for Layout template
 		    driver.findElement(By.id("j_id0:form:tabLayout_lbl")).click();
+		    Thread.sleep(3000);
 		    driver.findElement(By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName")).clear();
+		    Thread.sleep(3000);
 		    driver.findElement(By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName")).sendKeys(Layout_Name);
+		    Thread.sleep(3000);
 		    new Select(driver.findElement(By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing"))).selectByVisibleText("Public");
+		    Thread.sleep(3000);
 		    driver.findElement(By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid")).click();
+		    Thread.sleep(3000);
 		    new Select(driver.findElement(By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType"))).selectByVisibleText("desktop");
+		    Thread.sleep(3000);
 		    driver.findElement(By.id("j_id0:form:layoutBlock:createLayout")).click();
 		    Thread.sleep(6000);
 		    driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -99,7 +109,7 @@ public class CreatenewquestionTest {
 		    Thread.sleep(6000);
 	    //Script for Linked in Questions
 	    driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-	    driver.findElement(By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName")).sendKeys("tghdtgh");
+	    driver.findElement(By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName")).sendKeys("test");
 	    driver.findElement(By.xpath("//img[@title='Create New']")).click();
 	    driver.findElement(By.xpath("//textarea[@id='textAreaQuestionText']")).sendKeys(Question);
 	    new Select(driver.findElement(By.xpath("//select[@id='selectAnswerTypeCreate']"))).selectByVisibleText("radio");
@@ -116,13 +126,37 @@ public class CreatenewquestionTest {
 	    
 	    
 	    driver.findElement(By.xpath("//*[@id='divLibraryQuestionList']/table/tbody/tr/td[1]")).click();
-	    Thread.sleep(3000);
+	    Thread.sleep(10000);
 	    driver.findElement(By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion")).click();
 	    Thread.sleep(3000);
 	    driver.findElement(By.id("j_id0:form:buttonSave")).click();
 	    Thread.sleep(6000);
 	    driver.findElement(By.id("j_id0:form:buttonPublish")).click();
-	    Thread.sleep(3000);
+	    Thread.sleep(6000);
 	 
 	  }
+	   public void switchtoLightining()  { 
+			  System.out.println("I am in clasic1");
+			  
+				if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+					System.out.println("I am in clasic");
+				         driver.findElement(By.id("userNavLabel")).click();
+				          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+				          String parentWindow= driver.getWindowHandle();
+				          Set<String> allWindows = driver.getWindowHandles();
+				          for(String curWindow : allWindows){
+				              driver.switchTo().window(curWindow);
+				          //perform operation on popup
+				              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+				              driver.findElement(By.id("simpleDialog0button0")).click();
+				           // switch back to parent window
+				       driver.switchTo().window(parentWindow);
+				       
+				       driver.navigate().refresh();
+				          }
+				     }
+				     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+				    	 System.out.println("I am in clasic2");
+				    	 driver.findElement(By.linkText("App Launcher")).click();
+				     }}	
 }
