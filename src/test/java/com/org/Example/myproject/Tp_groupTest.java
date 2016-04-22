@@ -35,7 +35,7 @@ public class Tp_groupTest  {
 		  baseUrl = "https://login.salesforce.com";      
 	      driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	  }
 
@@ -76,10 +76,10 @@ public class Tp_groupTest  {
    driver.findElement(By.linkText(Group)).click();
    Thread.sleep(5000);
  }
- public void switchtoLightining()  { 
+ public void switchtoLightining() throws InterruptedException  { 
 	  System.out.println("I am in clasic1");
 	  
-		if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+		if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
 			System.out.println("I am in clasic");
 		         driver.findElement(By.id("userNavLabel")).click();
 		          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
@@ -92,7 +92,7 @@ public class Tp_groupTest  {
 		              driver.findElement(By.id("simpleDialog0button0")).click();
 		           // switch back to parent window
 		       driver.switchTo().window(parentWindow);
-		       
+		       Thread.sleep(8000);
 		       driver.navigate().refresh();
 		          }
 		     }

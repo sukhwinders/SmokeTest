@@ -36,7 +36,7 @@ public class Edit_TPartnerTest {
 		baseUrl = "https://login.salesforce.com";      
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
 	}
 
@@ -55,13 +55,13 @@ public class Edit_TPartnerTest {
 		driver.findElement(By.id("Login")).click();
 		Thread.sleep(5000);
 		switchtoLightining();
-		driver.findElement(By.cssSelector("div.icon-waffle")).click();
+		driver.findElement(By.linkText("App Launcher")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Relationships')]")).click();
 		driver.findElement(By.linkText(partner_name)).click();
 		driver.findElement(By.xpath("//a[contains(.,'Edit')]")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Active");
+		new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Pending");
 		new Select(driver.findElement(By.xpath("//select[@id='ddl_UURelationship_Type']"))).selectByVisibleText("Cold Storage");
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
 		driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
@@ -73,10 +73,10 @@ public class Edit_TPartnerTest {
 
 
 	}
-	public void switchtoLightining()  { 
+	public void switchtoLightining() throws InterruptedException  { 
 		  System.out.println("I am in clasic1");
 		  
-			if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
 				System.out.println("I am in clasic");
 			         driver.findElement(By.id("userNavLabel")).click();
 			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
@@ -89,7 +89,7 @@ public class Edit_TPartnerTest {
 			              driver.findElement(By.id("simpleDialog0button0")).click();
 			           // switch back to parent window
 			       driver.switchTo().window(parentWindow);
-			       
+			       Thread.sleep(8000);
 			       driver.navigate().refresh();
 			          }
 			     }

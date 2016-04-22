@@ -50,14 +50,14 @@ public class UploadNew_privatedocumentTest {
 	  public void send_document() throws Exception {
 	   
 		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("icixqa01rk@icix.com");
+		driver.findElement(By.id("username")).sendKeys(userName1);
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(password1);
 		driver.findElement(By.id("Login")).click();
 		Thread.sleep(5000); 
 		switchtoLightining();
-	    driver.findElement(By.cssSelector("div.r6")).click();
-	    driver.findElement(By.cssSelector("a.appName")).click();
+	    driver.findElement(By.linkText("App Launcher")).click();
+	    driver.findElement(By.linkText("ICIX")).click(); 
 	    driver.findElement(By.linkText("Document Library")).click();
 	    Thread.sleep(3000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
@@ -99,6 +99,9 @@ public class UploadNew_privatedocumentTest {
 	 				exp.printStackTrace();
 	 			}
 		     	}
+        
+        Thread.sleep(3000);
+        driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.xpath("//input[contains(@class,'slds-input slds-show')]")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 	    //driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
@@ -108,14 +111,13 @@ public class UploadNew_privatedocumentTest {
 	    driver.findElement(By.id("uploadButton")).click();
 	    Thread.sleep(6000);
 	    driver.findElement(By.id("btn_ShowMore1")).click();
-	    
 	    Thread.sleep(6000);
 	    
 	  }
-	  public void switchtoLightining()  { 
+	  public void switchtoLightining() throws InterruptedException  { 
 		  System.out.println("I am in clasic1");
 		  
-			if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
 				System.out.println("I am in clasic");
 			         driver.findElement(By.id("userNavLabel")).click();
 			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
@@ -128,14 +130,12 @@ public class UploadNew_privatedocumentTest {
 			              driver.findElement(By.id("simpleDialog0button0")).click();
 			           // switch back to parent window
 			       driver.switchTo().window(parentWindow);
-			       
+			       Thread.sleep(8000);
 			       driver.navigate().refresh();
 			          }
 			     }
 			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
 			    	 System.out.println("I am in clasic2");
 			    	 driver.findElement(By.linkText("App Launcher")).click();
-			     }}	
-
-	  
+			     }}  
 }

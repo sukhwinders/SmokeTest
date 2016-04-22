@@ -16,7 +16,7 @@ import com.utils.Data_loading;
 
 
 
-public class UploadNew_documentTest {
+public class UploadNew_publicdocumentTest {
 	Date d = new Date(System.currentTimeMillis());
 	String 	Document		="Testdocument"+d;
 	
@@ -34,7 +34,7 @@ public class UploadNew_documentTest {
 		  baseUrl = "https://login.salesforce.com";      
 	        driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	 }
 
@@ -46,14 +46,14 @@ public class UploadNew_documentTest {
 	  public void send_document() throws Exception {
 	   
 		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("icixqa01rk@icix.com");
+		driver.findElement(By.id("username")).sendKeys(userName1);
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(password1);
 		driver.findElement(By.id("Login")).click();
 		Thread.sleep(5000);       
 		switchtoLightining();
-	    driver.findElement(By.cssSelector("div.r6")).click();
-	    driver.findElement(By.cssSelector("a.appName")).click();
+	    driver.findElement(By.linkText("App Launcher")).click();
+	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Document Library")).click();
 	    Thread.sleep(3000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
@@ -95,7 +95,8 @@ public class UploadNew_documentTest {
 	 				exp.printStackTrace();
 	 			}
 		     	}
-	    driver.findElement(By.xpath("//input[contains(@class,'slds-input slds-show')]")).click();
+        driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+	    driver.findElement(By.xpath(".//*[@id='category']")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 	    driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
 	    Thread.sleep(2000);
@@ -103,24 +104,13 @@ public class UploadNew_documentTest {
 	    
 	    driver.findElement(By.id("uploadButton")).click();
 	    Thread.sleep(6000);
-	    driver.findElement(By.id("btn_ShowMore1")).click();
-	    driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate")).click();
-	    driver.findElement(By.id("requestName")).clear();
-	    driver.findElement(By.id("requestName")).sendKeys(Document);
-	    driver.findElement(By.id("recipients")).clear();
-	    driver.findElement(By.id("recipients")).sendKeys("Dev QA 02");
-	    driver.findElement(By.xpath ("//a[@data-type='partner']")).click();
-	    driver.findElement(By.id("comments")).clear();
-	    driver.findElement(By.id("comments")).sendKeys(comment);
-	    driver.findElement(By.id("sendDialogSendButton")).click();
-	    driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > #btn_sendConfirmDialogCloseButton")).click();
-	    Thread.sleep(5000);
+	    
 	    
 	  }    
-	  public void switchtoLightining()  { 
+	  public void switchtoLightining() throws InterruptedException  { 
 		  System.out.println("I am in clasic1");
 		  
-			if(driver.findElements(By.linkText("App Launcher")).size() < 0){
+			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
 				System.out.println("I am in clasic");
 			         driver.findElement(By.id("userNavLabel")).click();
 			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
@@ -133,14 +123,14 @@ public class UploadNew_documentTest {
 			              driver.findElement(By.id("simpleDialog0button0")).click();
 			           // switch back to parent window
 			       driver.switchTo().window(parentWindow);
-			       
+			       Thread.sleep(8000);
 			       driver.navigate().refresh();
 			          }
 			     }
 			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
 			    	 System.out.println("I am in clasic2");
 			    	 driver.findElement(By.linkText("App Launcher")).click();
-			     }}	
+			     }}		
 
 	  }
 

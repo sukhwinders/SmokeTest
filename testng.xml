@@ -25,9 +25,12 @@
       <class name="com.org.Example.myproject.TPsearchWithCombinationTest"/>
       <class name="com.org.Example.myproject.TwoActorworkflowTest"/>
       <class name="com.org.Example.myproject.Upload_DocumentsTest"/>
-      <class name="com.org.Example.myproject.UploadNew_documentTest"/>
+      <class name="com.org.Example.myproject.UploadNew_publicdocumentTest"/>
       <class name="com.org.Example.myproject.QuestionSearch_ByAnswertypeTest"/>
       <class name="com.org.Example.myproject.UploadNew_privatedocumentTest"/>
+      <class name="com.org.Example.myproject.EditProductgroupTest"/>
+      <class name="com.org.Example.myproject.CreateproductgroupTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -34,7 +34,7 @@ public class Edit_TPgroupTest {
 		    baseUrl = "https://login.salesforce.com";      
 	        driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	  }
 
@@ -52,12 +52,12 @@ public class Edit_TPgroupTest {
 		driver.findElement(By.id("Login")).click();
 		Thread.sleep(5000);
 		switchtoLightining();
-	    driver.findElement(By.cssSelector("div.r5")).click();
+	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Trading Partner Groups")).click();
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//div[@title='New']")).click();
-	    driver.switchTo().frame(0);
+	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.id("txtGroupName")).clear();
 	    driver.findElement(By.id("txtGroupName")).sendKeys(Group);
 	   
@@ -71,22 +71,23 @@ public class Edit_TPgroupTest {
 	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Trading Partner Groups")).click();
 	    Thread.sleep(3000);
+	    driver.navigate().refresh();
 	    driver.findElement(By.linkText(Group)).click();
 	   Thread.sleep(3000);
 	   
 	   driver.findElement(By.cssSelector("div[title=\"Edit\"]")).click();
-	   driver.switchTo().frame(1);
+	   driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
        driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]")).click();
        driver.findElement(By.id("btnSave")).click();
        driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 	   
 	   	   
 }
-	public void switchtoLightining()  { 
-		  System.out.println("I am in clasic1");
+	public void switchtoLightining() throws InterruptedException  { 
 		  
-			if(driver.findElements(By.linkText("App Launcher")).size() < 0){
-				System.out.println("I am in clasic");
+		  
+			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
+			
 			         driver.findElement(By.id("userNavLabel")).click();
 			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
 			          String parentWindow= driver.getWindowHandle();
@@ -98,12 +99,12 @@ public class Edit_TPgroupTest {
 			              driver.findElement(By.id("simpleDialog0button0")).click();
 			           // switch back to parent window
 			       driver.switchTo().window(parentWindow);
-			       
+			       Thread.sleep(8000);
 			       driver.navigate().refresh();
 			          }
 			     }
 			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
-			    	 System.out.println("I am in clasic2");
+			    	 
 			    	 driver.findElement(By.linkText("App Launcher")).click();
 			     }}	
 }

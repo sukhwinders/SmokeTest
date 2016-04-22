@@ -36,18 +36,19 @@ public class Create_PublicproductTest {
 	 String password2 = guitils.getPassword("RequestorPassword");
 	 String strTPName = guitils.getPassword("product_partner");
   @Test
-  public void test1() throws Exception {
+  public void publicProduct () throws Exception {
 	  driver.findElement(By.id("username")).clear();
 	    driver.findElement(By.id("username")).sendKeys(userName2);
 	    driver.findElement(By.id("password")).clear();
 	    driver.findElement(By.id("password")).sendKeys(password2);
 	    driver.findElement(By.id("Login")).click();
 	    switchtoLightining();
-	    driver.findElement(By.cssSelector("div.icon-waffle")).click();
+	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+	    Thread.sleep(5000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.id("txtProductName")).sendKeys(Product);
 	    driver.findElement(By.id("txtIdValue0")).clear();
@@ -100,7 +101,7 @@ public class Create_PublicproductTest {
 	driver.findElement(By.id("password")).sendKeys(password1);
 	driver.findElement(By.id("Login")).click();
 	switchtoLightining();
-	driver.findElement(By.cssSelector("div.icon-waffle")).click();
+	driver.findElement(By.linkText("App Launcher")).click();
 	driver.findElement(By.linkText("ICIX")).click();
 	driver.findElement(By.xpath("//a[contains(.,'Product Search')]")).click();
 
@@ -119,7 +120,7 @@ public class Create_PublicproductTest {
 	  baseUrl = "https://login.salesforce.com";      
       driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
   }
 
@@ -127,30 +128,34 @@ public class Create_PublicproductTest {
   public void afterClass() {
 	  driver.quit();
   }
-  public void switchtoLightining()  { 
-	  System.out.println("I am in clasic1");
-	  
-		if(driver.findElements(By.linkText("App Launcher")).size() < 0){
-			System.out.println("I am in clasic");
-		         driver.findElement(By.id("userNavLabel")).click();
-		          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
-		          String parentWindow= driver.getWindowHandle();
-		          Set<String> allWindows = driver.getWindowHandles();
-		          for(String curWindow : allWindows){
-		              driver.switchTo().window(curWindow);
-		          //perform operation on popup
-		              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
-		              driver.findElement(By.id("simpleDialog0button0")).click();
-		           // switch back to parent window
-		       driver.switchTo().window(parentWindow);
-		       
-		       driver.navigate().refresh();
-		          }
-		     }
-		     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
-		    	 System.out.println("I am in clasic2");
-		    	 driver.findElement(By.linkText("App Launcher")).click();
-		     }}	
+  public void switchtoLightining() throws InterruptedException  { 
+		
+
+		if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
+			
+			driver.findElement(By.id("userNavLabel")).click();
+			driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+			String parentWindow= driver.getWindowHandle();
+			Set<String> allWindows = driver.getWindowHandles();
+			for(String curWindow : allWindows){
+				driver.switchTo().window(curWindow);
+				//perform operation on popup
+				if(driver.findElements(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).size() >0){
+				driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+				driver.findElement(By.id("simpleDialog0button0")).click();
+				}
+				else if(driver.findElements(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).size() <0){
+					
+				}
+				// switch back to parent window
+				driver.switchTo().window(parentWindow);
+				Thread.sleep(8000);
+				driver.navigate().refresh();
+			}
+		}
+		else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+			driver.findElement(By.linkText("App Launcher")).click();
+		}}	
   }
 
  
