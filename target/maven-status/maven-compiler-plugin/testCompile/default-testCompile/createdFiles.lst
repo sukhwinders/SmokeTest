@@ -2,6 +2,7 @@ com\org\Example\myproject\Create_privateproductTest.class
 com\org\Example\myproject\TPSearchIDTest.class
 com\org\Example\myproject\ProductTwo_ActorworkflowTest.class
 com\org\Example\myproject\TPsearchCompanyNameTest.class
+com\org\Example\myproject\UploadNew_publicdocumentTest.class
 com\org\Example\myproject\AccountsconnectandsearchTest.class
 com\org\Example\myproject\TPsearchPostalCodeTest.class
 com\utils\Data_loading.class
@@ -18,9 +19,10 @@ com\org\Example\myproject\QuestionSearch_ByAnswertypeTest.class
 com\org\Example\myproject\TPsearchWithCombinationTest.class
 com\org\Example\myproject\Connectto_TpartnerTest.class
 com\org\Example\myproject\Tp_createrequestTest.class
-com\org\Example\myproject\UploadNew_documentTest.class
+com\org\Example\myproject\EditProductgroupTest.class
 com\org\Example\myproject\Upload_DocumentsTest.class
 com\org\Example\myproject\Send_DocumentsTest.class
 com\org\Example\myproject\UploadNew_privatedocumentTest.class
 com\org\Example\myproject\TPSearchAddressTest.class
+com\org\Example\myproject\CreateproductgroupTest.class
 com\org\Example\myproject\Tp_groupTest.class

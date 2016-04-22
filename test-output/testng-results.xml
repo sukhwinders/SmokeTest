@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="195325" started-at="2016-04-22T05:32:26Z" finished-at="2016-04-22T05:35:42Z">
+  <suite name="Default suite" duration-ms="199883" started-at="2016-04-22T10:44:48Z" finished-at="2016-04-22T10:48:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="195325" started-at="2016-04-22T05:32:26Z" finished-at="2016-04-22T05:35:42Z">
-      <class name="com.org.Example.myproject.Create_privateproductTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@ea4a92b]" name="beforeClass" is-config="true" duration-ms="12488" started-at="2016-04-22T11:02:26Z" finished-at="2016-04-22T11:02:39Z">
+    <test name="Default test" duration-ms="199883" started-at="2016-04-22T10:44:48Z" finished-at="2016-04-22T10:48:08Z">
+      <class name="com.org.Example.myproject.UploadNew_publicdocumentTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.UploadNew_publicdocumentTest@256216b3]" name="beforeClass" is-config="true" duration-ms="12704" started-at="2016-04-22T16:14:48Z" finished-at="2016-04-22T16:15:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@ea4a92b]" name="test1" duration-ms="181613" started-at="2016-04-22T11:02:39Z" finished-at="2016-04-22T11:05:40Z">
+        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.UploadNew_publicdocumentTest@256216b3]" name="send_document" duration-ms="186247" started-at="2016-04-22T16:15:00Z" finished-at="2016-04-22T16:18:07Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//h3[@class='ng-binding']"}
-Command duration or timeout: 50.12 seconds
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//a[@id='browseLink']"}
+Command duration or timeout: 51.51 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d394d649-ed61-4f4e-bfb1-2d19d5fe8c44
-*** Element info: {Using=xpath, value=//h3[@class='ng-binding']}]]>
+Session ID: a3522c43-6acb-4ffe-baa3-1a3b165164f9
+*** Element info: {Using=xpath, value=//a[@id='browseLink']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//h3[@class='ng-binding']"}
-Command duration or timeout: 50.12 seconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//a[@id='browseLink']"}
+Command duration or timeout: 51.51 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d394d649-ed61-4f4e-bfb1-2d19d5fe8c44
-*** Element info: {Using=xpath, value=//h3[@class='ng-binding']}
+Session ID: a3522c43-6acb-4ffe-baa3-1a3b165164f9
+*** Element info: {Using=xpath, value=//a[@id='browseLink']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -45,7 +45,7 @@ Session ID: d394d649-ed61-4f4e-bfb1-2d19d5fe8c44
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.Create_privateproductTest.test1(Create_privateproductTest.java:89)
+	at com.org.Example.myproject.UploadNew_publicdocumentTest.send_document(UploadNew_publicdocumentTest.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -70,24 +70,24 @@ Session ID: d394d649-ed61-4f4e-bfb1-2d19d5fe8c44
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//h3[@class='ng-binding']"}
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//a[@id='browseLink']"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5046120008965758323webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5046120008965758323webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6121887906245095535webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6121887906245095535webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@ea4a92b]" name="afterClass" is-config="true" duration-ms="1169" started-at="2016-04-22T11:05:40Z" finished-at="2016-04-22T11:05:42Z">
+        </test-method> <!-- send_document -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.UploadNew_publicdocumentTest@256216b3]" name="afterClass" is-config="true" duration-ms="896" started-at="2016-04-22T16:18:07Z" finished-at="2016-04-22T16:18:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Create_privateproductTest -->
+      </class> <!-- com.org.Example.myproject.UploadNew_publicdocumentTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

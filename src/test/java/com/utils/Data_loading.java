@@ -100,8 +100,7 @@ public class Data_loading {
     	DateFormat sdf = new SimpleDateFormat(DATE_FORMAT_TODAY_DATE_TIME2, Locale.US);
     	String currentDateTimeStr =  sdf.format(curDate);
     	Date currentDateTime = sdf.parse(currentDateTimeStr);
-//    	System.out.println("==============" + curDate + "=================");
-//    	System.out.println("==============" + currentDateTime + "=================");
+
     	return currentDateTime;
     }
 
@@ -150,36 +149,7 @@ public class Data_loading {
     	    	
     	    	
     	    	
-//    	     if(isElementPresent(driver, By.xpath("//span[@id='userNavLabel']"))){
-//    	         driver.findElement(By.id("userNavLabel")).click();
-//    	          driver.findElement(By.xpath("//a[text()='Switch to Lightning Experience']")).click();
-//    	          String parentWindow= driver.getWindowHandle();
-//    	          Set<String> allWindows = driver.getWindowHandles();
-//    	          for(String curWindow : allWindows){
-//    	              driver.switchTo().window(curWindow);
-//    	          //perform operation on popup
-//    	              driver.findElement(By.id("simpleDialog0button0")).click();
-//    	           // switch back to parent window
-//    	       driver.switchTo().window(parentWindow);
-//    	       driver.navigate().refresh();
-//    	          }
-//    	     }
-//    	     else{
-//    	    	 driver.findElement(By.cssSelector("div.r5")).click();
-//    	     }
-//    	    }
-//    	     public boolean isElementPresent(WebDriver driver, By bydriver)
-//     	    {
-//     	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-//     	     try
-//     	        {
-//     	            driver.findElement(bydriver);
-//     	            return true;
-//     	        }
-//     	        catch(NoSuchElementException e){
-//     	            return false;
-//     	        }
-//
+//    	     
      	
     	    
     	    
@@ -194,7 +164,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  //System.out.println(prop.getProperty(username));
+    	  
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {
@@ -220,7 +190,7 @@ public class Data_loading {
        	  prop.load(input);
 
        	  // get the property value and print it out
-       	  //System.out.println(prop.getProperty(Data));
+       	  
        	 } catch (IOException ex) {
        	  ex.printStackTrace();
        	 } finally {
@@ -247,7 +217,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  //System.out.println(prop.getProperty(password));
+    	  
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {
@@ -287,7 +257,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  //System.out.println(prop.getProperty(Rtype));
+    	  
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {
@@ -315,7 +285,7 @@ public class Data_loading {
     	  prop.load(input);
 
     	  // get the property value and print it out
-    	  //System.out.println(prop.getProperty(Rstatus));
+    	  
     	 } catch (IOException ex) {
     	  ex.printStackTrace();
     	 } finally {

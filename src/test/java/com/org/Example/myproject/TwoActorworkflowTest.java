@@ -102,7 +102,7 @@ public class TwoActorworkflowTest {
 		Thread.sleep(10000);
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 
 		if(System.getProperty("os.name").toLowerCase().contains("win")){
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.CONTROL + "t");
@@ -143,14 +143,19 @@ public class TwoActorworkflowTest {
 
 		tblAccounts= driver.findElement(By.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));		
 		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
-		System.out.println("checking for the table2");
-
-
+		driver.findElement(By.linkText(Reqname)).click();
+		
+		driver.findElement(By.xpath("//a[contains(@title,'Related')]")).click();
+		driver.findElement(By.xpath("//a[@title='Allergen Statement']")).click();
+		driver.findElement(By.xpath("//div[@title='Open Form']")).click();
+		
+		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']")).click();
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.linkText(Reqname)).click();
 		driver.findElement(By.xpath("//div[@title='Submit']")).click();
-
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.xpath("//button[contains(.,'Submit')]")).click();
+		driver.findElement(By.xpath("//button[@onclick='submitRequest()']")).click();
 		Thread.sleep(5000);
 		driver.switchTo().defaultContent();
 
@@ -162,6 +167,7 @@ public class TwoActorworkflowTest {
 		}	
 
 		driver.navigate().refresh();
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[contains(@title,'Related')]")).click();
 
 		driver.findElement(By.xpath(".//div[@class='scroller actionBarPlugin fixedHeaderPlugin']/table/tbody/tr/th/div/a")).click();

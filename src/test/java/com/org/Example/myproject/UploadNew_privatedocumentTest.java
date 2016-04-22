@@ -115,10 +115,10 @@ public class UploadNew_privatedocumentTest {
 	    
 	  }
 	  public void switchtoLightining() throws InterruptedException  { 
-		  System.out.println("I am in clasic1");
+		  
 		  
 			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
-				System.out.println("I am in clasic");
+				
 			         driver.findElement(By.id("userNavLabel")).click();
 			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
 			          String parentWindow= driver.getWindowHandle();
@@ -135,7 +135,7 @@ public class UploadNew_privatedocumentTest {
 			          }
 			     }
 			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
-			    	 System.out.println("I am in clasic2");
+			    	
 			    	 driver.findElement(By.linkText("App Launcher")).click();
 			     }}  
 }

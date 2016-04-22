@@ -54,7 +54,7 @@ public class Upload_DocumentsTest  {
 		    Thread.sleep(5000);
 		    switchtoLightining();
 	    driver.findElement(By.linkText("App Launcher")).click();
-	    driver.findElement(By.cssSelector("a.appName")).click();
+	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Document Library")).click();
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.id("btn_AddDocument")).click();
@@ -84,10 +84,7 @@ public class Upload_DocumentsTest  {
 	    
 	  }
 	  public void switchtoLightining() throws InterruptedException  { 
-		  System.out.println("I am in clasic1");
-		  
 			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
-				System.out.println("I am in clasic");
 			         driver.findElement(By.id("userNavLabel")).click();
 			          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
 			          String parentWindow= driver.getWindowHandle();
@@ -104,7 +101,7 @@ public class Upload_DocumentsTest  {
 			          }
 			     }
 			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
-			    	 System.out.println("I am in clasic2");
+			    	
 			    	 driver.findElement(By.linkText("App Launcher")).click();
 			     }}	
 	  }
