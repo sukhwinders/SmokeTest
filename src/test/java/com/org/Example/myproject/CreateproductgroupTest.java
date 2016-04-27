@@ -65,6 +65,8 @@ public class CreateproductgroupTest {
 	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Product Groups")).click();
+	    Thread.sleep(3000);
+	    driver.navigate().refresh();
 	    driver.findElement(By.linkText(Group)).click();
 	    
 	   

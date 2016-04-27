@@ -37,6 +37,7 @@ public class Create_PublicproductTest {
 	 String strTPName = guitils.getPassword("product_partner");
   @Test
   public void publicProduct () throws Exception {
+	  
 	  driver.findElement(By.id("username")).clear();
 	    driver.findElement(By.id("username")).sendKeys(userName2);
 	    driver.findElement(By.id("password")).clear();
@@ -50,7 +51,7 @@ public class Create_PublicproductTest {
 	    driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	    Thread.sleep(5000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-	    driver.findElement(By.id("txtProductName")).sendKeys(Product);
+	    
 	    driver.findElement(By.id("txtIdValue0")).clear();
 	    driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);
 	    Thread.sleep(9000);
@@ -103,8 +104,8 @@ public class Create_PublicproductTest {
 	switchtoLightining();
 	driver.findElement(By.linkText("App Launcher")).click();
 	driver.findElement(By.linkText("ICIX")).click();
-	driver.findElement(By.xpath("//a[contains(.,'Product Search')]")).click();
-
+	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
+	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	driver.findElement(By.id("txtIdValue0")).clear();
 	driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);

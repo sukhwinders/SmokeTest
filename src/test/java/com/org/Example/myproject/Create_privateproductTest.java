@@ -71,7 +71,7 @@ public class Create_privateproductTest {
 	    driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	    Thread.sleep(5000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-	    driver.findElement(By.id("txtProductName")).sendKeys(Product);
+	    
 	    driver.findElement(By.id("txtIdValue0")).clear();
 	    driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);
 	    Thread.sleep(10000);
@@ -123,8 +123,8 @@ public class Create_privateproductTest {
 	switchtoLightining();
 	driver.findElement(By.linkText("App Launcher")).click();
 	driver.findElement(By.linkText("ICIX")).click();
-	driver.findElement(By.xpath("//a[contains(.,'Product Search')]")).click();
-
+	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
+	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	driver.findElement(By.id("txtIdValue0")).clear();
 	driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);

@@ -58,9 +58,12 @@ public class Upload_DocumentsTest  {
 	    driver.findElement(By.linkText("Document Library")).click();
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.id("btn_AddDocument")).click();
-	    new Select(driver.findElement(By.id("ddTemplate"))).selectByVisibleText("I_AA_Form");
+	    new Select(driver.findElement(By.id("ddTemplate"))).selectByVisibleText("GFSI Certification");
 	    driver.findElement(By.id("createButton")).click();
-		Set<String> w=driver.getWindowHandles();
+		
+	    
+	    
+	    Set<String> w=driver.getWindowHandles();
 		String handle[]=new String[w.size()];
 		System.out.println("********** Handles are **************");
 		int i=0;

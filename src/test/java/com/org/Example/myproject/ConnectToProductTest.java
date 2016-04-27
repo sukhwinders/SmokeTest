@@ -55,7 +55,7 @@ public class ConnectToProductTest  {
 	    driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	    Thread.sleep(5000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-	    driver.findElement(By.id("txtProductName")).sendKeys(Product);
+	   
 	    driver.findElement(By.id("txtIdValue0")).clear();
 	    driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);
 	    Thread.sleep(10000);
@@ -108,7 +108,7 @@ public class ConnectToProductTest  {
     switchtoLightining();
     driver.findElement(By.linkText("App Launcher")).click();
     driver.findElement(By.linkText("ICIX")).click();
-    driver.findElement(By.xpath("//a[contains(.,'Product Search')]")).click();
+    driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
     Thread.sleep(2000);
     driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
     driver.findElement(By.xpath("//input[@id='txtIdValue0']")).clear();
@@ -134,7 +134,7 @@ public class ConnectToProductTest  {
 	    driver.findElement(By.id("btn_UPRelationshipPermission_Save")).click();
 	    driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
 	    Thread.sleep(5000);
-	    
+	    System.out.println(Product);
 } 
   @BeforeClass
   public void beforeClass() {

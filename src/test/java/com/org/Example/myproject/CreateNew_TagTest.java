@@ -92,7 +92,7 @@ public class CreateNew_TagTest {
 	 	      driver.findElement(By.xpath(strTypeDrp)).sendKeys(Keys.chord(Keys.ARROW_DOWN));
 		     	}
 	    Thread.sleep(2000);
-	    System.out.println("25614586");
+	  
 	    driver.findElement(By.xpath("//a[@id='btn_UPRelationship_Tag_Add']")).click();
 	    Thread.sleep(4000);
 	    
