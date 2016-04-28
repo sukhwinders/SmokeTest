@@ -26,7 +26,7 @@ public class Upload_DocumentsTest  {
 	String TPname       = guitils.getDATA("TPName");
 	String Responder = guitils.getDATA("Partner_name");
 	
-	
+	String firstwindow;
 
 	WebDriver driver;
 	String baseUrl; 
@@ -61,9 +61,11 @@ public class Upload_DocumentsTest  {
 	    new Select(driver.findElement(By.id("ddTemplate"))).selectByVisibleText("GFSI Certification");
 	    driver.findElement(By.id("createButton")).click();
 		
+	    Set<String> window=driver.getWindowHandles();
+		Iterator<String> iter=window.iterator();
+		firstwindow=iter.next();
 	    
-	    
-	    Set<String> w=driver.getWindowHandles();
+	   /* Set<String> w=driver.getWindowHandles();
 		String handle[]=new String[w.size()];
 		System.out.println("********** Handles are **************");
 		int i=0;
@@ -73,12 +75,12 @@ public class Upload_DocumentsTest  {
 			handle[i]=s;
 			i++;  
 		}
-		
+		*/
 		//Switch driver focus from parent window to child window
-		driver.switchTo().window(handle[1]);
-		driver.findElement(By.xpath(".//*[@id='origin-main']/div[1]/div[2]/button[3]")).click();
+		
+		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
 		//Switch driver focus from child window to parent window
-		driver.switchTo().window(handle[0]);
+		driver.switchTo().window(firstwindow);
 	    // ERROR: Caught exception [ERROR: Unsupported command [waitForPopUp | form | 30000]]
 	    driver.findElement(By.linkText("Incident")).click();
 	    driver.findElement(By.id("isPublic")).click();

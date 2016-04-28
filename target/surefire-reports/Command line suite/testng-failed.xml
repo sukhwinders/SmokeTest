@@ -67,6 +67,7 @@
       </class> <!-- com.org.Example.myproject.EditProductgroupTest -->
       <class name="com.org.Example.myproject.QuestionSearch_ByAnswertypeTest">
         <methods>
+          <include name="createNew_form"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>
@@ -101,6 +102,7 @@
         <methods>
           <include name="beforeClass"/>
           <include name="send_document"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.Upload_DocumentsTest -->
       <class name="com.org.Example.myproject.Edit_TPartnerTest">
@@ -131,24 +133,23 @@
       </class> <!-- com.org.Example.myproject.CreatenewformTest -->
       <class name="com.org.Example.myproject.CreateNew_TagTest">
         <methods>
-          <include name="Tagstest"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.CreateNew_TagTest -->
+      <class name="com.org.Example.myproject.UploadNew_publicdocumentTest">
+        <methods>
+          <include name="send_document"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.UploadNew_publicdocumentTest -->
       <class name="com.org.Example.myproject.ConnectToProductTest">
         <methods>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="searchingfor_conectTOproduct"/>
         </methods>
       </class> <!-- com.org.Example.myproject.ConnectToProductTest -->
-      <class name="com.org.Example.myproject.UploadNew_publicdocumentTest">
-        <methods>
-          <include name="send_document"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.UploadNew_publicdocumentTest -->
       <class name="com.org.Example.myproject.Tp_createrequestTest">
         <methods>
           <include name="beforeClass"/>

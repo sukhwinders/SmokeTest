@@ -110,6 +110,7 @@ public class ConnectToProductTest  {
     driver.findElement(By.linkText("ICIX")).click();
     driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
     Thread.sleep(2000);
+    driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
     driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
     driver.findElement(By.xpath("//input[@id='txtIdValue0']")).clear();
     driver.findElement(By.xpath("//input[@id='txtIdValue0']")).sendKeys(UPCproduct);
@@ -118,6 +119,7 @@ public class ConnectToProductTest  {
     Thread.sleep(5000);
     Assert.assertTrue(driver.findElement(By.xpath("//td[5]/button")).isDisplayed(), "product is not avilable");  
     driver.findElement(By.xpath("//button[contains(.,'Connect to Product')]")).click();
+    driver.findElement(By.xpath("//input[@id='txt_UPProductRelationship_Name']")).sendKeys(Product);
     if(System.getProperty("os.name").toLowerCase().contains("win")){
 	    	
 	    	driver.switchTo().activeElement().equals(driver.findElement(By.xpath(strTypeDrp)));
@@ -126,7 +128,7 @@ public class ConnectToProductTest  {
 	 	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
 	 		 driver.switchTo().activeElement().equals(driver.findElement(By.xpath(strTypeDrp)));
 	 	      driver.findElement(By.xpath(strTypeDrp)).sendKeys(Keys.chord(Keys.ARROW_DOWN));
-	 	}
+	 	} 
     
         driver.findElement(By.id("btn_UPRelationship_Next")).click();
 	    driver.findElement(By.id("rdPermissionOption1")).click();

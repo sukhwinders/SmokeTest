@@ -148,7 +148,7 @@ public class ProductTwo_ActorworkflowTest {
 
 		tblAccounts= driver.findElement(By.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));		
 		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
-		System.out.println("checking for the table2");
+		
 
 		driver.findElement(By.linkText(Reqname)).click();
 		

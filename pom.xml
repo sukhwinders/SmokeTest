@@ -19,7 +19,7 @@
 	<groupId>org.testng</groupId>
 	<artifactId>testng</artifactId>
 	<version>6.9.10</version>
-	<scope>Test</scope>
+	<scope>test</scope>
     </dependency>
 
     <dependency>

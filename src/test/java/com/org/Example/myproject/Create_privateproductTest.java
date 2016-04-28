@@ -57,7 +57,7 @@ public class Create_privateproductTest {
 
 
   @Test
-  public void test1() throws Exception {
+  public void private_product() throws Exception {
 	  driver.findElement(By.id("username")).clear();
 	    driver.findElement(By.id("username")).sendKeys(userName2);
 	    driver.findElement(By.id("password")).clear();
@@ -124,6 +124,8 @@ public class Create_privateproductTest {
 	driver.findElement(By.linkText("App Launcher")).click();
 	driver.findElement(By.linkText("ICIX")).click();
 	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
+	Thread.sleep(3000);
+	driver.navigate().refresh();
 	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	driver.findElement(By.id("txtIdValue0")).clear();

@@ -59,7 +59,6 @@ public class UploadNew_privatedocumentTest {
 	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click(); 
 	    driver.findElement(By.linkText("Document Library")).click();
-	    Thread.sleep(3000);
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.id("btn_AddDocument")).click();
 	    driver.findElement(By.xpath("//a[@id='browseLink']")).click();
