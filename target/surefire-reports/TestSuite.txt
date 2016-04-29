@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 27, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 7,268.032 sec <<< FAILURE!
-publicProduct(com.org.Example.myproject.Create_PublicproductTest)  Time elapsed: 468.202 sec  <<< FAILURE!
+Tests run: 28, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 6,299.12 sec <<< FAILURE!
+publicProduct(com.org.Example.myproject.Create_PublicproductTest)  Time elapsed: 271.969 sec  <<< FAILURE!
 org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 50.11 seconds
+Command duration or timeout: 50.06 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 635ea08e-afe9-41f1-b77b-db69dbefb78f
+Session ID: 173c1db8-7e5b-446f-8474-e61aa3042f10
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -27,21 +27,21 @@ Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca8
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
 	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4222698755409460701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4222698755409460701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4222698755409460701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4222698755409460701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4222698755409460701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
 
-test1(com.org.Example.myproject.Create_privateproductTest)  Time elapsed: 375.328 sec  <<< FAILURE!
+private_product(com.org.Example.myproject.Create_privateproductTest)  Time elapsed: 306.863 sec  <<< FAILURE!
 org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 50.47 seconds
+Command duration or timeout: 50.94 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e615e55f-9f80-4892-8845-6e905f5e42d8
+Session ID: 2aa864fc-df15-4375-b9df-8b9bf09ae091
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -51,57 +51,27 @@ Session ID: e615e55f-9f80-4892-8845-6e905f5e42d8
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at com.org.Example.myproject.Create_privateproductTest.test1(Create_privateproductTest.java:127)
+	at com.org.Example.myproject.Create_privateproductTest.private_product(Create_privateproductTest.java:129)
 Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
 	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous778461841249014510webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous778461841249014510webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous778461841249014510webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous778461841249014510webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous778461841249014510webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
 
-createNew_Question(com.org.Example.myproject.CreatenewquestionTest)  Time elapsed: 282.192 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']"}
-Command duration or timeout: 50.23 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1a392141-af85-4c6f-85ff-1489419c60aa
-*** Element info: {Using=xpath, value=.//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.CreatenewquestionTest.createNew_Question(CreatenewquestionTest.java:101)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous353086086063213301webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous353086086063213301webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-
-Edit_TradingPartner(com.org.Example.myproject.Edit_TPartnerTest)  Time elapsed: 227.688 sec  <<< FAILURE!
+Edit_TradingPartner(com.org.Example.myproject.Edit_TPartnerTest)  Time elapsed: 202.99 sec  <<< FAILURE!
 org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 50.13 seconds
+Command duration or timeout: 50.10 seconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b0411a08-5a09-4347-92be-d6b09ae40385
+Session ID: 5abdb4a4-e111-49fa-9119-29536a0fcc7c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -116,129 +86,20 @@ Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not curren
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7872781751196613274webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7872781751196613274webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7872781751196613274webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7872781751196613274webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
 
-productTwoactor_workflow(com.org.Example.myproject.ProductTwo_ActorworkflowTest)  Time elapsed: 193.233 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//input[@id='productDropDown']"}
-Command duration or timeout: 50.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9a8d82ae-8bb5-4eb5-8aee-7572f22ffba5
-*** Element info: {Using=xpath, value=//input[@id='productDropDown']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.ProductTwo_ActorworkflowTest.productTwoactor_workflow(ProductTwo_ActorworkflowTest.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//input[@id='productDropDown']"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3560065344540015812webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3560065344540015812webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-
-createNew_form(com.org.Example.myproject.QuestionSearch_ByAnswertypeTest)  Time elapsed: 171.621 sec  <<< FAILURE!
-org.openqa.selenium.WebDriverException: Element is not clickable at point (279.26666259765625, 104). Other element would receive the click: <div class="waitingSearchDiv" id="loading"></div>
-Command duration or timeout: 215 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: aebf5ebe-090d-44d8-9b9c-7b6594474b1d
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at com.org.Example.myproject.QuestionSearch_ByAnswertypeTest.createNew_form(QuestionSearch_ByAnswertypeTest.java:82)
-
-createRequest(com.org.Example.myproject.Tp_createrequestTest)  Time elapsed: 187.523 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"h3.ng-binding"}
-Command duration or timeout: 50.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9e5a130d-a8f1-4b7f-8e24-2c803a703dd2
-*** Element info: {Using=css selector, value=h3.ng-binding}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.Tp_createrequestTest.createRequest(Tp_createrequestTest.java:73)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"h3.ng-binding"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6987279474367609672webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6987279474367609672webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-
-TwoActorWorkFlow(com.org.Example.myproject.TwoActorworkflowTest)  Time elapsed: 195.569 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"h3.ng-binding"}
-Command duration or timeout: 50.09 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e51e7095-d7ee-4334-880e-f9003d01d602
-*** Element info: {Using=css selector, value=h3.ng-binding}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.TwoActorworkflowTest.TwoActorWorkFlow(TwoActorworkflowTest.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"h3.ng-binding"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5521753669541320116webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5521753669541320116webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-
-send_document(com.org.Example.myproject.UploadNew_privatedocumentTest)  Time elapsed: 368.955 sec  <<< FAILURE!
+send_document(com.org.Example.myproject.UploadNew_privatedocumentTest)  Time elapsed: 381.309 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
-Command duration or timeout: 100.59 seconds
+Command duration or timeout: 100.06 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: f54e81be-4831-45ca-9b34-794f85981fbd
+Session ID: 32326569-5792-44bf-ab4f-58ac2dd1e130
 *** Element info: {Using=id, value=vfFrameId}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -257,18 +118,18 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5238506711039136395webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5238506711039136395webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1868420303094395892webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1868420303094395892webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 
-send_document(com.org.Example.myproject.UploadNew_publicdocumentTest)  Time elapsed: 241.573 sec  <<< FAILURE!
+send_document(com.org.Example.myproject.UploadNew_publicdocumentTest)  Time elapsed: 195.481 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
-Command duration or timeout: 50.08 seconds
+Command duration or timeout: 50.12 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ee3cb523-1f7a-4a8d-8854-d1a87d569c45
+Session ID: d78a04b5-1232-4c21-966e-688bf4d44dea
 *** Element info: {Using=id, value=vfFrameId}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -287,18 +148,18 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous71468052636741419webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous71468052636741419webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous2269281687906021664webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous2269281687906021664webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 
-send_document(com.org.Example.myproject.Upload_DocumentsTest)  Time elapsed: 252.047 sec  <<< FAILURE!
+send_document(com.org.Example.myproject.Upload_DocumentsTest)  Time elapsed: 188.704 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Incident"}
-Command duration or timeout: 57.06 seconds
+Command duration or timeout: 50.11 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 898a58d7-da93-4314-af81-bd2d8d6dd1f5
+Session ID: 77ff0171-52f0-43a6-8086-19da7250fcc6
 *** Element info: {Using=link text, value=Incident}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -317,6 +178,6 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8032574344635595108webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8032574344635595108webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7735116799184616755webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7735116799184616755webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 

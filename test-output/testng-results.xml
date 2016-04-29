@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="340172" started-at="2016-04-28T08:20:18Z" finished-at="2016-04-28T08:25:58Z">
+  <suite name="Default suite" duration-ms="244490" started-at="2016-04-29T06:38:29Z" finished-at="2016-04-29T06:42:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="340172" started-at="2016-04-28T08:20:18Z" finished-at="2016-04-28T08:25:58Z">
-      <class name="com.org.Example.myproject.Create_privateproductTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@ea4a92b]" name="beforeClass" is-config="true" duration-ms="14957" started-at="2016-04-28T13:50:18Z" finished-at="2016-04-28T13:50:33Z">
+    <test name="Default test" duration-ms="244490" started-at="2016-04-29T06:38:29Z" finished-at="2016-04-29T06:42:33Z">
+      <class name="com.org.Example.myproject.Rcall_RequestTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@256216b3]" name="beforeClass" is-config="true" duration-ms="16210" started-at="2016-04-29T12:08:29Z" finished-at="2016-04-29T12:08:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="private_product()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@ea4a92b]" name="private_product" duration-ms="323645" started-at="2016-04-28T13:50:33Z" finished-at="2016-04-28T13:55:57Z">
+        <test-method status="PASS" signature="RecallWorkFlow()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@256216b3]" name="RecallWorkFlow" duration-ms="225532" started-at="2016-04-29T12:08:45Z" finished-at="2016-04-29T12:12:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- private_product -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@ea4a92b]" name="afterClass" is-config="true" duration-ms="1526" started-at="2016-04-28T13:55:57Z" finished-at="2016-04-28T13:55:58Z">
+        </test-method> <!-- RecallWorkFlow -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@256216b3]" name="afterClass" is-config="true" duration-ms="2715" started-at="2016-04-29T12:12:31Z" finished-at="2016-04-29T12:12:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Create_privateproductTest -->
+      </class> <!-- com.org.Example.myproject.Rcall_RequestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
