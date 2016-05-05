@@ -40,7 +40,7 @@ public class TC9658_Test  {
 	 
   @Test
   public void searchingfor_conectTOproduct() throws Exception {
-	  driver.findElement(By.id("username")).clear();
+	    driver.findElement(By.id("username")).clear();
 	    driver.findElement(By.id("username")).sendKeys(userName2);
 	    driver.findElement(By.id("password")).clear();
 	    driver.findElement(By.id("password")).sendKeys(password2);

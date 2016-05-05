@@ -1,29 +1,30 @@
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\QuestionSearch_ByAnswertypeTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Rcall_RequestTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\TPsearchCompanyNameTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\CreateproductgroupTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\EditProductgroupTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Connectto_TpartnerTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\ProductTwo_ActorworkflowTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\UploadNew_privatedocumentTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\ConnectToProductTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Create_PublicproductTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Tp_createrequestTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Send_DocumentsTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Edit_TPartnerTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\TPsearchWithCombinationTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\CreateNew_TagTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\utils\Data_loading.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\TPsearchPostalCodeTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\CreatenewquestionTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Create_privateproductTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\TPSearchAddressTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\UploadNew_publicdocumentTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\SetAndSendCompilinceTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\TPSearchIDTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Upload_DocumentsTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\TwoActorworkflowTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Edit_TPgroupTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\AccountsconnectandsearchTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\Tp_groupTest.java
-D:\salesforce worksace\SmokeAutomation\src\test\java\com\org\Example\myproject\CreatenewformTest.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9675_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9669_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9656_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9673_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9658_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9677_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9652_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9664_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9671_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9651_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9678_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9665_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9670_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9659_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\utils\Data_loading.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9648_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9654_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9681_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9667_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9661_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9674_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9649_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9676_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9672_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9647_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9663_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9653_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9650_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9666_Test.java
+D:\salesforce worksace\Package Automation\src\test\java\com\org\Example\myproject\TC9668_Test.java

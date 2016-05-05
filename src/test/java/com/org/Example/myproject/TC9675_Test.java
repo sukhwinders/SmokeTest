@@ -60,12 +60,12 @@ public class TC9675_Test {
 	    driver.findElement(By.xpath("//a[@id='browseLink']")).click();
 	    Thread.sleep(5000);
         if(System.getProperty("os.name").toLowerCase().contains("win")){
-	   Runtime.getRuntime().exec("..\\SmokeAutomation\\file upload.exe");
+	   Runtime.getRuntime().exec("..\\PackageAutomation\\file upload.exe");
 	    			   
 	 	}
 	 	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
 	 	// set the file name in clipboard
-	 		StringSelection ss = new StringSelection("SmokeAutomation\\upload dociment.docx");
+	 		StringSelection ss = new StringSelection("PackageAutomation\\upload dociment.docx");
 	 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
 	 		Thread.sleep(3000);
 	 		

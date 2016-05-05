@@ -101,7 +101,8 @@ public class TC9653_Test {
 			     	}
 		    
 			driver.findElement(By.xpath(".//*[@id='btn_UPRelationship_Save']")).click();
-			System.out.println(driver.findElement(By.xpath("html/body/main/div/div[2]")).getText());	
+			System.out.println(driver.findElement(By.xpath("html/body/main/div/div[2]")).getText());
+			
 			driver.switchTo().defaultContent();
 			Thread.sleep(8000);
 		    driver.findElement(By.cssSelector("img.profileTrigger")).click();
