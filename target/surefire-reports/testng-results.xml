@@ -1,324 +1,752 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="6" total="28" passed="22">
+<testng-results skipped="0" failed="9" total="28" passed="19">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="6296260" started-at="2016-04-29T09:05:02Z" finished-at="2016-04-29T10:49:58Z">
+  <suite name="Command line suite" duration-ms="8834391" started-at="2016-05-02T07:09:06Z" finished-at="2016-05-02T09:36:20Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="6296260" started-at="2016-04-29T09:05:02Z" finished-at="2016-04-29T10:49:58Z">
-      <class name="com.org.Example.myproject.Rcall_RequestTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@77b52d12]" name="beforeClass" is-config="true" duration-ms="11090" started-at="2016-04-29T15:31:15Z" finished-at="2016-04-29T15:31:26Z">
+    <test name="Command line test" duration-ms="8834391" started-at="2016-05-02T07:09:06Z" finished-at="2016-05-02T09:36:20Z">
+      <class name="com.org.Example.myproject.TC9650_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9650_Test@246ae04d]" name="beforeClass" is-config="true" duration-ms="15071" started-at="2016-05-02T12:46:28Z" finished-at="2016-05-02T12:46:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="RecallWorkFlow()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@77b52d12]" name="RecallWorkFlow" duration-ms="222953" started-at="2016-04-29T15:31:26Z" finished-at="2016-04-29T15:35:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RecallWorkFlow -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@77b52d12]" name="afterClass" is-config="true" duration-ms="619" started-at="2016-04-29T15:35:09Z" finished-at="2016-04-29T15:35:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Rcall_RequestTest -->
-      <class name="com.org.Example.myproject.EditProductgroupTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.EditProductgroupTest@60addb54]" name="beforeClass" is-config="true" duration-ms="15697" started-at="2016-04-29T15:10:15Z" finished-at="2016-04-29T15:10:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.org.Example.myproject.EditProductgroupTest@60addb54]" name="test" duration-ms="214557" started-at="2016-04-29T15:10:31Z" finished-at="2016-04-29T15:14:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.EditProductgroupTest@60addb54]" name="afterClass" is-config="true" duration-ms="1205" started-at="2016-04-29T15:14:05Z" finished-at="2016-04-29T15:14:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.EditProductgroupTest -->
-      <class name="com.org.Example.myproject.UploadNew_publicdocumentTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.UploadNew_publicdocumentTest@6615435c]" name="beforeClass" is-config="true" duration-ms="15714" started-at="2016-04-29T16:13:06Z" finished-at="2016-04-29T16:13:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.UploadNew_publicdocumentTest@6615435c]" name="send_document" duration-ms="195451" started-at="2016-04-29T16:13:22Z" finished-at="2016-04-29T16:16:37Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: {"method":"id","selector":"vfFrameId"}
-Command duration or timeout: 50.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d78a04b5-1232-4c21-966e-688bf4d44dea
-*** Element info: {Using=id, value=vfFrameId}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
-Command duration or timeout: 50.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d78a04b5-1232-4c21-966e-688bf4d44dea
-*** Element info: {Using=id, value=vfFrameId}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.UploadNew_publicdocumentTest.send_document(UploadNew_publicdocumentTest.java:97)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous2269281687906021664webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous2269281687906021664webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- send_document -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.UploadNew_publicdocumentTest@6615435c]" name="afterClass" is-config="true" duration-ms="580" started-at="2016-04-29T16:16:37Z" finished-at="2016-04-29T16:16:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.UploadNew_publicdocumentTest -->
-      <class name="com.org.Example.myproject.Tp_createrequestTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Tp_createrequestTest@47f6473]" name="beforeClass" is-config="true" duration-ms="13093" started-at="2016-04-29T15:54:23Z" finished-at="2016-04-29T15:54:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="createRequest()[pri:0, instance:com.org.Example.myproject.Tp_createrequestTest@47f6473]" name="createRequest" duration-ms="204529" started-at="2016-04-29T15:54:36Z" finished-at="2016-04-29T15:58:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createRequest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Tp_createrequestTest@47f6473]" name="afterClass" is-config="true" duration-ms="650" started-at="2016-04-29T15:58:00Z" finished-at="2016-04-29T15:58:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Tp_createrequestTest -->
-      <class name="com.org.Example.myproject.UploadNew_privatedocumentTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.UploadNew_privatedocumentTest@1936f0f5]" name="beforeClass" is-config="true" duration-ms="12263" started-at="2016-04-29T16:06:32Z" finished-at="2016-04-29T16:06:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.UploadNew_privatedocumentTest@1936f0f5]" name="send_document" duration-ms="381310" started-at="2016-04-29T16:06:44Z" finished-at="2016-04-29T16:13:06Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: {"method":"id","selector":"vfFrameId"}
-Command duration or timeout: 100.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 32326569-5792-44bf-ab4f-58ac2dd1e130
-*** Element info: {Using=id, value=vfFrameId}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
-Command duration or timeout: 100.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 32326569-5792-44bf-ab4f-58ac2dd1e130
-*** Element info: {Using=id, value=vfFrameId}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.UploadNew_privatedocumentTest.send_document(UploadNew_privatedocumentTest.java:103)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1868420303094395892webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1868420303094395892webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- send_document -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.UploadNew_privatedocumentTest@1936f0f5]" name="afterClass" is-config="true" duration-ms="563" started-at="2016-04-29T16:13:06Z" finished-at="2016-04-29T16:13:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.UploadNew_privatedocumentTest -->
-      <class name="com.org.Example.myproject.AccountsconnectandsearchTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@180bc464]" name="beforeClass" is-config="true" duration-ms="17579" started-at="2016-04-29T14:35:02Z" finished-at="2016-04-29T14:35:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Auccount_verification()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@180bc464]" name="Auccount_verification" duration-ms="117597" started-at="2016-04-29T14:35:20Z" finished-at="2016-04-29T14:37:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Auccount_verification -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.AccountsconnectandsearchTest@180bc464]" name="afterClass" is-config="true" duration-ms="1653" started-at="2016-04-29T14:37:17Z" finished-at="2016-04-29T14:37:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.AccountsconnectandsearchTest -->
-      <class name="com.org.Example.myproject.TPsearchCompanyNameTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TPsearchCompanyNameTest@3567135c]" name="beforeClass" is-config="true" duration-ms="10884" started-at="2016-04-29T15:46:26Z" finished-at="2016-04-29T15:46:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TPsearchCompanyNameTest@3567135c]" name="testSearchByIcixId" duration-ms="136648" started-at="2016-04-29T15:46:37Z" finished-at="2016-04-29T15:48:54Z">
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9650_Test@246ae04d]" name="testSearchByIcixId" duration-ms="137721" started-at="2016-05-02T12:46:43Z" finished-at="2016-05-02T12:49:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchByIcixId -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TPsearchCompanyNameTest@3567135c]" name="afterClass" is-config="true" duration-ms="597" started-at="2016-04-29T15:48:54Z" finished-at="2016-04-29T15:48:54Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9650_Test@246ae04d]" name="afterClass" is-config="true" duration-ms="900" started-at="2016-05-02T12:49:00Z" finished-at="2016-05-02T12:49:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.org.Example.myproject.TPsearchCompanyNameTest@3567135c]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-04-29T15:48:54Z" finished-at="2016-04-29T15:48:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.org.Example.myproject.TPsearchCompanyNameTest -->
-      <class name="com.org.Example.myproject.TwoActorworkflowTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TwoActorworkflowTest@6b143ee9]" name="beforeClass" is-config="true" duration-ms="12496" started-at="2016-04-29T16:01:23Z" finished-at="2016-04-29T16:01:35Z">
+      </class> <!-- com.org.Example.myproject.TC9650_Test -->
+      <class name="com.org.Example.myproject.TC9664_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9664_Test@614c5515]" name="beforeClass" is-config="true" duration-ms="11973" started-at="2016-05-02T13:25:39Z" finished-at="2016-05-02T13:25:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TwoActorWorkFlow()[pri:0, instance:com.org.Example.myproject.TwoActorworkflowTest@6b143ee9]" name="TwoActorWorkFlow" duration-ms="296187" started-at="2016-04-29T16:01:35Z" finished-at="2016-04-29T16:06:31Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.org.Example.myproject.TC9664_Test@614c5515]" name="test" duration-ms="206246" started-at="2016-05-02T13:25:51Z" finished-at="2016-05-02T13:29:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TwoActorWorkFlow -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TwoActorworkflowTest@6b143ee9]" name="afterClass" is-config="true" duration-ms="811" started-at="2016-04-29T16:06:31Z" finished-at="2016-04-29T16:06:32Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9664_Test@614c5515]" name="afterClass" is-config="true" duration-ms="584" started-at="2016-05-02T13:29:17Z" finished-at="2016-05-02T13:29:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TwoActorworkflowTest -->
-      <class name="com.org.Example.myproject.CreateNew_TagTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.CreateNew_TagTest@5315b42e]" name="beforeClass" is-config="true" duration-ms="11131" started-at="2016-04-29T14:43:43Z" finished-at="2016-04-29T14:43:54Z">
+      </class> <!-- com.org.Example.myproject.TC9664_Test -->
+      <class name="com.org.Example.myproject.TC9661_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9661_Test@4cb2c100]" name="beforeClass" is-config="true" duration-ms="10970" started-at="2016-05-02T13:16:22Z" finished-at="2016-05-02T13:16:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Tagstest()[pri:0, instance:com.org.Example.myproject.CreateNew_TagTest@5315b42e]" name="Tagstest" duration-ms="162972" started-at="2016-04-29T14:43:54Z" finished-at="2016-04-29T14:46:37Z">
+        <test-method status="FAIL" signature="publicProduct()[pri:0, instance:com.org.Example.myproject.TC9661_Test@4cb2c100]" name="publicProduct" duration-ms="333331" started-at="2016-05-02T13:16:33Z" finished-at="2016-05-02T13:22:07Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 50.03 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 8d9282f1-7238-468b-9126-32f89d6327c0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 50.03 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 8d9282f1-7238-468b-9126-32f89d6327c0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.org.Example.myproject.TC9661_Test.publicProduct(TC9661_Test.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5522895683712682500webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5522895683712682500webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5522895683712682500webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5522895683712682500webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tagstest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.CreateNew_TagTest@5315b42e]" name="afterClass" is-config="true" duration-ms="526" started-at="2016-04-29T14:46:37Z" finished-at="2016-04-29T14:46:38Z">
+        </test-method> <!-- publicProduct -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9661_Test@4cb2c100]" name="afterClass" is-config="true" duration-ms="644" started-at="2016-05-02T13:22:07Z" finished-at="2016-05-02T13:22:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.CreateNew_TagTest -->
-      <class name="com.org.Example.myproject.Upload_DocumentsTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Upload_DocumentsTest@4909b8da]" name="beforeClass" is-config="true" duration-ms="10707" started-at="2016-04-29T16:16:38Z" finished-at="2016-04-29T16:16:49Z">
+      </class> <!-- com.org.Example.myproject.TC9661_Test -->
+      <class name="com.org.Example.myproject.TC9656_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9656_Test@1e67b872]" name="beforeClass" is-config="true" duration-ms="11389" started-at="2016-05-02T13:01:45Z" finished-at="2016-05-02T13:01:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.Upload_DocumentsTest@4909b8da]" name="send_document" duration-ms="188695" started-at="2016-04-29T16:16:49Z" finished-at="2016-04-29T16:19:57Z">
+        <test-method status="FAIL" signature="private_product()[pri:0, instance:com.org.Example.myproject.TC9656_Test@1e67b872]" name="private_product" duration-ms="350504" started-at="2016-05-02T13:01:57Z" finished-at="2016-05-02T13:07:47Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 50.89 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 621217ea-7786-4b76-b6ff-929424af5687]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 50.89 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 621217ea-7786-4b76-b6ff-929424af5687
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.org.Example.myproject.TC9656_Test.private_product(TC9656_Test.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
+	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4812897727704610159webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4812897727704610159webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4812897727704610159webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4812897727704610159webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4812897727704610159webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- private_product -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9656_Test@1e67b872]" name="afterClass" is-config="true" duration-ms="1822" started-at="2016-05-02T13:07:47Z" finished-at="2016-05-02T13:07:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9656_Test -->
+      <class name="com.org.Example.myproject.TC9653_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9653_Test@2ef9b8bc]" name="beforeClass" is-config="true" duration-ms="11149" started-at="2016-05-02T12:54:05Z" finished-at="2016-05-02T12:54:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Auccount_verification()[pri:0, instance:com.org.Example.myproject.TC9653_Test@2ef9b8bc]" name="Auccount_verification" duration-ms="124603" started-at="2016-05-02T12:54:17Z" finished-at="2016-05-02T12:56:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Auccount_verification -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9653_Test@2ef9b8bc]" name="afterClass" is-config="true" duration-ms="1022" started-at="2016-05-02T12:56:21Z" finished-at="2016-05-02T12:56:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9653_Test -->
+      <class name="com.org.Example.myproject.TC9675_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9675_Test@6b143ee9]" name="beforeClass" is-config="true" duration-ms="14055" started-at="2016-05-02T14:50:48Z" finished-at="2016-05-02T14:51:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.TC9675_Test@6b143ee9]" name="send_document" duration-ms="189939" started-at="2016-05-02T14:51:02Z" finished-at="2016-05-02T14:54:12Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"link text","selector":"Incident"}
-Command duration or timeout: 50.11 seconds
+              <![CDATA[Unable to locate element: {"method":"id","selector":"vfFrameId"}
+Command duration or timeout: 50.09 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 77ff0171-52f0-43a6-8086-19da7250fcc6
+Session ID: 992cf3b7-fe25-4067-ac87-d99232f61f4d
+*** Element info: {Using=id, value=vfFrameId}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
+Command duration or timeout: 50.09 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 992cf3b7-fe25-4067-ac87-d99232f61f4d
+*** Element info: {Using=id, value=vfFrameId}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9675_Test.send_document(TC9675_Test.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3749398931013455588webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3749398931013455588webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_document -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9675_Test@6b143ee9]" name="afterClass" is-config="true" duration-ms="821" started-at="2016-05-02T14:54:12Z" finished-at="2016-05-02T14:54:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9675_Test -->
+      <class name="com.org.Example.myproject.TC9648_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9648_Test@1324409e]" name="beforeClass" is-config="true" duration-ms="12639" started-at="2016-05-02T12:41:12Z" finished-at="2016-05-02T12:41:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9648_Test@1324409e]" name="testSearchByIcixId" duration-ms="137760" started-at="2016-05-02T12:41:25Z" finished-at="2016-05-02T12:43:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9648_Test@1324409e]" name="afterClass" is-config="true" duration-ms="748" started-at="2016-05-02T12:43:43Z" finished-at="2016-05-02T12:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.org.Example.myproject.TC9648_Test@1324409e]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-05-02T12:43:44Z" finished-at="2016-05-02T12:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.org.Example.myproject.TC9648_Test -->
+      <class name="com.org.Example.myproject.TC9678_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9678_Test@4909b8da]" name="beforeClass" is-config="true" duration-ms="11617" started-at="2016-05-02T15:03:49Z" finished-at="2016-05-02T15:04:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="send_document()[pri:0, instance:com.org.Example.myproject.TC9678_Test@4909b8da]" name="send_document" duration-ms="138966" started-at="2016-05-02T15:04:00Z" finished-at="2016-05-02T15:06:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_document -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9678_Test@4909b8da]" name="afterClass" is-config="true" duration-ms="546" started-at="2016-05-02T15:06:19Z" finished-at="2016-05-02T15:06:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9678_Test -->
+      <class name="com.org.Example.myproject.TC9672_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9672_Test@90f6bfd]" name="beforeClass" is-config="true" duration-ms="10445" started-at="2016-05-02T14:31:10Z" finished-at="2016-05-02T14:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="TwoActorWorkFlow()[pri:0, instance:com.org.Example.myproject.TC9672_Test@90f6bfd]" name="TwoActorWorkFlow" duration-ms="598722" started-at="2016-05-02T14:31:20Z" finished-at="2016-05-02T14:41:19Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"link text","selector":"AutoTestMon May 02 12:39:05 IST 2016"}
+Command duration or timeout: 52.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 73da93b2-7764-4458-8d29-83dfff9637dc
+*** Element info: {Using=link text, value=AutoTestMon May 02 12:39:05 IST 2016}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"AutoTestMon May 02 12:39:05 IST 2016"}
+Command duration or timeout: 52.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 73da93b2-7764-4458-8d29-83dfff9637dc
+*** Element info: {Using=link text, value=AutoTestMon May 02 12:39:05 IST 2016}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9672_Test.TwoActorWorkFlow(TC9672_Test.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"AutoTestMon May 02 12:39:05 IST 2016"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4899858799545409131webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4899858799545409131webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TwoActorWorkFlow -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9672_Test@90f6bfd]" name="afterClass" is-config="true" duration-ms="669" started-at="2016-05-02T14:41:19Z" finished-at="2016-05-02T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9672_Test -->
+      <class name="com.org.Example.myproject.TC9670_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9670_Test@327471b5]" name="beforeClass" is-config="true" duration-ms="9481" started-at="2016-05-02T14:22:13Z" finished-at="2016-05-02T14:22:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="createNew_form()[pri:0, instance:com.org.Example.myproject.TC9670_Test@327471b5]" name="createNew_form" duration-ms="264760" started-at="2016-05-02T14:22:22Z" finished-at="2016-05-02T14:26:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNew_form -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9670_Test@327471b5]" name="afterClass" is-config="true" duration-ms="640" started-at="2016-05-02T14:26:47Z" finished-at="2016-05-02T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9670_Test -->
+      <class name="com.org.Example.myproject.TC9667_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9667_Test@68837a77]" name="beforeClass" is-config="true" duration-ms="16524" started-at="2016-05-02T14:10:27Z" finished-at="2016-05-02T14:10:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Productgroup()[pri:0, instance:com.org.Example.myproject.TC9667_Test@68837a77]" name="Productgroup" duration-ms="214018" started-at="2016-05-02T14:10:44Z" finished-at="2016-05-02T14:14:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Productgroup -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9667_Test@68837a77]" name="afterClass" is-config="true" duration-ms="820" started-at="2016-05-02T14:14:18Z" finished-at="2016-05-02T14:14:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9667_Test -->
+      <class name="com.org.Example.myproject.TC9659_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9659_Test@3f2a3a5]" name="beforeClass" is-config="true" duration-ms="12592" started-at="2016-05-02T13:13:28Z" finished-at="2016-05-02T13:13:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Tagstest()[pri:0, instance:com.org.Example.myproject.TC9659_Test@3f2a3a5]" name="Tagstest" duration-ms="161357" started-at="2016-05-02T13:13:40Z" finished-at="2016-05-02T13:16:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tagstest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9659_Test@3f2a3a5]" name="afterClass" is-config="true" duration-ms="556" started-at="2016-05-02T13:16:22Z" finished-at="2016-05-02T13:16:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9659_Test -->
+      <class name="com.org.Example.myproject.TC9676_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9676_Test@1936f0f5]" name="beforeClass" is-config="true" duration-ms="15170" started-at="2016-05-02T14:54:13Z" finished-at="2016-05-02T14:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.TC9676_Test@1936f0f5]" name="send_document" duration-ms="344283" started-at="2016-05-02T14:54:28Z" finished-at="2016-05-02T15:00:12Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"vfFrameId"}
+Command duration or timeout: 100.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 15aeded7-316a-49fd-84dc-cc3fc0fa0414
+*** Element info: {Using=id, value=vfFrameId}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
+Command duration or timeout: 100.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 15aeded7-316a-49fd-84dc-cc3fc0fa0414
+*** Element info: {Using=id, value=vfFrameId}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9676_Test.send_document(TC9676_Test.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"vfFrameId"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1094638666798195642webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1094638666798195642webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_document -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9676_Test@1936f0f5]" name="afterClass" is-config="true" duration-ms="781" started-at="2016-05-02T15:00:12Z" finished-at="2016-05-02T15:00:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9676_Test -->
+      <class name="com.org.Example.myproject.TC9673_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9673_Test@47f6473]" name="beforeClass" is-config="true" duration-ms="9204" started-at="2016-05-02T14:41:20Z" finished-at="2016-05-02T14:41:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="productTwoactor_workflow()[pri:0, instance:com.org.Example.myproject.TC9673_Test@47f6473]" name="productTwoactor_workflow" duration-ms="337944" started-at="2016-05-02T14:41:29Z" finished-at="2016-05-02T14:47:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productTwoactor_workflow -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9673_Test@47f6473]" name="afterClass" is-config="true" duration-ms="723" started-at="2016-05-02T14:47:07Z" finished-at="2016-05-02T14:47:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9673_Test -->
+      <class name="com.org.Example.myproject.TC9665_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9665_Test@77b52d12]" name="beforeClass" is-config="true" duration-ms="11930" started-at="2016-05-02T13:29:18Z" finished-at="2016-05-02T13:29:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.org.Example.myproject.TC9665_Test@77b52d12]" name="test" duration-ms="261126" started-at="2016-05-02T13:29:29Z" finished-at="2016-05-02T13:33:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9665_Test@77b52d12]" name="afterClass" is-config="true" duration-ms="1467" started-at="2016-05-02T13:33:51Z" finished-at="2016-05-02T13:33:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9665_Test -->
+      <class name="com.org.Example.myproject.TC9668_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9668_Test@6be46e8f]" name="beforeClass" is-config="true" duration-ms="10117" started-at="2016-05-02T14:14:18Z" finished-at="2016-05-02T14:14:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.org.Example.myproject.TC9668_Test@6be46e8f]" name="test" duration-ms="204513" started-at="2016-05-02T14:14:28Z" finished-at="2016-05-02T14:17:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9668_Test@6be46e8f]" name="afterClass" is-config="true" duration-ms="672" started-at="2016-05-02T14:17:53Z" finished-at="2016-05-02T14:17:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9668_Test -->
+      <class name="com.org.Example.myproject.TC9649_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9649_Test@2c6a3f77]" name="beforeClass" is-config="true" duration-ms="12567" started-at="2016-05-02T12:43:44Z" finished-at="2016-05-02T12:43:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9649_Test@2c6a3f77]" name="testSearchByIcixId" duration-ms="151028" started-at="2016-05-02T12:43:56Z" finished-at="2016-05-02T12:46:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9649_Test@2c6a3f77]" name="afterClass" is-config="true" duration-ms="580" started-at="2016-05-02T12:46:27Z" finished-at="2016-05-02T12:46:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9649_Test -->
+      <class name="com.org.Example.myproject.TC9674_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9674_Test@15975490]" name="beforeClass" is-config="true" duration-ms="10654" started-at="2016-05-02T14:47:08Z" finished-at="2016-05-02T14:47:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="RecallWorkFlow()[pri:0, instance:com.org.Example.myproject.TC9674_Test@15975490]" name="RecallWorkFlow" duration-ms="208069" started-at="2016-05-02T14:47:18Z" finished-at="2016-05-02T14:50:46Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 15.13 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d77e5438-2fa3-43b7-8113-8f682e8fa39e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 15.13 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d77e5438-2fa3-43b7-8113-8f682e8fa39e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.org.Example.myproject.TC9674_Test.RecallWorkFlow(TC9674_Test.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5324058452812711728webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5324058452812711728webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5324058452812711728webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous5324058452812711728webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RecallWorkFlow -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9674_Test@15975490]" name="afterClass" is-config="true" duration-ms="1282" started-at="2016-05-02T14:50:47Z" finished-at="2016-05-02T14:50:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9674_Test -->
+      <class name="com.org.Example.myproject.TC9677_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9677_Test@6615435c]" name="beforeClass" is-config="true" duration-ms="10351" started-at="2016-05-02T15:00:13Z" finished-at="2016-05-02T15:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="send_document()[pri:0, instance:com.org.Example.myproject.TC9677_Test@6615435c]" name="send_document" duration-ms="204475" started-at="2016-05-02T15:00:23Z" finished-at="2016-05-02T15:03:48Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"link text","selector":"Incident"}
+Command duration or timeout: 51.27 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 48c51f0b-6e90-441d-9991-6e63274ba084
 *** Element info: {Using=link text, value=Incident}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Incident"}
-Command duration or timeout: 50.11 seconds
+Command duration or timeout: 51.27 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 77ff0171-52f0-43a6-8086-19da7250fcc6
+Session ID: 48c51f0b-6e90-441d-9991-6e63274ba084
 *** Element info: {Using=link text, value=Incident}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -331,7 +759,7 @@ Session ID: 77ff0171-52f0-43a6-8086-19da7250fcc6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.Upload_DocumentsTest.send_document(Upload_DocumentsTest.java:85)
+	at com.org.Example.myproject.TC9677_Test.send_document(TC9677_Test.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -371,221 +799,75 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7735116799184616755webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7735116799184616755webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1066427392974304386webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous1066427392974304386webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- send_document -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Upload_DocumentsTest@4909b8da]" name="afterClass" is-config="true" duration-ms="878" started-at="2016-04-29T16:19:57Z" finished-at="2016-04-29T16:19:58Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9677_Test@6615435c]" name="afterClass" is-config="true" duration-ms="995" started-at="2016-05-02T15:03:48Z" finished-at="2016-05-02T15:03:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Upload_DocumentsTest -->
-      <class name="com.org.Example.myproject.ConnectToProductTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.ConnectToProductTest@1324409e]" name="beforeClass" is-config="true" duration-ms="12304" started-at="2016-04-29T14:37:19Z" finished-at="2016-04-29T14:37:31Z">
+      </class> <!-- com.org.Example.myproject.TC9677_Test -->
+      <class name="com.org.Example.myproject.TC9654_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9654_Test@5d624da6]" name="beforeClass" is-config="true" duration-ms="11283" started-at="2016-05-02T12:56:22Z" finished-at="2016-05-02T12:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="searchingfor_conectTOproduct()[pri:0, instance:com.org.Example.myproject.ConnectToProductTest@1324409e]" name="searchingfor_conectTOproduct" duration-ms="256776" started-at="2016-04-29T14:37:31Z" finished-at="2016-04-29T14:41:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchingfor_conectTOproduct -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.ConnectToProductTest@1324409e]" name="afterClass" is-config="true" duration-ms="2448" started-at="2016-04-29T14:41:48Z" finished-at="2016-04-29T14:41:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.ConnectToProductTest -->
-      <class name="com.org.Example.myproject.CreatenewformTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.CreatenewformTest@246ae04d]" name="beforeClass" is-config="true" duration-ms="25331" started-at="2016-04-29T14:56:44Z" finished-at="2016-04-29T14:57:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="createNew_form()[pri:0, instance:com.org.Example.myproject.CreatenewformTest@246ae04d]" name="createNew_form" duration-ms="287007" started-at="2016-04-29T14:57:09Z" finished-at="2016-04-29T15:01:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNew_form -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.CreatenewformTest@246ae04d]" name="afterClass" is-config="true" duration-ms="1372" started-at="2016-04-29T15:01:56Z" finished-at="2016-04-29T15:01:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.CreatenewformTest -->
-      <class name="com.org.Example.myproject.Create_PublicproductTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Create_PublicproductTest@1e67b872]" name="beforeClass" is-config="true" duration-ms="14083" started-at="2016-04-29T14:46:38Z" finished-at="2016-04-29T14:46:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="publicProduct()[pri:0, instance:com.org.Example.myproject.Create_PublicproductTest@1e67b872]" name="publicProduct" duration-ms="271953" started-at="2016-04-29T14:46:52Z" finished-at="2016-04-29T14:51:24Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 50.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 173c1db8-7e5b-446f-8474-e61aa3042f10]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 50.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 173c1db8-7e5b-446f-8474-e61aa3042f10
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at com.org.Example.myproject.Create_PublicproductTest.publicProduct(Create_PublicproductTest.java:108)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous3501107919390147794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        <test-method status="PASS" signature="publicProduct()[pri:0, instance:com.org.Example.myproject.TC9654_Test@5d624da6]" name="publicProduct" duration-ms="311398" started-at="2016-05-02T12:56:33Z" finished-at="2016-05-02T13:01:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publicProduct -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Create_PublicproductTest@1e67b872]" name="afterClass" is-config="true" duration-ms="713" started-at="2016-04-29T14:51:24Z" finished-at="2016-04-29T14:51:24Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9654_Test@5d624da6]" name="afterClass" is-config="true" duration-ms="621" started-at="2016-05-02T13:01:45Z" finished-at="2016-05-02T13:01:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Create_PublicproductTest -->
-      <class name="com.org.Example.myproject.Connectto_TpartnerTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Connectto_TpartnerTest@2c6a3f77]" name="beforeClass" is-config="true" duration-ms="13642" started-at="2016-04-29T14:41:50Z" finished-at="2016-04-29T14:42:04Z">
+      </class> <!-- com.org.Example.myproject.TC9654_Test -->
+      <class name="com.org.Example.myproject.TC9651_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9651_Test@62043840]" name="beforeClass" is-config="true" duration-ms="17455" started-at="2016-05-02T12:49:01Z" finished-at="2016-05-02T12:49:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Auccount_verification()[pri:0, instance:com.org.Example.myproject.Connectto_TpartnerTest@2c6a3f77]" name="Auccount_verification" duration-ms="98398" started-at="2016-04-29T14:42:04Z" finished-at="2016-04-29T14:43:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Auccount_verification -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Connectto_TpartnerTest@2c6a3f77]" name="afterClass" is-config="true" duration-ms="627" started-at="2016-04-29T14:43:42Z" finished-at="2016-04-29T14:43:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Connectto_TpartnerTest -->
-      <class name="com.org.Example.myproject.CreatenewquestionTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.CreatenewquestionTest@62043840]" name="beforeClass" is-config="true" duration-ms="17956" started-at="2016-04-29T15:01:58Z" finished-at="2016-04-29T15:02:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="createNew_Question()[pri:0, instance:com.org.Example.myproject.CreatenewquestionTest@62043840]" name="createNew_Question" duration-ms="268687" started-at="2016-04-29T15:02:16Z" finished-at="2016-04-29T15:06:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNew_Question -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.CreatenewquestionTest@62043840]" name="afterClass" is-config="true" duration-ms="2119" started-at="2016-04-29T15:06:44Z" finished-at="2016-04-29T15:06:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.CreatenewquestionTest -->
-      <class name="com.org.Example.myproject.TPsearchPostalCodeTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TPsearchPostalCodeTest@4157f54e]" name="beforeClass" is-config="true" duration-ms="10863" started-at="2016-04-29T15:48:54Z" finished-at="2016-04-29T15:49:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TPsearchPostalCodeTest@4157f54e]" name="testSearchByIcixId" duration-ms="171780" started-at="2016-04-29T15:49:05Z" finished-at="2016-04-29T15:51:57Z">
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9651_Test@62043840]" name="testSearchByIcixId" duration-ms="137939" started-at="2016-05-02T12:49:19Z" finished-at="2016-05-02T12:51:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchByIcixId -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.org.Example.myproject.TPsearchPostalCodeTest@4157f54e]" name="tearDown" is-config="true" duration-ms="549" started-at="2016-04-29T15:51:57Z" finished-at="2016-04-29T15:51:57Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.org.Example.myproject.TC9651_Test@62043840]" name="tearDown" is-config="true" duration-ms="532" started-at="2016-05-02T12:51:37Z" finished-at="2016-05-02T12:51:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.org.Example.myproject.TPsearchPostalCodeTest -->
-      <class name="com.org.Example.myproject.TPsearchWithCombinationTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TPsearchWithCombinationTest@90f6bfd]" name="beforeClass" is-config="true" duration-ms="10871" started-at="2016-04-29T15:51:57Z" finished-at="2016-04-29T15:52:08Z">
+      </class> <!-- com.org.Example.myproject.TC9651_Test -->
+      <class name="com.org.Example.myproject.TC9658_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9658_Test@60addb54]" name="beforeClass" is-config="true" duration-ms="15795" started-at="2016-05-02T13:07:49Z" finished-at="2016-05-02T13:08:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TPsearchWithCombinationTest@90f6bfd]" name="testSearchByIcixId" duration-ms="133844" started-at="2016-04-29T15:52:08Z" finished-at="2016-04-29T15:54:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSearchByIcixId -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TPsearchWithCombinationTest@90f6bfd]" name="afterClass" is-config="true" duration-ms="585" started-at="2016-04-29T15:54:22Z" finished-at="2016-04-29T15:54:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TPsearchWithCombinationTest -->
-      <class name="com.org.Example.myproject.Create_privateproductTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@5d624da6]" name="beforeClass" is-config="true" duration-ms="11410" started-at="2016-04-29T14:51:24Z" finished-at="2016-04-29T14:51:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="private_product()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@5d624da6]" name="private_product" duration-ms="306834" started-at="2016-04-29T14:51:36Z" finished-at="2016-04-29T14:56:43Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method status="FAIL" signature="searchingfor_conectTOproduct()[pri:0, instance:com.org.Example.myproject.TC9658_Test@60addb54]" name="searchingfor_conectTOproduct" duration-ms="322106" started-at="2016-05-02T13:08:05Z" finished-at="2016-05-02T13:13:27Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 50.94 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+              <![CDATA[Unable to locate element: {"method":"link text","selector":"App Launcher"}
+Command duration or timeout: 50.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 2aa864fc-df15-4375-b9df-8b9bf09ae091]]>
+Session ID: 4ceb0dcb-1867-4cf4-b515-2465ffe545b9
+*** Element info: {Using=link text, value=App Launcher}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 50.94 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"App Launcher"}
+Command duration or timeout: 50.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 2aa864fc-df15-4375-b9df-8b9bf09ae091
+Session ID: 4ceb0dcb-1867-4cf4-b515-2465ffe545b9
+*** Element info: {Using=link text, value=App Launcher}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -593,9 +875,11 @@ Session ID: 2aa864fc-df15-4375-b9df-8b9bf09ae091
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at com.org.Example.myproject.Create_privateproductTest.private_product(Create_privateproductTest.java:129)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9658_Test.searchingfor_conectTOproduct(TC9658_Test.java:109)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -630,66 +914,118 @@ Session ID: 2aa864fc-df15-4375-b9df-8b9bf09ae091
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"App Launcher"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10090)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous7810733970243525884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4986061308078002750webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4986061308078002750webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- private_product -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Create_privateproductTest@5d624da6]" name="afterClass" is-config="true" duration-ms="1121" started-at="2016-04-29T14:56:43Z" finished-at="2016-04-29T14:56:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Create_privateproductTest -->
-      <class name="com.org.Example.myproject.Tp_groupTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Tp_groupTest@15975490]" name="beforeClass" is-config="true" duration-ms="9778" started-at="2016-04-29T15:58:01Z" finished-at="2016-04-29T15:58:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.org.Example.myproject.Tp_groupTest@15975490]" name="test" duration-ms="190917" started-at="2016-04-29T15:58:11Z" finished-at="2016-04-29T16:01:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Tp_groupTest@15975490]" name="afterClass" is-config="true" duration-ms="872" started-at="2016-04-29T16:01:22Z" finished-at="2016-04-29T16:01:23Z">
+        </test-method> <!-- searchingfor_conectTOproduct -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9658_Test@60addb54]" name="afterClass" is-config="true" duration-ms="578" started-at="2016-05-02T13:13:27Z" finished-at="2016-05-02T13:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Tp_groupTest -->
-      <class name="com.org.Example.myproject.Edit_TPartnerTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Edit_TPartnerTest@3f2a3a5]" name="beforeClass" is-config="true" duration-ms="12409" started-at="2016-04-29T15:14:06Z" finished-at="2016-04-29T15:14:19Z">
+      </class> <!-- com.org.Example.myproject.TC9658_Test -->
+      <class name="com.org.Example.myproject.TC9652_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9652_Test@5315b42e]" name="beforeClass" is-config="true" duration-ms="11494" started-at="2016-05-02T12:51:37Z" finished-at="2016-05-02T12:51:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="Edit_TradingPartner()[pri:0, instance:com.org.Example.myproject.Edit_TPartnerTest@3f2a3a5]" name="Edit_TradingPartner" duration-ms="202984" started-at="2016-04-29T15:14:19Z" finished-at="2016-04-29T15:17:42Z">
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9652_Test@5315b42e]" name="testSearchByIcixId" duration-ms="135978" started-at="2016-05-02T12:51:49Z" finished-at="2016-05-02T12:54:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9652_Test@5315b42e]" name="afterClass" is-config="true" duration-ms="590" started-at="2016-05-02T12:54:05Z" finished-at="2016-05-02T12:54:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9652_Test -->
+      <class name="com.org.Example.myproject.TC9669_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9669_Test@3567135c]" name="beforeClass" is-config="true" duration-ms="10432" started-at="2016-05-02T14:17:54Z" finished-at="2016-05-02T14:18:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="createNew_Question()[pri:0, instance:com.org.Example.myproject.TC9669_Test@3567135c]" name="createNew_Question" duration-ms="248052" started-at="2016-05-02T14:18:04Z" finished-at="2016-05-02T14:22:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNew_Question -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9669_Test@3567135c]" name="afterClass" is-config="true" duration-ms="704" started-at="2016-05-02T14:22:12Z" finished-at="2016-05-02T14:22:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9669_Test -->
+      <class name="com.org.Example.myproject.TC9666_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9666_Test@2d554825]" name="beforeClass" is-config="true" duration-ms="11641" started-at="2016-05-02T13:33:52Z" finished-at="2016-05-02T13:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="SetAndSendCompilince()[pri:0, instance:com.org.Example.myproject.TC9666_Test@2d554825]" name="SetAndSendCompilince" duration-ms="2181940" started-at="2016-05-02T13:34:04Z" finished-at="2016-05-02T14:10:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetAndSendCompilince -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9666_Test@2d554825]" name="afterClass" is-config="true" duration-ms="1365" started-at="2016-05-02T14:10:26Z" finished-at="2016-05-02T14:10:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9666_Test -->
+      <class name="com.org.Example.myproject.TC9647_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9647_Test@180bc464]" name="beforeClass" is-config="true" duration-ms="11556" started-at="2016-05-02T12:39:06Z" finished-at="2016-05-02T12:39:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Auccount_verification()[pri:0, instance:com.org.Example.myproject.TC9647_Test@180bc464]" name="Auccount_verification" duration-ms="114163" started-at="2016-05-02T12:39:17Z" finished-at="2016-05-02T12:41:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Auccount_verification -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9647_Test@180bc464]" name="afterClass" is-config="true" duration-ms="981" started-at="2016-05-02T12:41:11Z" finished-at="2016-05-02T12:41:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9647_Test -->
+      <class name="com.org.Example.myproject.TC9671_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9671_Test@4157f54e]" name="beforeClass" is-config="true" duration-ms="9581" started-at="2016-05-02T14:26:48Z" finished-at="2016-05-02T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="createNew_form()[pri:0, instance:com.org.Example.myproject.TC9671_Test@4157f54e]" name="createNew_form" duration-ms="252065" started-at="2016-05-02T14:26:57Z" finished-at="2016-05-02T14:31:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNew_form -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9671_Test@4157f54e]" name="afterClass" is-config="true" duration-ms="656" started-at="2016-05-02T14:31:09Z" finished-at="2016-05-02T14:31:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9671_Test -->
+      <class name="com.org.Example.myproject.TC9663_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9663_Test@6fb554cc]" name="beforeClass" is-config="true" duration-ms="12562" started-at="2016-05-02T13:22:07Z" finished-at="2016-05-02T13:22:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="Edit_TradingPartner()[pri:0, instance:com.org.Example.myproject.TC9663_Test@6fb554cc]" name="Edit_TradingPartner" duration-ms="198487" started-at="2016-05-02T13:22:20Z" finished-at="2016-05-02T13:25:38Z">
           <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
               <![CDATA[Element is not currently visible and so may not be interacted with
-Command duration or timeout: 50.10 seconds
+Command duration or timeout: 50.08 seconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5abdb4a4-e111-49fa-9119-29536a0fcc7c]]>
+Session ID: b37df40a-3c9e-44ec-af1c-9302d049bbc7]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 50.10 seconds
+Command duration or timeout: 50.08 seconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5abdb4a4-e111-49fa-9119-29536a0fcc7c
+Session ID: b37df40a-3c9e-44ec-af1c-9302d049bbc7
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -699,7 +1035,7 @@ Session ID: 5abdb4a4-e111-49fa-9119-29536a0fcc7c
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at com.org.Example.myproject.Edit_TPartnerTest.Edit_TradingPartner(Edit_TPartnerTest.java:67)
+	at com.org.Example.myproject.TC9663_Test.Edit_TradingPartner(TC9663_Test.java:67)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -738,133 +1074,21 @@ Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not curren
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'SDN-151', ip: '172.10.55.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous8503923314200764915webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6227180040792876273webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6227180040792876273webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6227180040792876273webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous6227180040792876273webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Edit_TradingPartner -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Edit_TPartnerTest@3f2a3a5]" name="afterClass" is-config="true" duration-ms="563" started-at="2016-04-29T15:17:42Z" finished-at="2016-04-29T15:17:42Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9663_Test@6fb554cc]" name="afterClass" is-config="true" duration-ms="502" started-at="2016-05-02T13:25:38Z" finished-at="2016-05-02T13:25:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Edit_TPartnerTest -->
-      <class name="com.org.Example.myproject.SetAndSendCompilinceTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.SetAndSendCompilinceTest@68837a77]" name="beforeClass" is-config="true" duration-ms="10789" started-at="2016-04-29T15:37:40Z" finished-at="2016-04-29T15:37:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="SetAndSendCompilince()[pri:0, instance:com.org.Example.myproject.SetAndSendCompilinceTest@68837a77]" name="SetAndSendCompilince" duration-ms="218685" started-at="2016-04-29T15:37:51Z" finished-at="2016-04-29T15:41:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetAndSendCompilince -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.SetAndSendCompilinceTest@68837a77]" name="afterClass" is-config="true" duration-ms="548" started-at="2016-04-29T15:41:29Z" finished-at="2016-04-29T15:41:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.SetAndSendCompilinceTest -->
-      <class name="com.org.Example.myproject.QuestionSearch_ByAnswertypeTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.QuestionSearch_ByAnswertypeTest@614c5515]" name="beforeClass" is-config="true" duration-ms="11358" started-at="2016-04-29T15:26:49Z" finished-at="2016-04-29T15:27:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="createNew_form()[pri:0, instance:com.org.Example.myproject.QuestionSearch_ByAnswertypeTest@614c5515]" name="createNew_form" duration-ms="253339" started-at="2016-04-29T15:27:01Z" finished-at="2016-04-29T15:31:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNew_form -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.QuestionSearch_ByAnswertypeTest@614c5515]" name="afterClass" is-config="true" duration-ms="766" started-at="2016-04-29T15:31:14Z" finished-at="2016-04-29T15:31:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.QuestionSearch_ByAnswertypeTest -->
-      <class name="com.org.Example.myproject.ProductTwo_ActorworkflowTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.ProductTwo_ActorworkflowTest@6fb554cc]" name="beforeClass" is-config="true" duration-ms="10940" started-at="2016-04-29T15:21:44Z" finished-at="2016-04-29T15:21:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="productTwoactor_workflow()[pri:0, instance:com.org.Example.myproject.ProductTwo_ActorworkflowTest@6fb554cc]" name="productTwoactor_workflow" duration-ms="292901" started-at="2016-04-29T15:21:55Z" finished-at="2016-04-29T15:26:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productTwoactor_workflow -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.ProductTwo_ActorworkflowTest@6fb554cc]" name="afterClass" is-config="true" duration-ms="1633" started-at="2016-04-29T15:26:48Z" finished-at="2016-04-29T15:26:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.ProductTwo_ActorworkflowTest -->
-      <class name="com.org.Example.myproject.TPSearchIDTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TPSearchIDTest@327471b5]" name="beforeClass" is-config="true" duration-ms="12865" started-at="2016-04-29T15:44:02Z" finished-at="2016-04-29T15:44:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TPSearchIDTest@327471b5]" name="testSearchByIcixId" duration-ms="130657" started-at="2016-04-29T15:44:15Z" finished-at="2016-04-29T15:46:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSearchByIcixId -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TPSearchIDTest@327471b5]" name="afterClass" is-config="true" duration-ms="513" started-at="2016-04-29T15:46:26Z" finished-at="2016-04-29T15:46:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TPSearchIDTest -->
-      <class name="com.org.Example.myproject.Send_DocumentsTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Send_DocumentsTest@2d554825]" name="beforeClass" is-config="true" duration-ms="9718" started-at="2016-04-29T15:35:09Z" finished-at="2016-04-29T15:35:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="send_document()[pri:0, instance:com.org.Example.myproject.Send_DocumentsTest@2d554825]" name="send_document" duration-ms="140038" started-at="2016-04-29T15:35:19Z" finished-at="2016-04-29T15:37:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- send_document -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Send_DocumentsTest@2d554825]" name="afterClass" is-config="true" duration-ms="607" started-at="2016-04-29T15:37:39Z" finished-at="2016-04-29T15:37:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Send_DocumentsTest -->
-      <class name="com.org.Example.myproject.TPSearchAddressTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TPSearchAddressTest@6be46e8f]" name="beforeClass" is-config="true" duration-ms="13243" started-at="2016-04-29T15:41:30Z" finished-at="2016-04-29T15:41:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TPSearchAddressTest@6be46e8f]" name="testSearchByIcixId" duration-ms="138577" started-at="2016-04-29T15:41:43Z" finished-at="2016-04-29T15:44:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSearchByIcixId -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TPSearchAddressTest@6be46e8f]" name="afterClass" is-config="true" duration-ms="466" started-at="2016-04-29T15:44:02Z" finished-at="2016-04-29T15:44:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TPSearchAddressTest -->
-      <class name="com.org.Example.myproject.CreateproductgroupTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.CreateproductgroupTest@2ef9b8bc]" name="beforeClass" is-config="true" duration-ms="14978" started-at="2016-04-29T15:06:46Z" finished-at="2016-04-29T15:07:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Productgroup()[pri:0, instance:com.org.Example.myproject.CreateproductgroupTest@2ef9b8bc]" name="Productgroup" duration-ms="192887" started-at="2016-04-29T15:07:01Z" finished-at="2016-04-29T15:10:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Productgroup -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.CreateproductgroupTest@2ef9b8bc]" name="afterClass" is-config="true" duration-ms="782" started-at="2016-04-29T15:10:14Z" finished-at="2016-04-29T15:10:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.CreateproductgroupTest -->
-      <class name="com.org.Example.myproject.Edit_TPgroupTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Edit_TPgroupTest@4cb2c100]" name="beforeClass" is-config="true" duration-ms="11496" started-at="2016-04-29T15:17:42Z" finished-at="2016-04-29T15:17:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.org.Example.myproject.Edit_TPgroupTest@4cb2c100]" name="test" duration-ms="229228" started-at="2016-04-29T15:17:54Z" finished-at="2016-04-29T15:21:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Edit_TPgroupTest@4cb2c100]" name="afterClass" is-config="true" duration-ms="658" started-at="2016-04-29T15:21:43Z" finished-at="2016-04-29T15:21:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Edit_TPgroupTest -->
+      </class> <!-- com.org.Example.myproject.TC9663_Test -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>

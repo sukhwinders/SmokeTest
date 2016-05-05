@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="244490" started-at="2016-04-29T06:38:29Z" finished-at="2016-04-29T06:42:33Z">
+  <suite name="Default suite" duration-ms="352633" started-at="2016-05-05T07:22:10Z" finished-at="2016-05-05T07:28:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="244490" started-at="2016-04-29T06:38:29Z" finished-at="2016-04-29T06:42:33Z">
-      <class name="com.org.Example.myproject.Rcall_RequestTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@256216b3]" name="beforeClass" is-config="true" duration-ms="16210" started-at="2016-04-29T12:08:29Z" finished-at="2016-04-29T12:08:45Z">
+    <test name="Default test" duration-ms="352633" started-at="2016-05-05T07:22:10Z" finished-at="2016-05-05T07:28:03Z">
+      <class name="com.org.Example.myproject.TC9658_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9658_Test@ea4a92b]" name="beforeClass" is-config="true" duration-ms="12790" started-at="2016-05-05T12:52:10Z" finished-at="2016-05-05T12:52:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="RecallWorkFlow()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@256216b3]" name="RecallWorkFlow" duration-ms="225532" started-at="2016-04-29T12:08:45Z" finished-at="2016-04-29T12:12:31Z">
+        <test-method status="PASS" signature="searchingfor_conectTOproduct()[pri:0, instance:com.org.Example.myproject.TC9658_Test@ea4a92b]" name="searchingfor_conectTOproduct" duration-ms="337271" started-at="2016-05-05T12:52:23Z" finished-at="2016-05-05T12:58:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RecallWorkFlow -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.Rcall_RequestTest@256216b3]" name="afterClass" is-config="true" duration-ms="2715" started-at="2016-04-29T12:12:31Z" finished-at="2016-04-29T12:12:33Z">
+        </test-method> <!-- searchingfor_conectTOproduct -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9658_Test@ea4a92b]" name="afterClass" is-config="true" duration-ms="2523" started-at="2016-05-05T12:58:00Z" finished-at="2016-05-05T12:58:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.Rcall_RequestTest -->
+      </class> <!-- com.org.Example.myproject.TC9658_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
