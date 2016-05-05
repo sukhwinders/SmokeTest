@@ -59,6 +59,7 @@ public class TC9676_Test {
 	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click(); 
 	    driver.findElement(By.linkText("Document Library")).click();
+	    
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	    driver.findElement(By.id("btn_AddDocument")).click();
 	    driver.findElement(By.xpath("//a[@id='browseLink']")).click();
@@ -101,6 +102,7 @@ public class TC9676_Test {
         
         Thread.sleep(3000);
         driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+        
 	    driver.findElement(By.xpath("//input[contains(@class,'slds-input slds-show')]")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 	    //driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
