@@ -103,6 +103,7 @@ public class TC9654_Test {
 	driver.findElement(By.id("Login")).click();
 	switchtoLightining();
 	driver.findElement(By.linkText("App Launcher")).click();
+	Thread.sleep(3000);
 	driver.findElement(By.linkText("ICIX")).click();
 	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
 	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
