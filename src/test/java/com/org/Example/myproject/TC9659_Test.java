@@ -30,7 +30,7 @@ public class TC9659_Test {
 	 Data_loading guitils = new Data_loading();
 	 String userName1     = guitils.getUserName("RequestorUsername");
 	 String password1     = guitils.getPassword("RequestorPassword");
-	 String strTPName = guitils.getUserName("TradingPartnerName");
+	 String strTPName = guitils.getUserName("TPResponder");
 	 
 	  @BeforeClass
 	  public void beforeClass() {

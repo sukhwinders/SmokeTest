@@ -47,7 +47,7 @@ public class TC9676_Test {
 		  driver.quit();
 	 }
 	  @Test
-	  public void send_document() throws Exception {
+	  public void uploadprivatedocument() throws Exception {
 	   
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(userName1);
@@ -64,12 +64,12 @@ public class TC9676_Test {
 	    driver.findElement(By.xpath("//a[@id='browseLink']")).click();
 	    Thread.sleep(5000);
         if(System.getProperty("os.name").toLowerCase().contains("win")){
-	   Runtime.getRuntime().exec("..\\SmokeAutomation\\file upload.exe");
+	   Runtime.getRuntime().exec("..\\ProductionAutomation\\file upload.exe");
 	    			   
 	 	}
 	 	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
 	 	// set the file name in clipboard
-	 		StringSelection ss = new StringSelection("SmokeAutomation\\upload dociment.docx");
+	 		StringSelection ss = new StringSelection("ProductionAutomation\\upload dociment.docx");
 	 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
 	 		Thread.sleep(3000);
 	 		
@@ -100,7 +100,7 @@ public class TC9676_Test {
 		     	}
         
         Thread.sleep(3000);
-        driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+        
 	    driver.findElement(By.xpath("//input[contains(@class,'slds-input slds-show')]")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 	    //driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();

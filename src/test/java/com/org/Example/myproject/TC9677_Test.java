@@ -44,7 +44,7 @@ public class TC9677_Test  {
 		  driver.quit();
 	 }
 	  @Test
-	  public void send_document() throws Exception {
+	  public void uploadexistingform() throws Exception {
 	   
 		  driver.findElement(By.id("username")).clear();
 		  driver.findElement(By.id("username")).sendKeys(userName1);

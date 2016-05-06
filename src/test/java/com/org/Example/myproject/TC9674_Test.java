@@ -20,7 +20,7 @@ import com.utils.Data_loading;
 
 public class TC9674_Test {
 	Data_loading guitils = new Data_loading();
-	 String userName1 = guitils.getUserName("RequestorUsername");
+	 String userName1 = guitils.getUserName("TPRequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
 	 String Responder = guitils.getDATA("TPResponder");
 	 String userName2 = guitils.getUserName("ResponderUsername");
