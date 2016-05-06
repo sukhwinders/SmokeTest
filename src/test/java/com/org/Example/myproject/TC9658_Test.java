@@ -34,7 +34,7 @@ public class TC9658_Test  {
 	 Data_loading guitils = new Data_loading();
 	 String userName1 = guitils.getUserName("RequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
-	 String userName2 = guitils.getUserName("ResponderUsername");
+	 String userName2 = guitils.getUserName("TPRequestorUsername");
 	 String password2 = guitils.getPassword("RequestorPassword");
 	 String strTPName = guitils.getPassword("product_partner");
 	 
@@ -66,11 +66,9 @@ public class TC9658_Test  {
 		  
 	    driver.findElement(By.xpath("//button[contains(@ng-click,'vm.AddNewProduct()')]")).click();
 	    driver.findElement(By.xpath("//input[@id='txt_UPProductRelationship_Name']")).sendKeys(Product);
-	    driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
+	    /*driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
 	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();
-	  
-	 
+	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();*/
 	    new Select(driver.findElement(By.id("ddl_UPRelationship_Type"))).selectByVisibleText("Buy");
 	    
 	    String strTypeDrp="//select[@id='ddl_UPRelationship_Status']";
