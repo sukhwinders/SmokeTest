@@ -61,11 +61,11 @@ public class TC9677_Test  {
 	    new Select(driver.findElement(By.id("ddTemplate"))).selectByVisibleText("GFSI Certification");
 	    driver.findElement(By.id("createButton")).click();
 		
-	    Set<String> window=driver.getWindowHandles();
+	    /*Set<String> window=driver.getWindowHandles();
 		Iterator<String> iter=window.iterator();
-		firstwindow=iter.next();
+		firstwindow=iter.next();*/
 	    
-	   /* Set<String> w=driver.getWindowHandles();
+	   Set<String> w=driver.getWindowHandles();
 		String handle[]=new String[w.size()];
 		System.out.println("********** Handles are **************");
 		int i=0;
@@ -75,10 +75,10 @@ public class TC9677_Test  {
 			handle[i]=s;
 			i++;  
 		}
-		*/
-		//Switch driver focus from parent window to child window
 		
-		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
+		//Switch driver focus from parent window to child window
+		driver.close();
+		//driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
 		//Switch driver focus from child window to parent window
 		driver.switchTo().window(firstwindow);
 	    // ERROR: Caught exception [ERROR: Unsupported command [waitForPopUp | form | 30000]]

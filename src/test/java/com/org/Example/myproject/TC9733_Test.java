@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-public class TC9681_Test {
+public class TC9733_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
@@ -54,7 +54,7 @@ public class TC9681_Test {
 	}
 
 	@Test
-	public void SubmitformBYresponder() throws Exception {
+	public void Approve_Request() throws Exception {
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(userName1);
 		driver.findElement(By.id("password")).clear();
@@ -210,7 +210,40 @@ public class TC9681_Test {
 		 driver.switchTo().defaultContent();
         Thread.sleep(10000);
         
-        
+        if(System.getProperty("os.name").toLowerCase().contains("win")){
+  		  driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.CONTROL + "w");
+     	}
+     	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
+     		driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.COMMAND + "w");
+     	}	driver.switchTo().window(firstwindow);
+        driver.navigate().refresh();
+      //driver.findElement(By.xpath("//a[@title='Related']")).click();
+      //driver.findElement(By.xpath("//div[@class='uiScroller scroller-wrapper scroll-bidirectional native']/div/table/tbody/tr/th/div/a")).click();
+      driver.findElement(By.linkText("App Launcher")).click();
+	  Thread.sleep(5000);
+	  driver.findElement(By.linkText("ICIX")).click();
+	  Thread.sleep(5000);
+	  driver.navigate().refresh();
+	  
+	  driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
+	  driver.findElement(By.linkText(Reqname)).click();
+		Thread.sleep(3000);
+		
+	   driver.findElement(By.linkText("Show more actions for this record")).click();
+	   Thread.sleep(2000);
+	   
+	   driver.findElement(By.linkText("Approve")).click();
+	   Thread.sleep(2000);
+	   
+	   driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+	   driver.findElement(By.xpath("//textarea[@name='j_id0:j_id40:commentBlock:j_id44']")).sendKeys();
+	   Thread.sleep(5000);
+	   driver.findElement(By.xpath("//input[contains(@value,'Submit')]")).click();
+	   driver.switchTo().defaultContent();
+	   Thread.sleep(5000);
+	   driver.navigate().refresh();
+	   Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'Approved')]")).isDisplayed(), "Status is not getting Changed");
+	  
 	}
 	
 
@@ -251,5 +284,6 @@ public class TC9681_Test {
 			driver.findElement(By.linkText("App Launcher")).click();
 		}
 	}
+
 
 }

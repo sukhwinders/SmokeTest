@@ -1,13 +1,10 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -21,9 +18,7 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-
-
-public class TC9673_Test {
+public class TC9735_Test {
 	WebDriver driver;
 	String baseUrl;
 	Date      d = new Date(System.currentTimeMillis());
@@ -34,13 +29,13 @@ public class TC9673_Test {
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
 	String Product   = guitils.getDATA("Product_Name");
-	String Comments  = guitils.getDATA("Comment");
+	String Comment  = guitils.getDATA("Comment");
 
 
 	WebElement tblAccounts;
 	List <WebElement> RowsOfTable;
 	WebElement ColOfTable;	
-
+	String firstwindow;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -85,7 +80,7 @@ public class TC9673_Test {
 		driver.findElement(By.cssSelector("button.slds-button.slds-button--neutral")).click();
 		driver.findElement(By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//span[@class='slds-checkbox--faux'])[2]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'California Transparency of Supply Chain Act')]")).click();
 		driver.findElement(By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand")).click();
 		driver.findElement(By.xpath("//button[3]")).click();
 
@@ -150,6 +145,80 @@ public class TC9673_Test {
 		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(4000);
+		driver.findElement(By.xpath("//a[@title='Related']")).click();
+
+		driver.findElement(
+				By.xpath("//a[contains(@title,'California Transparency of Supply Chain Act')]"))
+				.click();
+		driver.findElement(By.xpath("//div[@title='Open Form']")).click();
+		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+
+		// List <WebElement>
+		// RdoYes=driver.findElements(By.xpath(".//label[starts-with(@for,'Yes')]"));
+		List<WebElement> RdoNo = driver.findElements(By
+				.xpath(".//label[starts-with(@for,'No')]"));
+
+		RdoNo.get(0).click();
+		/*
+		 * RdoYes.get(1).click();
+		 * 
+		 * RdoNo.get(2).click(); RdoYes.get(3).click(); RdoNo.get(4).click();
+		 * RdoYes.get(5).click(); RdoNo.get(6).click();
+		 */
+		driver.findElement(By.xpath("//input[@id='QuestionSignature']"))
+				.sendKeys(Comment);
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']"))
+				.click();
+		Thread.sleep(5000);
+		//driver.findElement(By.xpath("//a[@title='Related']")).click();
+		driver.findElement(By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a")).click();
+		Thread.sleep(5000);
+		
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.findElement(By.xpath("//div[@title='Submit']")).click();
+		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.findElement(By.xpath("//button[@onclick='submitRequest()']")).click();
+		driver.switchTo().defaultContent();
+        Thread.sleep(10000);
+        
+        if(System.getProperty("os.name").toLowerCase().contains("win")){
+  		  driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.CONTROL + "w");
+     	}
+     	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
+     		driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.COMMAND + "w");
+     	}	
+        
+        
+        driver.switchTo().window(firstwindow);
+        driver.navigate().refresh();
+      //driver.findElement(By.xpath("//a[@title='Related']")).click();
+      //driver.findElement(By.xpath("//div[@class='uiScroller scroller-wrapper scroll-bidirectional native']/div/table/tbody/tr/th/div/a")).click();
+      driver.findElement(By.linkText("App Launcher")).click();
+	  Thread.sleep(5000);
+	  driver.findElement(By.linkText("ICIX")).click();
+	  Thread.sleep(5000);
+	  driver.navigate().refresh();
+	  
+	  driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
+	  driver.findElement(By.linkText(Reqname)).click();
+		Thread.sleep(3000);
+		
+	   driver.findElement(By.linkText("Show more actions for this record")).click();
+	   Thread.sleep(2000);
+	   
+	   driver.findElement(By.linkText("Approve")).click();
+	   Thread.sleep(2000);
+	   
+	   driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+	   driver.findElement(By.xpath("//textarea[@name='j_id0:j_id40:commentBlock:j_id44']")).sendKeys();
+	   Thread.sleep(5000);
+	   driver.findElement(By.xpath("//input[contains(@value,'Submit')]")).click();
+	   driver.switchTo().defaultContent();
+	   Thread.sleep(5000);
+	   driver.navigate().refresh();
+	   Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'Approved')]")).isDisplayed(), "Status is not getting Changed");
+	  
 		
 
 	}
@@ -177,4 +246,5 @@ public class TC9673_Test {
 
 			driver.findElement(By.linkText("App Launcher")).click();
 		}}	
+
 }

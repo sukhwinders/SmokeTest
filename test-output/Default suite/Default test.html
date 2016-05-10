@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 04 18:00:55 IST 2016</td>
+<td>Started on:</td><td>Tue May 10 14:04:29 IST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>389 seconds (389537 ms)</td>
+<tr><td>Total time:</td><td>171 seconds (171255 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,28 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.org.Example.myproject.TC9676_Test.send_document()'><b>send_document</b><br>Test class: com.org.Example.myproject.TC9676_Test</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;vfFrameId&quot;}
-Command duration or timeout: 100.10 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;SDN-151&apos;, ip: &apos;172.10.55.185&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8f63d7f4-e96d-41b2-834d-8a465a95b4de
-*** Element info: {Using=id, value=vfFrameId}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.TC9676_Test.send_document(TC9676_Test.java:104)
+<td title='com.org.Example.myproject.TC9677_Test.send_document()'><b>send_document</b><br>Test class: com.org.Example.myproject.TC9677_Test</td>
+<td><div><pre>java.lang.NullPointerException: null value in entry: name=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:39)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1015)
+	at com.org.Example.myproject.TC9677_Test.send_document(TC9677_Test.java:83)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,35 +107,14 @@ Session ID: 8f63d7f4-e96d-41b2-834d-8a465a95b4de
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;vfFrameId&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;SDN-151&apos;, ip: &apos;172.10.55.185&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4502658101597414098webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4502658101597414098webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-</pre></div><a href='#' onClick='toggleBox("stack-trace671046933", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace671046933'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;vfFrameId&quot;}
-Command duration or timeout: 100.10 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;SDN-151&apos;, ip: &apos;172.10.55.185&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8f63d7f4-e96d-41b2-834d-8a465a95b4de
-*** Element info: {Using=id, value=vfFrameId}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.TC9676_Test.send_document(TC9676_Test.java:104)
+</pre></div><a href='#' onClick='toggleBox("stack-trace370370379", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace370370379'><pre>java.lang.NullPointerException: null value in entry: name=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:39)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1015)
+	at com.org.Example.myproject.TC9677_Test.send_document(TC9677_Test.java:83)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,16 +139,9 @@ Session ID: 8f63d7f4-e96d-41b2-834d-8a465a95b4de
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;vfFrameId&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;SDN-151&apos;, ip: &apos;172.10.55.185&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4502658101597414098webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/SRNATK~1/AppData/Local/Temp/anonymous4502658101597414098webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 </pre></div></td>
-<td>374</td>
-<td>com.org.Example.myproject.TC9676_Test@256216b3</td></tr>
+<td>155</td>
+<td>com.org.Example.myproject.TC9677_Test@649d209a</td></tr>
 </table><p>
 </body>
 </html>
