@@ -31,12 +31,14 @@
       <class name="com.org.Example.myproject.TC9676_Test"/>
       <class name="com.org.Example.myproject.TC9677_Test"/>
       <class name="com.org.Example.myproject.TC9678_Test"/>
+      <class name="com.org.Example.myproject.TC9681_Test"/>
     </classes>
   </test> <!-- Command line test -->
   <test name="Command line test(failed)">
     <classes>
       <class name="com.org.Example.myproject.TC9669_Test">
         <methods>
+          <include name="createNew_Question"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
@@ -45,7 +47,6 @@
         <methods>
           <include name="beforeClass"/>
           <include name="afterClass"/>
-          <include name="private_product"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9656_Test -->
       <class name="com.org.Example.myproject.TC9665_Test">
@@ -63,7 +64,6 @@
       </class> <!-- com.org.Example.myproject.TC9661_Test -->
       <class name="com.org.Example.myproject.TC9658_Test">
         <methods>
-          <include name="searchingfor_conectTOproduct"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>
@@ -83,6 +83,7 @@
       <class name="com.org.Example.myproject.TC9654_Test">
         <methods>
           <include name="afterClass"/>
+          <include name="publicProduct"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9654_Test -->
@@ -105,16 +106,10 @@
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9677_Test -->
-      <class name="com.org.Example.myproject.TC9663_Test">
-        <methods>
-          <include name="Edit_TradingPartner"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9663_Test -->
       <class name="com.org.Example.myproject.TC9659_Test">
         <methods>
           <include name="afterClass"/>
+          <include name="Tagstest"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9659_Test -->
@@ -124,6 +119,12 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9670_Test -->
+      <class name="com.org.Example.myproject.TC9663_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9663_Test -->
       <class name="com.org.Example.myproject.TC9650_Test">
         <methods>
           <include name="beforeClass"/>
@@ -134,6 +135,7 @@
         <methods>
           <include name="beforeClass"/>
           <include name="afterClass"/>
+          <include name="testSearchByIcixId"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9652_Test -->
       <class name="com.org.Example.myproject.TC9676_Test">
@@ -152,6 +154,7 @@
       </class> <!-- com.org.Example.myproject.TC9648_Test -->
       <class name="com.org.Example.myproject.TC9678_Test">
         <methods>
+          <include name="send_document"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
@@ -159,7 +162,6 @@
       <class name="com.org.Example.myproject.TC9672_Test">
         <methods>
           <include name="beforeClass"/>
-          <include name="TwoActorWorkFlow"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9672_Test -->
@@ -167,8 +169,16 @@
         <methods>
           <include name="beforeClass"/>
           <include name="afterClass"/>
+          <include name="Auccount_verification"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9653_Test -->
+      <class name="com.org.Example.myproject.TC9681_Test">
+        <methods>
+          <include name="SubmitformBYresponder"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9681_Test -->
       <class name="com.org.Example.myproject.TC9675_Test">
         <methods>
           <include name="send_document"/>
@@ -185,7 +195,6 @@
       <class name="com.org.Example.myproject.TC9674_Test">
         <methods>
           <include name="beforeClass"/>
-          <include name="RecallWorkFlow"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9674_Test -->
@@ -197,6 +206,7 @@
       </class> <!-- com.org.Example.myproject.TC9668_Test -->
       <class name="com.org.Example.myproject.TC9673_Test">
         <methods>
+          <include name="productTwoactor_workflow"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>

@@ -100,7 +100,7 @@ public class TC9676_Test {
 		     	}
         
         Thread.sleep(3000);
-        driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+        
 	    driver.findElement(By.xpath("//input[contains(@class,'slds-input slds-show')]")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 	    //driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();

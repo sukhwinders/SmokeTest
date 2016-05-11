@@ -94,7 +94,7 @@ public class TC9675_Test {
 	 				exp.printStackTrace();
 	 			}
 		     	}
-        driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+        
 	    driver.findElement(By.xpath(".//*[@id='category']")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 	    driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
