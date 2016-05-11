@@ -25,16 +25,16 @@ public class TC9658_Test  {
 	 WebDriver driver;
 	 String baseUrl; 
 	
-	    Date d = new Date(System.currentTimeMillis());
-		String 	Product		="TestProduct"+d;
-		String randomNumbers = RandomStringUtils.randomNumeric(8);
-		String UPCproduct = "1111" + randomNumbers; 
+	 Date d = new Date(System.currentTimeMillis());
+	 String 	Product		="TestProduct"+d;
+	 String randomNumbers = RandomStringUtils.randomNumeric(8);
+	 String UPCproduct = "1111" + randomNumbers; 
 		
 	 String firstwindow;
 	 Data_loading guitils = new Data_loading();
 	 String userName1 = guitils.getUserName("RequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
-	 String userName2 = guitils.getUserName("TPRequestorUsername");
+	 String userName2 = guitils.getUserName("ResponderUsername");
 	 String password2 = guitils.getPassword("RequestorPassword");
 	 String strTPName = guitils.getPassword("product_partner");
 	 

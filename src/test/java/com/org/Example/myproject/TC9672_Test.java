@@ -23,9 +23,9 @@ import com.utils.Data_loading;
 public class TC9672_Test {
 
 	 Data_loading guitils = new Data_loading();
-	 String userName1 = guitils.getUserName("TPRequestorUsername");
+	 String userName1 = guitils.getUserName("RequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
-	 String Responder = guitils.getDATA("TPResponder");
+	 String Responder = guitils.getDATA("product_partner");
 	 String userName2 = guitils.getUserName("ResponderUsername");
 	 String password2 = guitils.getPassword("RequestorPassword");
 	Date d = new Date(System.currentTimeMillis());

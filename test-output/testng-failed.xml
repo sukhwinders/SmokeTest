@@ -6,15 +6,4 @@
       <class name="com.org.Example.myproject.TC9658_Test"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.org.Example.myproject.TC9658_Test">
-        <methods>
-          <include name="searchingfor_conectTOproduct"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9658_Test -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

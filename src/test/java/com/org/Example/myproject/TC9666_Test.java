@@ -27,7 +27,7 @@ public class TC9666_Test {
 	String secondwindow;
 	
 	Data_loading guitils = new Data_loading();
-	 String userName1 = guitils.getUserName("RequestorUsername");
+	 String userName1 = guitils.getUserName("TPRequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
 	
 	
@@ -97,7 +97,7 @@ public class TC9666_Test {
 	     	}
     Thread.sleep(6000);
     driver.findElement(By.xpath("//input[@name='dateid']")).click();
-    Thread.sleep(5000);
+    Thread.sleep(6000);
     new Select(driver.findElement(By.id("DocType0"))).selectByVisibleText("Bioterrorism Act Statement of Compliance");
     Thread.sleep(2000);
     driver.findElement(By.linkText("+ Add Another compliance criteria")).click();

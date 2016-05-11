@@ -22,7 +22,7 @@ public class TC9681_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String Responder = guitils.getDATA("TPResponder");
+	String Responder = guitils.getDATA("product_partner");
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
 	String comment = guitils.getPassword("Comments");

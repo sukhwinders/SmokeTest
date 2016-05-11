@@ -31,6 +31,7 @@
       <class name="com.org.Example.myproject.TC9676_Test"/>
       <class name="com.org.Example.myproject.TC9677_Test"/>
       <class name="com.org.Example.myproject.TC9678_Test"/>
+      <class name="com.org.Example.myproject.TC9681_Test"/>
     </classes>
   </test> <!-- Command line test -->
   <test name="Command line test(failed)">
@@ -83,6 +84,7 @@
       <class name="com.org.Example.myproject.TC9654_Test">
         <methods>
           <include name="afterClass"/>
+          <include name="publicProduct"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9654_Test -->
@@ -101,7 +103,7 @@
       <class name="com.org.Example.myproject.TC9677_Test">
         <methods>
           <include name="beforeClass"/>
-          <include name="send_document"/>
+          <include name="uploadexistingform"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9677_Test -->
@@ -134,15 +136,9 @@
         <methods>
           <include name="beforeClass"/>
           <include name="afterClass"/>
+          <include name="testSearchByIcixId"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9652_Test -->
-      <class name="com.org.Example.myproject.TC9676_Test">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="send_document"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9676_Test -->
       <class name="com.org.Example.myproject.TC9648_Test">
         <methods>
           <include name="afterClass"/>
@@ -150,8 +146,15 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9648_Test -->
+      <class name="com.org.Example.myproject.TC9676_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9676_Test -->
       <class name="com.org.Example.myproject.TC9678_Test">
         <methods>
+          <include name="send_document"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
@@ -167,17 +170,25 @@
         <methods>
           <include name="beforeClass"/>
           <include name="afterClass"/>
+          <include name="Auccount_verification"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9653_Test -->
+      <class name="com.org.Example.myproject.TC9681_Test">
+        <methods>
+          <include name="SubmitformBYresponder"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9681_Test -->
       <class name="com.org.Example.myproject.TC9675_Test">
         <methods>
-          <include name="send_document"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9675_Test -->
       <class name="com.org.Example.myproject.TC9666_Test">
         <methods>
+          <include name="SetAndSendCompilince"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
@@ -197,6 +208,7 @@
       </class> <!-- com.org.Example.myproject.TC9668_Test -->
       <class name="com.org.Example.myproject.TC9673_Test">
         <methods>
+          <include name="productTwoactor_workflow"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>
@@ -204,6 +216,7 @@
       <class name="com.org.Example.myproject.TC9649_Test">
         <methods>
           <include name="beforeClass"/>
+          <include name="testSearchByIcixId"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9649_Test -->
