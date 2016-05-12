@@ -25,7 +25,7 @@ public class TC9672_Test {
 	 Data_loading guitils = new Data_loading();
 	 String userName1 = guitils.getUserName("RequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
-	 String Responder = guitils.getDATA("product_partner");
+	 String Responder = guitils.getDATA("TradingPartnerName");
 	 String userName2 = guitils.getUserName("ResponderUsername");
 	 String password2 = guitils.getPassword("RequestorPassword");
 	Date d = new Date(System.currentTimeMillis());
@@ -43,7 +43,7 @@ public class TC9672_Test {
 		baseUrl = "https://login.salesforce.com";      
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
 	}
 

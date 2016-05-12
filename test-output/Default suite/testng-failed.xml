@@ -3,7 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.org.Example.myproject.TC9658_Test"/>
+      <class name="com.org.Example.myproject.TC9735_Test"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.org.Example.myproject.TC9735_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="productTwoactor_workflow"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9735_Test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
