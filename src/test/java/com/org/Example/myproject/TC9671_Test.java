@@ -43,7 +43,7 @@ import com.utils.Data_loading;
 			  baseUrl = "https://login.salesforce.com";      
 		      driver = new FirefoxDriver();
 			  driver.manage().window().maximize();
-			  driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			  driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 			  driver.navigate().to(baseUrl);  
 		  }
 
@@ -116,6 +116,7 @@ import com.utils.Data_loading;
 		    driver.findElement(By.xpath("//input[@value='SAVE']")).click();
 		    Thread.sleep(6000);
 		    //Script for Linked in Questions
+		    driver.findElement(By.id("//input[@id='j_id0:form:newElementWithQuestion:newElementBlock:inputElementReadOnly']")).click();
 		    driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
 		    Thread.sleep(3000);
 		    driver.findElement(By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName")).sendKeys("test");

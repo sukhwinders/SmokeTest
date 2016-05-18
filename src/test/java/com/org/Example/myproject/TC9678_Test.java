@@ -41,7 +41,7 @@ public class TC9678_Test  {
 		  baseUrl = "https://login.salesforce.com";      
 	      driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	  }
 
@@ -96,6 +96,7 @@ public class TC9678_Test  {
 	    driver.findElement(By.id("comments")).sendKeys(comment);
 	    driver.findElement(By.id("sendDialogSendButton")).click();
 	    driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > #btn_sendConfirmDialogCloseButton")).click();
+	    driver.switchTo().defaultContent();
 	    if(System.getProperty("os.name").toLowerCase().contains("win")){
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.CONTROL + "t");
 
@@ -111,6 +112,7 @@ public class TC9678_Test  {
 		driver.findElement(By.id("Login")).click();
 		switchtoLightining();
 		driver.findElement(By.linkText("App Launcher")).click();
+		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]")).click();
 

@@ -34,7 +34,7 @@ public class TC9675_Test {
 		  baseUrl = "https://login.salesforce.com";      
 	        driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	 }
 
@@ -43,7 +43,7 @@ public class TC9675_Test {
 		  driver.quit();
 	 }
 	  @Test
-	  public void send_document() throws Exception {
+	  public void Public_document() throws Exception {
 	   
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(userName1);
@@ -59,13 +59,13 @@ public class TC9675_Test {
 	    driver.findElement(By.id("btn_AddDocument")).click();
 	    driver.findElement(By.xpath("//a[@id='browseLink']")).click();
 	    Thread.sleep(5000);
-        if(System.getProperty("os.name").toLowerCase().contains("win")){
+        /*if(System.getProperty("os.name").toLowerCase().contains("win")){
 	   Runtime.getRuntime().exec("..\\SmokeAutomation\\file upload.exe");
 	    			   
 	 	}
-	 	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
+	 	else if(System.getProperty("os.name").toLowerCase().contains("mac")){*/
 	 	// set the file name in clipboard
-	 		StringSelection ss = new StringSelection("SmokeAutomation\\upload dociment.docx");
+	 		StringSelection ss = new StringSelection("..\\SmokeAutomation\\upload dociment.docx");
 	 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
 	 		Thread.sleep(3000);
 	 		
@@ -93,7 +93,7 @@ public class TC9675_Test {
 	 			} catch (Exception exp){
 	 				exp.printStackTrace();
 	 			}
-		     	}
+		     	
         
 	    driver.findElement(By.xpath(".//*[@id='category']")).click();
 	    driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();

@@ -70,7 +70,6 @@ public class TC9658_Test  {
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();*/
 	  
-	 
 	    new Select(driver.findElement(By.id("ddl_UPRelationship_Type"))).selectByVisibleText("Buy");
 	    
 	    String strTypeDrp="//select[@id='ddl_UPRelationship_Status']";
@@ -143,7 +142,7 @@ public class TC9658_Test  {
 	  baseUrl = "https://login.salesforce.com";      
       driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
   }
 

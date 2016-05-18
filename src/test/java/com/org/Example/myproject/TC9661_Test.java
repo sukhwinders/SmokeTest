@@ -61,9 +61,9 @@ public class TC9661_Test {
 		  
 	    driver.findElement(By.xpath("//button[contains(@ng-click,'vm.AddNewProduct()')]")).click();
 	    driver.findElement(By.xpath("//input[@id='txt_UPProductRelationship_Name']")).sendKeys(Product);
-	    driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
+	    /*driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
 	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();
+	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();*/
 	    new Select(driver.findElement(By.id("ddl_UPRelationship_Type"))).selectByVisibleText("Buy");
 	    String strTypeDrp="//select[@id='ddl_UPRelationship_Status']";
 	    
@@ -104,7 +104,9 @@ public class TC9661_Test {
 	switchtoLightining();
 	driver.findElement(By.linkText("App Launcher")).click();
 	driver.findElement(By.linkText("ICIX")).click();
+    Thread.sleep(5000);
 	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
+	driver.navigate().refresh();
 	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	driver.findElement(By.id("txtIdValue0")).clear();

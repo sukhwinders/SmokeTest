@@ -38,7 +38,7 @@ public class TC9676_Test {
 		  baseUrl = "https://login.salesforce.com";      
 	     driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	 }
 
@@ -47,7 +47,7 @@ public class TC9676_Test {
 		  driver.quit();
 	 }
 	  @Test
-	  public void send_document() throws Exception {
+	  public void Private_document() throws Exception {
 	   
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(userName1);

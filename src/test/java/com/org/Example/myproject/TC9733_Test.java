@@ -44,7 +44,7 @@ public class TC9733_Test {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
 
@@ -181,12 +181,12 @@ public class TC9733_Test {
 		driver.findElement(By.xpath("//div[@title='Open Form']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 
-		// List <WebElement>
-		// RdoYes=driver.findElements(By.xpath(".//label[starts-with(@for,'Yes')]"));
+		List <WebElement>
+		RdoYes=driver.findElements(By.xpath(".//label[starts-with(@for,'Yes')]"));
 		List<WebElement> RdoNo = driver.findElements(By
 				.xpath(".//label[starts-with(@for,'No')]"));
-
-		RdoNo.get(0).click();
+		RdoYes.get(0).click();
+		/*RdoNo.get(0).click();
 		/*
 		 * RdoYes.get(1).click();
 		 * 
@@ -196,14 +196,14 @@ public class TC9733_Test {
 		driver.findElement(By.xpath("//input[@id='QuestionSignature']"))
 				.sendKeys(comment);
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']"))
+		driver.findElement(By.xpath("//button[@class='slds-button slds-button--brand']"))
 				.click();
 		Thread.sleep(5000);
 		//driver.findElement(By.xpath("//a[@title='Related']")).click();
-		driver.findElement(By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a")).click();
+		driver.findElement(By.xpath("//div[@title='Submit']")).click();
 		Thread.sleep(5000);
 		
-		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		
 		driver.findElement(By.xpath("//div[@title='Submit']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//button[@onclick='submitRequest()']")).click();

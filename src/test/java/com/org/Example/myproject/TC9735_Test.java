@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
+
 public class TC9735_Test {
 	WebDriver driver;
 	String baseUrl;
@@ -42,7 +43,7 @@ public class TC9735_Test {
 		baseUrl = "https://login.salesforce.com";      
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
 	}
 
@@ -179,7 +180,6 @@ public class TC9735_Test {
 		driver.findElement(By.xpath("//div[@title='Submit']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//button[@onclick='submitRequest()']")).click();
-		driver.switchTo().defaultContent();
         Thread.sleep(10000);
         
         if(System.getProperty("os.name").toLowerCase().contains("win")){

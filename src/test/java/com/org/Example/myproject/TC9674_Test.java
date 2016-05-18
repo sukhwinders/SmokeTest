@@ -40,7 +40,7 @@ public class TC9674_Test {
 		baseUrl = "https://login.salesforce.com";      
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
 	}
 
@@ -120,6 +120,7 @@ public class TC9674_Test {
 		driver.findElement(By.id("Login")).click();
 		switchtoLightining();
 		driver.findElement(By.linkText("App Launcher")).click();
+		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]")).click();
 
