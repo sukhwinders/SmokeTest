@@ -27,7 +27,7 @@ public class TC9666_Test {
 	String secondwindow;
 	
 	Data_loading guitils = new Data_loading();
-	 String userName1 = guitils.getUserName("TPRequestorUsername");
+	 String userName1 = guitils.getUserName("RequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
 	
 	
