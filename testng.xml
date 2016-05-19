@@ -3,7 +3,7 @@
 <suite name="Suite" >
   <test name="Test" preserve-order="true">
     <classes>
-    <!—-
+    <!--
 <class name="com.org.Example.myproject.TC9647_Test" />
 	<class name="com.org.Example.myproject.TC9648_Test" />
 	<class name="com.org.Example.myproject.TC9649_Test" />
@@ -37,7 +37,7 @@
 	<class name="com.org.Example.myproject.TC9733_Test" />  
 	<class name="com.org.Example.myproject.TC9735_Test" />  
 
-—->
+-->
 
 
 <class name="com.org.Example.myproject.TC9666_Test" />
