@@ -104,8 +104,11 @@ public class TC9661_Test {
 	switchtoLightining();
 	driver.findElement(By.linkText("App Launcher")).click();
 	driver.findElement(By.linkText("ICIX")).click();
+	Thread.sleep(5000);
 	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
+	Thread.sleep(5000);
 	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+	Thread.sleep(5000);
 	driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	driver.findElement(By.id("txtIdValue0")).clear();
 	driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);

@@ -143,7 +143,8 @@ public class TC9674_Test {
 		}    
 
 		tblAccounts= driver.findElement(By.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));		
-		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
+		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));	
+		Thread.sleep(9000);
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(9000);	   
 

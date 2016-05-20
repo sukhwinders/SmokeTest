@@ -91,13 +91,14 @@ public class TC9659_Test {
 	 		 driver.switchTo().activeElement().equals(driver.findElement(By.xpath(strTypeDrp)));
 	 	      driver.findElement(By.xpath(strTypeDrp)).sendKeys(Keys.chord(Keys.ARROW_DOWN));
 		     	}
-	    Thread.sleep(2000);
+	    Thread.sleep(4000);
 	  
 	    driver.findElement(By.xpath("//a[@id='btn_UPRelationship_Tag_Add']")).click();
 	    Thread.sleep(4000);
 	    
 	    
 	    driver.findElement(By.xpath("//input[@id='txt_UPRelationship_Tag_New']")).sendKeys(Tags);
+	    Thread.sleep(5000);
 	    driver.findElement(By.xpath("//textarea[@id='txt_UPRelationship_Comment'] ")).click();
 	    
 	    Thread.sleep(5000);   

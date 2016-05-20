@@ -97,6 +97,7 @@ public class TC9666_Test {
 	     	}
     Thread.sleep(6000);
     driver.findElement(By.xpath("//input[@name='dateid']")).click();
+    Thread.sleep(5000);
     new Select(driver.findElement(By.id("DocType0"))).selectByVisibleText("Bioterrorism Act Statement of Compliance");
     Thread.sleep(2000);
     driver.findElement(By.linkText("+ Add Another compliance criteria")).click();

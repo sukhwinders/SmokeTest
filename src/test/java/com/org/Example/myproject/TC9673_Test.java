@@ -47,7 +47,7 @@ public class TC9673_Test {
 		baseUrl = "https://login.salesforce.com";      
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
 	}
 
@@ -148,8 +148,7 @@ public class TC9673_Test {
 
 		tblAccounts= driver.findElement(By.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));		
 		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
-		
-
+		Thread.sleep(9000);
 		driver.findElement(By.linkText(Reqname)).click();
 		
 

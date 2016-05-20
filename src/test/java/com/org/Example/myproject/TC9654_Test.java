@@ -106,6 +106,7 @@ public class TC9654_Test {
 	Thread.sleep(3000);
 	driver.findElement(By.linkText("ICIX")).click();
 	driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]")).click();
+	Thread.sleep(4000);
 	driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 	driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 	driver.findElement(By.id("txtIdValue0")).clear();
