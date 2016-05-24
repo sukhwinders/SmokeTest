@@ -150,7 +150,7 @@ import com.utils.Data_loading;
 		    Thread.sleep(6000);
 		    driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		    Thread.sleep(8000);
-		    driver.findElement(By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']")).click();
+		    driver.findElement(By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:1:selectTab']")).click();
 		    Thread.sleep(9000);
 		    //Script for Sections template
 		    driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
@@ -200,7 +200,7 @@ import com.utils.Data_loading;
 		    Thread.sleep(6000);
 		    driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		    Thread.sleep(8000);
-		    driver.findElement(By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']")).click();
+		    driver.findElement(By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:2:selectTab']")).click();
 		    Thread.sleep(9000);
 		    //Script for Sections template
 		    driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();

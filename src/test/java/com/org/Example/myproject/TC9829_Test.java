@@ -201,13 +201,13 @@ public class TC9829_Test {
 				.sendKeys(Tab_Name);
 		Thread.sleep(3000);
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable10:j_id57"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id57"))
 				.click();
 		Thread.sleep(6000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(8000);
 		driver.findElement(
-				By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']"))
+				By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:1:selectTab']"))
 				.click();
 		Thread.sleep(9000);
 		// Script for Sections template
@@ -281,7 +281,7 @@ public class TC9829_Test {
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(8000);
 		driver.findElement(
-				By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']"))
+				By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:2:selectTab']"))
 				.click();
 		Thread.sleep(9000);
 		// Script for Sections template
@@ -367,7 +367,7 @@ public class TC9829_Test {
 		Thread.sleep(8000);
 
 		driver.findElement(
-				By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:0:selectTab']"))
+				By.xpath(".//*[@id='j_id0:form:tabBlock:tabSection:tabTable:3:selectTab']"))
 				.click();
 		Thread.sleep(9000);
 

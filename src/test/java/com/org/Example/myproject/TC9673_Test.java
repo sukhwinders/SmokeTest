@@ -75,13 +75,16 @@ public class TC9673_Test {
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		Thread.sleep(2000);
 		driver.findElement(By.id("requestName")).clear();
+		Thread.sleep(2000);
 		driver.findElement(By.id("requestName")).sendKeys(Reqname);
-
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("html/body/div[3]/div/div/div/div/label[2]/span[1]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='productDropDown1']")).clear();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='productDropDown1']")).sendKeys(Product);
 		driver.findElement(By.cssSelector("h3.ng-binding")).click();
-
+		Thread.sleep(2000);
 		driver.findElement(By.cssSelector("button.slds-button.slds-button--neutral")).click();
 		driver.findElement(By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]")).click();
 		Thread.sleep(2000);

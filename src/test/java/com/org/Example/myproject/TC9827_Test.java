@@ -29,7 +29,7 @@ public class TC9827_Test {
 	 String Layout_Name    ="Testlayout"+d;
 	 String Tab_Name       ="Testtab"+d;
 	 String Section_Name   ="Testsection"+d;
-	 String QuestionText   ="Testsection"+d;
+	 String QuestionText   ="Testsection"+d; 
 	 
      Data_loading guitils = new Data_loading();
 	 String userName1   = guitils.getUserName("RequestorUsername");

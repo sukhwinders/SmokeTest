@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="202870" started-at="2016-05-20T09:07:07Z" finished-at="2016-05-20T09:10:30Z">
+  <suite name="Default suite" duration-ms="351455" started-at="2016-05-24T08:33:38Z" finished-at="2016-05-24T08:39:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="202870" started-at="2016-05-20T09:07:07Z" finished-at="2016-05-20T09:10:30Z">
-      <class name="com.org.Example.myproject.TC9658_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9658_Test@852d37e]" name="beforeClass" is-config="true" duration-ms="8672" started-at="2016-05-20T14:37:07Z" finished-at="2016-05-20T14:37:16Z">
+    <test name="Default test" duration-ms="351455" started-at="2016-05-24T08:33:38Z" finished-at="2016-05-24T08:39:30Z">
+      <class name="com.org.Example.myproject.TC9832_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9832_Test@1593948d]" name="beforeClass" is-config="true" duration-ms="12570" started-at="2016-05-24T14:03:38Z" finished-at="2016-05-24T14:03:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="searchingfor_conectTOproduct()[pri:0, instance:com.org.Example.myproject.TC9658_Test@852d37e]" name="searchingfor_conectTOproduct" duration-ms="193274" started-at="2016-05-20T14:37:16Z" finished-at="2016-05-20T14:40:29Z">
+        <test-method status="PASS" signature="createNew_form()[pri:0, instance:com.org.Example.myproject.TC9832_Test@1593948d]" name="createNew_form" duration-ms="338303" started-at="2016-05-24T14:03:51Z" finished-at="2016-05-24T14:09:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchingfor_conectTOproduct -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9658_Test@852d37e]" name="afterClass" is-config="true" duration-ms="895" started-at="2016-05-20T14:40:29Z" finished-at="2016-05-20T14:40:30Z">
+        </test-method> <!-- createNew_form -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9832_Test@1593948d]" name="afterClass" is-config="true" duration-ms="572" started-at="2016-05-24T14:09:29Z" finished-at="2016-05-24T14:09:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TC9658_Test -->
+      </class> <!-- com.org.Example.myproject.TC9832_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
