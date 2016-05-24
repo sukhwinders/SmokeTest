@@ -22,7 +22,7 @@
 	<class name="com.org.Example.myproject.TC9666_Test" />
 	<class name="com.org.Example.myproject.TC9667_Test" />
 	<class name="com.org.Example.myproject.TC9668_Test" />
-	<class name="ConfigData.TC9669_Test" />
+	<class name="com.org.Example.myproject.TC9669_Test" />
 	<class name="com.org.Example.myproject.TC9670_Test" />
 	<class name="com.org.Example.myproject.TC9671_Test" />
 	<class name="com.org.Example.myproject.TC9672_Test" />
