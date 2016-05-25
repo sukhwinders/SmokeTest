@@ -21,7 +21,7 @@ import com.utils.Data_loading;
 
 public class TC9666_Test {
   
-  Date d = new Date(System.currentTimeMillis());
+	Date d = new Date(System.currentTimeMillis());
 	String TP_Group	="Test Group "+d;
 	String firstwindow;
 	String secondwindow;
@@ -38,7 +38,7 @@ public class TC9666_Test {
 		  baseUrl = "https://login.salesforce.com";      
 	      driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 			driver.navigate().to(baseUrl);  
 	  }
 
@@ -98,7 +98,8 @@ public class TC9666_Test {
     Thread.sleep(6000);
     driver.findElement(By.xpath("//input[@name='dateid']")).click();
     Thread.sleep(6000);
-    new Select(driver.findElement(By.id("DocType0"))).selectByVisibleText("Bioterrorism Act Statement of Compliance");
+    Select dropdown = new Select(driver.findElement(By.id("DocType0")));
+    dropdown.selectByIndex(1);
     Thread.sleep(2000);
     driver.findElement(By.linkText("+ Add Another compliance criteria")).click();
     
@@ -106,11 +107,20 @@ public class TC9666_Test {
     driver.findElement(By.xpath("//button[contains(.,'Next Month')]")).click();
     Thread.sleep(3000);
     driver.findElement(By.xpath("html/body/div[1]/div/div[2]/form/div[2]/div[4]/section[1]/div/div/slds-datepicker/div/div[2]/table/tbody/tr[1]/td[6]/span")).click();
+    Thread.sleep(3000);
+    System.out.println("test0");
    
     
-    driver.findElement(By.xpath("html/body/div[1]/div/div[2]/form/div[3]/div[6]/a/span")).click();
+    driver.findElement(By.id("RequirementType0")).click();
+    System.out.println("test1");
+    Thread.sleep(5000);
     
+    driver.findElement(By.xpath("html/body/div[1]/div/div[2]/form/div[3]/div[6]/a/span")).click();
+    Thread.sleep(3000);
+    System.out.println("test2");
     driver.findElement(By.xpath("html/body/div[1]/div/div[3]/button[3]")).click();
+    Thread.sleep(3000);
+    System.out.println("test3");
     driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
     Thread.sleep(3000);
   
