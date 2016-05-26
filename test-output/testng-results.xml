@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="482428" started-at="2016-05-23T12:52:27Z" finished-at="2016-05-23T13:00:30Z">
+  <suite name="Default suite" duration-ms="305967" started-at="2016-05-26T05:05:00Z" finished-at="2016-05-26T05:10:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="482428" started-at="2016-05-23T12:52:27Z" finished-at="2016-05-23T13:00:30Z">
-      <class name="com.org.Example.myproject.TC9733_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9733_Test@1593948d]" name="beforeClass" is-config="true" duration-ms="9312" started-at="2016-05-23T18:22:27Z" finished-at="2016-05-23T18:22:37Z">
+    <test name="Default test" duration-ms="305967" started-at="2016-05-26T05:05:00Z" finished-at="2016-05-26T05:10:06Z">
+      <class name="com.org.Example.myproject.TC9735_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9735_Test@1593948d]" name="beforeClass" is-config="true" duration-ms="9353" started-at="2016-05-26T10:35:00Z" finished-at="2016-05-26T10:35:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Approve_Request()[pri:0, instance:com.org.Example.myproject.TC9733_Test@1593948d]" name="Approve_Request" duration-ms="472440" started-at="2016-05-23T18:22:37Z" finished-at="2016-05-23T18:30:29Z">
+        <test-method status="FAIL" signature="productTwoactor_workflow()[pri:0, instance:com.org.Example.myproject.TC9735_Test@1593948d]" name="productTwoactor_workflow" duration-ms="295521" started-at="2016-05-26T10:35:09Z" finished-at="2016-05-26T10:40:05Z">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[null value in entry: name=null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: null value in entry: name=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1015)
+	at com.org.Example.myproject.TC9735_Test.productTwoactor_workflow(TC9735_Test.java:193)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Approve_Request -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9733_Test@1593948d]" name="afterClass" is-config="true" duration-ms="653" started-at="2016-05-23T18:30:29Z" finished-at="2016-05-23T18:30:30Z">
+        </test-method> <!-- productTwoactor_workflow -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9735_Test@1593948d]" name="afterClass" is-config="true" duration-ms="1069" started-at="2016-05-26T10:40:05Z" finished-at="2016-05-26T10:40:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TC9733_Test -->
+      </class> <!-- com.org.Example.myproject.TC9735_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

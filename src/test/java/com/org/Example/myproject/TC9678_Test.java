@@ -26,7 +26,7 @@ public class TC9678_Test  {
 	Data_loading guitils = new Data_loading();
 	 String userName1 = guitils.getUserName("RequestorUsername");
 	 String password1 = guitils.getPassword("RequestorPassword");
-	 String Responder = guitils.getDATA("Partner_name");
+	 String Responder = guitils.getDATA("TradingPartnerName");
 	 String comment = guitils.getDATA("Comments");
 	
 	
@@ -61,30 +61,30 @@ public class TC9678_Test  {
 	    driver.findElement(By.linkText("ICIX")).click();
 	    driver.findElement(By.linkText("Document Library")).click();
 	    driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-	    tblAccounts= driver.findElement(By.xpath(sTblAccounts));		
-		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
-		
-		for (int r=0;r<RowsOfTable.size();r++)
-		{
-			ColOfTable=RowsOfTable.get(r).findElement(By.tagName("td[9]"));
-			String tdText=ColOfTable.getText();
-			String textToVerify="Yes";
-		
-			
-			if(tdText.equals(textToVerify))
-			{
-				
-				RowsOfTable.get(r).findElement(By.cssSelector(".forceIcon")).click();
-				Thread.sleep(2000);
-				driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate")).click();				
-				break;
-			}
-			
-		}	
+//	    tblAccounts= driver.findElement(By.xpath(sTblAccounts));		
+//		RowsOfTable=tblAccounts.findElements(By.tagName("tr"));		
+//		
+//		for (int r=0;r<RowsOfTable.size();r++)
+//		{
+//			ColOfTable=RowsOfTable.get(r).findElement(By.tagName("td[9]"));
+//			String tdText=ColOfTable.getText();
+//			String textToVerify="Yes";
+//		
+//			
+//			if(tdText.equals(textToVerify))
+//			{
+//				
+//				RowsOfTable.get(r).findElement(By.cssSelector(".forceIcon")).click();
+//				Thread.sleep(2000);
+//				driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate")).click();				
+//				break;
+//			}
+//			
+//		}	
 	    
 	    
-	    //driver.findElement(By.id("btn_ShowMore1")).click();
-	    //driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate")).click();
+	    driver.findElement(By.id("btn_ShowMore1")).click();
+	    driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate")).click();
 	    driver.findElement(By.id("requestName")).clear();
 	    driver.findElement(By.id("requestName")).sendKeys(Document);
 	    driver.findElement(By.id("recipients")).clear();

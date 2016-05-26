@@ -127,7 +127,7 @@ public class TC9735_Test {
 		driver.findElement(By.xpath("//input[@placeholder='Find list']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@placeholder='Find list']")).click();
-		Thread.sleep(7000);
+		Thread.sleep(4000);
 		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
 
 		Thread.sleep(7000);
