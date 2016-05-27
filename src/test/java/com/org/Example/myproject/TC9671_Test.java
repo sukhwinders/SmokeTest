@@ -91,7 +91,7 @@ import com.utils.Data_loading;
 		    Thread.sleep(9000);
 		    //script for Tsbs template
 		    driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		    Thread.sleep(3000);
+		    Thread.sleep(5000);
 		    driver.findElement(By.id("j_id0:form:createTab")).click();
 		    Thread.sleep(3000);
 		    driver.findElement(By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46")).clear();

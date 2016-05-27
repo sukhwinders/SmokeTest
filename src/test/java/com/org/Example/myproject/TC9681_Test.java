@@ -22,7 +22,7 @@ public class TC9681_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String Responder = guitils.getDATA("TPResponder");
+	String Responder = guitils.getDATA("TradingPartnerName");
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
 	String comment = guitils.getPassword("Comments");
@@ -126,7 +126,7 @@ public class TC9681_Test {
 		driver.findElement(By.xpath("//input[@placeholder='Find list']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@placeholder='Find list']")).click();
-		Thread.sleep(7000);
+		Thread.sleep(4000);
 		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
 
 		Thread.sleep(7000);

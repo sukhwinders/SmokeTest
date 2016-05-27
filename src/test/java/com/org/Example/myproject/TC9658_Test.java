@@ -25,10 +25,10 @@ public class TC9658_Test  {
 	 WebDriver driver;
 	 String baseUrl; 
 	
-	    Date d = new Date(System.currentTimeMillis());
-		String 	Product		="TestProduct"+d;
-		String randomNumbers = RandomStringUtils.randomNumeric(8);
-		String UPCproduct = "1111" + randomNumbers; 
+	 Date d = new Date(System.currentTimeMillis());
+	 String 	Product		="TestProduct"+d;
+	 String randomNumbers = RandomStringUtils.randomNumeric(8);
+	 String UPCproduct = "1111" + randomNumbers; 
 		
 	 String firstwindow;
 	 Data_loading guitils = new Data_loading();
@@ -40,7 +40,7 @@ public class TC9658_Test  {
 	 
   @Test
   public void searchingfor_conectTOproduct() throws Exception {
-	    driver.findElement(By.id("username")).clear();
+	  driver.findElement(By.id("username")).clear();
 	    driver.findElement(By.id("username")).sendKeys(userName2);
 	    driver.findElement(By.id("password")).clear();
 	    driver.findElement(By.id("password")).sendKeys(password2);
@@ -66,11 +66,9 @@ public class TC9658_Test  {
 		  
 	    driver.findElement(By.xpath("//button[contains(@ng-click,'vm.AddNewProduct()')]")).click();
 	    driver.findElement(By.xpath("//input[@id='txt_UPProductRelationship_Name']")).sendKeys(Product);
-	    driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
+	    /*driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
 	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();
-	  
-	 
+	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();*/
 	    new Select(driver.findElement(By.id("ddl_UPRelationship_Type"))).selectByVisibleText("Buy");
 	    
 	    String strTypeDrp="//select[@id='ddl_UPRelationship_Status']";
@@ -143,7 +141,7 @@ public class TC9658_Test  {
 	  baseUrl = "https://login.salesforce.com";      
       driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
   }
 

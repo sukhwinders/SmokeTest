@@ -25,7 +25,7 @@ public class TC9663_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String partner_name = guitils.getDATA("Partner_name");
+	String partner_name = guitils.getDATA("Responder");
 
 
 

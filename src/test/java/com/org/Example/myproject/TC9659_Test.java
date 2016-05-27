@@ -30,7 +30,7 @@ public class TC9659_Test {
 	 Data_loading guitils = new Data_loading();
 	 String userName1     = guitils.getUserName("RequestorUsername");
 	 String password1     = guitils.getPassword("RequestorPassword");
-	 String strTPName = guitils.getUserName("TradingPartnerName");
+	 String strTPName = guitils.getUserName("TPResponder");
 	 
 	  @BeforeClass
 	  public void beforeClass() {
@@ -73,9 +73,9 @@ public class TC9659_Test {
 	  
 	    driver.findElement(By.xpath("//button[contains(@ng-click,'vm.AddNewProduct()')]")).click();
 	    driver.findElement(By.xpath("//input[@id='txt_UPProductRelationship_Name']")).sendKeys("TEST Product");
-	    driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
+	    /*driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']")).sendKeys(strTPName);
 	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();
+	    driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();*/
 	  
 	 
 	    new Select(driver.findElement(By.id("ddl_UPRelationship_Type"))).selectByVisibleText("Buy");
