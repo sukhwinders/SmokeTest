@@ -51,7 +51,7 @@ public class Data_loading {
     	
 //    	formatter = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
 		convertedDate = formatter.parse(currentDate);
-//		System.out.println(convertedDate);
+//		
 		return convertedDate;
     }
 
@@ -64,7 +64,7 @@ public class Data_loading {
 	    cal.add(Calendar.DATE, 1);     
 	    String tommorrow= (String)(formatter.format(cal.getTime()));
 		convertedDate = formatter.parse(tommorrow);
-//		System.out.println(convertedDate);
+//		
 		return convertedDate;		
 	}
 
@@ -239,7 +239,7 @@ public class Data_loading {
     	        //{
     	        //    projectDir = projectDir + "src/test/java/Config/";
     	       // }
-    	        System.out.println("Using base directory as: " + projectDir);
+    	        
     	     return projectDir; 
     	     }
 

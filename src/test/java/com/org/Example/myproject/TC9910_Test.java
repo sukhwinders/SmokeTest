@@ -16,7 +16,7 @@ import com.utils.Data_loading;
 
 
 
-public class TC9888_Test {
+public class TC9910_Test {
 
 	WebDriver driver;
 	String baseUrl;
@@ -36,7 +36,7 @@ public class TC9888_Test {
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
+
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
@@ -48,7 +48,7 @@ public class TC9888_Test {
 
 	@Test
 	public void createNew_form() throws InterruptedException {
-
+		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(userName1);
 		driver.findElement(By.id("password")).clear();
@@ -62,12 +62,14 @@ public class TC9888_Test {
 		Thread.sleep(5000);
 
 		System.out
-				.println("TC9888 : Verify create a CF Form using 6 Tabs, 6 sections and 4 Question in each section with mandatory and linked questions (Scenario 19 - CF)");
+				.println("TC9910:Verify create BP Form using 1 Tab, 1 sections and 5 Questions(With different Answer types) (Scenario 30-BPF)");
 		// click on forms button
+		Thread.sleep(5000);
 		driver.findElement(By.name("j_id0:form:j_id7")).click();
 		createContainer();
 
 		createLayout();
+		Thread.sleep(5000);
 		// Click on tabs button
 		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
 		createTabs();
@@ -76,116 +78,7 @@ public class TC9888_Test {
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:selectTab"))
 				.click();
-
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
 		// create 4 sections
-		createSections();
-
-		/* Tab : 1 sections : 1 */
-		/* ################Section 1 Start#################### */
-		// Select 1st section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 1 End#################### */
-
-		
-
-		/*
-		 * Tab : 2 sections : 6
-		 */
-
-		// Click on tabs button
-		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		// select 2ndtab
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:selectTab"))
-				.click();
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		createSections();
-		/* ################Section 1 Start#################### */
-		// Select 1st section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 1 End#################### */
-
-		
-
-		/*
-		 * Tab : 3 Sections 6
-		 */
-		// Click on tabs button
-		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		// select 2ndtab
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:selectTab"))
-				.click();
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		createSections();
-		/* ################Section 1 Start#################### */
-		// Select 1st section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 1 End#################### */
-
-		
-
-		/*
-		 * Tab : 3 Sections 6
-		 */
-		// Click on tabs button
-		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		// select 2ndtab
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:selectTab"))
-				.click();
 		// Click on sections button
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
@@ -202,7 +95,8 @@ public class TC9888_Test {
 		Thread.sleep(5000);
 		// Create questions for 1st section
 		createQuestionText();
-		createQuestionCheckbox();
+		createQuestionLongText();
+		createQuestionDateAndTime();
 		createQuestionRadio();
 		createQuestionPicklist();
 		Thread.sleep(5000);
@@ -212,75 +106,7 @@ public class TC9888_Test {
 
 		
 
-		/* Tab : 5 Sections 6 */
-
-		// Click on tabs button
-		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		// select 2ndtab
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:4:selectTab"))
-				.click();
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		createSections();
-		/* ################Section 1 End#################### */
-		// Select 1st section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 1 End#################### */
-
 		
-
-		/* Tab : 6 Sections 6 */
-		// Click on tabs button
-		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		// select 2ndtab
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:5:selectTab"))
-				.click();
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		createSections();
-		/* ################Section 1 End#################### */
-		// Select 1st section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 1 End#################### */
-
-		
-
-		/* _______________________End_________________________ */
-
 	}
 
 	public void createContainer() throws InterruptedException {
@@ -306,11 +132,11 @@ public class TC9888_Test {
 
 		Containertypedropdown.selectByVisibleText("Single Form");
 
-		/*
-		 * driver.findElement( By.xpath(
-		 * "//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"
-		 * )) .click();
-		 */
+		
+		  driver.findElement( By.xpath(
+		  "//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"
+		  )) .click();
+		 
 
 		Select Librarydropdown = new Select(
 				driver.findElement(By
@@ -359,56 +185,49 @@ public class TC9888_Test {
 	public void createTabs() throws InterruptedException {
 
 		Thread.sleep(4000);
+		Thread.sleep(7000);
+		driver.findElement(By.id("j_id0:form:createTab")).click();
 
-		for (int i = 0; i <= 5; i++) {
+	/*	for (int i = 0; i <= 1; i++) {
+			Thread.sleep(7000);
 			driver.findElement(By.id("j_id0:form:createTab")).click();
-			Thread.sleep(5000);
-		}
 
+		}*/
+		Thread.sleep(6000);
 		// Send name for Tab 1
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
-				.clear();
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46")) .clear();
+		 */
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
 				.sendKeys("Tab1");
 		Thread.sleep(1000);
 
 		// Send name for Tab 2
-		driver.findElement(
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46")) .clear();
+		 */
+		/*driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46"))
-				.sendKeys("Tab2");
+				.sendKeys("Tab2");*/
 		// Send name for Tab 3
-		driver.findElement(
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46")) .clear();
+		 */
+	/*	driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
-				.sendKeys("Tab2");
+				.sendKeys("Tab3");*/
 		// Send name for Tab 4
-		driver.findElement(
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46")) .clear();
+		 */
+	/*	driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
-				.sendKeys("Tab2");
-		// Send name for Tab 5
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:4:j_id46"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:4:j_id46"))
-				.sendKeys("Tab5");
-		// Send name for Tab 6
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:5:j_id46"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:5:j_id46"))
-				.sendKeys("Tab6");
+				.sendKeys("Tab4");*/
 
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -417,18 +236,16 @@ public class TC9888_Test {
 
 	public void createSections() throws InterruptedException {
 
-		Thread.sleep(3000);
-		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:createSection']"))
+		Thread.sleep(8000);
+		driver.findElement(By.xpath("//input[@id='j_id0:form:createSection']"))
 				.click();
 		Thread.sleep(5000);
-		/*// create 6 sections
-		for (int i = 0; i <= 5; i++) {
-			driver.findElement(
-					By.xpath("//input[@id='j_id0:form:createSection']"))
-					.click();
-			Thread.sleep(5000);
-		}*/
+		// create 4 sections
+		/*
+		 * for (int i = 0; i <= 3; i++) { driver.findElement(
+		 * By.xpath("//input[@id='j_id0:form:createSection']")) .click();
+		 * Thread.sleep(5000); }
+		 */
 		// Send name for Section 1
 		driver.findElement(
 				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id73"))
@@ -438,41 +255,7 @@ public class TC9888_Test {
 				.sendKeys("Section 1");
 		Thread.sleep(1000);
 
-		/*// Send name for Section 2
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"))
-				.sendKeys("Section 2");
-		// Send name for Section 3
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"))
-				.sendKeys("Section 3");
-		// Send name for Section 4
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"))
-				.sendKeys("Section 4");
-		// Send name for Section 5
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:4:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:4:j_id73"))
-				.sendKeys("Section 5");
-		// Send name for Section 6
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:5:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:5:j_id73"))
-				.sendKeys("Section 6");*/
+	
 
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -480,15 +263,190 @@ public class TC9888_Test {
 
 	}
 
-	public void createQuestionRadio() throws InterruptedException {
-		// Radio Question with 5 Values
+	
 
+	public void createQuestionText() throws InterruptedException {
+		// Text Question with 1 value
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
+				.sendKeys("Text Question");
+		
+		  driver.findElement( By.id(
+		  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
+		  )) .click();
+		 
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
+				.click();
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
+				.sendKeys("Text Question");
+		//Link existing question
+		driver.findElement(By.xpath(".//*[@id='j_id0:form:newElementWithQuestion:newElementBlock:inputElementLinkedQuestion_lkwgt']/img")).click();
+		
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
+				.click();
+		Thread.sleep(5000);
+		driver.findElement(
+				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:0:selectElement"))
+				.click();
+		Thread.sleep(6000);
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+				.click();
+		Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
+				.sendKeys("Text Question");
+		//Code for link question
+		driver.findElement(By.xpath("//img[@title='Search']")).click();
+		Thread.sleep(3000);
+		driver.findElement(
+				By.xpath("//input[@id='input_searchLibraryQuestion']")).clear();
+		driver.findElement(
+				By.xpath("//input[@id='input_searchLibraryQuestion']"))
+				.sendKeys("text");
+
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//img[@title='Filter List']")).click();
+		Thread.sleep(5000);
+		driver.findElement(
+				By.xpath("//*[@id='divLibraryQuestionList']/table/tbody/tr/td[1]/a"))
+				.click();
+		/*-------------------------------------------*/
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
+				.sendKeys("V1");
+		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+		Thread.sleep(6000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:clearNewLinkedQuestion"))
+				.click();
+		Thread.sleep(6000);
+		/* _______________________End_________________________ */
+
+	}
+
+	public void createQuestionLongText() throws InterruptedException {
+		// Long Text Question with 4 values
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
+				.sendKeys("Long Text Question");
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
+				.sendKeys("Long Text Question");
+		  driver.findElement( By.id(
+				  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
+				  )) .click();
+		new Select(
+				driver.findElement(By
+						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
+				.selectByVisibleText("long text");
+	/*	Select dependencydropdwn = new Select(
+				driver.findElement(By
+						.xpath("//select[@id='j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionDependencyAction']")));
+		dependencydropdwn.selectByVisibleText("Show");*/
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
+				.click();
+		Thread.sleep(5000);
+		driver.findElement(
+				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:1:selectElement"))
+				.click();
+		Thread.sleep(6000);
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+				.click();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
+				.sendKeys("Long Text Question 1");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
+				.sendKeys("V1");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+				.click();
+		Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
+				.sendKeys("Long Text Question 2");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
+				.sendKeys("V2");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+				.click();
+		Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
+				.sendKeys("Long Text Question 3");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
+				.sendKeys("V3");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+				.click();
+		Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
+				.sendKeys("Long Text Question 4");
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
+				.clear();
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
+				.sendKeys("V4");
+		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+
+		Thread.sleep(6000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:clearNewLinkedQuestion"))
+				.click();
+		Thread.sleep(6000);
+		/* _______________________End_________________________ */
+
+	}
+
+	public void createQuestionDateAndTime() throws InterruptedException {
+		// Date Time Question with 4 Values
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
-				.sendKeys("Radio Question");
+				.sendKeys("Date Time Question");
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"))
 				.click();
@@ -501,149 +459,17 @@ public class TC9888_Test {
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.sendKeys("Radio Question");
+				.sendKeys("Date Time Question");
 		new Select(
 				driver.findElement(By
 						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
-				.selectByVisibleText("radio");
+				.selectByVisibleText("datetime");
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
 				.click();
 		Thread.sleep(4000);
-		// Select question Note : change id here
 		driver.findElement(
 				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:2:selectElement"))
-				.click();
-		Thread.sleep(6000);
-		// value 1
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.sendKeys("Radio 1");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
-				.sendKeys("V1");
-		// value 2
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.sendKeys("Radio 2");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
-				.sendKeys("V2");
-		// value 3
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
-				.sendKeys("Radio 3");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
-				.sendKeys("V3");
-		// value 4
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
-				.sendKeys("Radio 4");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
-				.sendKeys("V4");
-		// value 5
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
-				.sendKeys("Radio 5");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
-				.sendKeys("V5");
-
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:clearNewLinkedQuestion"))
-				.click();
-		Thread.sleep(6000);
-		/* _______________________End_________________________ */
-	}
-
-	public void createQuestionCheckbox() throws InterruptedException {
-		// Checkbox with 5 values
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
-				.sendKeys("Question Chekbox ");
-		/*
-		 * driver.findElement( By.id(
-		 * "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
-		 * )) .click();
-		 */
-
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.click();
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.sendKeys("Question Chekbox ");
-		new Select(
-				driver.findElement(By
-						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
-				.selectByVisibleText("checkbox");
-
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:1:selectElement"))
 				.click();
 		Thread.sleep(6000);
 		driver.findElement(
@@ -655,7 +481,7 @@ public class TC9888_Test {
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.sendKeys("Chekbox  1");
+				.sendKeys("Date Time Question 1");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.clear();
@@ -671,14 +497,13 @@ public class TC9888_Test {
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.sendKeys("Chekbox 2");
+				.sendKeys("Date Time Question 2");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
-		// value 3
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
 				.click();
@@ -688,14 +513,13 @@ public class TC9888_Test {
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
-				.sendKeys("Chekbox 3");
+				.sendKeys("Date Time Question 3");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.sendKeys("V3");
-		// value 4
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
 				.click();
@@ -705,33 +529,195 @@ public class TC9888_Test {
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
-				.sendKeys("Chekbox 4");
+				.sendKeys("Date Time Question 4");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.clear();
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.sendKeys("V4");
-		// value 5
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
-				.sendKeys("Chekbox 5");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
-				.sendKeys("V5");
-
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(6000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:clearNewLinkedQuestion"))
+				.click();
+		Thread.sleep(6000);
+		/* _______________________End_________________________ */
+
+	}
+
+	public void createQuestionRadio() throws InterruptedException {
+		// Radio Question with 5 Values
+
+				Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
+				.sendKeys("Radio Question");
+		
+		 driver.findElement( By.id(
+		  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
+		 )) .click();
+		 
+		/*// Read only
+		Thread.sleep(3000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newElementBlock:inputElementReadOnly"))
+				.click();*/
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
+				.click();
+		
+		Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
+				.sendKeys("Radio Question");
+		new Select(
+				driver.findElement(By
+						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
+				.selectByVisibleText("radio");
+		Thread.sleep(4000);
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
+				.click();
+		Thread.sleep(4000);
+		// Select question Note : change id here
+		driver.findElement(
+				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:3:selectElement"))
+				.click();
+		Thread.sleep(6000);
+		for(int i =0; i<=14; i++){
+			Thread.sleep(4000);
+			driver.findElement(
+					By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+					.click();
+			Thread.sleep(4000);
+		}
+		// value 1	
+		Thread.sleep(4000);		
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
+				.sendKeys("Radio 1");	
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
+				.sendKeys("V1");
+		// value 2
+			Thread.sleep(4000);		
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
+				.sendKeys("Radio 2");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
+				.sendKeys("V2");
+		// value 3
+				Thread.sleep(4000);		
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
+				.sendKeys("Radio 3");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
+				.sendKeys("V3");
+		// value 4
+				Thread.sleep(4000);		
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
+				.sendKeys("Radio 4");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
+				.sendKeys("V4");
+		// value 5
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
+				.sendKeys("Radio 5");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
+				.sendKeys("V5");
+		// value 6
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id166"))
+				.sendKeys("Radio 6");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id170"))
+				.sendKeys("V6");
+		// value 7
+			Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id166"))
+				.sendKeys("Radio 7");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id170"))
+				.sendKeys("V7");
+		// value 8
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id166"))
+				.sendKeys("Radio 8");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id170"))
+				.sendKeys("V8");
+		// value 9
+			Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id166"))
+				.sendKeys("Radio 9");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id170"))
+				.sendKeys("V9");
+		// value 10
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id166"))
+				.sendKeys("Radio 10");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id170"))
+				.sendKeys("V10");
+		// value 11
+			Thread.sleep(4000);		
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id166"))
+				.sendKeys("Radio 11");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id170"))
+				.sendKeys("V11");
+		// value 12
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id166"))
+				.sendKeys("Radio 12");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id170"))
+				.sendKeys("V12");
+		// value 13
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id166"))
+				.sendKeys("Radio 13");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id170"))
+				.sendKeys("V13");
+		// value 14
+			Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id166"))
+				.sendKeys("Radio 14");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id170"))
+				.sendKeys("V14");
+		// value 15
+
+		Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id166"))
+				.sendKeys("Radio 15");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id170"))
+				.sendKeys("V15");
+				
+
+		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:clearNewLinkedQuestion"))
 				.click();
@@ -741,17 +727,21 @@ public class TC9888_Test {
 
 	public void createQuestionPicklist() throws InterruptedException {
 		// Picklist Question with 5 Values
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.sendKeys("Picklist Question");
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.click();
 
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.sendKeys("Picklist Question");
+		 driver.findElement( By.id(
+				  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
+				  )) .click();
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
+				.click();
+		Thread.sleep(5000);
 		new Select(
 				driver.findElement(By
 						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
@@ -759,96 +749,139 @@ public class TC9888_Test {
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
 				.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		driver.findElement(
-				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:3:selectElement"))
+				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:4:selectElement"))
 				.click();
 		Thread.sleep(6000);
-		// Value 1
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
+		for(int i =0; i<=14; i++){
+			Thread.sleep(4000);
+			driver.findElement(
+					By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
+					.click();
+			Thread.sleep(4000);
+		}
+		// value 1	
+		Thread.sleep(4000);		
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.sendKeys("Picklist Question 1");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
-				.clear();
+				.sendKeys("PickList 1");	
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
-		// Value 2
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
+		// value 2
+			Thread.sleep(4000);		
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.sendKeys("Picklist Question 2");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
-				.clear();
-		driver.findElement(
+				.sendKeys("PickList 2");
+				driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
-		// Value 3
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
+		// value 3
+				Thread.sleep(4000);		
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
-				.sendKeys("Picklist Question 3");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
-				.clear();
-		driver.findElement(
+				.sendKeys("PickList 3");
+				driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.sendKeys("V3");
-		// Value 4
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
+		// value 4
+				Thread.sleep(4000);		
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
-				.sendKeys("Picklist Question 4");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
-				.clear();
-		driver.findElement(
+				.sendKeys("PickList 4");
+				driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.sendKeys("V4");
-		// Value 5
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
+		// value 5
+				Thread.sleep(4000);
+				driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
-				.sendKeys("Picklist Question 5");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
-				.clear();
-		driver.findElement(
+				.sendKeys("PickList 5");
+				driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.sendKeys("V5");
+		// value 6
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id166"))
+				.sendKeys("PickList 6");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id170"))
+				.sendKeys("V6");
+		// value 7
+			Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id166"))
+				.sendKeys("PickList 7");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id170"))
+				.sendKeys("V7");
+		// value 8
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id166"))
+				.sendKeys("PickList 8");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id170"))
+				.sendKeys("V8");
+		// value 9
+			Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id166"))
+				.sendKeys("PickList 9");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id170"))
+				.sendKeys("V9");
+		// value 10
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id166"))
+				.sendKeys("PickList 10");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id170"))
+				.sendKeys("V10");
+		// value 11
+			Thread.sleep(4000);		
+		driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id166"))
+				.sendKeys("PickList 11");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id170"))
+				.sendKeys("V11");
+		// value 12
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id166"))
+				.sendKeys("PickList 12");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id170"))
+				.sendKeys("V12");
+		// value 13
+				Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id166"))
+				.sendKeys("PickList 13");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id170"))
+				.sendKeys("V13");
+		// value 14
+			Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id166"))
+				.sendKeys("PickList 14");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id170"))
+				.sendKeys("V14");
+		// value 15
+
+		Thread.sleep(4000);
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id166"))
+				.sendKeys("PickList 15");
+				driver.findElement(
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id170"))
+				.sendKeys("V15");
 
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(5000);
@@ -860,76 +893,9 @@ public class TC9888_Test {
 		/* _______________________End_________________________ */
 
 	}
-
-	public void createQuestionText() throws InterruptedException {
-		// Text Question with 1 value
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
-				.sendKeys("Text Question");
-		/*
-		 * driver.findElement( By.id(
-		 * "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
-		 * )) .click();
-		 */
-
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.click();
-
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.sendKeys("Text Question");
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
-				.click();
-		Thread.sleep(5000);
-		driver.findElement(
-				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:0:selectElement"))
-				.click();
-		Thread.sleep(6000);
-		// Value 1
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.sendKeys("Text Question 1");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
-				.sendKeys("V1");
-		// Value 2
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
-				.sendKeys("Text Question 2");
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
-				.sendKeys("V2");
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(6000);
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:clearNewLinkedQuestion"))
-				.click();
-		Thread.sleep(6000);
-		/* _______________________End_________________________ */
-
-	}
+public void dependancy(){
+	
+}
 
 	public void switchtoLightining() throws InterruptedException {
 

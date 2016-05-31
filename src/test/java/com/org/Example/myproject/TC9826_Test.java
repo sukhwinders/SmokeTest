@@ -45,7 +45,7 @@ import com.utils.Data_loading;
 			  baseUrl = "https://login.salesforce.com";      
 		      driver = new FirefoxDriver();
 			  driver.manage().window().maximize();
-			  driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+			  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			  driver.navigate().to(baseUrl);  
 		  }
 
@@ -136,9 +136,6 @@ import com.utils.Data_loading;
 		    //passing Parameters
 			driver.findElement(By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']")).sendKeys("Test data one");
 			driver.findElement(By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']")).sendKeys("T0");
-			driver.findElement(By.xpath("//input[@id='j_id0:form:answerOptionBlock:createAnswerOption']")).click();
-			driver.findElement(By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166']")).sendKeys("Test data one");
-			driver.findElement(By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170']")).sendKeys("T1");
 			Thread.sleep(5000);
 		    driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		    Thread.sleep(5000);

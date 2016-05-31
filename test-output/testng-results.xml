@@ -2,28 +2,51 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="305967" started-at="2016-05-26T05:05:00Z" finished-at="2016-05-26T05:10:06Z">
+  <suite name="Default suite" duration-ms="271305" started-at="2016-05-27T04:41:27Z" finished-at="2016-05-27T04:45:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="305967" started-at="2016-05-26T05:05:00Z" finished-at="2016-05-26T05:10:06Z">
-      <class name="com.org.Example.myproject.TC9735_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9735_Test@1593948d]" name="beforeClass" is-config="true" duration-ms="9353" started-at="2016-05-26T10:35:00Z" finished-at="2016-05-26T10:35:09Z">
+    <test name="Default test" duration-ms="271305" started-at="2016-05-27T04:41:27Z" finished-at="2016-05-27T04:45:58Z">
+      <class name="com.org.Example.myproject.TC9828_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9828_Test@482f8f11]" name="beforeClass" is-config="true" duration-ms="9958" started-at="2016-05-27T10:11:27Z" finished-at="2016-05-27T10:11:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="productTwoactor_workflow()[pri:0, instance:com.org.Example.myproject.TC9735_Test@1593948d]" name="productTwoactor_workflow" duration-ms="295521" started-at="2016-05-26T10:35:09Z" finished-at="2016-05-26T10:40:05Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="createNew_form()[pri:0, instance:com.org.Example.myproject.TC9828_Test@482f8f11]" name="createNew_form" duration-ms="261317" started-at="2016-05-27T10:11:37Z" finished-at="2016-05-27T10:15:58Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[null value in entry: name=null]]>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//a[contains(.,'LQ-000025')]"}
+Command duration or timeout: 25.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Laptop-2', ip: '172.24.0.131', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f2f8f1a0-840e-4e91-b07a-4fb17e2a1f4c
+*** Element info: {Using=xpath, value=//a[contains(.,'LQ-000025')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: null value in entry: name=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1015)
-	at com.org.Example.myproject.TC9735_Test.productTwoactor_workflow(TC9735_Test.java:193)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//a[contains(.,'LQ-000025')]"}
+Command duration or timeout: 25.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Laptop-2', ip: '172.24.0.131', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f2f8f1a0-840e-4e91-b07a-4fb17e2a1f4c
+*** Element info: {Using=xpath, value=//a[contains(.,'LQ-000025')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9828_Test.create_Questions(TC9828_Test.java:421)
+	at com.org.Example.myproject.TC9828_Test.createNew_form(TC9828_Test.java:175)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -49,17 +72,20 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//a[contains(.,'LQ-000025')]"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Laptop-2', ip: '172.24.0.131', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Isteam/AppData/Local/Temp/anonymous1696611638308377863webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Isteam/AppData/Local/Temp/anonymous1696611638308377863webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productTwoactor_workflow -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9735_Test@1593948d]" name="afterClass" is-config="true" duration-ms="1069" started-at="2016-05-26T10:40:05Z" finished-at="2016-05-26T10:40:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TC9735_Test -->
+        </test-method> <!-- createNew_form -->
+      </class> <!-- com.org.Example.myproject.TC9828_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
