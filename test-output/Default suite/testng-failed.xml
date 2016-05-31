@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.org.Example.myproject.TC9666_Test">
+      <class name="com.org.Example.myproject.TC9912_Test">
         <methods>
-          <include name="SetAndSendCompilince"/>
-          <include name="afterClass"/>
           <include name="beforeClass"/>
+          <include name="createNew_form"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.org.Example.myproject.TC9666_Test -->
+      </class> <!-- com.org.Example.myproject.TC9912_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

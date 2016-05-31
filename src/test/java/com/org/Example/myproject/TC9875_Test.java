@@ -85,9 +85,9 @@ public class TC9875_Test {
 
 		Containertypedropdown.selectByVisibleText("Single Form");
 
-		driver.findElement(
+	/*	driver.findElement(
 				By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"))
-				.click();
+				.click();*/
 
 		Select Librarydropdown = new Select(
 				driver.findElement(By
@@ -295,7 +295,8 @@ public class TC9875_Test {
 				.click();
 		Thread.sleep(6000);
 		/*_______________________End_________________________*/
-		// Date Question with 4 Values
+		// Checkbox Question with 4 Values
+	
 				driver.findElement(
 						By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 						.clear();
@@ -403,7 +404,7 @@ public class TC9875_Test {
 				Thread.sleep(6000);
 				/*_______________________End_________________________*/
 				
-				// Checkbox Question with 4 Values
+				// Date Question with 4 Values
 				driver.findElement(
 						By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 						.clear();
