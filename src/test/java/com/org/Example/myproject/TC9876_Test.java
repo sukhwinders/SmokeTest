@@ -85,9 +85,9 @@ public class TC9876_Test {
 
 		Containertypedropdown.selectByVisibleText("Single Form");
 
-		driver.findElement(
+	/*	driver.findElement(
 				By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"))
-				.click();
+				.click();*/
 
 		Select Librarydropdown = new Select(
 				driver.findElement(By
