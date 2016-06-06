@@ -42,7 +42,7 @@ public class TC9663_Test {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 
@@ -61,8 +61,8 @@ public class TC9663_Test {
 		driver.findElement(By.linkText(partner_name)).click();
 		driver.findElement(By.xpath("//a[contains(.,'Edit')]")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		//new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Pending");
-		new Select(driver.findElement(By.xpath("//select[@id='ddl_UURelationship_Type']"))).selectByVisibleText("Vendor");
+		new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Pending");
+		new Select(driver.findElement(By.xpath("//select[@id='ddl_UURelationship_Type']"))).selectByVisibleText("Cold Storage");
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
 		driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
 		driver.switchTo().defaultContent();
