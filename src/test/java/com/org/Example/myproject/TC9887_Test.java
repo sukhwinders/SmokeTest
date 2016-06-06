@@ -230,8 +230,7 @@ public class TC9887_Test {
 		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
 		Thread.sleep(3000);
 		// Select 3rd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:selectSection"))
+		driver.findElement(By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:selectSection"))
 				.click();
 		Thread.sleep(5000);
 		// click on questions tab

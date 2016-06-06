@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
+
+
 public class TC9830_Test {
 
 	WebDriver driver;
@@ -52,6 +54,7 @@ public class TC9830_Test {
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		Thread.sleep(3000);
+		System.out.println("Scenario 05-BPF");
 		// script to container template
 		driver.findElement(By.name("j_id0:form:j_id7")).click();
 		Thread.sleep(3000);

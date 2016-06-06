@@ -25,7 +25,7 @@ public class TC9663_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String partner_name = guitils.getDATA("Partner_name1");
+	String partner_name = guitils.getDATA("Partner_name2");
 
 
 
@@ -61,9 +61,11 @@ public class TC9663_Test {
 		driver.findElement(By.linkText(partner_name)).click();
 		driver.findElement(By.xpath("//a[contains(.,'Edit')]")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		//new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Pending");
+		//new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Active");
 		new Select(driver.findElement(By.xpath("//select[@id='ddl_UURelationship_Type']"))).selectByVisibleText("Vendor");
+		Thread.sleep(3000);
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
+		
 		driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
 		driver.switchTo().defaultContent();
 		Thread.sleep(8000);
