@@ -308,6 +308,33 @@ public class Data_loading {
        		}
        
        
+    	    
+    	    public void LightiningView(WebDriver driver) throws InterruptedException  { 
+    	  	  
+    	  	  
+    			if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
+    				
+    			         driver.findElement(By.id("userNavLabel")).click();
+    			         Thread.sleep(2000);
+    			          driver.findElement(By.xpath("//a[@class='menuButtonMenuLink']")).click();
+    			     
+    			          String parentWindow= driver.getWindowHandle();
+    			          Set<String> allWindows = driver.getWindowHandles();
+    			          for(String curWindow : allWindows){
+    			              driver.switchTo().window(curWindow);
+    			          //perform operation on popup
+    			              driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
+    			              driver.findElement(By.id("simpleDialog0button0")).click();
+    			           // switch back to parent window
+    			       driver.switchTo().window(parentWindow);
+    			       Thread.sleep(8000);
+    			       driver.navigate().refresh();
+    			          }
+    			     }
+    			     else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
+    			    	 
+    			    	 driver.findElement(By.linkText("App Launcher")).click();
+    			     }}
        		
 
 }

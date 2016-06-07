@@ -62,7 +62,7 @@ import org.openqa.selenium.support.ui.Select;
 		    driver.findElement(By.id("password")).clear();
 		    driver.findElement(By.id("password")).sendKeys(password1);
 		    driver.findElement(By.id("Login")).click();
-		    switchtoLightining();
+		    guitils.LightiningView(driver);
 		    driver.findElement(By.linkText("App Launcher")).click();
 		    Thread.sleep(3000);
 		    driver.findElement(By.linkText("ICIX")).click();

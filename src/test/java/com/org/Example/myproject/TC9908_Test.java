@@ -52,7 +52,7 @@ public class TC9908_Test {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("Test@123");
 		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
+		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();

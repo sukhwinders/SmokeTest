@@ -46,7 +46,7 @@ public class TC9658_Test  {
 	    driver.findElement(By.id("password")).sendKeys(password2);
 	    driver.findElement(By.id("Login")).click();
 	    Thread.sleep(5000);
-	    switchtoLightining();
+	    guitils.LightiningView(driver);
 	    System.out.println(Product);
 	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click();

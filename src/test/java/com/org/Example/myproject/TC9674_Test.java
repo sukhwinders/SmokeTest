@@ -56,7 +56,7 @@ public class TC9674_Test {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(password1);
 		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
+		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("App Launcher")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]")).click();

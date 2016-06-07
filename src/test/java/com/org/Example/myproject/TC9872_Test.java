@@ -53,7 +53,7 @@ public class TC9872_Test {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("Test@123");
 		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
+		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("App Launcher")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();

@@ -36,7 +36,8 @@ public class TC9647_Test {
 	    driver.findElement(By.id("Login")).click();
 	    Thread.sleep(8000);
 	    
-	    switchtoLightining();
+	    //switchtoLightining();
+	    guitils.LightiningView(driver);
 	   
 	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click();
@@ -77,7 +78,9 @@ public class TC9647_Test {
 		if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
 			
 		         driver.findElement(By.id("userNavLabel")).click();
-		          driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
+		         Thread.sleep(2000);
+		          driver.findElement(By.xpath("//a[@class='menuButtonMenuLink']")).click();
+		     
 		          String parentWindow= driver.getWindowHandle();
 		          Set<String> allWindows = driver.getWindowHandles();
 		          for(String curWindow : allWindows){

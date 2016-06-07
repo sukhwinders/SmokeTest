@@ -60,7 +60,7 @@ public class TC9856_Test {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(password1);
 		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
+		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
@@ -132,7 +132,7 @@ public class TC9856_Test {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(password2);
 		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
+		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
@@ -298,7 +298,7 @@ public class TC9856_Test {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys(password2);
 		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
+		guitils.LightiningView(driver);
 		Thread.sleep(15000);
 		driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(5000);

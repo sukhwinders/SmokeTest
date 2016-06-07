@@ -55,7 +55,7 @@ public class TC9676_Test {
 		driver.findElement(By.id("password")).sendKeys(password1);
 		driver.findElement(By.id("Login")).click();
 		Thread.sleep(5000); 
-		switchtoLightining();
+		guitils.LightiningView(driver);
 	    driver.findElement(By.linkText("App Launcher")).click();
 	    driver.findElement(By.linkText("ICIX")).click(); 
 	    driver.findElement(By.linkText("Document Library")).click();
