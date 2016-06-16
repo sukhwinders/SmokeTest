@@ -1,7 +1,6 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,8 +12,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
-
-
 
 public class TC9847_Test {
 
@@ -41,21 +38,16 @@ public class TC9847_Test {
 		driver.navigate().to(baseUrl);
 	}
 
-	/*@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}*/
+	
+	 @AfterClass public void afterClass() { driver.quit(); }
+	 
 
 	@Test
 	public void createNew_form() throws InterruptedException {
 
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("Test@123");
-		driver.findElement(By.id("Login")).click();
+		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("App Launcher")).click();
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
@@ -64,7 +56,7 @@ public class TC9847_Test {
 		System.out
 				.println("TC9847 : Verify create a Custom Form using 3 Tabs, 6 sections and 4 Question in each section (Scenario 03 - CF)");
 		// click on forms button
-		driver.findElement(By.name("j_id0:form:j_id7")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		createContainer();
 
 		createLayout();
@@ -287,9 +279,11 @@ public class TC9847_Test {
 						.xpath("//select[@id='j_id0:form:containerBlock:containerNew:inputContainerContainerType']")));
 
 		Containertypedropdown.selectByVisibleText("Single Form");
-		/*driver.findElement(
-				By.id("j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm"))
-				.click();*/
+		/*
+		 * driver.findElement( By.id(
+		 * "j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm"
+		 * )) .click();
+		 */
 
 		/*
 		 * driver.findElement( By.xpath(
@@ -297,11 +291,13 @@ public class TC9847_Test {
 		 * )) .click();
 		 */
 
-		Select Librarydropdown = new Select(
-				driver.findElement(By
-						.id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")));
-
-		Librarydropdown.selectByVisibleText("Existing");
+		/*
+		 * Select Librarydropdown = new Select( driver.findElement(By
+		 * .id("j_id0:form:containerBlock:containerNew:inputContainerLibrary"
+		 * )));
+		 * 
+		 * Librarydropdown.selectByVisibleText("Existing");
+		 */
 
 		driver.findElement(By.id("j_id0:form:containerBlock:createContainer"))
 				.click();
@@ -511,12 +507,13 @@ public class TC9847_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys("Layout_Name");
-		new Select(driver.findElement(By
-				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
-				.selectByVisibleText("Public");
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-				.click();
+		/*
+		 * new Select(driver.findElement(By
+		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
+		 * .selectByVisibleText("Public"); driver.findElement(
+		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
+		 * .click();
+		 */
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
@@ -570,10 +567,12 @@ public class TC9847_Test {
 		/*
 		 * driver.findElement(
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46")) .clear();
+		 */	
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
+		 * .sendKeys("Tab4");
 		 */
-		/*driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
-				.sendKeys("Tab4");*/
 
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -613,32 +612,4 @@ public class TC9847_Test {
 
 	}
 
-	public void switchtoLightining() throws InterruptedException {
-
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				driver.findElement(
-						By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.click();
-				driver.findElement(By.id("simpleDialog0button0")).click();
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-
-			driver.findElement(By.linkText("App Launcher")).click();
-		}
-	}
 }

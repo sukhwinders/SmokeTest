@@ -1,7 +1,6 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -41,14 +40,9 @@ public class TC9848_Test {
 	@Test
 	public void createNew_form() throws Exception {
 
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("Test@123");
-		driver.findElement(By.id("Login")).click();
+		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("App Launcher")).click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
@@ -56,7 +50,7 @@ public class TC9848_Test {
 		Thread.sleep(2000);
 		// script to container template
 
-		driver.findElement(By.name("j_id0:form:j_id7")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		Thread.sleep(2000);
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
@@ -81,12 +75,13 @@ public class TC9848_Test {
 				By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"))
 				.click();
 
-	
-		Select Librarydropdown = new Select(
-				driver.findElement(By
-						.id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")));
-
-		Librarydropdown.selectByVisibleText("Existing");
+		/*
+		 * Select Librarydropdown = new Select( driver.findElement(By
+		 * .id("j_id0:form:containerBlock:containerNew:inputContainerLibrary"
+		 * )));
+		 * 
+		 * Librarydropdown.selectByVisibleText("Existing");
+		 */
 
 		driver.findElement(By.id("j_id0:form:containerBlock:createContainer"))
 				.click();
@@ -105,12 +100,13 @@ public class TC9848_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys("Layout_Name123");
-		new Select(driver.findElement(By
-				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
-				.selectByVisibleText("Public");
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-				.click();
+		/*
+		 * new Select(driver.findElement(By
+		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
+		 * .selectByVisibleText("Public"); driver.findElement(
+		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
+		 * .click();
+		 */
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
@@ -663,7 +659,9 @@ public class TC9848_Test {
 				.click();
 		Thread.sleep(5000);
 		// passing Parameters
-		driver.findElement(By.xpath("//input[@id='j_id0:form:newElementWithQuestion:newElementBlock:inputElementReadOnly']")).click();
+		driver.findElement(
+				By.xpath("//input[@id='j_id0:form:newElementWithQuestion:newElementBlock:inputElementReadOnly']"))
+				.click();
 		System.out.println("Read button selected on elemets fields section");
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
@@ -730,7 +728,9 @@ public class TC9848_Test {
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170']"))
 				.sendKeys("T1");
-		driver.findElement(By.xpath("//input[@name='j_id0:form:newElementWithQuestion:cloneNewLinkedQuestion']")).click();
+		driver.findElement(
+				By.xpath("//input[@name='j_id0:form:newElementWithQuestion:cloneNewLinkedQuestion']"))
+				.click();
 		System.out.println("copy link selected");
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -738,7 +738,6 @@ public class TC9848_Test {
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:newElementWithQuestion:clearNewLinkedQuestion']"))
 				.click();
-		
 
 		// radio
 		Thread.sleep(5000);
@@ -807,7 +806,7 @@ public class TC9848_Test {
 				By.xpath("//input[@id='j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:3:selectElement']"))
 				.click();
 		Thread.sleep(5000);
-		//click on add value button 5 times
+		// click on add value button 5 times
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:answerOptionBlock:createAnswerOption']"))
 				.click();
@@ -871,34 +870,5 @@ public class TC9848_Test {
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(7000);
 
-	}
-
-	public void switchtoLightining() throws InterruptedException {
-
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				driver.findElement(
-						By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.click();
-				driver.findElement(By.id("simpleDialog0button0")).click();
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-
-			driver.findElement(By.linkText("App Launcher")).click();
-		}
 	}
 }

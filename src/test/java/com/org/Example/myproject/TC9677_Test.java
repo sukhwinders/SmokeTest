@@ -1,26 +1,21 @@
 package com.org.Example.myproject;
-	import java.awt.Robot;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Set;
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
-import org.testng.annotations.*;
-
-import static org.testng.Assert.*;
-
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-import java.awt.event.KeyEvent;
 import com.utils.Data_loading;
 
-
-public class TC9677_Test  {
+public class TC9677_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
@@ -34,7 +29,7 @@ public class TC9677_Test  {
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
-		// driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
@@ -47,21 +42,14 @@ public class TC9677_Test  {
 	@Test
 	public void send_document() throws Exception {
 		// Login to the portal
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(password1);
-		driver.findElement(By.id("Login")).click();
-		Thread.sleep(2000);
+		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
-		// Click on App Launcher button
-		driver.findElement(By.linkText("App Launcher")).click();
-		// Click on ICIX button
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		// Click on Document Library
 		driver.findElement(By.linkText("Document Library")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.id("btn_AddDocument")).click();
+		driver.findElement(By.xpath("//button[@id='btn_AddDocument']")).click();;
 		new Select(driver.findElement(By.id("ddTemplate")))
 				.selectByVisibleText("GFSI Certification");
 		driver.findElement(By.id("createButton")).click();
@@ -121,36 +109,4 @@ public class TC9677_Test  {
 
 	}
 
-	public void switchtoLightining() throws InterruptedException {
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				driver.findElement(
-						By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.click();
-				driver.findElement(By.id("simpleDialog0button0")).click();
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(5000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-
-			driver.findElement(By.linkText("App Launcher")).click();
-		}
-	}
-	  }
-
-
-
-
-
-   
+}

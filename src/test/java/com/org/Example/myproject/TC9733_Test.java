@@ -26,7 +26,7 @@ public class TC9733_Test {
 	String Responder = guitils.getDATA("TPResponder");
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
-	String comment   = guitils.getPassword("Comments");
+	String comment = guitils.getPassword("Comments");
 
 	Date d = new Date(System.currentTimeMillis());
 	String Reqname = "AutoTest" + d;
@@ -55,13 +55,8 @@ public class TC9733_Test {
 
 	@Test
 	public void Approve_Request() throws Exception {
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(password1);
-		driver.findElement(By.id("Login")).click();
+		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("App Launcher")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
 				.click();
@@ -128,13 +123,8 @@ public class TC9733_Test {
 					.sendKeys(Keys.COMMAND + "t");
 		}
 		driver.get(baseUrl);
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName2);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(password2);
-		driver.findElement(By.id("Login")).click();
+		guitils.loginToPortal(userName2,password2,driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
@@ -199,91 +189,62 @@ public class TC9733_Test {
 		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']"))
 				.click();
 		Thread.sleep(5000);
-		//driver.findElement(By.xpath("//a[@title='Related']")).click();
-		driver.findElement(By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a")).click();
+		// driver.findElement(By.xpath("//a[@title='Related']")).click();
+		driver.findElement(
+				By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a"))
+				.click();
 		Thread.sleep(5000);
-		
-		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+
+		// driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//div[@title='Submit']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.xpath("//button[@onclick='submitRequest()']")).click();
-		 driver.switchTo().defaultContent();
-        Thread.sleep(10000);
-        
-        if(System.getProperty("os.name").toLowerCase().contains("win")){
-  		  driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.CONTROL + "w");
-     	}
-     	else if(System.getProperty("os.name").toLowerCase().contains("mac")){
-     		driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]")).sendKeys(Keys.COMMAND + "w");
-     	}	driver.switchTo().window(firstwindow);
-        driver.navigate().refresh();
-      //driver.findElement(By.xpath("//a[@title='Related']")).click();
-      //driver.findElement(By.xpath("//div[@class='uiScroller scroller-wrapper scroll-bidirectional native']/div/table/tbody/tr/th/div/a")).click();
-      driver.findElement(By.linkText("App Launcher")).click();
-	  Thread.sleep(5000);
-	  driver.findElement(By.linkText("ICIX")).click();
-	  Thread.sleep(5000);
-	  driver.navigate().refresh();
-	  
-	  driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
-	  driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(3000);
-		
-	   driver.findElement(By.linkText("Show more actions for this record")).click();
-	   Thread.sleep(2000);
-	   
-	   driver.findElement(By.linkText("Approve")).click();
-	   Thread.sleep(2000);
-	   
-	   driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-	   driver.findElement(By.xpath("//textarea[@name='j_id0:j_id40:commentBlock:j_id44']")).sendKeys();
-	   Thread.sleep(5000);
-	   driver.findElement(By.xpath("//input[contains(@value,'Submit')]")).click();
-	   driver.switchTo().defaultContent();
-	   Thread.sleep(5000);
-	   driver.navigate().refresh();
-	   Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'Approved')]")).isDisplayed(), "Status is not getting Changed");
-	  
-	}
-	
+		driver.findElement(By.xpath("//button[@onclick='submitRequest()']"))
+				.click();
+		driver.switchTo().defaultContent();
+		Thread.sleep(10000);
 
-	public void switchtoLightining() throws InterruptedException {
-
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				if (driver
-						.findElements(
-								By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.size() > 0) {
-					driver.findElement(
-							By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-							.click();
-					driver.findElement(By.id("simpleDialog0button0")).click();
-				} else if (driver
-						.findElements(
-								By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.size() < 0) {
-
-				}
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-			driver.findElement(By.linkText("App Launcher")).click();
+		if (System.getProperty("os.name").toLowerCase().contains("win")) {
+			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
+					.sendKeys(Keys.CONTROL + "w");
+		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
+					.sendKeys(Keys.COMMAND + "w");
 		}
-	}
+		driver.switchTo().window(firstwindow);
+		driver.navigate().refresh();
+		// driver.findElement(By.xpath("//a[@title='Related']")).click();
+		// driver.findElement(By.xpath("//div[@class='uiScroller scroller-wrapper scroll-bidirectional native']/div/table/tbody/tr/th/div/a")).click();
+		driver.findElement(By.linkText("App Launcher")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.linkText("ICIX")).click();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
 
+		driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
+		driver.findElement(By.linkText(Reqname)).click();
+		Thread.sleep(3000);
+
+		driver.findElement(By.linkText("Show more actions for this record"))
+				.click();
+		Thread.sleep(2000);
+
+		driver.findElement(By.linkText("Approve")).click();
+		Thread.sleep(2000);
+
+		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.findElement(
+				By.xpath("//textarea[@name='j_id0:j_id40:commentBlock:j_id44']"))
+				.sendKeys();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[contains(@value,'Submit')]"))
+				.click();
+		driver.switchTo().defaultContent();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//span[contains(.,'Approved')]"))
+						.isDisplayed(), "Status is not getting Changed");
+
+	}
 
 }
