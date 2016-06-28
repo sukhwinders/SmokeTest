@@ -1,7 +1,6 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,8 +12,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
-
-
 
 public class TC9909_Test {
 
@@ -36,7 +33,7 @@ public class TC9909_Test {
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
-
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
@@ -48,14 +45,9 @@ public class TC9909_Test {
 
 	@Test
 	public void createNew_form() throws InterruptedException {
-		driver.manage().window().maximize();
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("Test@123");
-		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
-		driver.findElement(By.linkText("App Launcher")).click();
+		guitils.loginToPortal(userName1, password1, driver);
+		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
@@ -65,7 +57,7 @@ public class TC9909_Test {
 				.println("TC9909 : Verify create BP Form using 2 Tab, 2 sections and 5 Questions(With different Answer types) (Scenario 29-BPF)");
 		// click on forms button
 		Thread.sleep(5000);
-		driver.findElement(By.name("j_id0:form:j_id7")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		createContainer();
 
 		createLayout();
@@ -136,7 +128,6 @@ public class TC9909_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		
 	}
 
 	public void createContainer() throws InterruptedException {
@@ -162,17 +153,17 @@ public class TC9909_Test {
 
 		Containertypedropdown.selectByVisibleText("Single Form");
 
-		
-		  driver.findElement( By.xpath(
-		  "//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"
-		  )) .click();
-		 
+		driver.findElement(
+				By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm']"))
+				.click();
 
-		Select Librarydropdown = new Select(
-				driver.findElement(By
-						.id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")));
-
-		Librarydropdown.selectByVisibleText("Existing");
+		/*
+		 * Select Librarydropdown = new Select( driver.findElement(By
+		 * .id("j_id0:form:containerBlock:containerNew:inputContainerLibrary"
+		 * )));
+		 * 
+		 * Librarydropdown.selectByVisibleText("Existing");
+		 */
 
 		driver.findElement(By.id("j_id0:form:containerBlock:createContainer"))
 				.click();
@@ -194,12 +185,13 @@ public class TC9909_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys("Layout_Name");
-		new Select(driver.findElement(By
-				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
-				.selectByVisibleText("Public");
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-				.click();
+		/*
+		 * new Select(driver.findElement(By
+		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
+		 * .selectByVisibleText("Public"); driver.findElement(
+		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
+		 * .click();
+		 */
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
@@ -245,17 +237,21 @@ public class TC9909_Test {
 		 * driver.findElement(
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46")) .clear();
 		 */
-	/*	driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
-				.sendKeys("Tab3");*/
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
+		 * .sendKeys("Tab3");
+		 */
 		// Send name for Tab 4
 		/*
 		 * driver.findElement(
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46")) .clear();
 		 */
-	/*	driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
-				.sendKeys("Tab4");*/
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
+		 * .sendKeys("Tab4");
+		 */
 
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -283,26 +279,21 @@ public class TC9909_Test {
 				.sendKeys("Section 1");
 		Thread.sleep(1000);
 
-	
-
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
 		/* System.out.println("2 tabs created successfully"); */
 
 	}
 
-	
-
 	public void createQuestionText() throws InterruptedException {
 		// Text Question with 1 value
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.sendKeys("Text Question");
-		
-		  driver.findElement( By.id(
-		  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
-		  )) .click();
-		 
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"))
+				.click();
 
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
@@ -402,17 +393,18 @@ public class TC9909_Test {
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.sendKeys("Long Text Question");
-		  driver.findElement( By.id(
-				  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
-				  )) .click();
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"))
+				.click();
 		new Select(
 				driver.findElement(By
 						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
 				.selectByVisibleText("long text");
-	/*	Select dependencydropdwn = new Select(
-				driver.findElement(By
-						.xpath("//select[@id='j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionDependencyAction']")));
-		dependencydropdwn.selectByVisibleText("Show");*/
+		/*
+		 * Select dependencydropdwn = new Select( driver.findElement(By .xpath(
+		 * "//select[@id='j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionDependencyAction']"
+		 * ))); dependencydropdwn.selectByVisibleText("Show");
+		 */
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
 				.click();
@@ -605,25 +597,25 @@ public class TC9909_Test {
 	public void createQuestionRadio() throws InterruptedException {
 		// Radio Question with 5 Values
 
-				Thread.sleep(4000);
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.sendKeys("Radio Question");
-		
-		 driver.findElement( By.id(
-		  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
-		 )) .click();
-		 
-		/*// Read only
-		Thread.sleep(3000);
+
 		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newElementBlock:inputElementReadOnly"))
-				.click();*/
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"))
+				.click();
+
+		/*
+		 * // Read only Thread.sleep(3000); driver.findElement( By.id(
+		 * "j_id0:form:newElementWithQuestion:newElementBlock:inputElementReadOnly"
+		 * )) .click();
+		 */
 
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.click();
-		
+
 		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
@@ -642,135 +634,134 @@ public class TC9909_Test {
 				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:3:selectElement"))
 				.click();
 		Thread.sleep(6000);
-		for(int i =0; i<=14; i++){
+		for (int i = 0; i <= 14; i++) {
 			Thread.sleep(4000);
 			driver.findElement(
 					By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
 					.click();
 			Thread.sleep(4000);
 		}
-		// value 1	
-		Thread.sleep(4000);		
+		// value 1
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.sendKeys("Radio 1");	
+				.sendKeys("Radio 1");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
 		// value 2
-			Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.sendKeys("Radio 2");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
 		// value 3
-				Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
 				.sendKeys("Radio 3");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.sendKeys("V3");
 		// value 4
-				Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
 				.sendKeys("Radio 4");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.sendKeys("V4");
 		// value 5
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
 				.sendKeys("Radio 5");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.sendKeys("V5");
 		// value 6
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id166"))
 				.sendKeys("Radio 6");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id170"))
 				.sendKeys("V6");
 		// value 7
-			Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id166"))
 				.sendKeys("Radio 7");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id170"))
 				.sendKeys("V7");
 		// value 8
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id166"))
 				.sendKeys("Radio 8");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id170"))
 				.sendKeys("V8");
 		// value 9
-			Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id166"))
 				.sendKeys("Radio 9");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id170"))
 				.sendKeys("V9");
 		// value 10
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id166"))
 				.sendKeys("Radio 10");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id170"))
 				.sendKeys("V10");
 		// value 11
-			Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id166"))
 				.sendKeys("Radio 11");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id170"))
 				.sendKeys("V11");
 		// value 12
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id166"))
 				.sendKeys("Radio 12");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id170"))
 				.sendKeys("V12");
 		// value 13
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id166"))
 				.sendKeys("Radio 13");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id170"))
 				.sendKeys("V13");
 		// value 14
-			Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id166"))
 				.sendKeys("Radio 14");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id170"))
 				.sendKeys("V14");
 		// value 15
 
 		Thread.sleep(4000);
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id166"))
 				.sendKeys("Radio 15");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id170"))
 				.sendKeys("V15");
-				
 
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(4000);
@@ -791,9 +782,9 @@ public class TC9909_Test {
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.sendKeys("Picklist Question");
-		 driver.findElement( By.id(
-				  "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"
-				  )) .click();
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionResponseRequired"))
+				.click();
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.click();
@@ -810,132 +801,132 @@ public class TC9909_Test {
 				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:4:selectElement"))
 				.click();
 		Thread.sleep(6000);
-		for(int i =0; i<=14; i++){
+		for (int i = 0; i <= 14; i++) {
 			Thread.sleep(4000);
 			driver.findElement(
 					By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
 					.click();
 			Thread.sleep(4000);
 		}
-		// value 1	
-		Thread.sleep(4000);		
+		// value 1
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
-				.sendKeys("PickList 1");	
+				.sendKeys("PickList 1");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
 		// value 2
-			Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.sendKeys("PickList 2");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
 		// value 3
-				Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
 				.sendKeys("PickList 3");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.sendKeys("V3");
 		// value 4
-				Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
 				.sendKeys("PickList 4");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.sendKeys("V4");
 		// value 5
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
 				.sendKeys("PickList 5");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.sendKeys("V5");
 		// value 6
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id166"))
 				.sendKeys("PickList 6");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:5:j_id170"))
 				.sendKeys("V6");
 		// value 7
-			Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id166"))
 				.sendKeys("PickList 7");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:6:j_id170"))
 				.sendKeys("V7");
 		// value 8
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id166"))
 				.sendKeys("PickList 8");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:7:j_id170"))
 				.sendKeys("V8");
 		// value 9
-			Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id166"))
 				.sendKeys("PickList 9");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:8:j_id170"))
 				.sendKeys("V9");
 		// value 10
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id166"))
 				.sendKeys("PickList 10");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:9:j_id170"))
 				.sendKeys("V10");
 		// value 11
-			Thread.sleep(4000);		
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id166"))
 				.sendKeys("PickList 11");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:10:j_id170"))
 				.sendKeys("V11");
 		// value 12
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id166"))
 				.sendKeys("PickList 12");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:11:j_id170"))
 				.sendKeys("V12");
 		// value 13
-				Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id166"))
 				.sendKeys("PickList 13");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:12:j_id170"))
 				.sendKeys("V13");
 		// value 14
-			Thread.sleep(4000);
-				driver.findElement(
+		Thread.sleep(4000);
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id166"))
 				.sendKeys("PickList 14");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:13:j_id170"))
 				.sendKeys("V14");
 		// value 15
 
 		Thread.sleep(4000);
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id166"))
 				.sendKeys("PickList 15");
-				driver.findElement(
+		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:14:j_id170"))
 				.sendKeys("V15");
 
@@ -949,36 +940,5 @@ public class TC9909_Test {
 		/* _______________________End_________________________ */
 
 	}
-public void dependancy(){
-	
-}
 
-	public void switchtoLightining() throws InterruptedException {
-
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				driver.findElement(
-						By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.click();
-				driver.findElement(By.id("simpleDialog0button0")).click();
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-
-			driver.findElement(By.linkText("App Launcher")).click();
-		}
-	}
 }

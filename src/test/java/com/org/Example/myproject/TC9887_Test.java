@@ -1,7 +1,6 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,8 +12,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
-
-
 
 public class TC9887_Test {
 
@@ -36,7 +33,7 @@ public class TC9887_Test {
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
+
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
@@ -48,14 +45,9 @@ public class TC9887_Test {
 
 	@Test
 	public void createNew_form() throws InterruptedException {
-
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("Test@123");
-		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
-		driver.findElement(By.linkText("App Launcher")).click();
+		guitils.loginToPortal(userName1, password1, driver);
+		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
@@ -64,6 +56,7 @@ public class TC9887_Test {
 		System.out
 				.println("TC9887 : Verify create a CF Form using 4 Tabs, 4 sections and 4 Question in each section with mandatory and linked questions (Scenario 18 - CF)");
 		// click on forms button
+		Thread.sleep(5000);
 		driver.findElement(By.name("j_id0:form:j_id7")).click();
 		createContainer();
 
@@ -101,76 +94,7 @@ public class TC9887_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		/* ################Section 2 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 2 End#################### */
-
-		/* ################Section 3 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 3rd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 3 End#################### */
-
-		/* ################Section 4 start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 4 End#################### */
-
-		/* Tab : 2 sections : 4 */
+		/* Tab : 2 sections : 1 */
 		// Click on tabs button
 		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
 		// select 2ndtab
@@ -201,73 +125,6 @@ public class TC9887_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		/* ################Section 2 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 2 End#################### */
-
-		/* ################Section 3 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 3rd section
-		driver.findElement(By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 3 End#################### */
-
-		/* ################Section 4 start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 4 End#################### */
 		/* Tab : 3 Sections 4 */
 		// Click on tabs button
 		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
@@ -280,7 +137,7 @@ public class TC9887_Test {
 		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
 		Thread.sleep(3000);
 		createSections();
-		/* ################Section 1 End#################### */
+		/* ################Section 1 Start#################### */
 		// Select 1st section
 		driver.findElement(
 				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
@@ -299,87 +156,21 @@ public class TC9887_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		/* ################Section 2 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 2 End#################### */
-
-		/* ################Section 3 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 3rd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 3 End#################### */
-
-		/* ################Section 4 start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 4 End#################### */
-		/* Tab : 3 Sections 4 */
+		/* Tab : 4 Sections 1 */
 		// Click on tabs button
+		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
-		// select 2ndtab
+		// select 4th tab
+		Thread.sleep(5000);
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:selectTab"))
 				.click();
 		// Click on sections button
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
 		Thread.sleep(3000);
 		createSections();
-		/* ################Section 1 End#################### */
+		/* ################Section 1 Start#################### */
 		// Select 1st section
 		driver.findElement(
 				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection"))
@@ -397,75 +188,6 @@ public class TC9887_Test {
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
-
-		/* ################Section 2 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 2 End#################### */
-
-		/* ################Section 3 Start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 3rd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 3 End#################### */
-
-		/* ################Section 4 start#################### */
-		// Click on sections button
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(3000);
-		// Select 2nd section
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:selectSection"))
-				.click();
-		Thread.sleep(5000);
-		// click on questions tab
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
-		Thread.sleep(5000);
-		// Create questions for 1st section
-		createQuestionText();
-		createQuestionCheckbox();
-		createQuestionRadio();
-		createQuestionPicklist();
-		Thread.sleep(5000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(5000);
-		/* ################Section 4 End#################### */
 
 		/* _______________________End_________________________ */
 
@@ -500,11 +222,13 @@ public class TC9887_Test {
 		 * )) .click();
 		 */
 
-		Select Librarydropdown = new Select(
-				driver.findElement(By
-						.id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")));
-
-		Librarydropdown.selectByVisibleText("Existing");
+		/*
+		 * Select Librarydropdown = new Select( driver.findElement(By
+		 * .id("j_id0:form:containerBlock:containerNew:inputContainerLibrary"
+		 * )));
+		 * 
+		 * Librarydropdown.selectByVisibleText("Existing");
+		 */
 
 		driver.findElement(By.id("j_id0:form:containerBlock:createContainer"))
 				.click();
@@ -526,12 +250,13 @@ public class TC9887_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys("Layout_Name");
-		new Select(driver.findElement(By
-				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
-				.selectByVisibleText("Public");
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-				.click();
+		/*
+		 * new Select(driver.findElement(By
+		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
+		 * .selectByVisibleText("Public"); driver.findElement(
+		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
+		 * .click();
+		 */
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
@@ -549,37 +274,42 @@ public class TC9887_Test {
 		Thread.sleep(4000);
 
 		for (int i = 0; i <= 3; i++) {
+			Thread.sleep(7000);
 			driver.findElement(By.id("j_id0:form:createTab")).click();
-			Thread.sleep(5000);
-		}
 
+		}
+		Thread.sleep(6000);
 		// Send name for Tab 1
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
-				.clear();
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46")) .clear();
+		 */
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
 				.sendKeys("Tab1");
 		Thread.sleep(1000);
 
 		// Send name for Tab 2
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46"))
-				.clear();
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46")) .clear();
+		 */
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46"))
 				.sendKeys("Tab2");
 		// Send name for Tab 3
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
-				.clear();
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46")) .clear();
+		 */
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
 				.sendKeys("Tab3");
 		// Send name for Tab 4
-		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
-				.clear();
+		/*
+		 * driver.findElement(
+		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46")) .clear();
+		 */
 		driver.findElement(
 				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
 				.sendKeys("Tab4");
@@ -591,14 +321,16 @@ public class TC9887_Test {
 
 	public void createSections() throws InterruptedException {
 
-		Thread.sleep(3000);
+		Thread.sleep(8000);
+		driver.findElement(By.xpath("//input[@id='j_id0:form:createSection']"))
+				.click();
+		Thread.sleep(5000);
 		// create 4 sections
-		for (int i = 0; i <= 3; i++) {
-			driver.findElement(
-					By.xpath("//input[@id='j_id0:form:createSection']"))
-					.click();
-			Thread.sleep(5000);
-		}
+		/*
+		 * for (int i = 0; i <= 3; i++) { driver.findElement(
+		 * By.xpath("//input[@id='j_id0:form:createSection']")) .click();
+		 * Thread.sleep(5000); }
+		 */
 		// Send name for Section 1
 		driver.findElement(
 				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id73"))
@@ -608,27 +340,23 @@ public class TC9887_Test {
 				.sendKeys("Section 1");
 		Thread.sleep(1000);
 
-		// Send name for Section 2
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"))
-				.sendKeys("Section 2");
-		// Send name for Section 3
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"))
-				.sendKeys("Section 3");
-		// Send name for Section 4
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"))
-				.sendKeys("Section 4");
+		/*
+		 * // Send name for Section 2 driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"
+		 * )) .sendKeys("Section 2"); // Send name for Section 3
+		 * driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"
+		 * )) .sendKeys("Section 3"); // Send name for Section 4
+		 * driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"
+		 * )) .sendKeys("Section 4");
+		 */
 
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -644,6 +372,7 @@ public class TC9887_Test {
 		 * "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"
 		 * )) .clear();
 		 */
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.sendKeys("Radio Question");
@@ -666,6 +395,7 @@ public class TC9887_Test {
 		 * "j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"
 		 * )) .clear();
 		 */
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.sendKeys("Radio Question");
@@ -673,6 +403,7 @@ public class TC9887_Test {
 				driver.findElement(By
 						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
 				.selectByVisibleText("radio");
+		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
 				.click();
@@ -812,11 +543,11 @@ public class TC9887_Test {
 		driver.findElement(
 				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:1:selectElement"))
 				.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
 				.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.clear();
@@ -857,17 +588,18 @@ public class TC9887_Test {
 
 	public void createQuestionPicklist() throws InterruptedException {
 		// Picklist Question with 5 Values
-
+		Thread.sleep(5000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
+				.sendKeys("Picklist Question");
+
+		driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.sendKeys("Picklist Question");
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
 				.click();
-
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionQuestionText"))
-				.sendKeys("Picklist Question");
+		Thread.sleep(5000);
 		new Select(
 				driver.findElement(By
 						.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionAnswerType")))
@@ -875,7 +607,7 @@ public class TC9887_Test {
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
 				.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		driver.findElement(
 				By.id("j_id0:form:linkedQuestionsBlock:linkedQuestionsSection:linkedQuestionsTable:3:selectElement"))
 				.click();
@@ -1027,34 +759,5 @@ public class TC9887_Test {
 		Thread.sleep(6000);
 		/* _______________________End_________________________ */
 
-	}
-
-	public void switchtoLightining() throws InterruptedException {
-
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				driver.findElement(
-						By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.click();
-				driver.findElement(By.id("simpleDialog0button0")).click();
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-
-			driver.findElement(By.linkText("App Launcher")).click();
-		}
 	}
 }

@@ -1,16 +1,11 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -34,7 +29,7 @@ public class TC9665_Test {
 		baseUrl = "https://login.salesforce.com";      
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);  
 	}
 
@@ -45,14 +40,11 @@ public class TC9665_Test {
 
 	@Test
 	public void test() throws Exception  {
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(password1);
-		driver.findElement(By.id("Login")).click();
+		// Login to the salesforce
+		guitils.loginToPortal(userName1,password1,driver);
 		Thread.sleep(5000);
-		switchtoLightining();
-		driver.findElement(By.linkText("App Launcher")).click();
+		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Trading Partner Groups")).click();
 		Thread.sleep(2000);
@@ -82,28 +74,5 @@ public class TC9665_Test {
 
 
 	}
-	public void switchtoLightining() throws InterruptedException  { 
-
-
-		if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() >0 ){
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(By.xpath("//a[@title='Switch to Lightning Experience']")).click();
-			String parentWindow= driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for(String curWindow : allWindows){
-				driver.switchTo().window(curWindow);
-				//perform operation on popup
-				driver.findElement(By.xpath("//div[@style='line-height:12px; margin-top: 12px']")).click();
-				driver.findElement(By.id("simpleDialog0button0")).click();
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		}
-		else if(driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() < 0 ){
-
-			driver.findElement(By.linkText("App Launcher")).click();
-		}}	
+	
 }

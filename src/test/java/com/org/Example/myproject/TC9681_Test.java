@@ -12,7 +12,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -23,10 +22,10 @@ public class TC9681_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String Responder = guitils.getDATA("TPResponder");
+	String Responder = guitils.getDATA("TradingPartnerName");
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
-	String comment   = guitils.getPassword("Comments");
+	String comment = guitils.getPassword("Comments");
 
 	Date d = new Date(System.currentTimeMillis());
 	String Reqname = "AutoTest" + d;
@@ -44,7 +43,7 @@ public class TC9681_Test {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
 
@@ -55,13 +54,10 @@ public class TC9681_Test {
 
 	@Test
 	public void SubmitformBYresponder() throws Exception {
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName1);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(password1);
-		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
-		driver.findElement(By.linkText("App Launcher")).click();
+		// Login to the salesforce
+		guitils.loginToPortal(userName2,password2,driver);
+		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
 				.click();
@@ -128,14 +124,10 @@ public class TC9681_Test {
 					.sendKeys(Keys.COMMAND + "t");
 		}
 		driver.get(baseUrl);
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys(userName2);
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(password2);
-		driver.findElement(By.id("Login")).click();
-		switchtoLightining();
-		driver.findElement(By.linkText("App Launcher")).click();
-		Thread.sleep(5000);
+		// Login to the salesforce
+		guitils.loginToPortal(userName1,password1,driver);
+		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
 				.click();
@@ -150,7 +142,7 @@ public class TC9681_Test {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
 				.click();
-		Thread.sleep(7000);
+		Thread.sleep(4000);
 		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
 
 		Thread.sleep(7000);
@@ -181,8 +173,10 @@ public class TC9681_Test {
 		driver.findElement(By.xpath("//div[@title='Open Form']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 
-		// List <WebElement>
-		// RdoYes=driver.findElements(By.xpath(".//label[starts-with(@for,'Yes')]"));
+		/*
+		 * List<WebElement> RdoYes = driver.findElements(By
+		 * .xpath(".//label[starts-with(@for,'Yes')]"));
+		 */
 		List<WebElement> RdoNo = driver.findElements(By
 				.xpath(".//label[starts-with(@for,'No')]"));
 
@@ -198,58 +192,10 @@ public class TC9681_Test {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']"))
 				.click();
-		Thread.sleep(5000);
-		//driver.findElement(By.xpath("//a[@title='Related']")).click();
-		driver.findElement(By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a")).click();
-		Thread.sleep(5000);
-		
-		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.xpath("//div[@title='Submit']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.xpath("//button[@onclick='submitRequest()']")).click();
-		 driver.switchTo().defaultContent();
-        Thread.sleep(10000);
-        
-        
-	}
-	
+		driver.findElement(By.xpath("//a[@title='Related']")).click();
+		// driver.findElement(By.linkText(Reqname)).click();
+		// driver.findElement(By.xpath("//button[contains(.,'Submit')]")).click();
 
-	public void switchtoLightining() throws InterruptedException {
-
-		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
-
-			driver.findElement(By.id("userNavLabel")).click();
-			driver.findElement(
-					By.xpath("//a[@title='Switch to Lightning Experience']"))
-					.click();
-			String parentWindow = driver.getWindowHandle();
-			Set<String> allWindows = driver.getWindowHandles();
-			for (String curWindow : allWindows) {
-				driver.switchTo().window(curWindow);
-				// perform operation on popup
-				if (driver
-						.findElements(
-								By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.size() > 0) {
-					driver.findElement(
-							By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-							.click();
-					driver.findElement(By.id("simpleDialog0button0")).click();
-				} else if (driver
-						.findElements(
-								By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
-						.size() < 0) {
-
-				}
-				// switch back to parent window
-				driver.switchTo().window(parentWindow);
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-			}
-		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
-				.size() < 0) {
-			driver.findElement(By.linkText("App Launcher")).click();
-		}
 	}
 
 }
