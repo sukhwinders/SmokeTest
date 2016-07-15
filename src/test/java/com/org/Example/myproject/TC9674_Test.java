@@ -22,7 +22,7 @@ public class TC9674_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String Responder = guitils.getDATA("TradingPartnerName");
+	String Responder = guitils.getDATA("TPResponder");
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
 	Date d = new Date(System.currentTimeMillis());
@@ -130,25 +130,29 @@ public class TC9674_Test {
 		driver.findElement(
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.sendKeys("All");
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		/*
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .sendKeys("All");
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .click(); Thread.sleep(2000);
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .click(); Thread.sleep(7000);
+		 * driver.findElement(By.xpath("//a[contains(@role,'option')]"
+		 * )).click();
+		 */
+		driver.findElement(
+				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
 				.click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.click();
-		Thread.sleep(7000);
-		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
 
 		Thread.sleep(7000);
 		while (true) {
 			String Total_requests = driver
 					.findElement(
-							By.xpath("//span[@class='uiOutputText forceListViewStatusInfo']"))
+							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
 					.getText();
 			if (Total_requests.indexOf("+") > -1) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
-				jse.executeScript("scrollContent = document.evaluate('html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
 			} else {
 				break;
 			}
@@ -156,7 +160,7 @@ public class TC9674_Test {
 
 		tblAccounts = driver
 				.findElement(By
-						.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));
+						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(9000);

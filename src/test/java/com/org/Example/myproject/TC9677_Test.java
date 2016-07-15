@@ -59,7 +59,6 @@ public class TC9677_Test {
 		// Get the list of window handles
 		ArrayList<String> tabs2 = new ArrayList<String>(
 				driver.getWindowHandles());
-		System.out.println("size is:" + tabs2.size());
 		/*
 		 * switch to first window driver.switchTo().window(tabs2.get(0));
 		 */

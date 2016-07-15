@@ -63,7 +63,9 @@ public class TC9667_Test {
 
 		driver.switchTo().defaultContent();
 		driver.findElement(By.linkText("App Launcher")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.linkText("ICIX")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.linkText("Product Groups")).click();
 		Thread.sleep(3000);
 		driver.navigate().refresh();

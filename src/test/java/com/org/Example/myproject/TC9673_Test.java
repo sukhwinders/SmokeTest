@@ -10,7 +10,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -44,18 +43,16 @@ public class TC9673_Test {
 		driver.navigate().to(baseUrl);
 	}
 
-	@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}
+	/*
+	 * @AfterClass public void afterClass() { driver.quit(); }
+	 */
 
 	// ** This test will create a new product in the specific org ID**//
 	@Test
 	public void productTwoactor_workflow() throws Exception {
 
-		guitils.loginToPortal(userName1,password1,driver);
+		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("App Launcher")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'Requests')]")).click();
 		Thread.sleep(2000);
@@ -100,9 +97,11 @@ public class TC9673_Test {
 		Thread.sleep(3000);
 		driver.findElement(
 				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();
-		/*Thread.sleep(5000);
-		driver.findElement(By.id("comments")).sendKeys("Test");
-		Thread.sleep(2000);*/
+		/*
+		 * Thread.sleep(5000);
+		 * driver.findElement(By.id("comments")).sendKeys("Test");
+		 * Thread.sleep(2000);
+		 */
 
 		driver.findElement(By.xpath("//button[contains(.,'Send')]")).click();
 		Thread.sleep(2000);
@@ -123,9 +122,8 @@ public class TC9673_Test {
 					.sendKeys(Keys.COMMAND + "t");
 		}
 		driver.get(baseUrl);
-		guitils.loginToPortal(userName2,password2,driver);
+		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
@@ -135,26 +133,29 @@ public class TC9673_Test {
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.sendKeys("All");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		/*
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .sendKeys("All"); Thread.sleep(2000);
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .click(); Thread.sleep(2000);
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .click(); Thread.sleep(7000);
+		 * driver.findElement(By.xpath("//a[contains(@role,'option')]"
+		 * )).click();
+		 */
+		driver.findElement(
+				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
 				.click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.click();
-		Thread.sleep(7000);
-		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
 
 		Thread.sleep(7000);
 		while (true) {
 			String Total_requests = driver
 					.findElement(
-							By.xpath("//span[@class='uiOutputText forceListViewStatusInfo']"))
+							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
 					.getText();
 			if (Total_requests.indexOf("+") > -1) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
-				jse.executeScript("scrollContent = document.evaluate('html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
 			} else {
 				break;
 			}
@@ -162,7 +163,7 @@ public class TC9673_Test {
 
 		tblAccounts = driver
 				.findElement(By
-						.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));
+						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 
 		driver.findElement(By.linkText(Reqname)).click();

@@ -23,7 +23,7 @@ public class TC9672_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String Responder = guitils.getDATA("TradingPartnerName");
+	String Responder = guitils.getDATA("TPResponder");
 	String userName2 = guitils.getUserName("ResponderUsername");
 	String password2 = guitils.getPassword("RequestorPassword");
 	Date d = new Date(System.currentTimeMillis());
@@ -42,7 +42,7 @@ public class TC9672_Test {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
 
@@ -53,7 +53,7 @@ public class TC9672_Test {
 
 	@Test
 	public void TwoActorWorkFlow() throws Exception {
-		guitils.loginToPortal(userName1,password1,driver);
+		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
@@ -119,7 +119,7 @@ public class TC9672_Test {
 					.sendKeys(Keys.COMMAND + "t");
 		}
 		driver.get(baseUrl);
-		guitils.loginToPortal(userName2,password2,driver);
+		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
@@ -128,34 +128,32 @@ public class TC9672_Test {
 		driver.findElement(
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.sendKeys("All");
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.click();
-		Thread.sleep(7000);
-		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
+
+		driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
+		.click();
+		
 
 		Thread.sleep(7000);
 		while (true) {
 			String Total_requests = driver
 					.findElement(
-							By.xpath("//span[@class='uiOutputText forceListViewStatusInfo']"))
+							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
 					.getText();
 			if (Total_requests.indexOf("+") > -1) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
-				jse.executeScript("scrollContent = document.evaluate('html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+				
 			} else {
 				break;
 			}
 		}
+	/*	driver.findElement(By.xpath("//table[@class='forceRecordLayout uiVirtualDataGrid--default uiVirtualDataGrid forceVirtualGrid resizable-cols']//th[4]")).click();*/
 
 		tblAccounts = driver
 				.findElement(By
-						.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));
+						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
+		Thread.sleep(9000);
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(9000);
 

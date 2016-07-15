@@ -54,27 +54,6 @@ public class TC9678_Test {
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Document Library")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		// tblAccounts= driver.findElement(By.xpath(sTblAccounts));
-		// RowsOfTable=tblAccounts.findElements(By.tagName("tr"));
-		//
-		// for (int r=0;r<RowsOfTable.size();r++)
-		// {
-		// ColOfTable=RowsOfTable.get(r).findElement(By.tagName("td[9]"));
-		// String tdText=ColOfTable.getText();
-		// String textToVerify="Yes";
-		//
-		//
-		// if(tdText.equals(textToVerify))
-		// {
-		//
-		// RowsOfTable.get(r).findElement(By.cssSelector(".forceIcon")).click();
-		// Thread.sleep(2000);
-		// driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate")).click();
-		// break;
-		// }
-		//
-		// }
-
 		driver.findElement(By.id("btn_ShowMore1")).click();
 		driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate"))
 				.click();

@@ -47,12 +47,9 @@ public class TC9663_Test {
 				By.xpath("//a[contains(.,'Trading Partner Relationships')]"))
 				.click();
 		driver.findElement(By.linkText(partner_name)).click();
-		Thread.sleep(2000);
-		/* driver.findElement(By.xpath("//a[contains(.,'Edit')]")).click(); */
-
-		driver.findElement(
-				By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div/div[1]/div/header/div[2]/div[1]/div/div[2]/ul/li[1]/a/div"))
-				.click();
+		Thread.sleep(4000);
+		driver.findElement(By.linkText("Edit")).click();
+		Thread.sleep(1000);
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		new Select(driver.findElement(By.id("ddl_UURelationship_Status")))
 				.selectByVisibleText("Pending");

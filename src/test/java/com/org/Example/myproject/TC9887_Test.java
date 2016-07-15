@@ -33,7 +33,7 @@ public class TC9887_Test {
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
-
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
@@ -47,17 +47,18 @@ public class TC9887_Test {
 	public void createNew_form() throws InterruptedException {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		Thread.sleep(4000);
+		driver.findElement(By.cssSelector("div[class='icon-waffle']"))
+		.click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		Thread.sleep(5000);
 
 		System.out
-				.println("TC9887 : Verify create a CF Form using 4 Tabs, 4 sections and 4 Question in each section with mandatory and linked questions (Scenario 18 - CF)");
+				.println("TC9887(Scenario 18 - CF)");
 		// click on forms button
 		Thread.sleep(5000);
-		driver.findElement(By.name("j_id0:form:j_id7")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		createContainer();
 
 		createLayout();

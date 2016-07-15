@@ -50,9 +50,6 @@ public class TC9885_Test {
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		Thread.sleep(3000);
-
-		System.out
-				.println(" Verify create a CF Form using 1 Tabs, 2 sections and 4 Question in each section with mandatory and linked questions");
 		// script to container template
 
 		driver.findElement(By.name("j_id0:form:j_id8")).click();

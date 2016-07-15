@@ -36,7 +36,7 @@ public class TC9654_Test {
 	public void publicProduct() throws Exception {
 
 		// Login to the salesforce
-		guitils.loginToPortal(userName2,password2,driver);
+		guitils.loginToPortal(userName2, password2, driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
@@ -104,13 +104,15 @@ public class TC9654_Test {
 		}
 		driver.get(baseUrl);
 		// Login to the salesforce
-		guitils.loginToPortal(userName1,password1,driver);
+		guitils.loginToPortal(userName1, password1, driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[contains(.,'ICIX Products')]"))
 				.click();
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.id("txtIdValue0")).clear();

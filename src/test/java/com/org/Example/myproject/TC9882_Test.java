@@ -41,11 +41,6 @@ public class TC9882_Test {
 
 	@AfterClass
 	public void afterClass() throws Exception {
-		Thread.sleep(2000);
-		driver.findElement(By.id("j_id0:form:buttonPreview")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.id("j_id0:form:buttonPublish")).click();
-		Thread.sleep(2000);
 		driver.quit();
 	}
 
@@ -117,6 +112,9 @@ public class TC9882_Test {
 		// script for Tabs template
 		for (int i = 0; i <= 9; i++) {
 			driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
+			
+			
+	
 			Thread.sleep(3000);
 			driver.findElement(By.id("j_id0:form:createTab")).click();
 			Thread.sleep(3000);

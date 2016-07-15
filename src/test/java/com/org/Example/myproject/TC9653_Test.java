@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -17,11 +18,11 @@ import com.utils.Data_loading;
 public class TC9653_Test {
 	WebDriver driver;
 	String baseUrl;
-	String sTblAccounts = "html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/tbody";
+	String sTblAccounts = "//table[@class='forceRecordLayout uiVirtualDataGrid--default uiVirtualDataGrid forceVirtualGrid resizable-cols']//tbody";
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String strTPName = guitils.getPassword("Partner_name");
+	String strTPName = guitils.getPassword("TradingPartnerName");
 
 	WebElement tblAccounts;
 	List<WebElement> RowsOfTable;
@@ -36,10 +37,10 @@ public class TC9653_Test {
 		driver.navigate().to(baseUrl);
 	}
 
-	/*@AfterClass
+	@AfterClass
 	public void afterClass() {
 		driver.quit();
-	}*/
+	}
 
 	@Test
 	public void Auccount_verification() throws Exception {
@@ -63,11 +64,14 @@ public class TC9653_Test {
 				RowsOfTable.get(r).findElement(By.cssSelector(".forceIcon"))
 						.click();
 				Thread.sleep(2000);
-				driver.findElement(
+			/*	driver.findElement(
 						By.xpath("//div[contains(title(),'Delete')]/parent::a[@class='forceActionLink']/parent::a"))
+						.click();*/
+				driver.findElement(
+						By.linkText("Delete"))
 						.click();
 				driver.findElement(
-						By.xpath("//button[contains(@title,'Delete')]"))
+						By.cssSelector("button[title='Delete'][type='button']"))
 						.click();
 				break;
 			}

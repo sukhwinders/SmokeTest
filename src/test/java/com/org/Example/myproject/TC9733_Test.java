@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -55,11 +54,10 @@ public class TC9733_Test {
 
 	@Test
 	public void Approve_Request() throws Exception {
-		guitils.loginToPortal(userName1,password1,driver);
+		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
-				.click();
+		driver.findElement(By.linkText("Requests")).click();
 		Thread.sleep(2000);
 		Set<String> window = driver.getWindowHandles();
 		Iterator<String> iter = window.iterator();
@@ -113,45 +111,58 @@ public class TC9733_Test {
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(10000);
+		// code for logout
+		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
+				.click();
+		driver.findElement(By.linkText("Log Out")).click();
+		Thread.sleep(5000);
 
-		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
-					.sendKeys(Keys.CONTROL + "t");
-
-		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
-					.sendKeys(Keys.COMMAND + "t");
-		}
+		/*
+		 * if (System.getProperty("os.name").toLowerCase().contains("win")) {
+		 * driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
+		 * .sendKeys(Keys.CONTROL + "t");
+		 * 
+		 * } else if
+		 * (System.getProperty("os.name").toLowerCase().contains("mac")) {
+		 * driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
+		 * .sendKeys(Keys.COMMAND + "t"); }
+		 */
 		driver.get(baseUrl);
-		guitils.loginToPortal(userName2,password2,driver);
+		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
-				.click();
-
+		Thread.sleep(5000);
+		driver.findElement(By.linkText("Requests")).click();
+		Thread.sleep(5000);
 		driver.findElement(
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.sendKeys("All");
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		/*
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .sendKeys("All");
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .click(); Thread.sleep(2000);
+		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
+		 * .click(); Thread.sleep(4000);
+		 * driver.findElement(By.xpath("//a[contains(@role,'option')]"
+		 * )).click();
+		 */
+
+		// click on all option
+		driver.findElement(
+				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
 				.click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Find list']"))
-				.click();
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("//a[contains(@role,'option')]")).click();
 
 		Thread.sleep(7000);
 		while (true) {
 			String Total_requests = driver
 					.findElement(
-							By.xpath("//span[@class='uiOutputText forceListViewStatusInfo']"))
+							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
 					.getText();
 			if (Total_requests.indexOf("+") > -1) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
-				jse.executeScript("scrollContent = document.evaluate('html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
 			} else {
 				break;
 			}
@@ -159,16 +170,33 @@ public class TC9733_Test {
 
 		tblAccounts = driver
 				.findElement(By
-						.xpath("html/body/div[6]/div[1]/section/div[1]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/table/tbody"));
+						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 		driver.findElement(By.linkText(Reqname)).click();
+		// driver.findElement(By.linkText("AutoTestTue Jun 21 10:48:47 IST 2016")).click();
+
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//a[@title='Related']")).click();
 
 		driver.findElement(
 				By.xpath("//a[contains(@title,'California Transparency of Supply Chain Act')]"))
 				.click();
-		driver.findElement(By.xpath("//div[@title='Open Form']")).click();
+		Thread.sleep(5000);
+		// Click on open form button
+		driver.findElement(
+				By.cssSelector("[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']"))
+				.click();
+		// driver.findElement(By.xpath("//div[@title='Open Form']")).click();
+		Thread.sleep(4000);
+		/*
+		 * driver.findElement(
+		 * By.xpath("//span[@title='Show more actions for this record']"))
+		 * .click();
+		 */
+		// driver.findElement(By.linkText("Open Form")).click();
+		driver.findElement(
+				By.cssSelector("[role='menuitem'][title='Open Form']")).click();
+
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 
 		// List <WebElement>
@@ -177,8 +205,9 @@ public class TC9733_Test {
 				.xpath(".//label[starts-with(@for,'No')]"));
 
 		RdoNo.get(0).click();
+
 		/*
-		 * RdoYes.get(1).click();
+		 * * RdoYes.get(1).click();
 		 * 
 		 * RdoNo.get(2).click(); RdoYes.get(3).click(); RdoNo.get(4).click();
 		 * RdoYes.get(5).click(); RdoNo.get(6).click();
@@ -193,40 +222,95 @@ public class TC9733_Test {
 		driver.findElement(
 				By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a"))
 				.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		// driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.xpath("//div[@title='Submit']")).click();
+		// driver.findElement(By.xpath("//div[@title='Submit']")).click();
+		driver.findElement(By.linkText("Submit")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//button[@onclick='submitRequest()']"))
 				.click();
 		driver.switchTo().defaultContent();
 		Thread.sleep(10000);
+		// logout responder
+		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
+				.click();
+		driver.findElement(By.linkText("Log Out")).click();
+		Thread.sleep(5000);
 
-		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
-					.sendKeys(Keys.CONTROL + "w");
-		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
-					.sendKeys(Keys.COMMAND + "w");
-		}
-		driver.switchTo().window(firstwindow);
-		driver.navigate().refresh();
-		// driver.findElement(By.xpath("//a[@title='Related']")).click();
-		// driver.findElement(By.xpath("//div[@class='uiScroller scroller-wrapper scroll-bidirectional native']/div/table/tbody/tr/th/div/a")).click();
-		driver.findElement(By.linkText("App Launcher")).click();
+		/*
+		 * if (System.getProperty("os.name").toLowerCase().contains("win")) {
+		 * driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
+		 * .sendKeys(Keys.CONTROL + "w"); } else if
+		 * (System.getProperty("os.name").toLowerCase().contains("mac")) {
+		 * driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
+		 * .sendKeys(Keys.COMMAND + "w"); }
+		 * driver.switchTo().window(firstwindow); driver.navigate().refresh();
+		 */
+		/*
+		 * driver.findElement(By.xpath("//a[@title='Related']")).click();
+		 * driver.findElement(By.xpath(
+		 * "//div[@class='uiScroller scroller-wrapper scroll-bidirectional native']/div/table/tbody/tr/th/div/a"
+		 * )).click();
+		 */
+
+		// login by requester
+		guitils.loginToPortal(userName1, password1, driver);
+		guitils.LightiningView(driver);
 		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(5000);
-		driver.navigate().refresh();
+		// driver.navigate().refresh();
 
 		driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
-		driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(3000);
-
-		driver.findElement(By.linkText("Show more actions for this record"))
+		// click on all option
+		// code for scroll
+		// code for click req.
+		// click on all option
+		driver.findElement(
+				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
-		Thread.sleep(2000);
+		driver.findElement(
+				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
+				.click();
+
+		Thread.sleep(7000);
+		while (true) {
+			String Total_requests = driver
+					.findElement(
+							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
+					.getText();
+			if (Total_requests.indexOf("+") > -1) {
+				JavascriptExecutor jse = (JavascriptExecutor) driver;
+				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+			} else {
+				break;
+			}
+		}
+
+		tblAccounts = driver
+				.findElement(By
+						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
+		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
+		driver.findElement(By.linkText(Reqname)).click();
+		// driver.findElement(By.linkText("AutoTestTue Jun 21 16:33:22 IST 2016")).click();
+
+		Thread.sleep(5000);
+		// Approve request
+		// driver.findElement(By.xpath("//span[@class='forceIconDeprecated forceIcon']")).click();
+		String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
+
+		List<WebElement> a = driver.findElements(By
+				.cssSelector(cssSelectorOfSameElements));
+		a.get(0).click();
+		// a.get(1).click();
+		// a.get(2).click();
+
+		/*
+		 * driver.findElement(By.linkText("Show more actions for this record"))
+		 * .click();
+		 */
+		Thread.sleep(8000);
 
 		driver.findElement(By.linkText("Approve")).click();
 		Thread.sleep(2000);
@@ -234,7 +318,7 @@ public class TC9733_Test {
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(
 				By.xpath("//textarea[@name='j_id0:j_id40:commentBlock:j_id44']"))
-				.sendKeys();
+				.sendKeys("test comment");
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[contains(@value,'Submit')]"))
 				.click();
@@ -246,5 +330,4 @@ public class TC9733_Test {
 						.isDisplayed(), "Status is not getting Changed");
 
 	}
-
 }

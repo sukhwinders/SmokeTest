@@ -66,6 +66,7 @@ public class TC9676_Test {
 		StringSelection sel = new StringSelection(
 				System.getProperty("user.dir") + "\\test.txt\\");
 
+		Thread.sleep(1000);
 		// Copy to clipboard
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
 		System.out.println("selection" + sel);

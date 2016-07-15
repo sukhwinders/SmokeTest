@@ -13,8 +13,6 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-
-
 public class TC9888_Test {
 
 	WebDriver driver;
@@ -50,14 +48,13 @@ public class TC9888_Test {
 
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		Thread.sleep(4000);
+		driver.findElement(By.cssSelector("div[class='icon-waffle']")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		Thread.sleep(5000);
 
-		System.out
-				.println("TC9888 : Verify create a CF Form using 6 Tabs, 6 sections and 4 Question in each section with mandatory and linked questions (Scenario 19 - CF)");
+		System.out.println("TC9888-(Scenario 19 - CF)");
 		// click on forms button
 		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		createContainer();
@@ -99,8 +96,6 @@ public class TC9888_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		
-
 		/*
 		 * Tab : 2 sections : 6
 		 */
@@ -135,8 +130,6 @@ public class TC9888_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		
-
 		/*
 		 * Tab : 3 Sections 6
 		 */
@@ -169,8 +162,6 @@ public class TC9888_Test {
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
-
-		
 
 		/*
 		 * Tab : 3 Sections 6
@@ -205,8 +196,6 @@ public class TC9888_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		
-
 		/* Tab : 5 Sections 6 */
 
 		// Click on tabs button
@@ -239,8 +228,6 @@ public class TC9888_Test {
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
 
-		
-
 		/* Tab : 6 Sections 6 */
 		// Click on tabs button
 		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
@@ -271,8 +258,6 @@ public class TC9888_Test {
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(5000);
 		/* ################Section 1 End#################### */
-
-		
 
 		/* _______________________End_________________________ */
 
@@ -307,11 +292,13 @@ public class TC9888_Test {
 		 * )) .click();
 		 */
 
-		/*Select Librarydropdown = new Select(
-				driver.findElement(By
-						.id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")));
-
-		Librarydropdown.selectByVisibleText("Existing");*/
+		/*
+		 * Select Librarydropdown = new Select( driver.findElement(By
+		 * .id("j_id0:form:containerBlock:containerNew:inputContainerLibrary"
+		 * )));
+		 * 
+		 * Librarydropdown.selectByVisibleText("Existing");
+		 */
 
 		driver.findElement(By.id("j_id0:form:containerBlock:createContainer"))
 				.click();
@@ -333,12 +320,13 @@ public class TC9888_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys("Layout_Name");
-		/*new Select(driver.findElement(By
-				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
-				.selectByVisibleText("Public");
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-				.click();*/
+		/*
+		 * new Select(driver.findElement(By
+		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
+		 * .selectByVisibleText("Public"); driver.findElement(
+		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
+		 * .click();
+		 */
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
@@ -413,17 +401,15 @@ public class TC9888_Test {
 	public void createSections() throws InterruptedException {
 
 		Thread.sleep(3000);
-		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:createSection']"))
+		driver.findElement(By.xpath("//input[@id='j_id0:form:createSection']"))
 				.click();
 		Thread.sleep(5000);
-		/*// create 6 sections
-		for (int i = 0; i <= 5; i++) {
-			driver.findElement(
-					By.xpath("//input[@id='j_id0:form:createSection']"))
-					.click();
-			Thread.sleep(5000);
-		}*/
+		/*
+		 * // create 6 sections for (int i = 0; i <= 5; i++) {
+		 * driver.findElement(
+		 * By.xpath("//input[@id='j_id0:form:createSection']")) .click();
+		 * Thread.sleep(5000); }
+		 */
 		// Send name for Section 1
 		driver.findElement(
 				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id73"))
@@ -433,41 +419,33 @@ public class TC9888_Test {
 				.sendKeys("Section 1");
 		Thread.sleep(1000);
 
-		/*// Send name for Section 2
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"))
-				.sendKeys("Section 2");
-		// Send name for Section 3
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"))
-				.sendKeys("Section 3");
-		// Send name for Section 4
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"))
-				.sendKeys("Section 4");
-		// Send name for Section 5
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:4:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:4:j_id73"))
-				.sendKeys("Section 5");
-		// Send name for Section 6
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:5:j_id73"))
-				.clear();
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:5:j_id73"))
-				.sendKeys("Section 6");*/
+		/*
+		 * // Send name for Section 2 driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:1:j_id73"
+		 * )) .sendKeys("Section 2"); // Send name for Section 3
+		 * driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:2:j_id73"
+		 * )) .sendKeys("Section 3"); // Send name for Section 4
+		 * driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:3:j_id73"
+		 * )) .sendKeys("Section 4"); // Send name for Section 5
+		 * driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:4:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:4:j_id73"
+		 * )) .sendKeys("Section 5"); // Send name for Section 6
+		 * driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:5:j_id73"
+		 * )) .clear(); driver.findElement(
+		 * By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:5:j_id73"
+		 * )) .sendKeys("Section 6");
+		 */
 
 		// Save tabs
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -925,6 +903,5 @@ public class TC9888_Test {
 		/* _______________________End_________________________ */
 
 	}
-
 
 }

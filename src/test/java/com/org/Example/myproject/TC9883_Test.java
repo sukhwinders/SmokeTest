@@ -60,14 +60,13 @@ public class TC9883_Test {
 		driver.switchTo().frame(0);
 		FName = driver
 				.findElement(
-						By.xpath("//input[@id='j_id0:form:dataPageBlock:j_id39:0:j_id69']"))
+						By.xpath(".//*[@id='j_id0:form:dataPageBlock:j_id39:3:j_id69']"))
 				.getText();
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:dataPageBlock:j_id39:0:j_id69']"))
 				.click();
-		System.out.println("Pint of the elemnent" +FName);
-		String str = driver.findElement(By.linkText("containerToCopy"+FName))
-				.getText();
+		String str = driver.findElement(
+				By.id("j_id0:form:dataPageBlock:j_id39:3:j_id69")).getText();
 		if (str.contains(FName))
 
 		{
