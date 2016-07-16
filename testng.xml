@@ -31,7 +31,10 @@
 	<class name="com.org.Example.myproject.TC9675_Test" />
 	<class name="com.org.Example.myproject.TC9676_Test" />
 	<class name="com.org.Example.myproject.TC9677_Test" />
-	<class name="com.org.Example.myproject.TC9678_Test" />              
+	<class name="com.org.Example.myproject.TC9678_Test" /> 
+	<class name="com.org.Example.myproject.TC9681_Test" />
+	<class name="com.org.Example.myproject.TC9733_Test" />  
+	<class name="com.org.Example.myproject.TC9735_Test" />           
 </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
