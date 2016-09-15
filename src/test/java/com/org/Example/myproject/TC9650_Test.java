@@ -33,7 +33,7 @@ public class TC9650_Test {
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+	//	driver.quit();
 	}
 
 	@Test

@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -19,7 +20,7 @@ import com.utils.Data_loading;
 
 public class TC9673_Test {
 	WebDriver driver;
-	String baseUrl;
+	String baseUrl = "https://login.salesforce.com";
 	Date d = new Date(System.currentTimeMillis());
 	String Reqname = "AutoTest" + d;
 	Data_loading guitils = new Data_loading();
@@ -36,16 +37,20 @@ public class TC9673_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+		driver = guitils.openBrowser(driver);
+		/*baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
 	}
 
-	/*
-	 * @AfterClass public void afterClass() { driver.quit(); }
-	 */
+	
+	 @AfterClass public void afterClass() 
+	 { 
+		 driver.quit(); 
+		}
+	 
 
 	// ** This test will create a new product in the specific org ID**//
 	@Test
@@ -70,7 +75,9 @@ public class TC9673_Test {
 		driver.findElement(By.xpath("//input[@id='productDropDown1']")).clear();
 		driver.findElement(By.xpath("//input[@id='productDropDown1']"))
 				.sendKeys(Product);
-		driver.findElement(By.cssSelector("h3.ng-binding")).click();
+		//driver.findElement(By.cssSelector("h3.ng-binding")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Test Pr002')]")).click();
+		
 
 		driver.findElement(
 				By.cssSelector("button.slds-button.slds-button--neutral"))
@@ -79,16 +86,21 @@ public class TC9673_Test {
 				By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]"))
 				.click();
 		Thread.sleep(2000);
-		driver.findElement(
-				By.xpath("(//span[@class='slds-checkbox--faux'])[2]")).click();
+		driver.findElement(By.xpath("//div[5]/div/div/div/div/label/span")).click();
+/*		List<WebElement> checklist = driver.findElements(By.xpath("//input[@class='slds-checkbox']"));
+		if(checklist.size()>0)
+		checklist.get(0).click();*/
+		
+		
 		driver.findElement(
 				By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand"))
 				.click();
 		driver.findElement(By.xpath("//button[3]")).click();
 
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@id='date']")).click();
-		driver.findElement(By.xpath("//div[2]/button")).click();
+		driver.findElement(By.id("dueDate")).click();
+		driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
+/*		driver.findElement(By.xpath("//div[2]/button")).click();
 		Thread.sleep(6000);
 		driver.findElement(By.xpath("//span[contains(.,'12')]")).click();
 		driver.findElement(
@@ -96,12 +108,11 @@ public class TC9673_Test {
 				.click();
 		Thread.sleep(3000);
 		driver.findElement(
-				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();
-		/*
-		 * Thread.sleep(5000);
-		 * driver.findElement(By.id("comments")).sendKeys("Test");
-		 * Thread.sleep(2000);
-		 */
+				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();*/
+		
+		  driver.findElement(By.id("comments")).sendKeys("Test");
+		
+		
 
 		driver.findElement(By.xpath("//button[contains(.,'Send')]")).click();
 		Thread.sleep(2000);
@@ -110,17 +121,20 @@ public class TC9673_Test {
 				.click();
 		driver.navigate().refresh();
 		Thread.sleep(5000);
-		driver.findElement(By.linkText(Reqname)).click();
+		//driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(6000);
 
-		if (System.getProperty("os.name").toLowerCase().contains("win")) {
+		
+	/******** New Tab ***********/
+		
+		/*if (System.getProperty("os.name").toLowerCase().contains("win")) {
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
 					.sendKeys(Keys.CONTROL + "t");
 
 		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
 					.sendKeys(Keys.COMMAND + "t");
-		}
+		}*/
 		driver.get(baseUrl);
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
@@ -166,7 +180,7 @@ public class TC9673_Test {
 						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 
-		driver.findElement(By.linkText(Reqname)).click();
+		//driver.findElement(By.linkText(Reqname)).click();
 
 	}
 

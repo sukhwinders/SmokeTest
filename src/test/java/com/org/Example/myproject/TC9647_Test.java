@@ -58,11 +58,13 @@ public class TC9647_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+		driver = guitils.openBrowser(driver);
+		
+/*		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass

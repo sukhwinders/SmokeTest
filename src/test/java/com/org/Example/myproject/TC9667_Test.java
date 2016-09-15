@@ -24,13 +24,9 @@ public class TC9667_Test {
 	String partner_name = guitils.getDATA("Partner_name");
 
 	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
-	}
+	 public void beforeClass() {  
+	  driver = guitils.openBrowser(driver);
+	 }
 
 	@AfterClass
 	public void afterClass() {
@@ -56,10 +52,10 @@ public class TC9667_Test {
 		driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]"))
 				.click();
 		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
-
-		driver.findElement(
-				By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand"))
+		Thread.sleep(3000);
+		driver.findElement(		By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand"))
 				.click();
+		Thread.sleep(2000);
 
 		driver.switchTo().defaultContent();
 		driver.findElement(By.linkText("App Launcher")).click();

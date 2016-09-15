@@ -1,5 +1,7 @@
 package com.org.Example.myproject;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -7,6 +9,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
@@ -28,15 +31,14 @@ public class TC9659_Test {
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
 	String strTPName = guitils.getUserName("TPResponder");
+	String Responder = guitils.getDATA("TradingPartnerName");
+
 
 	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+	public void beforeClass() {		
+		driver = guitils.openBrowser(driver);
 	}
+
 
 	@AfterClass
 	public void afterClass() {
@@ -53,60 +55,42 @@ public class TC9659_Test {
 				.click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		Thread.sleep(3000);
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-
-		driver.findElement(By.id("txtIdValue0")).clear();
-		driver.findElement(By.id("txtIdValue0")).sendKeys(UPCproduct);
-		Thread.sleep(10000);
+		
+		driver.findElement(By.id("txt_SearchTermTradingPartner")).clear();
+		driver.findElement(By.id("txt_SearchTermTradingPartner")).sendKeys(Responder,Keys.TAB);		
+		Thread.sleep(5000);
+		//driver.findElement(By.xpath("//*[@id='tradingPartnerModal']/div[2]/ul/li[1]/div/div[2]/span")).click();
+		driver.findElement(By.xpath("//*[@id='s01']")).click();
+		
+		Thread.sleep(3000);
+		driver.findElement(By.id("txt_SearchTerm")).clear();
+		driver.findElement(By.id("txt_SearchTerm")).sendKeys(UPCproduct);
+		
+		Thread.sleep(2000);
 		driver.findElement(By.id("btnProductSearch")).click();
+		Thread.sleep(5000);
 		driver.findElement(By.id("btnCreateProduct")).click();
-		// input[@id='ProductName']
-
-		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys(
-				"TEST Product");
-
-		driver.findElement(
-				By.xpath("//button[contains(@ng-click,'vm.AddNewProduct()')]"))
-				.click();
-		driver.findElement(
-				By.xpath("//input[@id='txt_UPProductRelationship_Name']"))
-				.sendKeys("TEST Product");
-		/*
-		 * driver.findElement(By.xpath("//input[@id='txt_UPTardingPartner_Name']"
-		 * )).sendKeys(strTPName); Thread.sleep(2000);
-		 * driver.findElement(By.xpath("//h3[@class='ng-binding']")).click();
-		 */
-
-		new Select(driver.findElement(By.id("ddl_UPRelationship_Type")))
-				.selectByVisibleText("Buy");
-		String strTypeDrp = "//select[@id='ddl_UPRelationship_Status']";
-
-		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-
-			driver.switchTo().activeElement()
-					.equals(driver.findElement(By.xpath(strTypeDrp)));
-			driver.findElement(By.xpath(strTypeDrp)).sendKeys(Keys.ARROW_DOWN);
-
-		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			driver.switchTo().activeElement()
-					.equals(driver.findElement(By.xpath(strTypeDrp)));
-			driver.findElement(By.xpath(strTypeDrp)).sendKeys(
-					Keys.chord(Keys.ARROW_DOWN));
-		}
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys("TEST Product");
+		Thread.sleep(2000);
+		driver.findElement(By.id("btn_UPRelationship_Next")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("btn_UPRelationship_Next")).click();
+		
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//a[@id='btn_UPRelationship_Tag_Add']"))
-				.click();
+		driver.findElement(By.id("tab-ProductRelationship-1__item")).click();
+		driver.findElement(By.xpath("//a[@id='btn_UPRelationship_Tag_Add']")).click();
 		Thread.sleep(4000);
 
-		driver.findElement(
-				By.xpath("//input[@id='txt_UPRelationship_Tag_New']"))
-				.sendKeys(Tags);
-		driver.findElement(
-				By.xpath("//textarea[@id='txt_UPRelationship_Comment'] "))
-				.click();
-
-		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@id='txt_UPRelationship_Tag_New']")).sendKeys(Tags);
+		WebElement TagField = driver.findElement(By.id("txt_UPRelationship_Tag_New"));
+		TagField.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("btn_UPRelationship_Save")).click();
 
 	}
 

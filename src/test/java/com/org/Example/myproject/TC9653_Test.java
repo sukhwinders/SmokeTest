@@ -22,24 +22,20 @@ public class TC9653_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String strTPName = guitils.getPassword("TradingPartnerName");
+	String strTPName = "dev";//guitils.getPassword("TradingPartnerName");
 
 	WebElement tblAccounts;
 	List<WebElement> RowsOfTable;
 	WebElement ColOfTable;
 
 	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+	public void beforeClass() {		
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test
@@ -54,7 +50,7 @@ public class TC9653_Test {
 		tblAccounts = driver.findElement(By.xpath(sTblAccounts));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 
-		for (int r = 0; r < RowsOfTable.size(); r++) {
+		/*for (int r = 0; r < RowsOfTable.size(); r++) {
 			ColOfTable = RowsOfTable.get(r).findElement(By.tagName("th"));
 			String tdText = ColOfTable.getText();
 			String textToVerify = strTPName;
@@ -64,9 +60,6 @@ public class TC9653_Test {
 				RowsOfTable.get(r).findElement(By.cssSelector(".forceIcon"))
 						.click();
 				Thread.sleep(2000);
-			/*	driver.findElement(
-						By.xpath("//div[contains(title(),'Delete')]/parent::a[@class='forceActionLink']/parent::a"))
-						.click();*/
 				driver.findElement(
 						By.linkText("Delete"))
 						.click();
@@ -76,23 +69,17 @@ public class TC9653_Test {
 				break;
 			}
 
-		}
+		}*/
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		driver.findElement(By.linkText("New")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.cssSelector("input[id=\"companyName\"]"))
-				.sendKeys(strTPName);
-		driver.findElement(
-				By.xpath(".//*[@class='slds-button slds-button--brand']"))
-				.click();
-		driver.findElement(By.xpath("//button[contains(.,'Connect')]")).click();
-		new Select(driver.findElement(By
-				.xpath("//select[contains(@id,'ddl_UURelationship_Status')]")))
-				.selectByVisibleText("Active");
+		driver.findElement(By.cssSelector("input[id=\"companyName\"]")).sendKeys(strTPName);
+		driver.findElement(By.xpath(".//*[@class='slds-button slds-button--brand']")).click();
+		driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
+		Thread.sleep(3000);
+		//new Select(driver.findElement(By.xpath("//select[contains(@id,'ddl_UURelationship_Status')]"))).selectByVisibleText("Active");
 		String strTypeDrp = "//select[@id='ddl_UURelationship_Type']";
-
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-
 			driver.switchTo().activeElement()
 					.equals(driver.findElement(By.xpath(strTypeDrp)));
 			driver.findElement(By.xpath(strTypeDrp)).sendKeys(Keys.ARROW_DOWN);

@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -32,13 +33,9 @@ public class TC9678_Test {
 	String baseUrl;
 
 	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
-	}
+	 public void beforeClass() {  
+	  driver = guitils.openBrowser(driver);
+	 }
 
 	@AfterClass
 	public void afterClass() {
@@ -53,20 +50,25 @@ public class TC9678_Test {
 		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Document Library")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.id("btn_ShowMore1")).click();
-		driver.findElement(By.cssSelector("#link_Send1 > p.slds-truncate"))
-				.click();
+		driver.switchTo().frame(driver.findElement( By.id("vfFrameId")));
+		driver.findElement(By.id("btn_ShowMore4")).click();
+		
+		driver.findElement(By.cssSelector("#link_Send4 > p.slds-truncate")).click();
+		Thread.sleep(3000);
 		driver.findElement(By.id("requestName")).clear();
 		driver.findElement(By.id("requestName")).sendKeys(Document);
 		driver.findElement(By.id("recipients")).clear();
-		driver.findElement(By.id("recipients")).sendKeys(Responder,Keys.TAB);
+		driver.findElement(By.id("recipients")).sendKeys(Responder,Keys.TAB);		
+		Thread.sleep(3000);
+		//driver.findElement(By.linkText(Responder)).click();
+		driver.findElement(By.xpath("//*[@id='tradingPartnerModal']/div[2]/ul/li[1]/div/div[2]/span")).click();
+		
 		driver.findElement(By.id("comments")).clear();
 		driver.findElement(By.id("comments")).sendKeys(comment);
 		driver.findElement(By.id("sendDialogSendButton")).click();
-		driver.findElement(
-				By.cssSelector("div.slds-x-small-buttons--horizontal > #btn_sendConfirmDialogCloseButton"))
-				.click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("btn_sendConfirmDialogCloseButton")).click();
+		//driver.findElement(	By.cssSelector("div.slds-x-small-buttons--horizontal > #btn_sendConfirmDialogCloseButton")).click();
 
 	}
 

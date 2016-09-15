@@ -36,16 +36,17 @@ public class TC9735_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+		driver = guitils.openBrowser(driver);
+		/*baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	// ** This test will create a new product in the specific org ID**//
@@ -54,6 +55,7 @@ public class TC9735_Test {
 
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
+		driver.findElement(By.xpath("//a[@title='App Launcher']")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Requests")).click();
 		Thread.sleep(2000);
@@ -71,7 +73,8 @@ public class TC9735_Test {
 		driver.findElement(By.xpath("//input[@id='productDropDown1']")).clear();
 		driver.findElement(By.xpath("//input[@id='productDropDown1']"))
 				.sendKeys(Product);
-		driver.findElement(By.cssSelector("h3.ng-binding")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Test Pr002')]")).click();
+		//driver.findElement(By.cssSelector("h3.ng-binding")).click();
 
 		driver.findElement(
 				By.cssSelector("button.slds-button.slds-button--neutral"))
@@ -80,15 +83,20 @@ public class TC9735_Test {
 				By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]"))
 				.click();
 		Thread.sleep(2000);
-		driver.findElement(
+		/*driver.findElement(
 				By.xpath("//span[contains(.,'California Transparency of Supply Chain Act')]"))
-				.click();
+				.click();*/
+		driver.findElement(By.xpath("html/body/div[8]/div[1]/div/div[2]/div[2]/div[15]/div/div[1]/div/div/label/span")).click();
 		driver.findElement(
 				By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand"))
 				.click();
 		driver.findElement(By.xpath("//button[3]")).click();
+		
+		Thread.sleep(4000);
+		driver.findElement(By.id("dueDate")).click();
+		driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
 
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='date']")).click();
 		driver.findElement(By.xpath("//div[2]/button")).click();
 		Thread.sleep(3000);
@@ -97,7 +105,7 @@ public class TC9735_Test {
 				By.cssSelector("button.slds-button.slds-button--neutral"))
 				.click();
 		driver.findElement(
-				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();
+				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();*/
 
 		driver.findElement(By.id("comments")).sendKeys("Test");
 		Thread.sleep(2000);
@@ -107,11 +115,11 @@ public class TC9735_Test {
 		driver.findElement(
 				By.xpath("//button[@ng-click='redirectToRequestListPage();']"))
 				.click();
+		Thread.sleep(10000);
 		driver.navigate().refresh();
-		Thread.sleep(5000);
 		driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(6000);
-		// logout responder
+		Thread.sleep(10000);
+		// code for logout
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 				.click();
 		driver.findElement(By.linkText("Log Out")).click();
@@ -119,9 +127,10 @@ public class TC9735_Test {
 
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
+		driver.findElement(By.xpath("//a[@title='App Launcher']")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Requests")).click();
-
+		Thread.sleep(300000);
 		driver.findElement(
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
@@ -143,7 +152,6 @@ public class TC9735_Test {
 				break;
 			}
 		}
-
 		tblAccounts = driver
 				.findElement(By
 						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
@@ -155,7 +163,12 @@ public class TC9735_Test {
 		driver.findElement(
 				By.xpath("//a[contains(@title,'California Transparency of Supply Chain Act')]"))
 				.click();
-		driver.findElement(By.xpath("//div[@title='Open Form']")).click();
+				Thread.sleep(5000);
+		// Click on open form button
+		driver.findElement(
+				By.cssSelector("[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']"))
+				.click();
+			driver.findElement(By.cssSelector("[role='menuitem'][title='Open Form']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 
 		
@@ -188,70 +201,80 @@ public class TC9735_Test {
 
 		
 		// login by requester
-		guitils.loginToPortal(userName1, password1, driver);
-		guitils.LightiningView(driver);
-		Thread.sleep(5000);
-		driver.findElement(By.linkText("ICIX")).click();
-		Thread.sleep(5000);
+				guitils.loginToPortal(userName1, password1, driver);
+				guitils.LightiningView(driver);
+				Thread.sleep(5000);
+				driver.findElement(By.linkText("ICIX")).click();
+				Thread.sleep(5000);
+				// driver.navigate().refresh();
 
-		driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
-		// click on all option
-		// code for scroll
-		// code for click req.
-		// click on all option
-		driver.findElement(
-				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
-				.click();
-		driver.findElement(
-				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
-				.click();
+				driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
+				// click on all option
+				// code for scroll
+				// code for click req.
+				// click on all option
+				driver.findElement(
+						By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
+						.click();
+				driver.findElement(
+						By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
+						.click();
 
-		Thread.sleep(7000);
-		while (true) {
-			String Total_requests = driver
-					.findElement(
-							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
-					.getText();
-			if (Total_requests.indexOf("+") > -1) {
-				JavascriptExecutor jse = (JavascriptExecutor) driver;
-				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
-			} else {
-				break;
+				Thread.sleep(7000);
+				while (true) {
+					String Total_requests = driver
+							.findElement(
+									By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
+							.getText();
+					if (Total_requests.indexOf("+") > -1) {
+						JavascriptExecutor jse = (JavascriptExecutor) driver;
+						jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
+					} else {
+						break;
+					}
+				}
+
+				tblAccounts = driver
+						.findElement(By
+								.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
+				RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
+				driver.findElement(By.linkText(Reqname)).click();
+				// driver.findElement(By.linkText("AutoTestTue Jun 21 16:33:22 IST 2016")).click();
+
+				Thread.sleep(5000);
+				// Approve request
+				// driver.findElement(By.xpath("//span[@class='forceIconDeprecated forceIcon']")).click();
+				String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
+
+				List<WebElement> a = driver.findElements(By
+						.cssSelector(cssSelectorOfSameElements));
+				a.get(0).click();
+				// a.get(1).click();
+				// a.get(2).click();
+
+				/*
+				 * driver.findElement(By.linkText("Show more actions for this record"))
+				 * .click();
+				 */
+				Thread.sleep(8000);
+
+				driver.findElement(By.linkText("Approve")).click();
+				Thread.sleep(2000);
+
+				driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+				driver.findElement(
+						By.xpath("//textarea[@placeholder='Enter Comments ']"))
+						.sendKeys("test comment");
+				Thread.sleep(5000);
+				driver.findElement(By.xpath("//input[contains(@value,'Submit')]"))
+						.click();
+				driver.switchTo().defaultContent();
+				Thread.sleep(5000);
+				driver.navigate().refresh();
+				Assert.assertTrue(
+						driver.findElement(By.xpath("//span[contains(.,'Approved')]"))
+								.isDisplayed(), "Status is not getting Changed");
+
 			}
 		}
 
-		tblAccounts = driver
-				.findElement(By
-						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
-		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
-		driver.findElement(By.linkText(Reqname)).click();
-		// driver.findElement(By.linkText("AutoTestTue Jun 21 16:33:22 IST 2016")).click();
-
-		String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
-
-		List<WebElement> a = driver.findElements(By
-				.cssSelector(cssSelectorOfSameElements));
-		a.get(0).click();
-		// a.get(1).click();
-		// a.get(2).click();
-
-		driver.findElement(By.linkText("Approve")).click();
-		Thread.sleep(2000);
-
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(
-				By.xpath("//textarea[@name='j_id0:j_id40:commentBlock:j_id44']"))
-				.sendKeys("Test comment");
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//input[contains(@value,'Submit')]"))
-				.click();
-		driver.switchTo().defaultContent();
-		Thread.sleep(5000);
-		driver.navigate().refresh();
-		Assert.assertTrue(
-				driver.findElement(By.xpath("//span[contains(.,'Approved')]"))
-						.isDisplayed(), "Status is not getting Changed");
-
-	}
-
-}

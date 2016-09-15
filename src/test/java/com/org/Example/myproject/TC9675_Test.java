@@ -27,15 +27,12 @@ public class TC9675_Test {
 
 	WebDriver driver;
 	String baseUrl;
-
+	
 	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
-	}
+	 public void beforeClass() {  
+	  driver = guitils.openBrowser(driver);
+	 }
+
 
 	@AfterClass
 	public void afterClass() {
@@ -71,8 +68,7 @@ public class TC9675_Test {
 		// Sleep time to detect the window dialog box
 
 		// Perform native keystrokes for CTRL+V and ENTER keys
-		StringSelection sel = new StringSelection(
-				System.getProperty("user.dir") + "\\test.txt\\");
+		StringSelection sel = new StringSelection(System.getProperty("user.dir") + "\\test.txt\\");
 
 		// Copy to clipboard
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
@@ -100,13 +96,18 @@ public class TC9675_Test {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		// }
-
-		driver.findElement(By.xpath(".//*[@id='category']")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
-		driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']"))
-				.click();
+		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//*[@id='category']")).click();
+		driver.findElement(By.id("category")).click();
+		//driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
+		driver.findElement(By.xpath("//*[@id='category']/option[1]")).click();
+		
+		driver.findElement(By.className("slds-checkbox--faux")).click();		
+		//driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
+		//driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
+		driver.findElement(By.id("documentDialogSaveButton")).click();
+		Thread.sleep(2000);
 
 		driver.findElement(By.id("uploadButton")).click();
 		Thread.sleep(6000);

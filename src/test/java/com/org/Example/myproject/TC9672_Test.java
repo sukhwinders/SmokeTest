@@ -35,15 +35,16 @@ public class TC9672_Test {
 	List<WebElement> RowsOfTable;
 	WebElement ColOfTable;
 	WebDriver driver;
-	String baseUrl;
+	String baseUrl =  "https://login.salesforce.com";
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+		driver = guitils.openBrowser(driver);
+		/*baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
@@ -78,16 +79,19 @@ public class TC9672_Test {
 				By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]"))
 				.click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//input[@type='checkbox'])[3]")).click();
-		driver.findElement(By.xpath("//div[3]/div/label/span[2]")).click();
+		
+		driver.findElement(By.xpath("//div[5]/div/div/div/div/label/span")).click();
+		
 		driver.findElement(
 				By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand"))
 				.click();
 		driver.findElement(By.xpath("//button[3]")).click();
 
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='date']")).click();
-		driver.findElement(By.xpath("//div[2]/button")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.id("dueDate")).click();
+		driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
+		
+/*		driver.findElement(By.xpath("//div[2]/button")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[contains(.,'12')]")).click();
 		Thread.sleep(2000);
@@ -95,7 +99,7 @@ public class TC9672_Test {
 				By.cssSelector("button.slds-button.slds-button--neutral"))
 				.click();
 		driver.findElement(
-				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();
+				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();*/
 
 		driver.findElement(By.id("comments")).sendKeys("Test");
 		Thread.sleep(2000);
@@ -109,7 +113,7 @@ public class TC9672_Test {
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(10000);
-
+/*
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
 					.sendKeys(Keys.CONTROL + "t");
@@ -117,7 +121,7 @@ public class TC9672_Test {
 		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))
 					.sendKeys(Keys.COMMAND + "t");
-		}
+		}*/
 		driver.get(baseUrl);
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
@@ -129,9 +133,9 @@ public class TC9672_Test {
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
 
-		driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
-		.click();
-		
+		driver.findElement(
+				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
+				.click();
 
 		Thread.sleep(7000);
 		while (true) {
@@ -142,21 +146,17 @@ public class TC9672_Test {
 			if (Total_requests.indexOf("+") > -1) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
 				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
-				
 			} else {
 				break;
 			}
 		}
-	/*	driver.findElement(By.xpath("//table[@class='forceRecordLayout uiVirtualDataGrid--default uiVirtualDataGrid forceVirtualGrid resizable-cols']//th[4]")).click();*/
 
 		tblAccounts = driver
 				.findElement(By
 						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
-		Thread.sleep(9000);
-		driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(9000);
+
+		//driver.findElement(By.linkText(Reqname)).click();
 
 	}
-
 }
