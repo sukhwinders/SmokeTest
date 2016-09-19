@@ -15,19 +15,21 @@ import com.utils.Data_loading;
 public class TC9648_Test {
 
 	WebDriver driver;
-	String baseUrl;
+	//String baseUrl;
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
 	String Partner = guitils.getDATA("CompenyName");
+	String baseUrl =  "https://login.salesforce.com";
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver = guitils.openBrowser(driver);
+		//baseUrl = "https://login.salesforce.com";
+		//driver = new FirefoxDriver();
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.navigate().to(baseUrl);
 	}
 
 	@AfterClass

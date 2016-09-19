@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -50,7 +51,7 @@ public class TC9733_Test {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
@@ -120,7 +121,7 @@ public class TC9733_Test {
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 				.click();
 		driver.findElement(By.linkText("Log Out")).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 
 		/*
 		 * if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -279,39 +280,33 @@ public class TC9733_Test {
 		// code for click req.
 		// click on all option
 		
-		driver.findElement(
-				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
-				.click();
-		driver.findElement(
-				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
-				.click();
-		System.out.println("Test 0");
-		Thread.sleep(7000);
-		while (true) {
-			String Total_requests = driver
-					.findElement(
-							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
-					.getText();
-			if (Total_requests.indexOf("+") > -1) {
-				JavascriptExecutor jse = (JavascriptExecutor) driver;
-				jse.executeScript("scrollContent = document.evaluate('/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div/div[2]/div/div[3]/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;scrollContent.scrollTop = scrollContent.scrollHeight;");
-			} else {
-				break;
-			}
-		}
-		System.out.println("Test 1");
-		tblAccounts = driver
-				.findElement(By
-						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
-		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
-		System.out.println("Test 2");
 		
-		WebElement rateElement1 = driver.findElement(By.linkText("Reqname"));
-		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement1);
+		
+		//New
+		
+		//Thread.sleep(2000);
+		//driver.findElement(By.linkText("Trading Partner Groups")).click();
+		Thread.sleep(2000);
+		// Search Trading Partner 
+				driver.findElement(By.id("84:2;a")).sendKeys(Reqname);
+				Thread.sleep(3000);
+				WebElement webElement = driver.findElement(By.id("84:2;a"));
+				webElement.sendKeys(Keys.TAB);
+				Thread.sleep(3000);
+				webElement.sendKeys(Keys.ENTER);
+				Thread.sleep(3000);	
+				driver.findElement(By.linkText(Reqname)).click();
+				Thread.sleep(2000);
+		
+		//Till here
+		
+		//System.out.println(Reqname);
+		//WebElement rateElement1 = driver.findElement(By.linkText("Reqname"));
+		 // ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement1);
 		
 		//driver.findElement(By.linkText("AutoTestThu Sep 15 15:18:24 IST 2016")).click();
 	
-		System.out.println("Test 3");
+		//System.out.println("Test 3");
 		Thread.sleep(5000);
 		// Approve request
 		// driver.findElement(By.xpath("//span[@class='forceIconDeprecated forceIcon']")).click();
@@ -320,7 +315,7 @@ public class TC9733_Test {
 		List<WebElement> a = driver.findElements(By
 				.cssSelector(cssSelectorOfSameElements));
 		a.get(0).click();
-		System.out.println("Test 4");
+		//System.out.println("Test 4");
 		// a.get(1).click();
 		// a.get(2).click();
 
@@ -346,6 +341,16 @@ public class TC9733_Test {
 		Assert.assertTrue(
 				driver.findElement(By.xpath("//span[contains(.,'Approved')]"))
 						.isDisplayed(), "Status is not getting Changed");
+		
+		//String txt= "";
+		//driver.getPageSource().contains(txt);
+		
+			
+			
+			
+		
+		}
+		
 
 	}
-}
+

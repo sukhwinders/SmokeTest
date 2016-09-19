@@ -22,7 +22,7 @@ public class TC9647_Test {
 	String Icixid = guitils.getDATA("icixid");
 
 	@Test
-	public void Auccount_verification() throws Exception {
+	public void Account_verification() throws Exception {
 		//Login to the salesforce
 		guitils.loginToPortal(userName1,password1,driver);
 		Thread.sleep(8000);

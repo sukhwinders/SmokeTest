@@ -35,7 +35,7 @@ public class TC9653_Test {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

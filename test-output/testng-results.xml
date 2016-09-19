@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70405" started-at="2016-09-15T13:03:23Z" finished-at="2016-09-15T13:04:33Z">
+  <suite name="Default suite" duration-ms="377373" started-at="2016-09-19T08:06:12Z" finished-at="2016-09-19T08:12:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70405" started-at="2016-09-15T13:03:23Z" finished-at="2016-09-15T13:04:33Z">
-      <class name="com.org.Example.myproject.TC10460_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC10460_Test@6093dd95]" name="beforeClass" is-config="true" duration-ms="11123" started-at="2016-09-15T18:33:23Z" finished-at="2016-09-15T18:33:34Z">
+    <test name="Default test" duration-ms="377373" started-at="2016-09-19T08:06:12Z" finished-at="2016-09-19T08:12:29Z">
+      <class name="com.org.Example.myproject.TC9733_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9733_Test@2302e984]" name="beforeClass" is-config="true" duration-ms="19389" started-at="2016-09-19T13:36:12Z" finished-at="2016-09-19T13:36:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Approve_Request()[pri:0, instance:com.org.Example.myproject.TC10460_Test@6093dd95]" name="Approve_Request" duration-ms="59258" started-at="2016-09-15T18:33:34Z" finished-at="2016-09-15T18:34:33Z">
+        <test-method status="PASS" signature="Approve_Request()[pri:0, instance:com.org.Example.myproject.TC9733_Test@2302e984]" name="Approve_Request" duration-ms="357624" started-at="2016-09-19T13:36:31Z" finished-at="2016-09-19T13:42:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Approve_Request -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC10460_Test@6093dd95]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-09-15T18:34:33Z" finished-at="2016-09-15T18:34:33Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9733_Test@2302e984]" name="afterClass" is-config="true" duration-ms="343" started-at="2016-09-19T13:42:29Z" finished-at="2016-09-19T13:42:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TC10460_Test -->
+      </class> <!-- com.org.Example.myproject.TC9733_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
