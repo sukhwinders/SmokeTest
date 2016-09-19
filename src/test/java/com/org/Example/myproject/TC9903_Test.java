@@ -56,10 +56,10 @@ public class TC9903_Test {
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.linkText("FormList")).click();
+		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		// script for container template
-		driver.findElement(By.name("j_id0:form:j_id12")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
 				.clear();
@@ -86,7 +86,7 @@ public class TC9903_Test {
 				.click();
 		Thread.sleep(3000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 
 		// script for Layout template
 		driver.findElement(By.id("j_id0:form:tabLayout_lbl")).click();
@@ -117,8 +117,16 @@ public class TC9903_Test {
 		driver.findElement(By.id("j_id0:form:createTab")).click();
 		Thread.sleep(3000);
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
+				.clear();
+		Thread.sleep(3000);
+		driver.findElement(
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
 				.sendKeys(Tab_Name);
+		Thread.sleep(3000);
+		driver.findElement(
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id57"))
+				.click();
 		Thread.sleep(6000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(8000);

@@ -2,6 +2,7 @@ package com.org.Example.myproject;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -54,11 +55,11 @@ public class TC9913_Test {
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.linkText("FormList")).click();
+		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 
 		// Adding Container
-		driver.findElement(By.name("j_id0:form:j_id12")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
 				.clear();
@@ -76,11 +77,10 @@ public class TC9913_Test {
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm"))
 				.click();
-		/*
-		 * new Select( driver.findElement(By
-		 * .id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")))
-		 * .selectByVisibleText("Existing");
-		 */
+		/*new Select(
+				driver.findElement(By
+						.id("j_id0:form:containerBlock:containerNew:inputContainerLibrary")))
+				.selectByVisibleText("Existing");*/
 		driver.findElement(By.id("j_id0:form:containerBlock:createContainer"))
 				.click();
 		Thread.sleep(3000);
@@ -95,13 +95,12 @@ public class TC9913_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys(layout_Name);
-		/*
-		 * new Select(driver.findElement(By
-		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
-		 * .selectByVisibleText("Public"); driver.findElement(
-		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-		 * .click();
-		 */
+		/*new Select(driver.findElement(By
+				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
+				.selectByVisibleText("Public");
+		driver.findElement(
+				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
+				.click();*/
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
@@ -119,7 +118,11 @@ public class TC9913_Test {
 			Thread.sleep(3000);
 			driver.findElement(
 					By.id("j_id0:form:tabBlock:tabSection:tabTable:" + i
-							+ ":j_id47")).sendKeys(tab_Name + " " + i);
+							+ ":j_id46")).sendKeys(tab_Name + " " + i);
+			Thread.sleep(3000);
+			driver.findElement(
+					By.id("j_id0:form:tabBlock:tabSection:tabTable:" + i
+							+ ":j_id57")).click();
 			Thread.sleep(3000);
 			driver.findElement(By.id("j_id0:form:buttonSave")).click();
 			Thread.sleep(3000);
@@ -133,19 +136,19 @@ public class TC9913_Test {
 				driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
 				Thread.sleep(5000);
 				driver.findElement(By.id("j_id0:form:createSection")).click();
+				driver.findElement(
+						By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:"
+								+ j + ":j_id73")).click();
 				Thread.sleep(5000);
 				driver.findElement(
 						By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:"
-								+ j + ":j_id74")).sendKeys(section_Name);
-
-				Thread.sleep(2000);
-
+								+ j + ":j_id73")).sendKeys(section_Name);
+				Thread.sleep(5000);
 				new Select(
 						driver.findElement(By
 								.id("j_id0:form:sectionBlock:sectionSection:sectionTable:"
-										+ j + ":j_id89")))
+										+ j + ":j_id88")))
 						.selectByVisibleText("Row");
-
 				Thread.sleep(5000);
 				driver.findElement(By.xpath("//input[@value='SAVE']")).click();
 				Thread.sleep(6000);
@@ -173,6 +176,33 @@ public class TC9913_Test {
 
 		// Publishing the form
 		driver.findElement(By.id("j_id0:form:buttonPublish")).click();
+	}
+
+	public void switchtoLightining() throws InterruptedException {
+		if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
+			driver.findElement(By.id("userNavLabel")).click();
+			driver.findElement(
+					By.xpath("//a[@title='Switch to Lightning Experience']"))
+					.click();
+			String parentWindow = driver.getWindowHandle();
+			Set<String> allWindows = driver.getWindowHandles();
+			for (String curWindow : allWindows) {
+				driver.switchTo().window(curWindow);
+				// perform operation on popup
+				driver.findElement(
+						By.xpath("//div[@style='line-height:12px; margin-top: 12px']"))
+						.click();
+				driver.findElement(By.id("simpleDialog0button0")).click();
+
+				// switch back to parent window
+				driver.switchTo().window(parentWindow);
+				Thread.sleep(8000);
+				driver.navigate().refresh();
+			}
+		} else if (driver.findElements(By.xpath("//span[@id='userNavLabel']"))
+				.size() < 0) {
+			driver.findElement(By.linkText("App Launcher")).click();
+		}
 	}
 
 	public void createQuestion_text(int a) throws InterruptedException {
@@ -265,10 +295,10 @@ public class TC9913_Test {
 				Thread.sleep(4000);
 				driver.findElement(
 						By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-								+ awsCnt + ":j_id167")).sendKeys(answer_Text);
+								+ awsCnt + ":j_id166")).sendKeys(answer_Text);
 				driver.findElement(
 						By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-								+ awsCnt + ":j_id171")).sendKeys(answer_Text);
+								+ awsCnt + ":j_id170")).sendKeys(answer_Text);
 			}
 
 			// Saving the question
@@ -332,10 +362,10 @@ public class TC9913_Test {
 				Thread.sleep(4000);
 				driver.findElement(
 						By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-								+ awsCnt + ":j_id167")).sendKeys(answer_Text);
+								+ awsCnt + ":j_id166")).sendKeys(answer_Text);
 				driver.findElement(
 						By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-								+ awsCnt + ":j_id171")).sendKeys(answer_Text);
+								+ awsCnt + ":j_id170")).sendKeys(answer_Text);
 			}
 
 			// Saving the question
@@ -398,10 +428,10 @@ public class TC9913_Test {
 				Thread.sleep(4000);
 				driver.findElement(
 						By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-								+ awsCnt + ":j_id167")).sendKeys(answer_Text);
+								+ awsCnt + ":j_id166")).sendKeys(answer_Text);
 				driver.findElement(
 						By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-								+ awsCnt + ":j_id171")).sendKeys(answer_Text);
+								+ awsCnt + ":j_id170")).sendKeys(answer_Text);
 			}
 
 			// Saving the question

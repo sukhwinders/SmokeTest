@@ -37,15 +37,20 @@ public class TC9649_Test {
 	@Test
 	public void testSearchByIcixId() throws Exception {
 
-		guitils.loginToPortal(userName1, password1, driver);
+		// Login to the salesforce
+		guitils.loginToPortal(userName1,password1,driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.linkText("Accounts")).click();
+		driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
 		Thread.sleep(3000);
-		// New button
-		driver.findElement(By.linkText("New")).click();
+/*		driver.findElement(
+				By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a"))
+				.click();*/
+		//New button
+		driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
+
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 
 		driver.findElement(By.xpath("(//input[@type='text'])[3]")).clear();

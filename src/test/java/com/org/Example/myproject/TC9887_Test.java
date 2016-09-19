@@ -49,10 +49,8 @@ public class TC9887_Test {
 		guitils.LightiningView(driver);
 		driver.findElement(By.cssSelector("div[class='icon-waffle']"))
 		.click();
-		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();
-		//driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
-		driver.findElement(By.linkText("FormList")).click();
+		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		Thread.sleep(5000);
 
@@ -60,7 +58,7 @@ public class TC9887_Test {
 				.println("TC9887(Scenario 18 - CF)");
 		// click on forms button
 		Thread.sleep(5000);
-		driver.findElement(By.name("j_id0:form:j_id12")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		createContainer();
 
 		createLayout();
@@ -288,7 +286,7 @@ public class TC9887_Test {
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46")) .clear();
 		 */
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
 				.sendKeys("Tab1");
 		Thread.sleep(1000);
 
@@ -298,7 +296,7 @@ public class TC9887_Test {
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46")) .clear();
 		 */
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:1:j_id46"))
 				.sendKeys("Tab2");
 		// Send name for Tab 3
 		/*
@@ -306,7 +304,7 @@ public class TC9887_Test {
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46")) .clear();
 		 */
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:2:j_id46"))
 				.sendKeys("Tab3");
 		// Send name for Tab 4
 		/*
@@ -314,7 +312,7 @@ public class TC9887_Test {
 		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46")) .clear();
 		 */
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:3:j_id46"))
 				.sendKeys("Tab4");
 
 		// Save tabs
@@ -336,14 +334,11 @@ public class TC9887_Test {
 		 */
 		// Send name for Section 1
 		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74"))
+				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id73"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74"))
+				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id73"))
 				.sendKeys("Section 1");
-		new Select(driver.findElement(By
-				.xpath("//select[@id='j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id89']")))
-				.selectByVisibleText("Row");
 		Thread.sleep(1000);
 
 		/*
@@ -425,16 +420,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.sendKeys("Radio 1");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
 		// value 2
 		driver.findElement(
@@ -442,16 +437,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.sendKeys("Radio 2");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
 		// value 3
 		driver.findElement(
@@ -459,16 +454,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
 				.sendKeys("Radio 3");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.sendKeys("V3");
 		// value 4
 		driver.findElement(
@@ -476,16 +471,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
 				.sendKeys("Radio 4");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.sendKeys("V4");
 		// value 5
 		driver.findElement(
@@ -493,16 +488,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
 				.sendKeys("Radio 5");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.sendKeys("V5");
 
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -555,32 +550,32 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(7000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.sendKeys("Chekbox  1");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
 		driver.findElement(
 				By.id("j_id0:form:answerOptionBlock:createAnswerOption"))
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.sendKeys("Chekbox 2");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
 
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -624,16 +619,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.sendKeys("Picklist Question 1");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
 		// Value 2
 		driver.findElement(
@@ -641,16 +636,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166"))
 				.sendKeys("Picklist Question 2");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170"))
 				.sendKeys("V2");
 		// Value 3
 		driver.findElement(
@@ -658,16 +653,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id166"))
 				.sendKeys("Picklist Question 3");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:2:j_id170"))
 				.sendKeys("V3");
 		// Value 4
 		driver.findElement(
@@ -675,16 +670,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id166"))
 				.sendKeys("Picklist Question 4");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:3:j_id170"))
 				.sendKeys("V4");
 		// Value 5
 		driver.findElement(
@@ -692,16 +687,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id166"))
 				.sendKeys("Picklist Question 5");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:4:j_id170"))
 				.sendKeys("V5");
 
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -717,7 +712,6 @@ public class TC9887_Test {
 
 	public void createQuestionText() throws InterruptedException {
 		// Text Question with 1 value
-		Thread.sleep(4000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.sendKeys("Text Question");
@@ -747,16 +741,16 @@ public class TC9887_Test {
 				.click();
 		Thread.sleep(4000);
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166"))
 				.sendKeys("Text Question");
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.clear();
 		driver.findElement(
-				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171"))
+				By.id("j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170"))
 				.sendKeys("V1");
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(6000);

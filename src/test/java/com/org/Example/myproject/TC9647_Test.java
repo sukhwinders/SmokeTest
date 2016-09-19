@@ -23,11 +23,14 @@ public class TC9647_Test {
 
 	@Test
 	public void Auccount_verification() throws Exception {
+		//Login to the salesforce
+		guitils.loginToPortal(userName1,password1,driver);
+		Thread.sleep(8000);
 
-		guitils.loginToPortal(userName1, password1, driver);
-
+		// switchtoLightining();
 		guitils.LightiningView(driver);
 
+		Thread.sleep(3000);
 		driver.findElement(By.linkText("ICIX")).click();
 
 		driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
@@ -55,16 +58,20 @@ public class TC9647_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+		driver = guitils.openBrowser(driver);
+		
+/*		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
+
+	
 
 }

@@ -16,7 +16,6 @@ public class TC9652_Test {
 
 	WebDriver driver;
 	String baseUrl;
-
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
@@ -28,7 +27,7 @@ public class TC9652_Test {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
 
@@ -40,9 +39,11 @@ public class TC9652_Test {
 	@Test
 	public void testSearchByIcixId() throws Exception {
 
-		guitils.loginToPortal(userName1, password1, driver);
+		// Login to the salesforce
+		guitils.loginToPortal(userName1,password1,driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 
 		driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
@@ -59,10 +60,11 @@ public class TC9652_Test {
 		driver.findElement(By.xpath("//input[@placeholder='Street']")).clear();
 		driver.findElement(By.xpath("//input[@placeholder='Street']"))
 				.sendKeys(TpAddress);
+		Thread.sleep(3000);
 		driver.findElement(
 				By.cssSelector("button.slds-button.slds-button--brand"))
 				.click();
-
+		Thread.sleep(3000);
 		String compeny_Name = driver.findElement(
 				By.xpath("//h1[@class='slds-text-heading--small ng-binding']"))
 				.getText();

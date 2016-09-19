@@ -1,5 +1,4 @@
 package com.org.Example.myproject;
-
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -25,6 +24,7 @@ public class TC9676_Test {
 	String password1 = guitils.getPassword("RequestorPassword");
 	String DocuResponder = guitils.getDATA("DOcumentreciver");
 	String comment = guitils.getDATA("Comments");
+
 	WebDriver driver;
 	String baseUrl;
 
@@ -37,10 +37,11 @@ public class TC9676_Test {
 		driver.navigate().to(baseUrl);
 	}
 
-	@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}
+	
+	  @AfterClass
+	  public void afterClass() 
+	  { driver.quit(); }
+	 
 
 	@Test
 	public void Private_document() throws Exception {
@@ -60,10 +61,12 @@ public class TC9676_Test {
 		// Specify the file location with extension
 		// StringSelection sel = new
 		// StringSelection("D:\\Projects\\iCiX\\scripts.txt");
+		
 
 		StringSelection sel = new StringSelection(
 				System.getProperty("user.dir") + "\\test.txt\\");
 
+		Thread.sleep(1000);
 		// Copy to clipboard
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
 		System.out.println("selection" + sel);
@@ -91,7 +94,7 @@ public class TC9676_Test {
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		// }
 
-		Thread.sleep(7000);
+		Thread.sleep(4000);
 
 		driver.findElement(
 				By.xpath("//input[contains(@class,'slds-input slds-show')]"))
@@ -108,4 +111,5 @@ public class TC9676_Test {
 
 	}
 
+	
 }

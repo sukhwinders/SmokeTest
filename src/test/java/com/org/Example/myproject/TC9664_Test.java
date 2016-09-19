@@ -41,10 +41,11 @@ public class TC9664_Test {
 	@Test
 	public void test() throws Exception {
 
-		guitils.loginToPortal(userName1, password1, driver);
+		// Login to the salesforce
+		guitils.loginToPortal(userName1,password1,driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Trading Partner Groups")).click();
 		Thread.sleep(2000);

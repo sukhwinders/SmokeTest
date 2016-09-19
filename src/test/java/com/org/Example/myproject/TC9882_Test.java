@@ -50,14 +50,12 @@ public class TC9882_Test {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("div[class='icon-waffle']"))
-	     .click();
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		// script for container template
-		 driver.findElement(By.name("j_id0:form:j_id12")).click(); 
+		 driver.findElement(By.name("j_id0:form:j_id8")).click(); 
 		Thread.sleep(2000);
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
@@ -117,16 +115,16 @@ public class TC9882_Test {
 			
 			
 	
-			Thread.sleep(4000);
+			Thread.sleep(3000);
 			driver.findElement(By.id("j_id0:form:createTab")).click();
 			Thread.sleep(3000);
 			driver.findElement(
 					By.id("j_id0:form:tabBlock:tabSection:tabTable:" + i
-							+ ":j_id47")).clear();
+							+ ":j_id46")).clear();
 			Thread.sleep(3000);
 			driver.findElement(
 					By.id("j_id0:form:tabBlock:tabSection:tabTable:" + i
-							+ ":j_id47")).sendKeys(Tab_Name);
+							+ ":j_id46")).sendKeys(Tab_Name);
 			Thread.sleep(3000);
 			driver.findElement(By.id("j_id0:form:buttonSave")).click();
 			Thread.sleep(8000);

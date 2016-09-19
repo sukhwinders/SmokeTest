@@ -19,7 +19,7 @@ public class TC9670_Test {
 	Date d = new Date(System.currentTimeMillis());
 	String container_Name = "Testcontainer" + d;
 	String Layout_Name = "Testlayout" + d;
-	String Tab_Name = "Testtab";
+	String Tab_Name = "Testtab" + d;
 	String Section_Name = "Testsection" + d;
 
 	Data_loading guitils = new Data_loading();
@@ -32,28 +32,26 @@ public class TC9670_Test {
 		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.navigate().to(baseUrl);
 	}
-/*
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
-	}*/
+	}
 
 	@Test
 	public void createNew_form() throws Exception {
 
 		guitils.loginToPortal(userName1, password1, driver);
-		Thread.sleep(4000);
 		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("ICIX")).click();
-		//driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
-		driver.findElement(By.linkText("FormList")).click();
+		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 
 		driver.switchTo().frame(0);
 		// script for container template
-		driver.findElement(By.name("j_id0:form:j_id12")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
 				.clear();
@@ -80,7 +78,7 @@ public class TC9670_Test {
 				.click();
 		Thread.sleep(3000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
-		Thread.sleep(7000);
+		Thread.sleep(3000);
 		// script for Layout template
 		driver.findElement(By.id("j_id0:form:tabLayout_lbl")).click();
 		Thread.sleep(3000);
@@ -91,37 +89,37 @@ public class TC9670_Test {
 		driver.findElement(
 				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
 				.sendKeys(Layout_Name);
+		Thread.sleep(2000);
 		/*
-		 * Thread.sleep(3000); new Select(driver.findElement(By
+		 * new Select(driver.findElement(By
 		 * .id("j_id0:form:layoutBlock:layoutNew:inputLayoutSharing")))
 		 * .selectByVisibleText("Public"); Thread.sleep(3000);
 		 * driver.findElement(
 		 * By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutIsValid"))
-		 * .click();
+		 * .click(); Thread.sleep(3000);
 		 */
-		Thread.sleep(3000);
 		new Select(driver.findElement(By
 				.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType")))
 				.selectByVisibleText("desktop");
 		Thread.sleep(3000);
 		driver.findElement(By.id("j_id0:form:layoutBlock:createLayout"))
 				.click();
-		Thread.sleep(8000);
+		Thread.sleep(6000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(5000);
-		// script for Tsbs template
+		// script for Tabs template
 		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
 		Thread.sleep(6000);
 		driver.findElement(By.id("j_id0:form:createTab")).click();
 		Thread.sleep(6000);
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id47"))
-				.sendKeys(Tab_Name);
-		Thread.sleep(3000);
-	/*	driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id57"))
-				.click();*/
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
+				.clear();
 		Thread.sleep(6000);
+		driver.findElement(
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
+				.sendKeys(Tab_Name);
+		Thread.sleep(1000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(6000);
 		driver.findElement(
@@ -130,20 +128,12 @@ public class TC9670_Test {
 		Thread.sleep(6000);
 		// Script for Sections template
 		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='j_id0:form:createSection']"))
+		driver.findElement(By.xpath("//input[@id='j_id0:form:createSection']"))
 				.click();
-		/*
-		 * driver.findElement(By.xpath("//input[contains(@id,'id73')]")).sendKeys
-		 * ( Section_Name);
-		 */
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74"))
-				.sendKeys(Section_Name);
-		
-		new Select(
-				driver.findElement(By
-						.xpath("//select[@id='j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id89']")))
+		driver.findElement(By.xpath("//input[contains(@id,'id73')]")).sendKeys(
+				Section_Name);
+		new Select(driver.findElement(By
+				.xpath("//select[contains(@id,'id88')]")))
 				.selectByVisibleText("Row");
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
 		Thread.sleep(6000);
@@ -158,15 +148,15 @@ public class TC9670_Test {
 				By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName"))
 				.sendKeys("test");
 		Thread.sleep(3000);
-		/*
-		 * driver.findElement(By.xpath("//img[@title='Search']")).click();
-		 * Thread.sleep(3000); driver.findElement(
-		 * By.xpath("//input[@id='input_searchLibraryQuestion']"))
-		 * .sendKeys(Question_ID); Thread.sleep(3000);
-		 * driver.findElement(By.xpath("//img[@title='Filter List']")).click();
-		 * Thread.sleep(3000);
-		 * driver.findElement(By.linkText(Question_ID)).click();
-		 */
+		driver.findElement(By.xpath("//img[@title='Search']")).click();
+		Thread.sleep(3000);
+		driver.findElement(
+				By.xpath("//input[@id='input_searchLibraryQuestion']"))
+				.sendKeys(Question_ID);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//img[@title='Filter List']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.linkText(Question_ID)).click();
 		Thread.sleep(6000);
 		driver.findElement(
 				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))

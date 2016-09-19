@@ -19,7 +19,7 @@ public class TC9663_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
-	String partner_name = guitils.getDATA("Partner_name");
+	String partner_name = guitils.getDATA("Responder");
 
 	@BeforeClass
 	public void beforeClass() {
@@ -37,28 +37,26 @@ public class TC9663_Test {
 
 	@Test
 	public void Edit_TradingPartner() throws Exception {
+		// Login to the salesforce
 		guitils.loginToPortal(userName1, password1, driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(
 				By.xpath("//a[contains(.,'Trading Partner Relationships')]"))
 				.click();
-		//Click on All option
-		driver.findElement(By.cssSelector("span[class='triggerLinkText selectedListView uiOutputText']")).click();
-		driver.findElement(By.linkText("All")).click();
-		Thread.sleep(5000);
 		driver.findElement(By.linkText(partner_name)).click();
-		driver.findElement(By.xpath("//a[@title='Edit']")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.linkText("Edit")).click();
+		Thread.sleep(1000);
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		/*new Select(driver.findElement(By.id("ddl_UURelationship_Status")))
-				.selectByVisibleText("Pending");*/
+		new Select(driver.findElement(By.id("ddl_UURelationship_Status")))
+				.selectByVisibleText("Pending");
 		new Select(driver.findElement(By
 				.xpath("//select[@id='ddl_UURelationship_Type']")))
 				.selectByVisibleText("Cold Storage");
-		Thread.sleep(5000);
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
-		Thread.sleep(5000);
 		driver.findElement(
 				By.xpath("//message-dialog/div[2]/div/div/div[3]/button"))
 				.click();

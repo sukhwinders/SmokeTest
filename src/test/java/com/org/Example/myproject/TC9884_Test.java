@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -39,10 +38,9 @@ public class TC9884_Test {
 		driver.navigate().to(baseUrl);
 	}
 
-	@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}
+	/*
+	 * @AfterClass public void afterClass() { driver.quit(); }
+	 */
 
 	@Test
 	public void createNew_form() throws Exception {
@@ -50,13 +48,12 @@ public class TC9884_Test {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("div[class='icon-waffle']")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
 		driver.switchTo().frame(0);
 		// script for container template
-		driver.findElement(By.name("j_id0:form:j_id12")).click();
+		driver.findElement(By.name("j_id0:form:j_id8")).click();
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
 				.clear();
@@ -114,17 +111,16 @@ public class TC9884_Test {
 		driver.findElement(By.id("j_id0:form:createTab")).click();
 		Thread.sleep(3000);
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
 				.clear();
 		Thread.sleep(3000);
 		driver.findElement(
-				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id47"))
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id46"))
 				.sendKeys(Tab_Name);
 		Thread.sleep(3000);
-		/*
-		 * driver.findElement(
-		 * By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id57")) .click();
-		 */
+		driver.findElement(
+				By.id("j_id0:form:tabBlock:tabSection:tabTable:0:j_id57"))
+				.click();
 		Thread.sleep(6000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(8000);
@@ -138,13 +134,11 @@ public class TC9884_Test {
 		driver.findElement(By.xpath("//input[@id='j_id0:form:createSection']"))
 				.click();
 		Thread.sleep(5000);
-		driver.findElement(
-				By.id("j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74"))
-				.sendKeys(Section_Name);
+		driver.findElement(By.xpath("//input[contains(@id,'id73')]")).sendKeys(
+				Section_Name);
 		Thread.sleep(5000);
-		new Select(
-				driver.findElement(By
-						.xpath("//select[@id='j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id89']")))
+		new Select(driver.findElement(By
+				.xpath("//select[contains(@id,'id88')]")))
 				.selectByVisibleText("Row");
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@value='SAVE']")).click();
@@ -187,10 +181,10 @@ public class TC9884_Test {
 		Thread.sleep(5000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
 				.sendKeys("T0");
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -228,10 +222,10 @@ public class TC9884_Test {
 		Thread.sleep(5000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
 				.sendKeys("T0");
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -269,10 +263,10 @@ public class TC9884_Test {
 		Thread.sleep(5000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id167']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id171']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
 				.sendKeys("T0");
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -316,10 +310,10 @@ public class TC9884_Test {
 
 			driver.findElement(
 					By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-							+ i + ":j_id167']")).sendKeys("yes");
+							+ i + ":j_id166']")).sendKeys("yes");
 			driver.findElement(
 					By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-							+ i + ":j_id171']")).sendKeys("T0");
+							+ i + ":j_id170']")).sendKeys("T0");
 		}
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -358,10 +352,10 @@ public class TC9884_Test {
 			Thread.sleep(5000);
 			driver.findElement(
 					By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-							+ i + ":j_id167']")).sendKeys("yes");
+							+ i + ":j_id166']")).sendKeys("yes");
 			driver.findElement(
 					By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:"
-							+ i + ":j_id171']")).sendKeys("T0");
+							+ i + ":j_id170']")).sendKeys("T0");
 		}
 		Thread.sleep(8000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();

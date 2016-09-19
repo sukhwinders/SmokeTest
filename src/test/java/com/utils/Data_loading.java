@@ -10,10 +10,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 public class Data_loading {
 
@@ -66,6 +70,21 @@ public class Data_loading {
 		// System.out.println(convertedDate);
 		return convertedDate;
 	}
+	
+	public WebDriver openBrowser(WebDriver driver1)
+	  {  
+	  String baseUrl = "https://login.salesforce.com";
+	   //driver = new FirefoxDriver();
+	   //System.setProperty("webdriver.chrome.driver", "/Users/gurpinder.singh/Downloads/chromedriver");
+	   ChromeDriverManager.getInstance().setup();
+	   driver1 = new ChromeDriver();  
+	   driver1.manage().window().maximize();
+	   
+	   driver1.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+	   driver1.navigate().to(baseUrl);
+	   return driver1;
+	   
+	  }
 
 	public Date todayPlusNumberOfDaysSFDCformat(int numberOfDays)
 			throws Exception {
@@ -284,25 +303,24 @@ public class Data_loading {
 		// UPCproduct = "1111" + randomNumbers;
 		return "1111" + RandomStringUtils.randomNumeric(8);
 	}
-	
 
-	public void LightiningView(WebDriver driver1) throws InterruptedException {
-		
-		if (driver1.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
+	public void LightiningView(WebDriver driver) throws InterruptedException {
+			  if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
 
-			driver1.findElement(By.id("userNavLabel")).click();
-			driver1.findElement(By.xpath(".//*[@id='userNav-menuItems']/a[4]"))
-					.click();
-			
-			Thread.sleep(5000);
-			driver1.findElement(By.cssSelector("div[class='icon-waffle']"))
-					.click();
-		} else  {
-			Thread.sleep(5000);
-			driver1.findElement(By.cssSelector("div[class='icon-waffle']"))
-					.click();
-		}
-	}
+			   driver.findElement(By.id("userNavLabel")).click();
+			   driver.findElement(By.xpath(".//*[@id='userNav-menuItems']/a[4]"))
+			     .click();
+			   
+			   Thread.sleep(5000);
+			   driver.findElement(By.cssSelector("div[class='icon-waffle']"))
+			     .click();
+			  } else  {
+			   Thread.sleep(5000);
+			   driver.findElement(By.cssSelector("div[class='icon-waffle']"))
+			     .click();
+			  
+			  }
+			 }
 
 	public void loginToPortal(String uname, String pwd, WebDriver driver)
 			throws InterruptedException {
