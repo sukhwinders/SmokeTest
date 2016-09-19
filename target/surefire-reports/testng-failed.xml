@@ -18,24 +18,6 @@
   </test> <!-- Test -->
   <test name="Test(failed)">
     <classes>
-      <class name="com.org.Example.myproject.TC9659_Test">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9659_Test -->
-      <class name="com.org.Example.myproject.TC9667_Test">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9667_Test -->
-      <class name="com.org.Example.myproject.TC9666_Test">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9666_Test -->
       <class name="com.org.Example.myproject.TC9675_Test">
         <methods>
           <include name="uploadpublicdocument"/>
@@ -43,25 +25,6 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9675_Test -->
-      <class name="com.org.Example.myproject.TC9647_Test">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9647_Test -->
-      <class name="com.org.Example.myproject.TC9733_Test">
-        <methods>
-          <include name="afterClass"/>
-          <include name="Approve_Request"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9733_Test -->
-      <class name="com.org.Example.myproject.TC9672_Test">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9672_Test -->
       <class name="com.org.Example.myproject.TC9648_Test">
         <methods>
           <include name="afterClass"/>
@@ -69,18 +32,6 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9648_Test -->
-      <class name="com.org.Example.myproject.TC9673_Test">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9673_Test -->
-      <class name="com.org.Example.myproject.TC9678_Test">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.org.Example.myproject.TC9678_Test -->
       <class name="com.org.Example.myproject.TC9653_Test">
         <methods>
           <include name="beforeClass"/>
@@ -88,6 +39,55 @@
           <include name="Auccount_verification"/>
         </methods>
       </class> <!-- com.org.Example.myproject.TC9653_Test -->
+      <class name="com.org.Example.myproject.TC9667_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9667_Test -->
+      <class name="com.org.Example.myproject.TC9733_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9733_Test -->
+      <class name="com.org.Example.myproject.TC9678_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9678_Test -->
+      <class name="com.org.Example.myproject.TC9666_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="SetAndSendCompilince"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9666_Test -->
+      <class name="com.org.Example.myproject.TC9647_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9647_Test -->
+      <class name="com.org.Example.myproject.TC9672_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9672_Test -->
+      <class name="com.org.Example.myproject.TC9673_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9673_Test -->
+      <class name="com.org.Example.myproject.TC9659_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9659_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

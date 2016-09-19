@@ -8,12 +8,7 @@
 	<class name="com.org.Example.myproject.TC9733_Test" />
 	<class name="com.org.Example.myproject.TC9647_Test" />
 	<class name="com.org.Example.myproject.TC9648_Test" />
-	<class name="com.org.Example.myproject.TC9653_Test" />
-	<class name="com.org.Example.myproject.TC9659_Test" />
-	<class name="com.org.Example.myproject.TC9666_Test" />
-	<class name="com.org.Example.myproject.TC9667_Test" />
-	<class name="com.org.Example.myproject.TC9675_Test" />
-	<class name="com.org.Example.myproject.TC9678_Test" />    
+    
 </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

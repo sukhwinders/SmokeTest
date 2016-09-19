@@ -14,12 +14,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
+//import com.utils.*;
 
 public class TC9653_Test {
 	WebDriver driver;
 	String baseUrl;
 	String sTblAccounts = "//table[@class='forceRecordLayout uiVirtualDataGrid--default uiVirtualDataGrid forceVirtualGrid resizable-cols']//tbody";
 	Data_loading guitils = new Data_loading();
+	//Data_loading l=new Data_loading();
+	
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
 	String strTPName = "dev";//guitils.getPassword("TradingPartnerName");
@@ -39,7 +42,7 @@ public class TC9653_Test {
 	}
 
 	@Test
-	public void Auccount_verification() throws Exception {
+	public void Account_verification() throws Exception {
 		// Login to the salesforce
 		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
