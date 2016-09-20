@@ -53,6 +53,7 @@ public class TC10469_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -102,7 +103,7 @@ public class TC10469_Test {
 						.click();*/
 
 // Set Requirements 		
-		driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
+		//driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		

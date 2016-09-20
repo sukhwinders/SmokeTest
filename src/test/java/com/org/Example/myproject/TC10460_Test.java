@@ -50,6 +50,7 @@ public class TC10460_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 

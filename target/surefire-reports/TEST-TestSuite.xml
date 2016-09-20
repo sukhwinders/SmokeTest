@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="19" failures="6" name="TestSuite" time="3,035.456" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
+    <property name="java.vm.version" value="25.91-b15"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\nagarjunac\Desktop\Package Automation\Package Automation"/>
+    <property name="java.runtime.version" value="1.8.0_91-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\NAGARJ~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\nagarjunac\Documents\Eclipse Files\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4239604543661485966.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Users\nagarjunac\Documents\apache-ant-1.9.6-bin\apache-ant-1.9.6\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Users\nagarjunac\Desktop\softwares\eclipse\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\nagarjunac"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="nagarjunac"/>
+    <property name="java.class.path" value="/C:/Users/nagarjunac/Desktop/softwares/eclipse/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.5.0.20140605-2032/jars/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_91\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_91"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\nagarjunac\Desktop\Package Automation\Package Automation\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.org.Example.myproject.TC9672_Test" name="TwoActorWorkFlow" time="236.152">
+    <failure message="Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir7208_4315}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a40b81a429e1840f9b87cce320edf911" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir7208_4315}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a40b81a429e1840f9b87cce320edf911
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9672_Test.TwoActorWorkFlow(TC9672_Test.java:157)
+Caused by: org.openqa.selenium.WebDriverException: java.net.BindException: Address already in use: connect
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 38 more
+Caused by: java.net.BindException: Address already in use: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:162)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 39 more
+</failure>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf) on port 37673
+Only local connections are allowed.
+Sep 20, 2016 1:11:06 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:06 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:06 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:06 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:06 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:06 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+</system-err>
+  </testcase>
+  <testcase classname="com.org.Example.myproject.TC9672_Test" name="afterClass" time="240.274">
+    <failure message="Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir7208_4315}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a40b81a429e1840f9b87cce320edf911" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir7208_4315}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a40b81a429e1840f9b87cce320edf911
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.utils.Data_loading.logoutFromPortal(Data_loading.java:337)
+	at com.org.Example.myproject.TC9672_Test.afterClass(TC9672_Test.java:47)
+Caused by: org.openqa.selenium.WebDriverException: java.net.BindException: Address already in use: connect
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 37 more
+Caused by: java.net.BindException: Address already in use: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:162)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 38 more
+</failure>
+    <system-err>Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:08 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:10 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:10 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:10 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:10 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:10 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:10 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:12 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:12 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:12 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:12 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+Sep 20, 2016 1:11:12 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:37673: Address already in use: connect
+Sep 20, 2016 1:11:12 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:37673
+</system-err>
+  </testcase>
+  <testcase classname="com.org.Example.myproject.TC9673_Test" name="productTwoactor_workflow" time="127.471"/>
+  <testcase classname="com.org.Example.myproject.TC9733_Test" name="Approve_Request" time="496.431">
+    <failure message="Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir3372_697}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3d6a9ebdf45402d01da46ff9cf50578d" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir3372_697}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3d6a9ebdf45402d01da46ff9cf50578d
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:179)
+	at com.org.Example.myproject.TC9733_Test.Approve_Request(TC9733_Test.java:169)
+Caused by: org.openqa.selenium.WebDriverException: java.net.BindException: Address already in use: connect
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 36 more
+Caused by: java.net.BindException: Address already in use: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:162)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 37 more
+</failure>
+    <system-err>Starting ChromeDriver 2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf) on port 46640
+Only local connections are allowed.
+Sep 20, 2016 1:21:57 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:57 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:57 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:57 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:57 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:57 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+</system-err>
+  </testcase>
+  <testcase classname="com.org.Example.myproject.TC9733_Test" name="afterClass" time="498.461">
+    <failure message="Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir3372_697}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3d6a9ebdf45402d01da46ff9cf50578d" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir3372_697}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3d6a9ebdf45402d01da46ff9cf50578d
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.utils.Data_loading.logoutFromPortal(Data_loading.java:336)
+	at com.org.Example.myproject.TC9733_Test.afterClass(TC9733_Test.java:48)
+Caused by: org.openqa.selenium.WebDriverException: java.net.BindException: Address already in use: connect
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 39 more
+Caused by: java.net.BindException: Address already in use: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:162)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 40 more
+</failure>
+    <system-err>Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:21:59 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:22:01 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:22:01 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:22:01 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:22:01 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+Sep 20, 2016 1:22:01 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:46640: Address already in use: connect
+Sep 20, 2016 1:22:01 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:46640
+</system-err>
+  </testcase>
+  <testcase classname="com.org.Example.myproject.TC9735_Test" name="productTwoactor_workflow" time="449.564">
+    <failure message="Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir6200_24595}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2d6fc0967f2d1e8a21b766e8b40f48ce" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir6200_24595}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2d6fc0967f2d1e8a21b766e8b40f48ce
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.org.Example.myproject.TC9735_Test.productTwoactor_workflow(TC9735_Test.java:147)
+Caused by: org.openqa.selenium.WebDriverException: java.net.BindException: Address already in use: connect
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 38 more
+Caused by: java.net.BindException: Address already in use: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:162)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 39 more
+</failure>
+    <system-err>Starting ChromeDriver 2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf) on port 27555
+Only local connections are allowed.
+Sep 20, 2016 1:29:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:27555: Address already in use: connect
+Sep 20, 2016 1:29:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:27555
+Sep 20, 2016 1:29:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:27555: Address already in use: connect
+Sep 20, 2016 1:29:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:27555
+Sep 20, 2016 1:29:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:27555: Address already in use: connect
+Sep 20, 2016 1:29:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:27555
+Sep 20, 2016 1:29:41 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:27555: Address already in use: connect
+Sep 20, 2016 1:29:41 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:27555
+Sep 20, 2016 1:29:41 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:27555: Address already in use: connect
+Sep 20, 2016 1:29:41 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:27555
+Sep 20, 2016 1:29:41 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.BindException) caught when processing request to {}-&gt;http://localhost:27555: Address already in use: connect
+Sep 20, 2016 1:29:41 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}-&gt;http://localhost:27555
+</system-err>
+  </testcase>
+  <testcase classname="com.org.Example.myproject.TC9647_Test" name="Auccount_verification" time="61.814"/>
+  <testcase classname="com.org.Example.myproject.TC9648_Test" name="testSearchByIcixId" time="57.453"/>
+  <testcase classname="com.org.Example.myproject.TC9653_Test" name="Auccount_verification" time="79.672">
+    <failure message="element not visible
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25.14 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir9636_21217}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 739e824060fa099fe1013c32fbe74f80" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25.14 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-32AV7CG&apos;, ip: &apos;172.24.4.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\NAGARJ~1\AppData\Local\Temp\scoped_dir9636_21217}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 739e824060fa099fe1013c32fbe74f80
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
+	at com.org.Example.myproject.TC9653_Test.Auccount_verification(TC9653_Test.java:86)
+</failure>
+    <system-err>Starting ChromeDriver 2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf) on port 39366
+Only local connections are allowed.
+</system-err>
+  </testcase>
+  <testcase classname="com.org.Example.myproject.TC9659_Test" name="Tagstest" time="79.113"/>
+  <testcase classname="com.org.Example.myproject.TC10460_Test" name="TPG_Tags" time="57.936"/>
+  <testcase classname="com.org.Example.myproject.TC10461_Test" name="TPG_Relationship_Status" time="56.611"/>
+  <testcase classname="com.org.Example.myproject.TC10462_Test" name="TPG_Relationship_Type" time="95.541"/>
+  <testcase classname="com.org.Example.myproject.TC10467_Test" name="TPG_tag_status_and_Type" time="69.546"/>
+  <testcase classname="com.org.Example.myproject.TC10469_Test" name="Save_Multiple_Requirements" time="124.022"/>
+  <testcase classname="com.org.Example.myproject.TC9666_Test" name="SetAndSendCompilince" time="104.052"/>
+  <testcase classname="com.org.Example.myproject.TC9667_Test" name="Productgroup" time="61.521"/>
+  <testcase classname="com.org.Example.myproject.TC9675_Test" name="uploadpublicdocument" time="81.03"/>
+  <testcase classname="com.org.Example.myproject.TC9678_Test" name="send_document" time="58.792"/>
+</testsuite>

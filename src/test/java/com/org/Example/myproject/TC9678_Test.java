@@ -39,6 +39,7 @@ public class TC9678_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -69,7 +70,7 @@ public class TC9678_Test {
 		Thread.sleep(2000);
 		driver.findElement(By.id("btn_sendConfirmDialogCloseButton")).click();
 		//driver.findElement(	By.cssSelector("div.slds-x-small-buttons--horizontal > #btn_sendConfirmDialogCloseButton")).click();
-
+		driver.switchTo().defaultContent();
 	}
 
 }

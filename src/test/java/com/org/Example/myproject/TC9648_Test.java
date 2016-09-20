@@ -33,6 +33,7 @@ public class TC9648_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -65,12 +66,7 @@ public class TC9648_Test {
 				By.xpath("//h1[@class='slds-text-heading--small ng-binding']"))
 				.getText();
 		Assert.assertEquals(compeny_Name, Partner, "Name is not matched");
+		driver.switchTo().defaultContent();
 
 	}
-
-	@AfterClass
-	public void tearDown() throws Exception {
-		driver.quit();
-	}
-
 }

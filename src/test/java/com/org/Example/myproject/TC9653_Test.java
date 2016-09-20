@@ -35,6 +35,7 @@ public class TC9653_Test {
 
 	@AfterClass
 	public void afterClass() {
+		//guitils.logouToPortal(driver);
 		driver.quit();
 	}
 
@@ -95,11 +96,9 @@ public class TC9653_Test {
 				.click();
 		System.out.println(driver.findElement(
 				By.xpath("html/body/main/div/div[2]")).getText());
-
-		driver.switchTo().defaultContent();
 		Thread.sleep(8000);
-		driver.findElement(By.cssSelector("img.profileTrigger")).click();
-		driver.findElement(By.linkText("Log Out")).click();
+		driver.switchTo().defaultContent();
+		
 
 	}
 

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -40,15 +40,11 @@ public class TC9672_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-		/*baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -89,12 +85,24 @@ public class TC9672_Test {
 		driver.findElement(By.xpath("//button[3]")).click();
 
 		Thread.sleep(4000);
-		driver.findElement(By.id("dueDate")).click();
-		driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
+		//driver.findElement(By.id("dueDate")).click();
+		//driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
+	
+	driver.findElement(By.xpath(".//*[@id='dueDate']")).click();
+	Thread.sleep(1000);
+	List<WebElement> inputs = driver.findElements(By.xpath(".//*[@id='dueDate']"));
+    for (WebElement input : inputs) {
+     ((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('readonly','readonly')",input);
+    }
+    driver.findElement(By.xpath(".//*[@id='dueDate']")).clear();
+    driver.findElement(By.xpath(".//*[@id='dueDate']")).sendKeys("22nd September 2016");
+    
+	
 		
-/*		driver.findElement(By.xpath("//div[2]/button")).click();
+		
+		/*driver.findElement(By.xpath("//div[2]/button[1]")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(.,'12')]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'30')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(
 				By.cssSelector("button.slds-button.slds-button--neutral"))
@@ -102,6 +110,8 @@ public class TC9672_Test {
 		driver.findElement(
 				By.xpath("//button[@ng-click='CancelAttachDialog()']")).click();*/
 
+		
+		
 		driver.findElement(By.id("comments")).sendKeys("Test");
 		Thread.sleep(2000);
 
@@ -114,6 +124,8 @@ public class TC9672_Test {
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(Reqname)).click();
 		Thread.sleep(10000);
+		guitils.logoutFromPortal(driver);
+		Thread.sleep(5000);
 /*
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
 			driver.findElement(By.xpath("//a[contains(@alt,'App Launcher')]"))

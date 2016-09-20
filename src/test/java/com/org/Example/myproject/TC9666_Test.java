@@ -38,6 +38,7 @@ public class TC9666_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -132,6 +133,7 @@ public class TC9666_Test {
 		System.out.println("test3");
 		driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 		Thread.sleep(3000);
+		driver.switchTo().defaultContent();
 
 	}
 

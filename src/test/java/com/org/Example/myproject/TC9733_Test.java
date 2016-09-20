@@ -41,15 +41,11 @@ public class TC9733_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-/*		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -143,7 +139,7 @@ public class TC9733_Test {
 		driver.findElement(By.xpath("//a[@title='App Launcher']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.linkText("ICIX")).click();
-		Thread.sleep(5000);
+		Thread.sleep(20000);
 		driver.findElement(By.linkText("Requests")).click();
 		Thread.sleep(250000);
 		driver.findElement(

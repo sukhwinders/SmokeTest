@@ -37,15 +37,11 @@ public class TC9735_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-		/*baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
+		//guitils.logoutFromPortal(driver);
 		//driver.quit();
 	}
 
@@ -118,12 +114,12 @@ public class TC9735_Test {
 		Thread.sleep(10000);
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(10000);
+		Thread.sleep(50000);
 		// code for logout
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 				.click();
 		driver.findElement(By.linkText("Log Out")).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 
 /*------------------------------------------------*/
 /*------------ Login To Responder Org ------------*/
@@ -132,11 +128,11 @@ public class TC9735_Test {
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
 		driver.findElement(By.xpath("//a[@title='App Launcher']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 		driver.findElement(By.linkText("ICIX")).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 		driver.findElement(By.linkText("Requests")).click();
-		Thread.sleep(250000);
+		Thread.sleep(50000);
 		driver.findElement(
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
@@ -171,7 +167,7 @@ public class TC9735_Test {
 		driver.findElement(By.xpath("//a[@title='Related']")).click();
 
 		driver.findElement(
-				By.xpath("//a[contains(@title,'California Transparency of Supply Chain Act')]"))
+				By.xpath("//a[contains(@title,'California Proposition 65 Warranty')]"))
 				.click();
 				Thread.sleep(5000);
 		// Click on open form button
@@ -202,12 +198,12 @@ public class TC9735_Test {
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//button[@onclick='submitRequest()']"))
 				.click();
-		Thread.sleep(10000);
+		Thread.sleep(50000);
 		// logout responder
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 				.click();
 		driver.findElement(By.linkText("Log Out")).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 
 /*------------------------------------------------*/
 /*------------ Login To requester Org ------------*/
@@ -216,13 +212,13 @@ public class TC9735_Test {
 		// login by requester
 				guitils.loginToPortal(userName1, password1, driver);
 				guitils.LightiningView(driver);
-				Thread.sleep(5000);
+				Thread.sleep(50000);
 				driver.findElement(By.linkText("ICIX")).click();
-				Thread.sleep(5000);
+				Thread.sleep(50000);
 				// driver.navigate().refresh();
 
 				driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
-				Thread.sleep(280000);
+				Thread.sleep(80000);
 				// click on all option
 				// code for scroll
 				// code for click req.

@@ -50,25 +50,18 @@ public class TC9647_Test {
 				By.cssSelector("button.slds-button.slds-button--brand"))
 				.click();
 		driver.switchTo().defaultContent();
-		Thread.sleep(8000);
-		driver.findElement(By.cssSelector("img.profileTrigger")).click();
-		driver.findElement(By.linkText("Log Out")).click();
-
+		Thread.sleep(5000);
+	
 	}
 
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-		
-/*		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 

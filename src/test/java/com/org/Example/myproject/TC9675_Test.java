@@ -36,6 +36,7 @@ public class TC9675_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -111,6 +112,7 @@ public class TC9675_Test {
 
 		driver.findElement(By.id("uploadButton")).click();
 		Thread.sleep(6000);
+		driver.switchTo().defaultContent();
 
 	}
 

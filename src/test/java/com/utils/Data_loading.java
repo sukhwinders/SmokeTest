@@ -332,4 +332,9 @@ public class Data_loading {
 		driver.findElement(By.id("Login")).click();
 
 	}
+	public void logoutFromPortal(WebDriver driver){
+		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
+		.click();
+		driver.findElement(By.linkText("Log Out")).click();
+	}
 }

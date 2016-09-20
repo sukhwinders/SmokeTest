@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>DevSmoke</name>
+  <name>PackageAutomation</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -87,24 +87,6 @@
             <artifactId>maven-war-plugin</artifactId>
             <version>2.4</version>
           </plugin>
-          
-          
-          <plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-jar-plugin</artifactId>
-
-<configuration>
-<archive>
-<manifest>
-<addClasspath>true</addClasspath>
-<mainClass>com.org.Example</mainClass>
-</manifest>
-</archive>
-</configuration>
-
-</plugin>
-          
-          
         </plugins>
       </pluginManagement>  
     

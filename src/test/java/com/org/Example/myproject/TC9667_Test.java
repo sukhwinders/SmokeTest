@@ -30,6 +30,7 @@ public class TC9667_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -57,7 +58,7 @@ public class TC9667_Test {
 				.click();
 		Thread.sleep(2000);
 
-		//driver.switchTo().defaultContent();
+		driver.switchTo().defaultContent();
 		//driver.findElement(By.linkText("App Launcher")).click();
 		//Thread.sleep(3000);
 		//driver.findElement(By.linkText("ICIX")).click();

@@ -39,9 +39,9 @@ public class TC9659_Test {
 		driver = guitils.openBrowser(driver);
 	}
 
-
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -91,6 +91,7 @@ public class TC9659_Test {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
+		driver.switchTo().defaultContent();
 
 	}
 
