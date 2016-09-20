@@ -97,7 +97,7 @@
 <archive>
 <manifest>
 <addClasspath>true</addClasspath>
-<mainClass>fully.qualified.MainClass</mainClass>
+<mainClass>com.org.Example.myproject</mainClass>
 </manifest>
 </archive>
 </configuration>
