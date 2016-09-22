@@ -1,5 +1,8 @@
 package com.org.Example.myproject;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -63,6 +66,7 @@ public class TC9651_Test {
 
 	}
 
+	@AfterMethod
 	@AfterClass
 	public void tearDown() throws Exception {
 		driver.quit();

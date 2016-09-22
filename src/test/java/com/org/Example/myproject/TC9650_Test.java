@@ -1,5 +1,9 @@
 package com.org.Example.myproject;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -70,7 +74,7 @@ public class TC9650_Test {
 		String Stret = driver.findElement(
 				By.xpath("//p[@class='slds-text-body--regular ng-binding']"))
 				.getText();
-		Assert.assertEquals(Stret, Address, "Name is not matched");
+		AssertJUnit.assertEquals(Stret, Address, "Name is not matched");
 
 	}
 

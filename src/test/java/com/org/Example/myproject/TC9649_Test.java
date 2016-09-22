@@ -1,5 +1,8 @@
 package com.org.Example.myproject;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -23,15 +26,16 @@ public class TC9649_Test {
 	@BeforeClass
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver = guitils.openBrowser(driver);
+	//	driver = new FirefoxDriver();
+	//	driver.manage().window().maximize();
+	//	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	//	driver.navigate().to(baseUrl);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test
@@ -60,7 +64,7 @@ public class TC9649_Test {
 				By.cssSelector("button.slds-button.slds-button--brand"))
 				.click();
 		String ICIXID = driver.findElement(
-				By.xpath("//b[contains(.,'ICIX ID:')]")).getText();
+				By.xpath("//p[contains(.,'ICIX ID:')]")).getText();
 		System.out.println(ICIXID);
 
 	}
