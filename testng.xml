@@ -8,6 +8,13 @@
     <class name="com.org.Example.myproject.TC9733_Test" />
     <class name="com.org.Example.myproject.TC9735_Test" />
     <class name="com.org.Example.myproject.TC9647_Test" />
+    <class name="com.org.Example.myproject.TC9648_Test" />
+    <class name="com.org.Example.myproject.TC9653_Test" />
+    <class name="com.org.Example.myproject.TC9659_Test" />
+    <class name="com.org.Example.myproject.TC10460_Test" />
+    <class name="com.org.Example.myproject.TC10461_Test" />
+
+    
         
 </classes>
   </test> <!-- Test -->
