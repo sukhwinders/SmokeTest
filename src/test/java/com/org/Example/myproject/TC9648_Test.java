@@ -69,7 +69,8 @@ public class TC9648_Test {
 		String compeny_Name = driver.findElement(
 				By.xpath("//h1[@class='slds-text-heading--small ng-binding']"))
 				.getText();
-		AssertJUnit.assertEquals(compeny_Name, Partner, "Name is not matched");
+		Assert.assertEquals(compeny_Name, Partner, "Name is not matched");
+		
 		driver.switchTo().defaultContent();
 
 	}

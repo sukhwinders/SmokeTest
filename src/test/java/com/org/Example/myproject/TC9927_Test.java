@@ -4,10 +4,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
@@ -35,10 +37,11 @@ public class TC9927_Test {
 	@BeforeClass
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver = guitils.openBrowser(driver);
+		//driver = new FirefoxDriver();
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		//driver.navigate().to(baseUrl);
 	}
 
 	@AfterClass
@@ -53,12 +56,25 @@ public class TC9927_Test {
 		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
-		driver.switchTo().frame(0);
+		//driver.switchTo().frame(0);
 		Thread.sleep(5000);
 
 		System.out.println("Scenario 73 -CF");
 		// click on forms button
-		driver.findElement(By.name("j_id0:form:j_id8")).click();
+		
+		WebElement btnDiv=driver.findElement(By.xpath("//*[@id='buttonsBlock']"));
+		List<WebElement> Btns=btnDiv.findElements(By.tagName("input"));
+		
+		System.out.println(Btns.size());
+		//System.out.println(btnDiv.size());
+		
+		
+		
+		
+		
+		//driver.findElement(By.xpath("//input[@value='New Form']")).click();
+		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//input[@value='New Form']")).click();
 		createContainer();
 
 		createLayout();

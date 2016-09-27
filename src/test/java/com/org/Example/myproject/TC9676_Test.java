@@ -6,6 +6,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -34,10 +35,11 @@ public class TC9676_Test {
 	@BeforeClass
 	public void beforeClass() {
 		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver = guitils.openBrowser(driver);
+		//driver = new FirefoxDriver();
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.navigate().to(baseUrl);
 	}
 
 	
@@ -66,38 +68,67 @@ public class TC9676_Test {
 		// StringSelection("D:\\Projects\\iCiX\\scripts.txt");
 		
 
-		StringSelection sel = new StringSelection(
-				System.getProperty("user.dir") + "\\test.txt\\");
-
-		Thread.sleep(1000);
-		// Copy to clipboard
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
-		System.out.println("selection" + sel);
-		// Create object of Robot class
+		File file = new File("TestFile.doc");
+		 
+		StringSelection stringSelection= new StringSelection(file.getAbsolutePath());
+		 
+		//Copy to clipboard 
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		
+		 
 		Robot robot = new Robot();
-		Thread.sleep(1000);
-
-		// Press Enter
-		robot.keyPress(KeyEvent.VK_ENTER);
-
-		// Release Enter
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
-		// Press CTRL+V
-		robot.keyPress(KeyEvent.VK_CONTROL);
+		 
+		// Cmd + Tab is needed since it launches a Java app and the browser looses focus
+		 
+		robot.keyPress(KeyEvent.VK_META);
+		 
+		robot.keyPress(KeyEvent.VK_TAB);
+		 
+		robot.keyRelease(KeyEvent.VK_META);
+		 
+		robot.keyRelease(KeyEvent.VK_TAB);
+		 
+		robot.delay(500);
+		 
+		//Open Goto window
+		 
+		robot.keyPress(KeyEvent.VK_META);
+		 
+		robot.keyPress(KeyEvent.VK_SHIFT);
+		 
+		robot.keyPress(KeyEvent.VK_G);
+		 
+		robot.keyRelease(KeyEvent.VK_META);
+		 
+		robot.keyRelease(KeyEvent.VK_SHIFT);
+		 
+		robot.keyRelease(KeyEvent.VK_G);
+		 
+		//Paste the clipboard value
+		 
+		robot.keyPress(KeyEvent.VK_META);
+		 
 		robot.keyPress(KeyEvent.VK_V);
-
-		// Release CTRL+V
-		robot.keyRelease(KeyEvent.VK_CONTROL);
+		 
+		robot.keyRelease(KeyEvent.VK_META);
+		 
 		robot.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(3000);
-
-		// Press Enter
+		 
+		//Press Enter key to close the Goto window and Upload window
+		 
 		robot.keyPress(KeyEvent.VK_ENTER);
+		 
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		 
+		robot.delay(500);
+		 
+		robot.keyPress(KeyEvent.VK_ENTER);
+		 
+		robot.keyRelease(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		// }
 
-		Thread.sleep(4000);
+		Thread.sleep(15000);
 
 		driver.findElement(
 				By.xpath("//input[contains(@class,'slds-input slds-show')]"))

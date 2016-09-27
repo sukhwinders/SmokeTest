@@ -46,7 +46,7 @@ public class TC9735_Test {
 	@AfterClass
 	public void afterClass() {
 		//guitils.logoutFromPortal(driver);
-		//driver.quit();
+		driver.quit();
 	}
 
 	// ** This test will create a new product in the specific org ID**//
