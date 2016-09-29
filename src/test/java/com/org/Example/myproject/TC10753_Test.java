@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-public class TPG_Delete_Request {
+public class TC10753_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
