@@ -63,7 +63,7 @@ public class TC9648_Test {
 				By.cssSelector("button.slds-button.slds-button--brand"))
 				.click();
 		String compeny_Name = driver.findElement(
-				By.xpath("//h1[@class='slds-text-heading--small ng-binding']"))
+				By.xpath("//h1[@class='slds-text-heading--small']"))
 				.getText();
 		Assert.assertEquals(compeny_Name, Partner, "Name is not matched");
 

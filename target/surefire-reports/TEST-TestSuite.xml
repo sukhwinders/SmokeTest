@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="3" time="1,302.942" errors="0" skipped="0" tests="11" name="TestSuite">
+<testsuite failures="2" time="984.868" errors="0" skipped="0" tests="4" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home/jre/lib"/>
@@ -27,7 +27,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/sukhwinders/Documents/workspace/MyAutomation_FixedPkgSmoke/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf677112263864515451.tmp"/>
+    <property name="classworlds.conf" value="/Users/sukhwinders/Documents/workspace/MyAutomation_FinalDevCode/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5228192580763701311.tmp"/>
     <property name="sun.jnu.encoding" value="US-ASCII"/>
     <property name="java.library.path" value="/Users/sukhwinders/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,103 +63,24 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="147.225" classname="com.org.Example.myproject.TC9672_Test" name="TwoActorWorkFlow"/>
-  <testcase time="129.765" classname="com.org.Example.myproject.TC9673_Test" name="productTwoactor_workflow"/>
-  <testcase time="370.506" classname="com.org.Example.myproject.TC9733_Test" name="Approve_Request"/>
-  <testcase time="81.838" classname="com.org.Example.myproject.TC9647_Test" name="Account_verification"/>
-  <testcase time="64.753" classname="com.org.Example.myproject.TC9648_Test" name="testSearchByIcixId"/>
-  <testcase time="83.919" classname="com.org.Example.myproject.TC9653_Test" name="Auccount_verification">
-    <failure message="element not visible
+  <testcase time="756.195" classname="com.org.Example.myproject.TC9735_Test" name="productTwoactor_workflow">
+    <failure message="unknown error: Element is not clickable at point (198, 186). Other element would receive the click: &lt;a data-refid=&quot;filter&quot; tabindex=&quot;-1&quot; id=&quot;595:1;0_listviewpicker_0&quot; href=&quot;javascript:void(0);&quot; data-aura-rendered-by=&quot;604:1;0&quot; data-filter=&quot;00B15000009gr2pEAA&quot; role=&quot;menuitem&quot;&gt;...&lt;/a&gt;
   (Session info: chrome=53.0.2785.116)
   (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 25.07 seconds
+Command duration or timeout: 158 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
-Session ID: 1569ea4472f7a2764be5a945844b9fca
+Session ID: 5ad4b7bf186d460ba71ca702b6b82b4d
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.AxDw2R, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: element not visible
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.yMWrFk, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (198, 186). Other element would receive the click: &lt;a data-refid=&quot;filter&quot; tabindex=&quot;-1&quot; id=&quot;595:1;0_listviewpicker_0&quot; href=&quot;javascript:void(0);&quot; data-aura-rendered-by=&quot;604:1;0&quot; data-filter=&quot;00B15000009gr2pEAA&quot; role=&quot;menuitem&quot;&gt;...&lt;/a&gt;
   (Session info: chrome=53.0.2785.116)
   (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 25.07 seconds
+Command duration or timeout: 158 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
-Session ID: 1569ea4472f7a2764be5a945844b9fca
+Session ID: 5ad4b7bf186d460ba71ca702b6b82b4d
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.AxDw2R, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
-	at com.org.Example.myproject.TC9653_Test.Auccount_verification(TC9653_Test.java:90)
-</failure>
-    <system-err>Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 16391
-Only local connections are allowed.
-</system-err>
-  </testcase>
-  <testcase time="83.389" classname="com.org.Example.myproject.TC9659_Test" name="Tagstest"/>
-  <testcase time="118.005" classname="com.org.Example.myproject.TC9666_Test" name="SetAndSendCompilince">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@ng-change=&apos;populateDocumentType(row)&apos;]&quot;}
-  (Session info: chrome=53.0.2785.116)
-  (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 25.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
-*** Element info: {Using=xpath, value=//select[@ng-change=&apos;populateDocumentType(row)&apos;]}
-Session ID: bab3a98781fedb721194baab1ec016fb
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.Inizhs, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@ng-change=&apos;populateDocumentType(row)&apos;]&quot;}
-  (Session info: chrome=53.0.2785.116)
-  (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 25.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
-*** Element info: {Using=xpath, value=//select[@ng-change=&apos;populateDocumentType(row)&apos;]}
-Session ID: bab3a98781fedb721194baab1ec016fb
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.Inizhs, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.org.Example.myproject.TC9666_Test.SetAndSendCompilince(TC9666_Test.java:117)
-</failure>
-    <system-err>Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 8738
-Only local connections are allowed.
-</system-err>
-  </testcase>
-  <testcase time="83.99" classname="com.org.Example.myproject.TC9667_Test" name="Productgroup"/>
-  <testcase time="73.282" classname="com.org.Example.myproject.TC9675_Test" name="uploadpublicdocument">
-    <failure message="element not visible
-  (Session info: chrome=53.0.2785.116)
-  (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19 milliseconds
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
-Session ID: 67ac8c7e688c633db55855747708cb6c
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.7Q0R7X, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=53.0.2785.116)
-  (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19 milliseconds
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
-Session ID: 67ac8c7e688c633db55855747708cb6c
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.7Q0R7X, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.yMWrFk, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -169,13 +90,48 @@ Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browse
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at com.org.Example.myproject.TC9675_Test.uploadpublicdocument(TC9675_Test.java:101)
+	at com.org.Example.myproject.TC9735_Test.productTwoactor_workflow(TC9735_Test.java:159)
 </failure>
-    <system-out>selectionjava.awt.datatransfer.StringSelection@6d3c3df3
-</system-out>
-    <system-err>Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 30308
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 14516
 Only local connections are allowed.
 </system-err>
   </testcase>
-  <testcase time="66.27" classname="com.org.Example.myproject.TC9678_Test" name="send_document"/>
+  <testcase time="83.454" classname="com.org.Example.myproject.TC9653_Test" name="Account_verification">
+    <failure message="element not visible
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25.04 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
+Session ID: bc27570da07a286bed8943cd0c2dfef3
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.9iShu4, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6),platform=Mac OS X 10.10.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25.04 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;SDMMAC-F60-2.local&apos;, ip: &apos;172.24.3.181&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.3&apos;, java.version: &apos;1.7.0_12-ea&apos;
+Session ID: bc27570da07a286bed8943cd0c2dfef3
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.9iShu4, chromedriverVersion=2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6)}, networkConnectionEnabled=false, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=53.0.2785.116, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
+	at com.org.Example.myproject.TC9653_Test.Account_verification(TC9653_Test.java:93)
+</failure>
+    <system-err>Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 1561
+Only local connections are allowed.
+</system-err>
+  </testcase>
+  <testcase time="82.234" classname="com.org.Example.myproject.TC9659_Test" name="Tagstest"/>
+  <testcase time="62.985" classname="com.org.Example.myproject.TC10460_Test" name="Approve_Request"/>
 </testsuite>
