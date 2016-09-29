@@ -1,9 +1,5 @@
 package com.org.Example.myproject;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.AssertJUnit;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -45,7 +41,7 @@ public class TC9735_Test {
 
 	@AfterClass
 	public void afterClass() {
-		//guitils.logoutFromPortal(driver);
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -169,10 +165,11 @@ public class TC9735_Test {
 		
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//a[@title='Related']")).click();
-
-		driver.findElement(
+		Thread.sleep(4000);
+	/*	driver.findElement(
 				By.xpath("//a[contains(@title,'California Proposition 65 Warranty')]"))
-				.click();
+				.click();*/
+		driver.findElement(By.linkText("California Proposition 65 Warranty")).click();
 				Thread.sleep(5000);
 		// Click on open form button
 		driver.findElement(
@@ -182,7 +179,7 @@ public class TC9735_Test {
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 
 		
-		List<WebElement> RdoNo = driver.findElements(By
+		/*List<WebElement> RdoNo = driver.findElements(By
 				.xpath(".//label[starts-with(@for,'No')]"));
 
 		RdoNo.get(0).click();
@@ -201,7 +198,12 @@ public class TC9735_Test {
 		driver.findElement(By.xpath("//div[@title='Submit']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//button[@onclick='submitRequest()']"))
-				.click();
+				.click();*/
+		
+		driver.findElement(By.xpath("//ng-form/div[2]/div/div/input")).sendKeys("xyz org");
+		driver.findElement(By.xpath("//ng-form/div[4]/div/div/input")).sendKeys("Suneel");
+		driver.findElement(By.xpath("//ng-form/div[5]/div/div/input")).sendKeys("Sales Manager");
+		driver.findElement(By.xpath("//button[contains(.,'Submit')]")).click();
 		Thread.sleep(50000);
 		// logout responder
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
@@ -278,11 +280,12 @@ public class TC9735_Test {
 				Thread.sleep(2000);
 
 				driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-				driver.findElement(
+/*				driver.findElement(
 						By.xpath("//textarea[@placeholder='Enter Comments ']"))
-						.sendKeys("test comment");
+						.sendKeys("test comment");*/
+				driver.findElement(By.id("txt_Comment")).sendKeys("test comment");
 				Thread.sleep(5000);
-				driver.findElement(By.xpath("//input[contains(@value,'Submit')]"))
+				driver.findElement(By.xpath("//button[@id='btn_Save']"))
 						.click();
 				driver.switchTo().defaultContent();
 				Thread.sleep(5000);

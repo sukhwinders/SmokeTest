@@ -43,7 +43,7 @@ public class TC9653_Test {
 	}
 
 	@Test
-	public void Auccount_verification() throws Exception {
+	public void Account_verification() throws Exception {
 		// Login to the salesforce
 		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
