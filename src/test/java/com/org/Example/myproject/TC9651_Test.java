@@ -1,5 +1,8 @@
 package com.org.Example.myproject;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -22,11 +25,7 @@ public class TC9651_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver = guitils.openBrowser(driver);
 	}
 
 	@Test
@@ -36,16 +35,15 @@ public class TC9651_Test {
 		guitils.loginToPortal(userName1,password1,driver);
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
-		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
+		driver.findElement(By.cssSelector("div.slds-icon-waffle")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
 		Thread.sleep(3000);
 		// New button
 		/*driver.findElement(
 				By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a"))
 				.click();*/
-		 driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.findElement(By.xpath("//li//a//div[@title='New']")).click();
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 
 		driver.findElement(By.xpath("//input[@placeholder='Postal Code']"))
 				.clear();
@@ -54,15 +52,16 @@ public class TC9651_Test {
 		driver.findElement(
 				By.cssSelector("button.slds-button.slds-button--brand"))
 				.click();
-		String postasid = driver
-				.findElement(
-						By.xpath("//p[@class='slds-text-body--regular ng-binding'][3]"))
-				.getText();
+	//	String postasid = driver
+		//		.findElement(
+		//				By.xpath("//p[@class='slds-text-body--regular ng-binding'][3]"))
+		//		.getText();
 
-		System.out.println(postasid);
+		//System.out.println(postasid);
 
 	}
 
+	@AfterMethod
 	@AfterClass
 	public void tearDown() throws Exception {
 		driver.quit();

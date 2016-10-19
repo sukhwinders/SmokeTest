@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-public class TC10461_Test {
+public class TC10467_Test {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("RequestorUsername");
 	String password1 = guitils.getPassword("RequestorPassword");
@@ -31,7 +31,7 @@ public class TC10461_Test {
 	String comment = guitils.getPassword("Comments");
 
 	Date d = new Date(System.currentTimeMillis());
-	String tpgName = "Test Relationship Status only" + d;
+	String tpgName = "tags_status_and_Type" + d;
 
 	String firstwindow;
 	String secondwindow;
@@ -53,7 +53,7 @@ public class TC10461_Test {
 	}
 
 	@Test
-	public void TPG_Relationship_Status() throws Exception {
+	public void TPG_tag_status_and_Type() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		//driver.findElement(By.linkText("ICIX")).click();
@@ -61,19 +61,36 @@ public class TC10461_Test {
 		WebElement we = driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]"));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we);
 		Thread.sleep(3000);
-// Creating New Trading Partner Group 				
-		//driver.findElement(By.cssSelector("div[title='New']")).click();	
-		WebElement we1 = driver.findElement(By.cssSelector("div[title='New']"));
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we1);
+		// Creating New Trading Partner Group with the combination of tag,status and Type	 			
+		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[contains(.,'GFSI Certified')]")).click();
+		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
+		Thread.sleep(2000);
+	  
 		driver.findElement(By.xpath("//a[contains(.,'Status')]")).click();
 		driver.findElement(By.xpath("//span[contains(.,'Pending')]")).click();
 		driver.findElement(By.xpath("//span[contains(.,'Active')]")).click();
 		driver.findElement(By.xpath(".//*[@id='icnMoveRight']")).click();
 		
+		
+		driver.findElement(By.xpath("//a[contains(.,'Type')]")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//span[contains(.,'Agent')]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'Broker')]")).click();
+		Thread.sleep(3000);
+		
+		List<WebElement> ar=driver.findElements(By.id("icnMoveRight"));
+		//It is finding 2 elements of same ID
+		//driver.findElement(By.id("icnMoveRight")).click();
+		//clicking the 2nd one
+		ar.get(1).click();
+		Thread.sleep(3000);
+
 		driver.findElement(By.xpath(".//*[@id='btnSave']")).click();
 		Thread.sleep(3000);
 		driver.findElement(By

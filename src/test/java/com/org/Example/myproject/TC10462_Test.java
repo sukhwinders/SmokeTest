@@ -46,16 +46,11 @@ public class TC10462_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-/*		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
-		//guitils.logoutFromPortal(driver);
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -63,13 +58,15 @@ public class TC10462_Test {
 	public void TPG_Relationship_Type() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		WebElement we= driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we);
 		Thread.sleep(3000);
 		// Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);

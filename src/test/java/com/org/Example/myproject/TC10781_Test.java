@@ -1,5 +1,9 @@
 package com.org.Example.myproject;
 
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Date;
@@ -7,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +23,7 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-public class TC9659_Test {
+public class TC10781_Test {
 	WebDriver driver;
 	String baseUrl;
 	Date d = new Date(System.currentTimeMillis());
@@ -32,6 +37,9 @@ public class TC9659_Test {
 	String password1 = guitils.getPassword("RequestorPassword");
 	String strTPName = guitils.getUserName("TPResponder");
 	String Responder = guitils.getDATA("TradingPartnerName");
+	String PrdName;
+	String strIXN;
+	int IXNFlag=0;
 
 
 	@BeforeClass
@@ -39,26 +47,30 @@ public class TC9659_Test {
 		driver = guitils.openBrowser(driver);
 	}
 
-
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
 	@Test
-	public void Tagstest() throws Exception {
+	public void CreateProductWithoutUniversalId() throws Exception {
 		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
 		//driver.findElement(By.linkText("ICIX")).click();
-		//driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')]")).click();
+		//driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 		Thread.sleep(3000);
+		
+		
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		
 		WebElement frame=driver.findElement(By.tagName("iframe"));
 		driver.switchTo().frame(frame);
+		Thread.sleep(2000);
 		
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).clear();
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).sendKeys(Responder,Keys.TAB);		
@@ -75,26 +87,32 @@ public class TC9659_Test {
 		Thread.sleep(5000);
 		driver.findElement(By.id("btnCreateProduct")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys("TEST Product");
+		PrdName="TEST Product_" + UPCproduct;
+		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys(PrdName);
 		Thread.sleep(2000);
 		driver.findElement(By.id("btn_UPRelationship_Next")).click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		//driver.findElement(By.id("btn_UPRelationship_Next")).click();
-		
-		Thread.sleep(2000);
-
-		driver.findElement(By.id("tab-ProductRelationship-1__item")).click();
-		driver.findElement(By.xpath("//a[@id='btn_UPRelationship_Tag_Add']")).click();
-		Thread.sleep(4000);
-
-		driver.findElement(By.xpath("//input[@id='txt_UPRelationship_Tag_New']")).sendKeys(Tags);
-		WebElement TagField = driver.findElement(By.id("txt_UPRelationship_Tag_New"));
-		TagField.sendKeys(Keys.ENTER);
+			
 		Thread.sleep(3000);
 		
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
+		driver.findElement(By.xpath("//button[@ng-click='vm.close()']")).click();
+		Thread.sleep(2000);
+		driver.switchTo().defaultContent();
+		
+		Thread.sleep(1000);
+		
+		strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/ul/div[1]/li[2]/div[2]/div")).getText();
+		
+		if (strIXN.isEmpty())
+		{
+			IXNFlag=1; // Means there must be IXN ID 
+		}
+		
+		Assert.assertEquals(IXNFlag,0,"IXN Number must not be blank");
+		
 
 	}
 

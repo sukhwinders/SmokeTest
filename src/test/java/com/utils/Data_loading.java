@@ -312,11 +312,11 @@ public class Data_loading {
 			     .click();
 			   
 			   Thread.sleep(5000);
-			   driver.findElement(By.cssSelector("div[class='icon-waffle']"))
+			   driver.findElement(By.cssSelector("div[class='slds-icon-waffle']"))
 			     .click();
 			  } else  {
 			   Thread.sleep(5000);
-			   driver.findElement(By.cssSelector("div[class='icon-waffle']"))
+			   driver.findElement(By.cssSelector("div[class='slds-icon-waffle']"))
 			     .click();
 			  
 			  }
@@ -331,5 +331,10 @@ public class Data_loading {
 		driver.findElement(By.id("password")).sendKeys(pwd);
 		driver.findElement(By.id("Login")).click();
 
+	}
+	public void logoutFromPortal(WebDriver driver){
+		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
+		.click();
+		driver.findElement(By.linkText("Log Out")).click();
 	}
 }

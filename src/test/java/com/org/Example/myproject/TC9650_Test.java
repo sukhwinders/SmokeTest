@@ -1,9 +1,16 @@
 package com.org.Example.myproject;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -24,16 +31,11 @@ public class TC9650_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver = guitils.openBrowser(driver);
 	}
-
 	@AfterClass
 	public void afterClass() {
-	//	driver.quit();
+		driver.quit();
 	}
 
 	@Test
@@ -45,21 +47,21 @@ public class TC9650_Test {
 
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-
-		driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
+		//driver.findElement(By.cssSelector("div.slds-icon-waffle")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
 		Thread.sleep(3000);
 		// New button
 
-		driver.findElement(
-				By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a"))
-				.click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.findElement(By.xpath("//li//a//div[@title='New']")).click();
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 
-		driver.findElement(By.xpath("//input[@placeholder='Street']")).clear();
+	/*	driver.findElement(By.xpath("//input[@placeholder='Street']")).clear();
 		driver.findElement(By.xpath("//input[@placeholder='Street']"))
-				.sendKeys(Address);
-		driver.findElement(By.xpath("//input[@placeholder='City']")).sendKeys(
+				.sendKeys(Address);*/
+		driver.findElement(By.xpath("//input[contains(@placeholder,'Address1')]")).clear();
+		driver.findElement(By.xpath("//input[contains(@placeholder,'Address1')]")).sendKeys(Address);
+		
+		driver.findElement(By.xpath("//input[contains(@placeholder,'City/Town')]")).sendKeys(
 				City);
 		driver.findElement(
 				By.xpath("//input[contains(@ng-model,'avm.newPartner.address.state')]"))
@@ -67,10 +69,16 @@ public class TC9650_Test {
 		driver.findElement(
 				By.cssSelector("button.slds-button.slds-button--brand"))
 				.click();
-		String Stret = driver.findElement(
+	/*	String Stret = driver.findElement(
 				By.xpath("//p[@class='slds-text-body--regular ng-binding']"))
-				.getText();
-		Assert.assertEquals(Stret, Address, "Name is not matched");
+				.getText();*/
+	
+		List<WebElement> Streetlist = driver.findElements(By.xpath("//div[1]//p[@class='slds-text-body--small ng-binding'][1]"));
+		String Stret = Streetlist.get(0).getText();
+		System.out.println(Stret);
+		Assert.assertEquals(Stret, Address);
+		
+		//AssertJUnit.assertEquals(Stret, Address, "Name is not matched");
 
 	}
 

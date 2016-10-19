@@ -1,9 +1,17 @@
 package com.org.Example.myproject;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+
+
+
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,6 +46,7 @@ public class TC9666_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -48,19 +57,28 @@ public class TC9666_Test {
 		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.linkText("Trading Partner Groups")).click();
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.linkText("Trading Partner Groups")).click();
+		WebElement wb = driver.findElement(By.linkText("Trading Partner Groups"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",wb);
 
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@title='New']")).click();
-		driver.switchTo().frame(0);
+		
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		
+		driver.switchTo().frame(frame);
 		driver.findElement(By.id("txtGroupName")).clear();
 		driver.findElement(By.id("txtGroupName")).sendKeys(TP_Group);
 
-		driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]"))
-				.click();
+		//driver.findElement(By.xpath("//*[@id='tab-scoped-0']/div/div[13]/div/label/span[1]")).click();
+		List<WebElement> tags = driver.findElements(By.xpath("//span[@class='slds-checkbox--faux']"));
+		if(tags.size()>0){
+			tags.get(0).click();
+		}
+		
 		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 		Thread.sleep(2000);
@@ -71,27 +89,24 @@ public class TC9666_Test {
 		driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("Trading Partner Groups")).click();
-		Thread.sleep(2000);
+		Thread.sleep(2000); 
 		// Search Trading Partner 
-				driver.findElement(By.id("84:2;a")).sendKeys(TP_Group);
+				driver.findElement(By.id("754:9;a")).sendKeys(TP_Group);
 				Thread.sleep(3000);
-				WebElement webElement = driver.findElement(By.id("84:2;a"));
+				WebElement webElement = driver.findElement(By.id("754:9;a"));
 				webElement.sendKeys(Keys.TAB);
 				Thread.sleep(3000);
 				webElement.sendKeys(Keys.ENTER);
 				Thread.sleep(3000);	
 				driver.findElement(By.linkText(TP_Group)).click();
-				//driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div[2]/div[2]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/a")).click();
-				
 		
-		//driver.findElement(By.linkText(TP_Group)).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[@data-aura-class='forceIconDeprecated']")).click();
+		//Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[@data-aura-class='forceIconDeprecated']")).click();		
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[contains(.,'Set Requirements')]")).click();
 		Thread.sleep(3000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		Thread.sleep(4000);
 		/*if (System.getProperty("os.name").toLowerCase().contains("win")) {
 
@@ -114,26 +129,30 @@ public class TC9666_Test {
 					.sendKeys(Keys.chord(Keys.ARROW_DOWN));
 		}*/
 		
-		Select dropdown1 = new Select(driver.findElement(By.xpath("//select[@ng-change='populateDocumentType(row)']")));
+		Select dropdown1 = new Select(driver.findElement(By.id("RequestType0")));
 		dropdown1.selectByIndex(1);
-		Thread.sleep(6000);		
+		Thread.sleep(3000);		
 		Select dropdown = new Select(driver.findElement(By.id("DocType0")));
-		dropdown.selectByIndex(5);
+		dropdown.selectByIndex(1);
 		Thread.sleep(2000);
 		
 		//driver.findElement(By.name("dateid")).click();
-		driver.findElement(By.xpath("/html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[1]/div/input")).click();		
-		driver.findElement(By.xpath("//button[contains(.,'Next Month')]")).click();
-		//Thread.sleep(3000);
-		driver.findElement(By.xpath("/html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[7]/span")).click();
-		//driver.findElement(By.xpath("html/body/div[1]/div/div[2]/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[7]/span")).click();
-		Thread.sleep(3000);
+				driver.findElement(By.xpath("/html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[1]/div/input")).click();		
+				//driver.findElement(By.xpath("//button[contains(.,'Next Month')]")).click();
+				//Thread.sleep(3000);
+				driver.findElement(By.xpath("html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[7]/span")).click();
+				//driver.findElement(By.xpath("html/body/div[1]/div/div[2]/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[7]/span")).click();
+				Thread.sleep(3000);
+
 
 		driver.findElement(By.id("btnSend")).click();
 		Thread.sleep(3000);
 		System.out.println("test3");
+		Thread.sleep(3000);
 		driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 		Thread.sleep(3000);
+		driver.switchTo().defaultContent();
+		
 
 	}
 

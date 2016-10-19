@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -30,6 +32,7 @@ public class TC9667_Test {
 
 	@AfterClass
 	public void afterClass() {
+		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -40,15 +43,16 @@ public class TC9667_Test {
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.linkText("Product Groups")).click();
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.linkText("Product Groups")).click();
+		WebElement wb = driver.findElement(By.linkText("Product Groups"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",wb);
+		
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@title='New']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.findElement(By.xpath("//input[@id='txtGroupName']")).clear();
-		driver.findElement(By.xpath("//input[@id='txtGroupName']")).sendKeys(
-				Group);
-
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@id='txtGroupName']")).sendKeys(Group);
 		driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]"))
 				.click();
 		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
@@ -57,15 +61,22 @@ public class TC9667_Test {
 				.click();
 		Thread.sleep(2000);
 
-		driver.switchTo().defaultContent();
-		driver.findElement(By.linkText("App Launcher")).click();
+		//driver.switchTo().defaultContent();
+		WebElement we1 = driver.findElement(By.linkText("App Launcher"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we1);
+		
+		//driver.findElement(By.linkText("App Launcher")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.xpath("//button[@title='ICIX']")).click();
+		//driver.findElement(By.linkText("ICIX")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("Product Groups")).click();
+		//driver.findElement(By.linkText("Product Groups")).click();
+		WebElement we2 = driver.findElement(By.linkText("Product Groups"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we2);
 		Thread.sleep(3000);
 		driver.navigate().refresh();
-		driver.findElement(By.linkText(Group)).click();
+		//driver.findElement(By.linkText(Group)).click();
+		driver.findElement(By.xpath(".//a[contains(@title,'"+Group+"')]")).click();
 
 	}
 

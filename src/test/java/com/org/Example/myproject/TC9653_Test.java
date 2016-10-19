@@ -78,24 +78,21 @@ public class TC9653_Test {
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.cssSelector("input[id=\"companyName\"]")).sendKeys(strTPName);
 		driver.findElement(By.xpath(".//*[@class='slds-button slds-button--brand']")).click();
-		driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
+		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
+		
+		List<WebElement> acs = driver.findElements(By.cssSelector(".slds-button.slds-button--brand.slds-button--large.ng-scope"));
+		if(acs.size()>0){
+			acs.get(0).click();
+		}
 		Thread.sleep(3000);
 		//new Select(driver.findElement(By.xpath("//select[contains(@id,'ddl_UURelationship_Status')]"))).selectByVisibleText("Active");
-		String strTypeDrp = "//select[@id='ddl_UURelationship_Type']";
-		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-			driver.switchTo().activeElement()
-					.equals(driver.findElement(By.xpath(strTypeDrp)));
-			driver.findElement(By.xpath(strTypeDrp)).sendKeys(Keys.ARROW_DOWN);
-
-		} else if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			driver.switchTo().activeElement()
-					.equals(driver.findElement(By.xpath(strTypeDrp)));
-			driver.findElement(By.xpath(strTypeDrp)).sendKeys(
-					Keys.chord(Keys.ARROW_DOWN));
-		}
-
-		driver.findElement(By.xpath(".//*[@id='btn_UPRelationship_Save']"))
-				.click();
+		//String strTypeDrp = "//select[@id='ddl_UURelationship_Type']";
+		
+		Select dropdown = new Select(driver.findElement(By.id("ddl_UURelationship_Type")));
+		dropdown.selectByIndex(1);
+		
+		driver.findElement(By.xpath(".//*[@id='btn_UPRelationship_Save']")).click();
 		System.out.println(driver.findElement(
 				By.xpath("html/body/main/div/div[2]")).getText());
 
