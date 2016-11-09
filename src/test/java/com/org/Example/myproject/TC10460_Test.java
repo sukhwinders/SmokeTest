@@ -44,11 +44,6 @@ public class TC10460_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-/*		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
@@ -61,18 +56,18 @@ public class TC10460_Test {
 	public void TPG_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 		// Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[contains(.,'GFSI Certified')]")).click();
-		driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
+		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
 		Thread.sleep(2000);
 	    //driver.findElement(By.xpath("//a[@id='tab-scoped-1__item']")).click();
 		//new Select(driver.findElement(By.id("ddlAttrStatus"))).selectByVisibleText("Pending");

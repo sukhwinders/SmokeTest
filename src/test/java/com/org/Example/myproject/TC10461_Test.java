@@ -44,11 +44,6 @@ public class TC10461_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-/*		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
@@ -61,14 +56,13 @@ public class TC10461_Test {
 	public void TPG_Relationship_Status() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 // Creating New Trading Partner Group 				
-		driver.findElement(By.cssSelector("div[title='New']")).click();	
+		WebElement we1 = driver.findElement(By.cssSelector("div[title='New']"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we1);
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[contains(.,'Status')]")).click();

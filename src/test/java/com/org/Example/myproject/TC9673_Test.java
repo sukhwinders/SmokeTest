@@ -1,8 +1,5 @@
 package com.org.Example.myproject;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,6 +34,7 @@ public class TC9673_Test {
 	WebElement tblAccounts;
 	List<WebElement> RowsOfTable;
 	WebElement ColOfTable;
+	String FormName="BSE Statement";
 
 	@BeforeClass
 	public void beforeClass() {
@@ -49,7 +47,9 @@ public class TC9673_Test {
 	}
 
 	
-	 @AfterClass public void afterClass() 
+	 @AfterClass 
+	 public void afterClass() 
+	 
 	 { 
 		 driver.quit(); 
 		}
@@ -61,25 +61,26 @@ public class TC9673_Test {
 
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Requests')]")).click();
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.xpath("//a[contains(.,'Requests')]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(
-				By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a"))
-				.click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		//driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
+		driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(frame);
 		Thread.sleep(2000);
 		driver.findElement(By.id("requestName")).clear();
 		driver.findElement(By.id("requestName")).sendKeys(Reqname);
 
-		driver.findElement(
-				By.xpath("html/body/div[3]/div/div/div/div/label[2]/span[1]"))
-				.click();
+		driver.findElement(By.xpath("html/body/div[3]/div/div/div/div/label[2]/span[1]")).click();
 		driver.findElement(By.xpath("//input[@id='productDropDown1']")).clear();
 		driver.findElement(By.xpath("//input[@id='productDropDown1']"))
 				.sendKeys(Product);
 		//driver.findElement(By.cssSelector("h3.ng-binding")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Wheat')]")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Test Pr002')]")).click();
 		
 
 		driver.findElement(
@@ -89,8 +90,32 @@ public class TC9673_Test {
 				By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]"))
 				.click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//div[5]/div/div/div/div/label/span")).click();
+		
+		//driver.findElement(By.xpath("//div[5]/div/div/div/div/label/span")).click();
+		
+		
+		WebElement MainDiv=driver.findElement(By.xpath("//div[@ng-show='showCategoryModal']"));
+		List<WebElement> SubDivs=MainDiv.findElements(By.xpath("//div[@class='ng-scope']"));
+		List<WebElement> chkFromdiv=MainDiv.findElements(By.xpath("//label[@class='slds-checkbox']"));
+		//System.out.print(SubDivs.size());
+		//System.out.print(chkFromdiv.size());
+		if (SubDivs.size()>0)
+		{
+		for(int counter=0;counter<SubDivs.size();counter++)
+		{
+		//System.out.println(SubDivs.get(counter).getText());
+		if (SubDivs.get(counter).getText().contains(FormName))
+		{
+		chkFromdiv.get(counter).click();
+		break;
+		}
+		}
+		}
+		
+		
+		
 /*		List<WebElement> checklist = driver.findElements(By.xpath("//input[@class='slds-checkbox']"));
+ * 
 		if(checklist.size()>0)
 		checklist.get(0).click();*/
 		
@@ -142,14 +167,13 @@ public class TC9673_Test {
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(3000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'Requests')]"))
-				.click();
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.xpath("//a[contains(text(),'Requests')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		Thread.sleep(300000);
 
-		driver.findElement(
-				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
-				.click();
-		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']")).click();
+		//Thread.sleep(2000);
 		/*
 		 * driver.findElement(By.xpath("//input[@placeholder='Find list']"))
 		 * .sendKeys("All"); Thread.sleep(2000);
@@ -160,12 +184,10 @@ public class TC9673_Test {
 		 * driver.findElement(By.xpath("//a[contains(@role,'option')]"
 		 * )).click();
 		 */
-		driver.findElement(
-				By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a"))
-				.click();
+		//driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div/div[1]/div/div/div/div/div[1]/div/ul/li[1]/a")).click();
 
-		Thread.sleep(7000);
-		while (true) {
+		//Thread.sleep(7000);
+		/*while (true) {
 			String Total_requests = driver
 					.findElement(
 							By.xpath("//span[@class='countSortedByFilteredBy uiOutputText forceListViewStatusInfo']"))
@@ -182,8 +204,29 @@ public class TC9673_Test {
 				.findElement(By
 						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
-
+*/
 		//driver.findElement(By.linkText(Reqname)).click();
+		
+		
+		// Search the request
+		//driver.findElement(By.id("84:2;a")).sendKeys(Reqname);
+		//driver.switchTo().defaultContent();
+		Thread.sleep(3000);
+		WebElement txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+		txtSrc.click();
+		txtSrc.sendKeys(Reqname);
+		   Thread.sleep(3000);
+		   //WebElement webElement = driver.findElement(By.id("754:9;a"));
+		   //txtSrc.sendKeys(Keys.TAB);
+		  // Thread.sleep(3000);
+		   txtSrc.sendKeys(Keys.ENTER);
+		   Thread.sleep(3000); 
+		   //driver.findElement(By.linkText(Reqname)).click();
+
+		//Till here
+
+		WebElement rateElement = driver.findElement(By.linkText(Reqname));
+		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);	
 
 	}
 

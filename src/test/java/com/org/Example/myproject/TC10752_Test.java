@@ -1,6 +1,7 @@
 package com.org.Example.myproject;
 import java.util.Date;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -34,6 +35,16 @@ public class TC10752_Test {
 	WebDriver driver;
 	String baseUrl =  "https://login.salesforce.com";
 
+	//String FormName="California Transparency of Supply Chain Act";
+	
+	String container_Name = "Testcontainer" + d;
+	String Layout_Name = "QA_Testlayout" + d;
+	String Tab_Name = "Testtab" + d;
+	String Section_Name = "Testsection" + d;
+	
+	String FormName=container_Name;
+	String PartialReq = "Testcontainer";
+	
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
@@ -49,18 +60,23 @@ public class TC10752_Test {
 	public void TPG_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		CreateNewForm();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
-
+		
 // Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.manage().deleteAllCookies();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Thread.sleep(5000);
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(.,'New1')]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'qa1')]")).click();
 		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
 		Thread.sleep(2000);
 		
@@ -73,48 +89,63 @@ public class TC10752_Test {
 		Thread.sleep(3000);
 		WebElement rateElement = driver.findElement(By.linkText(tpgName));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		driver.manage().deleteAllCookies();
+		Thread.sleep(5000);
 		
 //Set Requirements then send	
+		if(driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).isDisplayed())
+		{
+			driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
+			Thread.sleep(1000);
+		}
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequestType0")))
 		.selectByVisibleText("All");
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("DocType0")))
-		.selectByVisibleText("BSE Statement");
+		.selectByVisibleText(FormName);
 		Thread.sleep(2000);
 		Actions action = new Actions(driver);
 		WebElement we = driver.findElement(By.xpath("html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[1]/div/input"));
-		action.moveToElement(we).moveToElement(driver.findElement(By.xpath("html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span"))).click().build().perform();
+		action.moveToElement(we).moveToElement(driver.findElement(By.xpath("html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[4]/span"))).click().build().perform();
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequirementType0")))
 				.selectByVisibleText("Approval");
 		
 		driver.findElement(By.xpath("//button[@id='btnSend']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 		driver.findElement(By.xpath("//button[@ng-click='CloseModalPopup();']")).click();
-		Thread.sleep(4000);
+		Thread.sleep(50000);
 		driver.switchTo().defaultContent();
 		
 // Logout 		
 		guitils.logoutFromPortal(driver);
+		Thread.sleep(50000);
 // Login to Responder org
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Requests')]")).click();
+		Thread.sleep(50000);
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
 		Thread.sleep(3000);
 		
 // Search For Requests
-		driver.findElement(By.id("84:2;a")).sendKeys("BSE Statement");
+		driver.findElement(By.xpath("//input[@title='Search Salesforce']")).sendKeys(FormName);
 		Thread.sleep(3000);
-		WebElement webElement = driver.findElement(By.id("84:2;a"));
-		webElement.sendKeys(Keys.TAB);
+		WebElement webElement = driver.findElement(By.xpath("//input[@title='Search Salesforce']"));
 		Thread.sleep(3000);
 		webElement.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);	
-		driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div[2]/div[2]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/a"))
-				.click();
+		driver.findElement(By.partialLinkText(FormName)).click();
+	}
+	public void CreateNewForm() throws InterruptedException
+	{
+		guitils.CreateContaniner(driver, container_Name);
+		guitils.CreateLayout(driver, Layout_Name);		
+		guitils.AddTab(driver, Tab_Name);
+		guitils.AddSection(driver, Section_Name);
+		guitils.AddLinkedQuestion(driver);
+		guitils.LightiningView(driver);
 	}
 }	

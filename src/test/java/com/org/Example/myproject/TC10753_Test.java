@@ -54,23 +54,22 @@ public class TC10753_Test {
 	public void TPG_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 
 // Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(.,'New1')]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'GFSI Certified')]")).click();
 		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath(".//*[@id='btnSave']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.findElement(By
 				.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand"))
 				.click();
@@ -78,10 +77,12 @@ public class TC10753_Test {
 		Thread.sleep(3000);
 		WebElement rateElement = driver.findElement(By.linkText(tpgName));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
-		
+		driver.manage().deleteAllCookies();
+		Thread.sleep(5000);
 //Set Requirements then send	
+		//driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequestType0")))
 		.selectByVisibleText("All");
@@ -102,10 +103,11 @@ public class TC10753_Test {
 		Thread.sleep(4000);
 		driver.switchTo().defaultContent();
 
-// Delete Requirements  		
+// Delete Requirements 
+		//driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
 		Thread.sleep(2000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		driver.findElement(By.xpath("//button[contains(.,'Remove')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@id='btnSave']")).click();

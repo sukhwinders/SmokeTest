@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -55,10 +56,14 @@ public class TC9676_Test {
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.linkText("Document Library")).click();
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.linkText("Document Library")).click();		
+		
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Document Library')]")).click();
+		Thread.sleep(2000);
 
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(frame);
 		driver.findElement(By.id("btn_AddDocument")).click();
 		driver.findElement(By.xpath("//a[@id='browseLink']")).click();
 		Thread.sleep(5000);
@@ -124,18 +129,17 @@ public class TC9676_Test {
 		 
 		robot.keyPress(KeyEvent.VK_ENTER);
 		 
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		//robot.keyRelease(KeyEvent.VK_ENTER);
+		//robot.keyRelease(KeyEvent.VK_ENTER);
+		//robot.keyRelease(KeyEvent.VK_ENTER);
 		// }
 
 		Thread.sleep(15000);
 
-		driver.findElement(
-				By.xpath("//input[contains(@class,'slds-input slds-show')]"))
-				.click();
-		driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
+		//driver.findElement(By.xpath("//input[contains(@class,'slds-input slds-show')]")).click();   --
+		//driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click(); --
 		// driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000); --
 		driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
 
 		driver.findElement(By.id("uploadButton")).click();

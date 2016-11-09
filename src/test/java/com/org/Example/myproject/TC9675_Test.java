@@ -1,8 +1,5 @@
 package com.org.Example.myproject;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -13,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -40,7 +38,6 @@ public class TC9675_Test {
 
 	@AfterClass
 	public void afterClass() {
-		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -51,68 +48,23 @@ public class TC9675_Test {
 		Thread.sleep(5000);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.linkText("Document Library")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		
+		
+		//driver.findElement(By.linkText("ICIX")).click();
+		
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Document Library')]")).click();
+		Thread.sleep(2000);
+		
+		//driver.findElement(By.linkText("Document Library")).click();
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(frame);
 		driver.findElement(By.id("btn_AddDocument")).click();
 		driver.findElement(By.xpath("//a[@id='browseLink']")).click();
 		Thread.sleep(5000);
-		/*
-		 * if(System.getProperty("os.name").toLowerCase().contains("win")){
-		 * Runtime
-		 * .getRuntime().exec("..\\ProductionAutomation\\file upload.exe");
-		 * 
-		 * } else
-		 * if(System.getProperty("os.name").toLowerCase().contains("mac")){ //
-		 * set the file name in clipboard StringSelection ss = new
-		 * StringSelection("ProductionAutomation\\upload dociment.docx");
-		 * Toolkit
-		 * .getDefaultToolkit().getSystemClipboard().setContents(ss,null);
-		 * Thread.sleep(3000);
-		 */
-		// Sleep time to detect the window dialog box
-
-		// Perform native keystrokes for CTRL+V and ENTER keys
-		//StringSelection sel = new StringSelection(System.getProperty("user.dir") + "//TestFile.doc");
 		
 		
-		
-
-		/*
-		
-		// Copy to clipboard
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
-		System.out.println("selection" + sel);
-		// Create object of Robot class
-		Robot robot = new Robot();
-		Thread.sleep(1000);
-
-		// Press Enter
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-
-		// Release Enter
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
-		// Press CTRL+V
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		// Release CTRL+V
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(3000);
-
-
-		// Press Enter
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		// }
-		 
-		 */
-		
-		
-		// New Code
+	// New Code
 		
 		//browser.findElement(By.className("import­button")).click();
 		 
@@ -172,22 +124,24 @@ public class TC9675_Test {
 		 
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		 
-		robot.delay(500);
+		robot.delay(2000);
 		 
 		robot.keyPress(KeyEvent.VK_ENTER);
 		 
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		//robot.keyRelease(KeyEvent.VK_ENTER);
+		//robot.keyRelease(KeyEvent.VK_ENTER);
 		
+		//robot.keyRelease(KeyEvent.VK_ENTER);
 		
+		// Till here		
 		
-		// Till here
 		Thread.sleep(3000);
 		//driver.findElement(By.xpath("//*[@id='category']")).click();
 		driver.findElement(By.id("category")).click();
 		//driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 		driver.findElement(By.xpath("//*[@id='category']/option[1]")).click();
 		
-		driver.findElement(By.className("slds-checkbox--faux")).click();		
+		//driver.findElement(By.className("slds-checkbox--faux")).click();		
 		//driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
 		Thread.sleep(2000);
 		//driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();
@@ -196,7 +150,6 @@ public class TC9675_Test {
 
 		driver.findElement(By.id("uploadButton")).click();
 		Thread.sleep(6000);
-		driver.switchTo().defaultContent();
 
 	}
 

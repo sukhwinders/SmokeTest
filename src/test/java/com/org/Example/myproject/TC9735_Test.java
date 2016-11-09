@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,15 +34,21 @@ public class TC9735_Test {
 	List<WebElement> RowsOfTable;
 	WebElement ColOfTable;
 	String firstwindow;
+	//String FormName="California Transparency of Supply Chain Act";
+	String FormName="Auto QA Test Form";
 
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
+		/*baseUrl = "https://login.salesforce.com";
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
 	public void afterClass() {
-		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -51,6 +58,7 @@ public class TC9735_Test {
 
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
+		/*
 		driver.findElement(By.xpath("//a[@title='App Launcher']")).click();
 		driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.linkText("Requests")).click();
@@ -60,6 +68,18 @@ public class TC9735_Test {
 				.click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		Thread.sleep(2000);
+		*/
+		
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		Thread.sleep(2000);		
+		
+		driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(frame);
+		Thread.sleep(2000);
+		
 		driver.findElement(By.id("requestName")).clear();
 		driver.findElement(By.id("requestName")).sendKeys(Reqname);
 
@@ -79,10 +99,34 @@ public class TC9735_Test {
 				By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]"))
 				.click();
 		Thread.sleep(2000);
-		/*driver.findElement(
-				By.xpath("//span[contains(.,'California Transparency of Supply Chain Act')]"))
-				.click();*/
-		driver.findElement(By.xpath("html/body/div[8]/div[1]/div/div[2]/div[2]/div[15]/div/div[1]/div/div/label/span")).click();
+		
+		
+		
+		//driver.findElement(By.xpath("//span[contains(.,'California Transparency of Supply Chain Act')]")).click();*/
+		//driver.findElement(By.xpath("html/body/div[8]/div[1]/div/div[2]/div[2]/div[15]/div/div[1]/div/div/label/span")).click();
+		//driver.findElement(By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand"))
+		//		.click();
+		//driver.findElement(By.xpath("//button[3]")).click();
+		
+		
+		WebElement MainDiv=driver.findElement(By.xpath("//div[@ng-show='showCategoryModal']"));
+		List<WebElement> SubDivs=MainDiv.findElements(By.xpath("//div[@class='ng-scope']"));
+		List<WebElement> chkFromdiv=MainDiv.findElements(By.xpath("//label[@class='slds-checkbox']"));
+		//System.out.print(SubDivs.size());
+		//System.out.print(chkFromdiv.size());
+		if (SubDivs.size()>0)
+		{
+		for(int counter=0;counter<SubDivs.size();counter++)
+		{
+		//System.out.println(SubDivs.get(counter).getText());
+		if (SubDivs.get(counter).getText().contains(FormName))
+		{
+		chkFromdiv.get(counter).click();
+		break;
+		}
+		}
+		}
+		
 		driver.findElement(
 				By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand"))
 				.click();
@@ -108,31 +152,26 @@ public class TC9735_Test {
 
 		driver.findElement(By.xpath("//button[contains(.,'Send')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(
-				By.xpath("//button[@ng-click='redirectToRequestListPage();']"))
-				.click();
-		Thread.sleep(10000);
+		//driver.findElement(By.xpath("//button[@ng-click='redirectToRequestListPage();']")).click();
+		//driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
+		driver.findElement(By.xpath("//button[@ng-click='redirectToRequestListPage();']")).click();
+		
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(50000);
+		Thread.sleep(10000);
 		// code for logout
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 				.click();
 		driver.findElement(By.linkText("Log Out")).click();
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 
-/*------------------------------------------------*/
-/*------------ Login To Responder Org ------------*/
-/*------------------------------------------------*/ 
-		
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
+		/*
 		driver.findElement(By.xpath("//a[@title='App Launcher']")).click();
-		Thread.sleep(50000);
 		driver.findElement(By.linkText("ICIX")).click();
-		Thread.sleep(50000);
 		driver.findElement(By.linkText("Requests")).click();
-		Thread.sleep(50000);
+		Thread.sleep(300000);
 		driver.findElement(
 				By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 				.click();
@@ -159,37 +198,77 @@ public class TC9735_Test {
 						.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 		//driver.findElement(By.linkText(Reqname)).click();
-		Thread.sleep(1000);
-		WebElement rateElement = driver.findElement(By.linkText(Reqname));
-		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		
+		WebElement we = driver.findElement(By.linkText(Reqname));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we);
+		
+		*/
+		
+		
+		
+		//////
+		
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		Thread.sleep(300000);
+		
+		
+		// Search the request
+				//driver.findElement(By.id("84:2;a")).sendKeys(Reqname);
+				//driver.switchTo().defaultContent();
+				Thread.sleep(3000);
+				WebElement txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+				txtSrc.click();
+				txtSrc.sendKeys(Reqname);
+				   Thread.sleep(3000);
+				   //WebElement webElement = driver.findElement(By.id("754:9;a"));
+				   //txtSrc.sendKeys(Keys.TAB);
+				  // Thread.sleep(3000);
+				   txtSrc.sendKeys(Keys.ENTER);
+				   Thread.sleep(3000); 
+				   //driver.findElement(By.linkText(Reqname)).click();
+				   
+				   WebElement rateElement = driver.findElement(By.linkText(Reqname));
+					  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+
+				//Till here
+		
+		
+		
+		//////
+		
+		
 		
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//a[@title='Related']")).click();
-		Thread.sleep(4000);
-	/*	driver.findElement(
-				By.xpath("//a[contains(@title,'California Proposition 65 Warranty')]"))
-				.click();*/
-		driver.findElement(By.linkText("California Proposition 65 Warranty")).click();
+
+		//driver.findElement(By.xpath("//a[contains(@title,'California Transparency of Supply Chain Act')]")).click();
+		driver.findElement(By.partialLinkText("Auto QA Test")).click();
 				Thread.sleep(5000);
 		// Click on open form button
 		driver.findElement(
 				By.cssSelector("[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']"))
 				.click();
 			driver.findElement(By.cssSelector("[role='menuitem'][title='Open Form']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+			
+			frame=driver.findElement(By.tagName("iframe"));
+			driver.switchTo().frame(frame);
+			Thread.sleep(2000);
 
 		
-		/*List<WebElement> RdoNo = driver.findElements(By
+		List<WebElement> RdoNo = driver.findElements(By
 				.xpath(".//label[starts-with(@for,'No')]"));
-
+		Thread.sleep(1000);
 		RdoNo.get(0).click();
-		
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@id='QuestionSignature']"))
 				.sendKeys(Comment);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']"))
 				.click();
 		Thread.sleep(5000);
+		
+		/*
 		driver.findElement(
 				By.xpath("//div[@class='full forcePageBlock forceRecordLayout']/section[1]/ul/div[2]/li[1]/div[2]/div/div/a"))
 				.click();
@@ -198,37 +277,35 @@ public class TC9735_Test {
 		driver.findElement(By.xpath("//div[@title='Submit']")).click();
 		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.xpath("//button[@onclick='submitRequest()']"))
-				.click();*/
-		
-		driver.findElement(By.xpath("//ng-form/div[2]/div/div/input")).sendKeys("xyz org");
-		driver.findElement(By.xpath("//ng-form/div[4]/div/div/input")).sendKeys("Suneel");
-		driver.findElement(By.xpath("//ng-form/div[5]/div/div/input")).sendKeys("Sales Manager");
-		driver.findElement(By.xpath("//button[contains(.,'Submit')]")).click();
-		Thread.sleep(50000);
+				.click();
+				*/
+		Thread.sleep(10000);
 		// logout responder
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 				.click();
 		driver.findElement(By.linkText("Log Out")).click();
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 
-/*------------------------------------------------*/
-/*------------ Login To requester Org ------------*/
-/*------------------------------------------------*/ 		
 		
 		// login by requester
 				guitils.loginToPortal(userName1, password1, driver);
 				guitils.LightiningView(driver);
-				Thread.sleep(50000);
+				/*
+				Thread.sleep(5000);
 				driver.findElement(By.linkText("ICIX")).click();
-				Thread.sleep(50000);
+				Thread.sleep(5000);
 				// driver.navigate().refresh();
+				 
+				 */
 
-				driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
-				Thread.sleep(80000);
+				//driver.findElement(By.xpath("//a[contains(.,'Workflows')]")).click();
+				driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Workflows')]")).click();
 				// click on all option
 				// code for scroll
 				// code for click req.
 				// click on all option
+				
+				/*
 				driver.findElement(
 						By.xpath("//span[@class='triggerLinkText selectedListView uiOutputText']"))
 						.click();
@@ -255,10 +332,31 @@ public class TC9735_Test {
 								.xpath("//div[@class = 'scroller actionBarPlugin fixedHeaderPlugin']//table[1]"));
 				RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 				//driver.findElement(By.linkText(Reqname)).click();
-				WebElement rateElement1 = driver.findElement(By.linkText(Reqname));
-				  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement1);
+				WebElement we1 = driver.findElement(By.linkText(Reqname));
+				((JavascriptExecutor)driver).executeScript("arguments[0].click();",we1);
 				// driver.findElement(By.linkText("AutoTestTue Jun 21 16:33:22 IST 2016")).click();
+*/
+				
+				// Search the request
+				//driver.findElement(By.id("84:2;a")).sendKeys(Reqname);
+				//driver.switchTo().defaultContent();
+				Thread.sleep(200000);
+				txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+				txtSrc.click();
+				txtSrc.sendKeys(Reqname);
+				   Thread.sleep(3000);
+				   //WebElement webElement = driver.findElement(By.id("754:9;a"));
+				   //txtSrc.sendKeys(Keys.TAB);
+				  // Thread.sleep(3000);
+				   txtSrc.sendKeys(Keys.ENTER);
+				   Thread.sleep(3000); 
+				   //driver.findElement(By.linkText(Reqname)).click();
 
+				//Till here
+
+				rateElement = driver.findElement(By.linkText(Reqname));
+				  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+				
 				Thread.sleep(5000);
 				// Approve request
 				// driver.findElement(By.xpath("//span[@class='forceIconDeprecated forceIcon']")).click();
@@ -279,16 +377,17 @@ public class TC9735_Test {
 				driver.findElement(By.linkText("Approve")).click();
 				Thread.sleep(2000);
 
-				driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-/*				driver.findElement(
-						By.xpath("//textarea[@placeholder='Enter Comments ']"))
-						.sendKeys("test comment");*/
-				driver.findElement(By.id("txt_Comment")).sendKeys("test comment");
+				frame=driver.findElement(By.tagName("iframe"));
+				driver.switchTo().frame(frame);
+				Thread.sleep(2000);
+				driver.findElement(
+						By.xpath("//textarea[@placeholder='Enter Comments']"))
+						.sendKeys("test comment");
 				Thread.sleep(5000);
-				driver.findElement(By.xpath("//button[@id='btn_Save']"))
-						.click();
+				//driver.findElement(By.xpath("//input[contains(@value,'Submit')]")).click();
+				driver.findElement(By.xpath("//button[contains(text(),'Save')]")).click();
 				driver.switchTo().defaultContent();
-				Thread.sleep(5000);
+				Thread.sleep(200000);
 				driver.navigate().refresh();
 				Assert.assertTrue(
 						driver.findElement(By.xpath("//span[contains(.,'Approved')]"))

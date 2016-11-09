@@ -3,11 +3,14 @@ package com.org.Example.myproject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
@@ -34,11 +37,12 @@ public class TC9671_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+/*		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
@@ -49,16 +53,15 @@ public class TC9671_Test {
 	@Test
 	public void createNew_form() throws Exception {
 
-		guitils.loginToPortal(userName1,password1,driver);
+		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'FormList')]")).click();
+		Thread.sleep(8000);
 		driver.switchTo().frame(0);
-		// script for container template
-		driver.findElement(By.name("j_id0:form:j_id8")).click();
-		driver.findElement(
-				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
-				.clear();
+// script for container template
+		driver.findElement(By.xpath(".//*[@id='buttonsBlock']/input[1]")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerName']")).click();
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
 				.sendKeys(container_Name);
@@ -177,9 +180,9 @@ public class TC9671_Test {
 				By.xpath("//*[@id='divLibraryQuestionList']/table/tbody/tr/td[1]/a"))
 				.click();
 		Thread.sleep(5000);
-		driver.findElement(
-				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"))
-				.click();
+		WebElement we1 = driver.findElement(
+				By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", we1);
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
 		Thread.sleep(6000);

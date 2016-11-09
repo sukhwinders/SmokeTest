@@ -55,23 +55,21 @@ public class TC10758_Test {
 	public void No_Duplicate_Requirements() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 
 // Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[contains(.,'New1')]")).click();
-		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
+		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();		
 		Thread.sleep(2000);
-		
 		driver.findElement(By.xpath(".//*[@id='btnSave']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.findElement(By
 				.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand"))
 				.click();
@@ -79,10 +77,13 @@ public class TC10758_Test {
 		Thread.sleep(3000);
 		WebElement rateElement = driver.findElement(By.linkText(tpgName));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		driver.manage().deleteAllCookies();
+		Thread.sleep(5000);
 		
-		//Set Requirements then send	
+//Set Requirements then send	
+		//driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequestType0")))
 		.selectByVisibleText("All");
@@ -95,17 +96,13 @@ public class TC10758_Test {
 		action.moveToElement(we).moveToElement(driver.findElement(By.xpath("html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span"))).click().build().perform();
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequirementType0")))
-				.selectByVisibleText("Approval");
-				
-				
+				.selectByVisibleText("Approval");	
 		// add new requirement
 		driver.findElement(By.xpath("html/body/form/div[2]/div[2]/button")).click();
 		
 		new Select(driver.findElement(By.id("RequestType1")))
 		.selectByVisibleText("All");
-		
-		
-		
+
 		WebElement dropdown = driver.findElement(By.id("DocType1"));
         Select select = new Select(dropdown);  
         int DuplicateReqFlag=0;

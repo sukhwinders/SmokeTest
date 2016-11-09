@@ -51,14 +51,12 @@ public class TC10760_Test {
 	public void SendRequestToInActiveTPStatus() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 // Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[contains(.,'Status')]")).click();
@@ -74,10 +72,14 @@ public class TC10760_Test {
 		Thread.sleep(3000);
 		WebElement rateElement = driver.findElement(By.linkText(tpgName));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		
+		driver.manage().deleteAllCookies();
+		Thread.sleep(5000);
 
 //Set Requirements then send	
+		//driver.findElement(By.xpath("//span[@alt='Show more actions for this record']")).click();
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequestType0")))
 		.selectByVisibleText("All");
@@ -95,26 +97,24 @@ public class TC10760_Test {
 		driver.findElement(By.xpath("//button[@id='btnSend']")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//button[@ng-click='CloseModalPopup();']")).click();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		driver.switchTo().defaultContent();
 // Logout 		
 		guitils.logoutFromPortal(driver);
 // Login to Responder org
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Requests')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
 		Thread.sleep(3000);
 				
 // Search For Requests
-		driver.findElement(By.id("84:2;a")).sendKeys("BSE Statement");
+		driver.findElement(By.xpath("//input[@title='Search Salesforce']")).sendKeys("BSE Statement");
 		Thread.sleep(3000);
-		WebElement webElement = driver.findElement(By.id("84:2;a"));
-		webElement.sendKeys(Keys.TAB);
+		WebElement webElement = driver.findElement(By.xpath("//input[@title='Search Salesforce']"));
 		Thread.sleep(3000);
 		webElement.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);	
-		driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div[2]/div[2]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/a"))
+		driver.findElement(By.partialLinkText("BSE Statement"))
 				.click();
 		
 	}

@@ -3,6 +3,7 @@ package com.org.Example.myproject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +17,8 @@ import org.testng.annotations.Test;
 
 import com.utils.Data_loading;
 
-public class TC9845_Test {
+public class TC9845_Test
+ {
 	String firstwindow;
 	WebDriver driver;
 	String baseUrl;
@@ -35,11 +37,12 @@ public class TC9845_Test {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+/*		baseUrl = "https://login.salesforce.com";
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
@@ -51,16 +54,13 @@ public class TC9845_Test {
 	public void createNew_form() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		Thread.sleep(3000);
-		driver.findElement(By.linkText("ICIX")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[contains(.,'FormList')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'FormList')]")).click();
+		Thread.sleep(8000);
 		driver.switchTo().frame(0);
-		// script for container template
-		driver.findElement(By.name("j_id0:form:j_id8")).click();
-		driver.findElement(
-				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
-				.clear();
+// script for container template
+		driver.findElement(By.xpath(".//*[@id='buttonsBlock']/input[1]")).click();
+		Thread.sleep(10000);
+		driver.findElement(By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerName']")).click();
 		driver.findElement(
 				By.id("j_id0:form:containerBlock:containerNew:inputContainerName"))
 				.sendKeys(container_Name);
@@ -183,19 +183,19 @@ public class TC9845_Test {
 		Thread.sleep(8000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id169']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id173']"))
 				.sendKeys("T0");
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:answerOptionBlock:createAnswerOption']"))
 				.click();
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id169']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id173']"))
 				.sendKeys("T1");
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -231,19 +231,19 @@ public class TC9845_Test {
 		Thread.sleep(8000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id169']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id173']"))
 				.sendKeys("T0");
 		driver.findElement(
 				By.xpath("//input[@id='j_id0:form:answerOptionBlock:createAnswerOption']"))
 				.click();
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id166']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id169']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id170']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:1:j_id173']"))
 				.sendKeys("T1");
 		Thread.sleep(5000);
 		driver.findElement(By.id("j_id0:form:buttonSave")).click();
@@ -282,10 +282,10 @@ public class TC9845_Test {
 		Thread.sleep(5000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id169']"))
 				.sendKeys("yes");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id173']"))
 				.sendKeys("T0");
 
 		Thread.sleep(5000);
@@ -321,10 +321,10 @@ public class TC9845_Test {
 		Thread.sleep(5000);
 		// passing Parameters
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id166']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id169']"))
 				.sendKeys("Test data one");
 		driver.findElement(
-				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id170']"))
+				By.xpath("//input[@id='j_id0:form:answerOptionBlock:answerOptionSection:answerOptionTable:0:j_id173']"))
 				.sendKeys("T0");
 		Thread.sleep(7000);
 		driver.findElement(

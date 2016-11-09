@@ -3,6 +3,7 @@ package com.org.Example.myproject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -47,11 +48,6 @@ public class TC10469_Test {
 	@BeforeClass
 	public void beforeClass() {
 		driver = guitils.openBrowser(driver);
-/*		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);*/
 	}
 
 	@AfterClass
@@ -64,19 +60,17 @@ public class TC10469_Test {
 	public void Save_Multiple_Requirements() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
-
-// Creating New Trading Partner Group 				
+// Creating New Trading Partner Group 	 			
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[contains(.,'GFSI Certified')]")).click();
-		driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
+		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
 		Thread.sleep(2000);
 
 		driver.findElement(By.xpath(".//*[@id='btnSave']")).click();
@@ -89,7 +83,9 @@ public class TC10469_Test {
 		
 		
 		driver.findElement(By.xpath(".//a[contains(@title,'"+tpgName+"')]")).click();
-				
+		driver.manage().deleteAllCookies();
+		Thread.sleep(8000);
+		
 		/*WebElement rateElement = driver.findElement(By.linkText(tpgName));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);*/
 		
@@ -108,8 +104,15 @@ public class TC10469_Test {
 // Set Requirements 		
 		//driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		Thread.sleep(4000);
 		
+		//driver.findElement(By.xpath("html/body/form/div[2]/div[2]/button")).click();
+                
+		
+		//List<WebElement> drp =driver.findElements(By.tagName("select"));
+		
+		//System.out.println(drp.size());
 		for(int i=1; i<3; i++){
 			int id=i-1;
 			int reqid=i+1;
@@ -123,8 +126,8 @@ public class TC10469_Test {
 		Thread.sleep(5000);
 
 		Actions action = new Actions(driver);
-		WebElement we = driver.findElement(By.xpath("html/body/form/div["+i+"]/div[4]/section/div/div/slds-datepicker/div/div[1]/div/input"));
-		action.moveToElement(we).moveToElement(driver.findElement(By.xpath("html/body/form/div["+i+"]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span"))).click().build().perform();
+		WebElement we1 = driver.findElement(By.xpath("html/body/form/div["+i+"]/div[4]/section/div/div/slds-datepicker/div/div[1]/div/input"));
+		action.moveToElement(we1).moveToElement(driver.findElement(By.xpath("html/body/form/div["+i+"]/div[4]/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[4]/span"))).click().build().perform();
 
 		Thread.sleep(5000);
 		new Select(driver.findElement(By.id("RequirementType"+id+"")))
@@ -154,10 +157,10 @@ public class TC10469_Test {
 		
 		if(listInputs.size()>0)
 		 {
-			System.out.println("Success: Requirements Saved " +listInputs.size());
+			System.out.println("Requirements Saved " +listInputs.size());
 		 }
 		else{
-			System.out.println("Failed: Requirements Saved " +listInputs.size());
+			System.out.println("Requirements Saved " +listInputs.size());
 		}
 	}
 }	

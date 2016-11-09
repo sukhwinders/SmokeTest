@@ -1,8 +1,5 @@
 package com.org.Example.myproject;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Date;
@@ -42,9 +39,9 @@ public class TC9659_Test {
 		driver = guitils.openBrowser(driver);
 	}
 
+
 	@AfterClass
 	public void afterClass() {
-		guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 
@@ -53,13 +50,15 @@ public class TC9659_Test {
 		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]"))
-				.click();
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 		Thread.sleep(3000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(frame);
 		
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).clear();
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).sendKeys(Responder,Keys.TAB);		
@@ -76,11 +75,11 @@ public class TC9659_Test {
 		Thread.sleep(5000);
 		driver.findElement(By.id("btnCreateProduct")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys("TEST Product");
+		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys("TEST Product_" + UPCproduct);
 		Thread.sleep(2000);
 		driver.findElement(By.id("btn_UPRelationship_Next")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.id("btn_UPRelationship_Next")).click();
+		//driver.findElement(By.id("btn_UPRelationship_Next")).click();
 		
 		Thread.sleep(2000);
 
@@ -94,7 +93,8 @@ public class TC9659_Test {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
-		driver.switchTo().defaultContent();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
 
 	}
 
