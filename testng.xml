@@ -3,11 +3,12 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-    <class name="com.org.Example.myproject.TC10460_Test" />
-    <class name="com.org.Example.myproject.TC10461_Test" />
-    <class name="com.org.Example.myproject.TC10462_Test" />
-    <class name="com.org.Example.myproject.TC10467_Test" />
-    <class name="com.org.Example.myproject.TC9665_Test" />    
+    <class name="com.org.Example.myproject.TC9647_Test" />
+    <class name="com.org.Example.myproject.TC9648_Test" />
+    <class name="com.org.Example.myproject.TC9649_Test" />
+    <class name="com.org.Example.myproject.TC9650_Test" />
+    <class name="com.org.Example.myproject.TC9651_Test" />  
+    <class name="com.org.Example.myproject.TC9652_Test" />    
 
 </classes>
   </test> <!-- Test -->
