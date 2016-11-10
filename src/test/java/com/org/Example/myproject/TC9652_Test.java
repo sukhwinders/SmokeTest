@@ -48,12 +48,16 @@ public class TC9652_Test {
 		//driver.findElement(By.linkText("ICIX")).click();
 
 		//driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
+		//driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
 		Thread.sleep(3000);
 		// New button
 		// driver.findElement(By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a")).click();
 		//driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
-		driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		
+		//driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		driver.findElement(By.xpath("//a[@title='New']")).click();
+				
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		driver.findElement(By.xpath("//input[@id='companyName']")).clear();
