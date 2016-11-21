@@ -21,23 +21,12 @@ import com.utils.Data_loading;
 public class TC9672_Test {
 
 Data_loading guitils = new Data_loading();
-String userName1 = guitils.getUserName("RequestorUsername");
-String password1 = guitils.getPassword("RequestorPassword");
-String Responder = guitils.getDATA("TPResponder");
-String userName2 = guitils.getUserName("ResponderUsername");
-String password2 = guitils.getPassword("RequestorPassword");
-Date d = new Date(System.currentTimeMillis());
-String Reqname = "AutoTest" + d;
-
-String firstwindow;
-String secondwindow;
-WebElement tblAccounts;
-List<WebElement> RowsOfTable;
-WebElement ColOfTable;
-WebDriver driver;
-String baseUrl =  "https://login.salesforce.com";
+String ReqUserName = guitils.getUserName("RequestorUsername");
+String ReqPassword = guitils.getPassword("RequestorPassword");	
+String RespUserName = guitils.getUserName("ResponderUsername");
+String RespPassword = guitils.getPassword("RequestorPassword");
 String FormName="BSE Statement";
-String comment = guitils.getPassword("Comments");
+WebDriver driver;	
 
 @BeforeClass
 public void beforeClass() {
@@ -51,23 +40,29 @@ public void afterClass() {
 
 @Test
 public void TwoActorWorkFlow() throws Exception {
-	guitils.loginToPortal(userName1, password1, driver);
-	Thread.sleep(3000);
-	guitils.LightiningView(driver);
-	Thread.sleep(5000);
-	
-	guitils.SendRequest(driver, Reqname, Responder, FormName, comment);
+	guitils.loginToSalesForce(ReqUserName, ReqPassword);		
+	guitils.SalesForceLightiningView();		
+	//guitils.LightiningView(driver);
+	CreateNewForm();
+	guitils.SendRequest();
 	
 	// code for logout
-	driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]")).click();
-	driver.findElement(By.linkText("Log Out")).click();		
-
-	//driver.get(baseUrl);
-	guitils.loginToPortal(userName2, password2, driver);
-	Thread.sleep(3000);
-	guitils.LightiningView(driver);
-	Thread.sleep(5000);
+	guitils.logoutSalesForce();
 	
-	guitils.SearchRequest(driver, Reqname);
+	guitils.loginToSalesForce(RespUserName, RespPassword);	
+	guitils.SalesForceLightiningView();	
+	guitils.FillFormAndSubmitRequest();	
+		
+	// logout responder
+	guitils.logoutSalesForce();
+}
+public void CreateNewForm() throws InterruptedException
+{
+	guitils.CreateContaniner();
+	guitils.CreateLayout();		
+	guitils.AddTab();
+	guitils.AddSection();
+	guitils.AddLinkedQuestion();
+	guitils.SalesForceLightiningView();
 }
 }

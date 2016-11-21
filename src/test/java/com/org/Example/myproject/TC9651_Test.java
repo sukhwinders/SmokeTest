@@ -3,10 +3,13 @@ package com.org.Example.myproject;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -43,7 +46,19 @@ public class TC9651_Test {
 				By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a"))
 				.click();*/
 		driver.findElement(By.xpath("//li//a//div[@title='New']")).click();
-		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//input[@placeholder='Postal Code']"))
 				.clear();

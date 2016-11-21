@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="676856" started-at="2016-11-10T05:11:19Z" finished-at="2016-11-10T05:22:36Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="676856" started-at="2016-11-10T05:11:19Z" finished-at="2016-11-10T05:22:36Z">
+      <class name="com.org.Example.myproject.TC9651_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9651_Test@4cdc5b6a]" name="beforeClass" is-config="true" duration-ms="27420" started-at="2016-11-10T10:48:52Z" finished-at="2016-11-10T10:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9651_Test@4cdc5b6a]" name="testSearchByIcixId" duration-ms="90249" started-at="2016-11-10T10:49:20Z" finished-at="2016-11-10T10:50:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.org.Example.myproject.TC9651_Test@4cdc5b6a]" name="tearDown" is-config="true" duration-ms="179" started-at="2016-11-10T10:50:50Z" finished-at="2016-11-10T10:50:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.org.Example.myproject.TC9651_Test@4cdc5b6a]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-11-10T10:50:50Z" finished-at="2016-11-10T10:50:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.org.Example.myproject.TC9651_Test -->
+      <class name="com.org.Example.myproject.TC9649_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9649_Test@65289697]" name="beforeClass" is-config="true" duration-ms="27057" started-at="2016-11-10T10:45:24Z" finished-at="2016-11-10T10:45:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9649_Test@65289697]" name="testSearchByIcixId" duration-ms="76535" started-at="2016-11-10T10:45:51Z" finished-at="2016-11-10T10:47:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9649_Test@65289697]" name="afterClass" is-config="true" duration-ms="410" started-at="2016-11-10T10:47:07Z" finished-at="2016-11-10T10:47:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9649_Test -->
+      <class name="com.org.Example.myproject.TC9652_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9652_Test@16f5b392]" name="beforeClass" is-config="true" duration-ms="25977" started-at="2016-11-10T10:50:50Z" finished-at="2016-11-10T10:51:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testSearchByAddAndName()[pri:0, instance:com.org.Example.myproject.TC9652_Test@16f5b392]" name="testSearchByAddAndName" duration-ms="79863" started-at="2016-11-10T10:51:16Z" finished-at="2016-11-10T10:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByAddAndName -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9652_Test@16f5b392]" name="afterClass" is-config="true" duration-ms="157" started-at="2016-11-10T10:52:36Z" finished-at="2016-11-10T10:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9652_Test -->
+      <class name="com.org.Example.myproject.TC9647_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9647_Test@37f0c4d2]" name="beforeClass" is-config="true" duration-ms="27775" started-at="2016-11-10T10:41:19Z" finished-at="2016-11-10T10:41:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Account_verification()[pri:0, instance:com.org.Example.myproject.TC9647_Test@37f0c4d2]" name="Account_verification" duration-ms="92076" started-at="2016-11-10T10:41:47Z" finished-at="2016-11-10T10:43:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Account_verification -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9647_Test@37f0c4d2]" name="afterClass" is-config="true" duration-ms="513" started-at="2016-11-10T10:43:19Z" finished-at="2016-11-10T10:43:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9647_Test -->
+      <class name="com.org.Example.myproject.TC9648_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9648_Test@2009d3af]" name="beforeClass" is-config="true" duration-ms="26783" started-at="2016-11-10T10:43:20Z" finished-at="2016-11-10T10:43:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="SearchByCompanyName()[pri:0, instance:com.org.Example.myproject.TC9648_Test@2009d3af]" name="SearchByCompanyName" duration-ms="96615" started-at="2016-11-10T10:43:47Z" finished-at="2016-11-10T10:45:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchByCompanyName -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9648_Test@2009d3af]" name="afterClass" is-config="true" duration-ms="391" started-at="2016-11-10T10:45:23Z" finished-at="2016-11-10T10:45:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9648_Test -->
+      <class name="com.org.Example.myproject.TC9650_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9650_Test@4bb6c763]" name="beforeClass" is-config="true" duration-ms="27435" started-at="2016-11-10T10:47:08Z" finished-at="2016-11-10T10:47:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9650_Test@4bb6c763]" name="testSearchByIcixId" duration-ms="77199" started-at="2016-11-10T10:47:35Z" finished-at="2016-11-10T10:48:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9650_Test@4bb6c763]" name="afterClass" is-config="true" duration-ms="201" started-at="2016-11-10T10:48:52Z" finished-at="2016-11-10T10:48:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC9650_Test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

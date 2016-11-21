@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="123650" started-at="2016-11-09T12:04:45Z" finished-at="2016-11-09T12:06:49Z">
+  <suite name="Default suite" duration-ms="121211" started-at="2016-11-21T05:59:43Z" finished-at="2016-11-21T06:01:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="123650" started-at="2016-11-09T12:04:45Z" finished-at="2016-11-09T12:06:49Z">
-      <class name="com.org.Example.myproject.TC10460_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC10460_Test@98380a4]" name="beforeClass" is-config="true" duration-ms="33627" started-at="2016-11-09T17:34:45Z" finished-at="2016-11-09T17:35:19Z">
+    <test name="Default test" duration-ms="121211" started-at="2016-11-21T05:59:43Z" finished-at="2016-11-21T06:01:44Z">
+      <class name="com.org.Example.myproject.TC9649_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9649_Test@73cd15da]" name="beforeClass" is-config="true" duration-ms="26479" started-at="2016-11-21T11:29:43Z" finished-at="2016-11-21T11:30:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TPG_Tags()[pri:0, instance:com.org.Example.myproject.TC10460_Test@98380a4]" name="TPG_Tags" duration-ms="76136" started-at="2016-11-09T17:35:19Z" finished-at="2016-11-09T17:36:35Z">
+        <test-method status="PASS" signature="testSearchByIcixId()[pri:0, instance:com.org.Example.myproject.TC9649_Test@73cd15da]" name="testSearchByIcixId" duration-ms="94353" started-at="2016-11-21T11:30:09Z" finished-at="2016-11-21T11:31:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TPG_Tags -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC10460_Test@98380a4]" name="afterClass" is-config="true" duration-ms="13784" started-at="2016-11-09T17:36:35Z" finished-at="2016-11-09T17:36:49Z">
+        </test-method> <!-- testSearchByIcixId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9649_Test@73cd15da]" name="afterClass" is-config="true" duration-ms="362" started-at="2016-11-21T11:31:43Z" finished-at="2016-11-21T11:31:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TC10460_Test -->
+      </class> <!-- com.org.Example.myproject.TC9649_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

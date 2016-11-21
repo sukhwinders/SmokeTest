@@ -52,11 +52,11 @@ public class TC9670_Test {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		
-		guitils.CreateContaniner(driver, container_Name);
-		guitils.CreateLayout(driver, Layout_Name);		
-		guitils.AddTab(driver, Tab_Name);
-		guitils.AddSection(driver, Section_Name);
-		guitils.AddLinkedQuestion(driver);	
+		guitils.CreateContaniner();
+		guitils.CreateLayout();		
+		guitils.AddTab();
+		guitils.AddSection();
+		guitils.AddLinkedQuestion();	
 
 	}
 }

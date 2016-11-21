@@ -25,7 +25,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import ModuleLocatorRepository.RequestRepo;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import ModuleLocatorRepository.*;
 
 public class Data_loading {
 
@@ -34,6 +36,26 @@ public class Data_loading {
 	String DATE_FORMAT_TODAY_DATE = "M/d/yyyy";
 	String DATE_FORMAT_TODAY_DATE_TIME = "M/dd/yyyy hh:mm a";
 	String DATE_FORMAT_TODAY_DATE_TIME2 = "M/d/yyyy hh:mm a";
+	
+	//For 2Actorworkflow
+	
+	RequestRepo ObjReq=new RequestRepo(); // to access the request module locators
+	
+	String userName1 = getUserName("RequestorUsername");
+	String password1 = getPassword("RequestorPassword");
+	String Responder = getDATA("TPResponder");
+	String userName2 = getUserName("ResponderUsername");
+	String password2 = getPassword("RequestorPassword");
+	String comment = getDATA("Comments");
+	
+	// Till here
+	
+	//For FormBuilder
+	
+	FormBuilderRepo ObjForm=new FormBuilderRepo();
+		
+	//Till here
+	
 	@SuppressWarnings("unused")
 	private WebDriver driver;
 
@@ -342,23 +364,38 @@ public class Data_loading {
 		driver.findElement(By.id("Login")).click();
 
 	}
-	public void logoutFromPortal(WebDriver driver){
+	public void logoutFromPortal(WebDriver driver)
+	{
 		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
 		.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		driver.findElement(By.linkText("Log Out")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
 	//// Added by Sukhwinder on 25th Oct 2016
 	
-	public void SendRequest(WebDriver driver,String Reqname,String Responder,String FormName,String comment) throws InterruptedException
+	public void SendRequest() throws InterruptedException
 	{
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		//driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		driver.findElement(By.xpath(ObjReq.lnkRequest)).click();
 		Thread.sleep(5000);		
 		
 		//driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
-		driver.findElement(By.xpath("//a[contains(@title,'New')]")).click();
+		//driver.findElement(By.xpath("//a[contains(@title,'New')]")).click();
+		driver.findElement(By.xpath(ObjReq.btnNew)).click();
 		//driver.findElement(By.xpath("//a[contains(.,'New')]/following::div[1]")).click();
 		
 		/*
@@ -367,31 +404,32 @@ public class Data_loading {
 		Thread.sleep(2000);
 		*/
 				
-		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		//List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		List<WebElement> frame1=driver.findElements(By.tagName(ObjReq.FrameTag));
 		System.out.println(frame1.size());
 		driver.switchTo().frame(frame1.get(1));
 		Thread.sleep(5000);
 		
-		driver.findElement(By.id("requestName")).clear();
-		driver.findElement(By.id("requestName")).sendKeys(Reqname);
-		driver.findElement(By.id("tradingPartnerDropDown")).clear();
-		driver.findElement(By.id("tradingPartnerDropDown")).sendKeys(Responder);
-		driver.findElement(By.cssSelector("h3.ng-binding")).click();
+		driver.findElement(By.id(ObjReq.txtReqName)).clear();
+		driver.findElement(By.id(ObjReq.txtReqName)).sendKeys(ObjReq.Reqname);
+		driver.findElement(By.id(ObjReq.drpTpName)).clear();
+		driver.findElement(By.id(ObjReq.drpTpName)).sendKeys(Responder);
+		driver.findElement(By.cssSelector(ObjReq.TpCssSelector)).click();
 
-		driver.findElement(By.cssSelector("button.slds-button.slds-button--neutral")).click();
-		driver.findElement(By.xpath("//a[contains(@ng-click,'populateDocTemplate(d.name);')]")).click();
+		driver.findElement(By.cssSelector(ObjReq.TpCssSelector1)).click();
+		driver.findElement(By.xpath(ObjReq.TemplateName)).click();
 		Thread.sleep(2000);
 				
-		WebElement MainDiv=driver.findElement(By.xpath("//div[@ng-show='showCategoryModal']"));
-		List<WebElement> SubDivs=MainDiv.findElements(By.xpath("//div[@class='ng-scope']"));
-		List<WebElement> chkFromdiv=MainDiv.findElements(By.xpath("//label[@class='slds-checkbox']"));
+		WebElement MainDiv=driver.findElement(By.xpath(ObjReq.MainDivForForm));
+		List<WebElement> SubDivs=MainDiv.findElements(By.xpath(ObjReq.InnerDivForForm));
+		List<WebElement> chkFromdiv=MainDiv.findElements(By.xpath(ObjReq.chkForm));
 		
 		if (SubDivs.size()>0)
 		{
 			for(int counter=0;counter<SubDivs.size();counter++)
 			{
 				//System.out.println(SubDivs.get(counter).getText());
-				if (SubDivs.get(counter).getText().contains(FormName))
+				if (SubDivs.get(counter).getText().contains(ObjForm.container_Name))
 				{
 					chkFromdiv.get(counter).click();
 					break;
@@ -399,40 +437,40 @@ public class Data_loading {
 			}
 		}		
 		
-		driver.findElement(By.cssSelector("div.slds-modal__footer.slds-modal__footer--directional > button.slds-button.slds-button--brand"))
+		driver.findElement(By.cssSelector(ObjReq.btnFormPopCssSelector1))
 				.click();
-		driver.findElement(By.xpath("//button[3]")).click();
+		driver.findElement(By.xpath(ObjReq.btnOnPop)).click();
 		
 		Thread.sleep(4000);
-		driver.findElement(By.id("dueDate")).click();
-		WebElement tblDate=driver.findElement(By.xpath("//table[@class='datepicker__month']"));
+		driver.findElement(By.id(ObjReq.txtDate)).click();
+		WebElement tblDate=driver.findElement(By.xpath(ObjReq.tblMonth));
 		
-		List<WebElement> tblTds=tblDate.findElements(By.tagName("td"));
+		List<WebElement> tblTds=tblDate.findElements(By.tagName(ObjReq.tblElementByTag));
 		
 		tblTds.get(25).click();
 		Thread.sleep(2000);
 		//driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
 		
-		driver.findElement(By.id("comments")).sendKeys(comment);
+		driver.findElement(By.id(ObjReq.txtComments)).sendKeys(ObjReq.SendReqComments);
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[contains(.,'Send')]")).click();
+		driver.findElement(By.xpath(ObjReq.btnSend)).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
+		driver.findElement(By.xpath(ObjReq.btnClose)).click();
 		Thread.sleep(30000);
 		driver.navigate().refresh();
-		driver.findElement(By.linkText(Reqname)).click();
+		driver.findElement(By.linkText(ObjReq.Reqname)).click();
 		Thread.sleep(50000);
 	}
 	
-	public void SearchRequest(WebDriver driver,String Reqname) throws InterruptedException
+	public void SearchRequest(String Reqname) throws InterruptedException
 	{
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		driver.findElement(By.xpath(ObjReq.lnkRequest)).click();
 		Thread.sleep(350000);
 		//Thread.sleep(3000);
 		
-		WebElement txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
 		txtSrc.sendKeys(Reqname);
 		   Thread.sleep(3000);
@@ -443,31 +481,38 @@ public class Data_loading {
 		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 	}
 	
-	public void FillFormAndSubmitRequest(WebDriver driver,String Reqname,String comment,String PartialContainer) throws InterruptedException
+	public void FillFormAndSubmitRequest() throws InterruptedException
 	{
 		Thread.sleep(4000);
-		SearchRequest(driver, Reqname);
+		SearchRequest(ObjReq.Reqname);
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//a[@title='Related']")).click();
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
 		Thread.sleep(4000);
 		
-		driver.findElement(By.partialLinkText(PartialContainer)).click();
+		driver.findElement(By.partialLinkText(ObjReq.PartialContainer)).click();
 		Thread.sleep(5000);
 		// Click on open form button
 		//driver.findElement(By.cssSelector("[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']")).click();
 		//driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 		//driver.findElement(By.xpath("//a[@class='menuTrigger'][@tabindex='0']")).click();
 		
-		List<WebElement> ar = driver.findElements(By.xpath("//a[@class='menuTrigger']"));
+		List<WebElement> ar = driver.findElements(By.xpath(ObjReq.ArrowForMenu));
 		
 		//System.out.print(ar.size());
 		
-		Thread.sleep(5000);
-		ar.get(1).click();
+		Thread.sleep(2000);
+		if(ar.size()>1)
+		{
+			ar.get(1).click();
+		}
+		else
+		{
+			ar.get(0).click();
+		}		
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector(ObjReq.OpenFormOption)).click();		
 		
-		driver.findElement(By.cssSelector("[role='menuitem'][title='Open Form']")).click();		
-		
-		WebElement frame=driver.findElement(By.tagName("iframe"));
+		WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
 		driver.switchTo().frame(frame);
 		Thread.sleep(5000);	
 		
@@ -480,40 +525,38 @@ public class Data_loading {
 		driver.findElement(By.xpath("//label[contains(.,'Signature')]/following::input[1]")).sendKeys(comment);
 		*/
 		
-		driver.findElement(By.xpath("//label[contains(.,'QA answer')]/following::input[1]")).sendKeys(comment);
-
+		driver.findElement(By.xpath(ObjReq.txtForRespAns)).sendKeys(ObjReq.ResponderComments);
 				
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//button[@ng-click='vm.onSubmit(vm)']"))
-				.click();
+		driver.findElement(By.xpath(ObjReq.btnFormSubmit)).click();
 		Thread.sleep(80000);
 	}
 	
-	public void ApproveRequest(WebDriver driver,String Reqname,String PartialReq) throws InterruptedException
+	public void ApproveRequest() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Workflows')]")).click();
+		driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
 				
 		Thread.sleep(320000);
 		//Thread.sleep(5000);
-		WebElement txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
-		txtSrc.sendKeys(Reqname);
+		txtSrc.sendKeys(ObjReq.Reqname);
 		Thread.sleep(3000);
 		txtSrc.sendKeys(Keys.ENTER);
 		Thread.sleep(3000); 
 		
-		WebElement rateElement = driver.findElement(By.linkText(Reqname));
+		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 		
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//a[@title='Related']")).click();
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
 		Thread.sleep(4000);
 		 
-		driver.findElement(By.partialLinkText(PartialReq)).click();
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
 		Thread.sleep(4000);
-		String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
+		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
 
-		List<WebElement> a = driver.findElements(By.cssSelector(cssSelectorOfSameElements));
+		List<WebElement> a = driver.findElements(By.cssSelector(ObjReq.cssSelectorOfSameElements));
 		//System.out.println(a.size());	
 		Thread.sleep(2000);
 		if(a.size()>1)
@@ -527,44 +570,50 @@ public class Data_loading {
 		
 		Thread.sleep(6000);
 
-		driver.findElement(By.linkText("Approve")).click();
+		driver.findElement(By.linkText(ObjReq.lnkApprove)).click();
 		Thread.sleep(2000);
 	
-		WebElement frame=driver.findElement(By.tagName("iframe"));
+		WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
 		driver.switchTo().frame(frame);
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//textarea[@id='txt_Comment']")).sendKeys("test comment");
+		driver.findElement(By.xpath(ObjReq.txtAreaForAppRej)).sendKeys(ObjReq.ApproveComments);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@id='btn_Save']")).click();
+		driver.findElement(By.xpath(ObjReq.btnSaveAppRej)).click();
+		Thread.sleep(5000);
+		driver.switchTo().defaultContent();
+		Thread.sleep(10000);
+		driver.navigate().refresh();	
+		Thread.sleep(20000);
+		
 	}
 	
-	public void RejectRequest(WebDriver driver,String Reqname,String PartialReq,String RejectComments) throws InterruptedException
+	public void RejectRequest() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Workflows')]")).click();
+		driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
 				
 		Thread.sleep(320000);
-		WebElement txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
-		txtSrc.sendKeys(Reqname);
+		txtSrc.sendKeys(ObjReq.Reqname);
 		Thread.sleep(3000);
 		txtSrc.sendKeys(Keys.ENTER);
 		Thread.sleep(3000); 
 		
-		WebElement rateElement = driver.findElement(By.linkText(Reqname));
+		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 		
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//a[@title='Related']")).click();
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
 		Thread.sleep(4000);
 		 
-		driver.findElement(By.partialLinkText(PartialReq)).click();
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
 		Thread.sleep(3000);
 		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
 
 		//List<WebElement> a = driver.findElements(By.cssSelector(cssSelectorOfSameElements));
 		//a.get(0).click();
-		List<WebElement> ar = driver.findElements(By.xpath("//a[@class='menuTrigger']"));
+		List<WebElement> ar = driver.findElements(By.xpath(ObjReq.ArrowForMenu));
 		
 		//System.out.print(ar.size());
 		Thread.sleep(2000);
@@ -579,41 +628,47 @@ public class Data_loading {
 		
 		Thread.sleep(6000);
 
-		driver.findElement(By.linkText("Reject")).click();
+		driver.findElement(By.linkText(ObjReq.lnkReject)).click();
 		Thread.sleep(2000);
 	
-		WebElement frame=driver.findElement(By.tagName("iframe"));
+		WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
 		driver.switchTo().frame(frame);
 		Thread.sleep(2000);
 		
 		//driver.findElement(By.xpath("//textarea[@id='txt_Comment']")).sendKeys("test comment");
-		driver.findElement(By.xpath("//label[contains(.,'Comments')]/following::textarea[1]")).sendKeys(RejectComments);
+		driver.findElement(By.xpath(ObjReq.txtRejectComments)).sendKeys(ObjReq.RejectComments);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@value='Submit']")).click();
+		driver.findElement(By.xpath(ObjReq.btnSubmit)).click();
 		Thread.sleep(5000);
 	}
 	
-	public void VerifyWorkFlowAndReqSts(WebDriver driver,String Reqname,String PartialReq) throws InterruptedException
+	public WebDriver VerifyWorkFlowAndReqSts() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		driver.switchTo().defaultContent();
+		Thread.sleep(10000);
+		driver.navigate().refresh();	
+		Thread.sleep(20000);
+		
+		driver.findElement(By.xpath(ObjReq.lnkRequest)).click();
 		Thread.sleep(350000);
 		
-		WebElement txtSrc=driver.findElement(By.xpath("//input[@placeholder='Search Salesforce']"));
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
-		txtSrc.sendKeys(Reqname);
+		txtSrc.sendKeys(ObjReq.Reqname);
 		   Thread.sleep(3000);
 		   txtSrc.sendKeys(Keys.ENTER);
 		   Thread.sleep(3000);   		
 
-		WebElement rateElement = driver.findElement(By.linkText(Reqname));
+		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
 		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 		  
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//a[@title='Related']")).click();
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
 		Thread.sleep(4000);
 		 
-		driver.findElement(By.partialLinkText(PartialReq)).click();
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
 		Thread.sleep(3000);
+		return driver;
 	}
 	
 	//// till here
@@ -622,131 +677,197 @@ public class Data_loading {
 ////Added by Sukhwinder on 1st Nov 2016
 	
 	//Create Container
-	public void CreateContaniner(WebDriver driver,String container_Name) throws InterruptedException
+	public void CreateContaniner() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'FormList')]")).click();
+		driver.findElement(By.xpath(ObjForm.lnkFormList)).click();
 		Thread.sleep(10000);
 		driver.switchTo().frame(0);
 		
 		WebElement btnBlock = (new WebDriverWait(driver, 10))
-				   .until(ExpectedConditions.elementToBeClickable(By.id("buttonsBlock")));
+				   .until(ExpectedConditions.elementToBeClickable(By.id(ObjForm.ButtonsBlock)));
 		
-		WebElement we3= driver.findElement(By.xpath(".//*[@id='buttonsBlock']/input[1]"));
+		WebElement we3= driver.findElement(By.xpath(ObjForm.btnBtn1));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", we3);
 		
-		Thread.sleep(12000);
-		driver.findElement(By.xpath("//input[@id='j_id0:form:containerBlock:containerNew:inputContainerName']")).click();
-		driver.findElement(By.id("j_id0:form:containerBlock:containerNew:inputContainerName")).sendKeys(container_Name);
+		Thread.sleep(10000);
+		driver.findElement(By.xpath(ObjForm.txtContainerName)).click();
+		driver.findElement(By.xpath(ObjForm.txtContainerName)).sendKeys(ObjForm.container_Name);
+		//driver.findElement(By.id(ObjForm.txtContainerName)).sendKeys(ObjForm.container_Name);
 		
-		new Select(driver.findElement(By.id("j_id0:form:containerBlock:containerNew:inputContainerContainerType"))).selectByVisibleText("Single Form");
-		new Select(driver.findElement(By.id("j_id0:form:containerBlock:containerNew:inputContainerType"))).selectByVisibleText("Form");
+		new Select(driver.findElement(By.id(ObjForm.drpContainerConType))).selectByVisibleText("Single Form");
+		new Select(driver.findElement(By.id(ObjForm.drpContainerType))).selectByVisibleText("Form");
 		
-		driver.findElement(By.id("j_id0:form:containerBlock:containerNew:inputContainerBestPracticeForm")).click();
+		driver.findElement(By.id(ObjForm.chkFormType)).click();
 	
-		driver.findElement(By.id("j_id0:form:containerBlock:createContainer")).click();
+		driver.findElement(By.id(ObjForm.btnCreateCon)).click();
 		Thread.sleep(3000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+		driver.findElement(By.id(ObjForm.btnSaveCon)).click();
 		Thread.sleep(3000);
 	}
 	
 	//Create Layout
-	public void CreateLayout(WebDriver driver,String Layout_Name) throws InterruptedException
+	public void CreateLayout() throws InterruptedException
 	{		
-		driver.findElement(By.id("j_id0:form:tabLayout_lbl")).click();
+		driver.findElement(By.id(ObjForm.TabLayout)).click();
 		Thread.sleep(3000);
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
-				.clear();
+		driver.findElement(By.id(ObjForm.txtLayoutName)).clear();
 		Thread.sleep(3000);
-		driver.findElement(
-				By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutName"))
-				.sendKeys(Layout_Name);
+		driver.findElement(By.id(ObjForm.txtLayoutName)).sendKeys(ObjForm.Layout_Name);
 		Thread.sleep(2000);
 		
-		new Select(driver.findElement(By.id("j_id0:form:layoutBlock:layoutNew:inputLayoutUiType"))).selectByVisibleText("desktop");
+		new Select(driver.findElement(By.id(ObjForm.LayoutType))).selectByVisibleText("desktop");
 		Thread.sleep(3000);
-		driver.findElement(By.id("j_id0:form:layoutBlock:createLayout")).click();
+		driver.findElement(By.id(ObjForm.btnCreateLayout)).click();
 		Thread.sleep(6000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+		driver.findElement(By.id(ObjForm.btnSaveLayout)).click();
 		Thread.sleep(5000);
 	}
 	
 	// Add Tab
-	public void AddTab(WebDriver driver,String Tab_Name) throws InterruptedException
+	public void AddTab() throws InterruptedException
 	{
 		
-		driver.findElement(By.id("j_id0:form:tabTabs_lbl")).click();
+		driver.findElement(By.id(ObjForm.tabTabs)).click();
 		Thread.sleep(6000);
-		driver.findElement(By.id("j_id0:form:createTab")).click();
+		driver.findElement(By.id(ObjForm.btnCreateTab)).click();
 		Thread.sleep(6000);
-		WebElement tblTabs=driver.findElement(By.xpath("//table[@class='list']"));
+		WebElement tblTabs=driver.findElement(By.xpath(ObjForm.tbllist));
 		
-		List<WebElement> tblRows=tblTabs.findElements(By.tagName("tr"));
+		List<WebElement> tblRows=tblTabs.findElements(By.tagName(ObjForm.tblElement));
 		
 		//System.out.println(tblRows.size());
 		
-		List<WebElement> trTxt=tblRows.get(1).findElements(By.xpath("//input[@type='text']"));
+		List<WebElement> trTxt=tblRows.get(1).findElements(By.xpath(ObjForm.txtName));
 		//System.out.println(trTxt.size());
-		trTxt.get(0).sendKeys(Tab_Name);
+		trTxt.get(0).sendKeys(ObjForm.Tab_Name);
 		Thread.sleep(1000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+		driver.findElement(By.id(ObjForm.btnSaveTab)).click();
 		Thread.sleep(6000);
 		
 	}
 	
-	public void AddSection(WebDriver driver,String Section_Name) throws InterruptedException
+	public void AddSection() throws InterruptedException
 	{
-		driver.findElement(By.id("j_id0:form:tabBlock:tabSection:tabTable:0:selectTab")).click();
+		driver.findElement(By.id(ObjForm.btnSelectTab)).click();
 		Thread.sleep(6000);
 		
 		//Script for Sections template
-		driver.findElement(By.id("j_id0:form:tabSections_lbl")).click();
+		driver.findElement(By.id(ObjForm.tabSection)).click();
 		Thread.sleep(5000);
 
-		driver.findElement(By.xpath("//input[contains(@id,'createSection')]")).click();
+		driver.findElement(By.xpath(ObjForm.btnAddSection)).click();
 		Thread.sleep(3000);
 		
-		WebElement tblTabs=driver.findElement(By.xpath("//table[@class='list']"));
+		WebElement tblTabs=driver.findElement(By.xpath(ObjForm.tbllist));
 		
-		List<WebElement> tblRows=tblTabs.findElements(By.tagName("tr"));		
+		List<WebElement> tblRows=tblTabs.findElements(By.tagName(ObjForm.tblElement));		
 		
-		List<WebElement> trTxt=tblRows.get(0).findElements(By.xpath("//input[@type='text']"));
-		trTxt.get(0).sendKeys(Section_Name);
+		List<WebElement> trTxt=tblRows.get(0).findElements(By.xpath(ObjForm.txtName));
+		trTxt.get(0).sendKeys(ObjForm.Section_Name);
 		
 		for (int counter=1;counter<=4;counter++)
 		{
 			driver.switchTo().activeElement().sendKeys(Keys.TAB);
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		}	
 		
 		driver.switchTo().activeElement().sendKeys("Row");
 		
-		WebElement we2 = driver.findElement(By.xpath("//input[@value='SAVE']"));
+		WebElement we2 = driver.findElement(By.xpath(ObjForm.btnSaveSection));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", we2);
 		Thread.sleep(6000);
-		driver.findElement(By.xpath("//input[@id='j_id0:form:sectionBlock:sectionSection:sectionTable:0:selectSection']")).click();
+		driver.findElement(By.xpath(ObjForm.btnSelectSection)).click();
 		Thread.sleep(6000);
 		
 	}
 	
-	public void AddLinkedQuestion(WebDriver driver) throws InterruptedException
+	public void AddLinkedQuestion() throws InterruptedException
 	{
 		// Script for Linked in Questions
-		driver.findElement(By.id("j_id0:form:tabLinkedQuestions_lbl")).click();
+		driver.findElement(By.id(ObjForm.tabQst)).click();
 		Thread.sleep(3000);	
 		
-		driver.findElement(By.id("j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName")).sendKeys("QA Question");
+		driver.findElement(By.id(ObjForm.txtQstName)).sendKeys(ObjForm.QuestionName);
 		Thread.sleep(500);
-		driver.findElement(By.xpath("//textarea[contains(@id,'inputQuestionQuestionText')]")).sendKeys("QA answer");
+		driver.findElement(By.xpath(ObjForm.txtAreaAns)).sendKeys(ObjForm.AnswerName);
 		
-		WebElement we1 = driver.findElement(By.id("j_id0:form:newElementWithQuestion:addNewLinkedQuestion"));
+		WebElement we1 = driver.findElement(By.id(ObjForm.btnAddQst));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", we1);
 		Thread.sleep(6000);
-		driver.findElement(By.id("j_id0:form:buttonSave")).click();
+		driver.findElement(By.id(ObjForm.btnSaveAll)).click();
 		Thread.sleep(6000);
-		driver.findElement(By.id("j_id0:form:buttonPublish")).click();
+		driver.findElement(By.id(ObjForm.btnPublish)).click();
 		Thread.sleep(6000);
 		driver.switchTo().defaultContent();
 		Thread.sleep(2000);
+	}
+	
+	public void InitilizeBrowser()
+	  {  
+	  String baseUrl = "https://login.salesforce.com";
+	   //driver = new FirefoxDriver();
+	   //System.setProperty("webdriver.chrome.driver", "/Users/gurpinder.singh/Downloads/chromedriver");
+	   ChromeDriverManager.getInstance().setup();
+	   driver = new ChromeDriver();  
+	   driver.manage().window().maximize();
+	   
+	   driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+	   driver.navigate().to(baseUrl);
+	   //return driver1;
+	   
+	  }
+	
+	public void loginToSalesForce(String uname, String pwd) throws InterruptedException {
+		
+		String baseUrl =  "https://login.salesforce.com";
+		driver.get(baseUrl);
+		driver.findElement(By.id("username")).clear();
+		driver.findElement(By.id("username")).sendKeys(uname);
+		driver.findElement(By.id("password")).clear();
+		driver.findElement(By.id("password")).sendKeys(pwd);
+		driver.findElement(By.id("Login")).click();
+		Thread.sleep(3000);
+
+	}
+	
+	public void SalesForceLightiningView() throws InterruptedException {
+		
+		System.out.println(driver);
+		  if (driver.findElements(By.xpath("//span[@id='userNavLabel']")).size() > 0) {
+
+		   driver.findElement(By.id("userNavLabel")).click();
+		   driver.findElement(By.xpath(".//*[@id='userNav-menuItems']/a[4]"))
+		     .click();
+		   
+		   Thread.sleep(5000);
+		   driver.findElement(By.cssSelector("div[class='slds-icon-waffle']"))
+		     .click();
+		  } else  {
+		   Thread.sleep(5000);
+		   driver.findElement(By.cssSelector("div[class='slds-icon-waffle']"))
+		     .click();
+		  
+		  }
+		  
+		  Thread.sleep(5000);
+		 }
+	
+	public void logoutSalesForce()
+	{
+		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]"))
+		.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		driver.findElement(By.linkText("Log Out")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

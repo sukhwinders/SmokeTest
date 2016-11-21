@@ -61,6 +61,7 @@ public class TC10752_Test {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		CreateNewForm();
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 		
@@ -76,7 +77,7 @@ public class TC10752_Test {
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(.,'qa1')]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'New1')]")).click();
 		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
 		Thread.sleep(2000);
 		
@@ -93,7 +94,8 @@ public class TC10752_Test {
 		Thread.sleep(5000);
 		
 //Set Requirements then send	
-		if(driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).isDisplayed())
+		//if(driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).isDisplayed())
+		if(driver.findElements(By.xpath("//span[@title='Show more actions for this record']")).size()>0)
 		{
 			driver.findElement(By.xpath("//span[@title='Show more actions for this record']")).click();
 			Thread.sleep(1000);
@@ -122,15 +124,16 @@ public class TC10752_Test {
 		
 // Logout 		
 		guitils.logoutFromPortal(driver);
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 // Login to Responder org
 		guitils.loginToPortal(userName2, password2, driver);
-		guitils.LightiningView(driver);
-		Thread.sleep(50000);
-		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		guitils.LightiningView(driver);	
 		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		Thread.sleep(320000);
 		
 // Search For Requests
+		System.out.println(FormName);
 		driver.findElement(By.xpath("//input[@title='Search Salesforce']")).sendKeys(FormName);
 		Thread.sleep(3000);
 		WebElement webElement = driver.findElement(By.xpath("//input[@title='Search Salesforce']"));
@@ -141,11 +144,11 @@ public class TC10752_Test {
 	}
 	public void CreateNewForm() throws InterruptedException
 	{
-		guitils.CreateContaniner(driver, container_Name);
-		guitils.CreateLayout(driver, Layout_Name);		
-		guitils.AddTab(driver, Tab_Name);
-		guitils.AddSection(driver, Section_Name);
-		guitils.AddLinkedQuestion(driver);
-		guitils.LightiningView(driver);
+		guitils.CreateContaniner();
+		guitils.CreateLayout();		
+		guitils.AddTab();
+		guitils.AddSection();
+		guitils.AddLinkedQuestion();
+		guitils.SalesForceLightiningView();
 	}
 }	

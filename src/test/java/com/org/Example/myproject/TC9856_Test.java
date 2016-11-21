@@ -24,35 +24,12 @@ import com.utils.Data_loading;
 
 public class TC9856_Test {
 	
-	Data_loading guitils = new Data_loading();
-	String userName1 = guitils.getUserName("RequestorUsername");
-	String password1 = guitils.getPassword("RequestorPassword");
-	String Responder = guitils.getDATA("TPResponder");
-	String userName2 = guitils.getUserName("ResponderUsername");
-	String password2 = guitils.getPassword("RequestorPassword");
-	String comment = guitils.getPassword("Comments");
-
-	Date d = new Date(System.currentTimeMillis());
-	String Reqname = "AutoTest" + d;	
-
-	String firstwindow;
-	String secondwindow;
-	WebElement tblAccounts;
-	List<WebElement> RowsOfTable;
-	WebElement ColOfTable;
-	WebDriver driver;
-	String baseUrl =  "https://login.salesforce.com";
-	//String FormName="California Transparency of Supply Chain Act";
-	//String FormName="Auto QA Test Form";
-	//String PartialReq = "AutoTest";
-	
-	String container_Name = "Testcontainer" + d;
-	String Layout_Name = "QA_Testlayout" + d;
-	String Tab_Name = "Testtab" + d;
-	String Section_Name = "Testsection" + d;
-	String FormName=container_Name;
-	String PartialReq = "AutoTest";
-	String PartialContainer = "Testcontainer";
+	Data_loading guitils = new Data_loading();	
+	String ReqUserName = guitils.getUserName("RequestorUsername");
+	String ReqPassword = guitils.getPassword("RequestorPassword");	
+	String RespUserName = guitils.getUserName("ResponderUsername");
+	String RespPassword = guitils.getPassword("RequestorPassword");
+	WebDriver driver;	
 
 	@BeforeClass
 	public void beforeClass() {
@@ -66,18 +43,15 @@ public class TC9856_Test {
 
 	@Test
 	public void Reject_Request() throws Exception {
-		guitils.loginToPortal(userName1, password1, driver);
-		Thread.sleep(3000);
-		guitils.LightiningView(driver);
-		Thread.sleep(5000);
-		
+		guitils.loginToSalesForce(ReqUserName, ReqPassword);		
+		guitils.SalesForceLightiningView();		
+				
 		CreateNewForm();
 		Thread.sleep(5000);
-		guitils.SendRequest(driver, Reqname, Responder, FormName, comment);
+		guitils.SendRequest();
 		
 		// code for logout
-		driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]")).click();
-		driver.findElement(By.linkText("Log Out")).click();		
+		guitils.logoutSalesForce();
 		
 		int RejectCounter;
 		String RejectComments;
@@ -86,34 +60,27 @@ public class TC9856_Test {
 		for(RejectCounter=1;RejectCounter<=4;RejectCounter++)
 		{
 			
-			guitils.loginToPortal(userName2, password2, driver);
+			guitils.loginToSalesForce(RespUserName, RespPassword);	
 			Thread.sleep(3000);
 			guitils.LightiningView(driver);
 			Thread.sleep(5000);
 			
 			RejectComments="Rejection - " + RejectCounter;
-			guitils.FillFormAndSubmitRequest(driver, Reqname, comment,PartialContainer);	
+			guitils.FillFormAndSubmitRequest();	
 			
 			// logout responder
-			Thread.sleep(3000);
-			driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]")).click();
-			Thread.sleep(3000);
-			driver.findElement(By.linkText("Log Out")).click();
+			guitils.logoutSalesForce();
 			Thread.sleep(5000);
 
 			// login by requester
-			guitils.loginToPortal(userName1, password1, driver);
-			Thread.sleep(3000);
-			guitils.LightiningView(driver);
-			Thread.sleep(5000);
+			guitils.loginToSalesForce(ReqUserName, ReqPassword);		
+			guitils.SalesForceLightiningView();	
 			
-			guitils.RejectRequest(driver, Reqname, PartialReq, RejectComments);
+			guitils.RejectRequest();
 			
 			// logout requester
 			Thread.sleep(3000);
-			driver.findElement(By.xpath("//img[contains(@class,'profileTrigger')]")).click();
-			Thread.sleep(3000);
-			driver.findElement(By.linkText("Log Out")).click();
+			guitils.logoutSalesForce();
 			Thread.sleep(5000);
 			
 		}		
@@ -124,11 +91,9 @@ public class TC9856_Test {
 		
 		// login by requester
 		Thread.sleep(4000);
-		guitils.loginToPortal(userName1, password1, driver);
-		Thread.sleep(3000);
-		guitils.LightiningView(driver);
-		Thread.sleep(5000);
-		guitils.VerifyWorkFlowAndReqSts(driver, Reqname, PartialReq);
+		guitils.loginToSalesForce(ReqUserName, ReqPassword);		
+		guitils.SalesForceLightiningView();	
+		guitils.VerifyWorkFlowAndReqSts();
 		Thread.sleep(3000);
 		
 		//Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'Workflow Status')]/following::span[2]")).getText(), "Status is not getting Changed");
@@ -139,12 +104,12 @@ public class TC9856_Test {
 	
 	public void CreateNewForm() throws InterruptedException
 	{
-		guitils.CreateContaniner(driver, container_Name);
-		guitils.CreateLayout(driver, Layout_Name);		
-		guitils.AddTab(driver, Tab_Name);
-		guitils.AddSection(driver, Section_Name);
-		guitils.AddLinkedQuestion(driver);
-		guitils.LightiningView(driver);
+		guitils.CreateContaniner();
+		guitils.CreateLayout();		
+		guitils.AddTab();
+		guitils.AddSection();
+		guitils.AddLinkedQuestion();
+		guitils.SalesForceLightiningView();
 	}
 	
 	}

@@ -61,7 +61,7 @@ public class DebugClass {
 		{		
 			
 			RejectComments="Rejection - " + RejectCounter;
-			guitils.FillFormAndSubmitRequest(driver, "AutoTestThu Oct 27 11:19:11 IST 2016", comment,PartialReq);	
+			guitils.FillFormAndSubmitRequest();	
 			
 			// logout responder
 			Thread.sleep(3000);
@@ -76,7 +76,7 @@ public class DebugClass {
 			guitils.LightiningView(driver);
 			Thread.sleep(5000);
 			
-			guitils.RejectRequest(driver, Reqname, PartialReq, RejectComments);
+			guitils.RejectRequest();
 			
 			// logout requester
 			Thread.sleep(3000);
@@ -97,7 +97,7 @@ public class DebugClass {
 		Thread.sleep(3000);
 		guitils.LightiningView(driver);
 		Thread.sleep(5000);
-		guitils.VerifyWorkFlowAndReqSts(driver, Reqname, PartialReq);
+		guitils.VerifyWorkFlowAndReqSts();
 		Thread.sleep(3000);
 		
 		//Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'Workflow Status')]/following::span[2]")).getText(), "Status is not getting Changed");

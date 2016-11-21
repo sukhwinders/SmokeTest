@@ -56,6 +56,7 @@ public class TC10460_Test {
 	public void TPG_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
 		Thread.sleep(3000);
 		// Creating New Trading Partner Group 				

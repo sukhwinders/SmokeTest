@@ -51,7 +51,7 @@ public class TC9673_Test {
 	 public void afterClass() 
 	 
 	 { 
-		 driver.quit(); 
+		// driver.quit(); 
 		}
 	 
 
@@ -69,8 +69,8 @@ public class TC9673_Test {
 		//driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
 		driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		WebElement frame=driver.findElement(By.tagName("iframe"));
-		driver.switchTo().frame(frame);
+		List<WebElement> frame=driver.findElements(By.tagName("iframe"));
+		driver.switchTo().frame(frame.get(1));
 		Thread.sleep(2000);
 		driver.findElement(By.id("requestName")).clear();
 		driver.findElement(By.id("requestName")).sendKeys(Reqname);
@@ -80,7 +80,7 @@ public class TC9673_Test {
 		driver.findElement(By.xpath("//input[@id='productDropDown1']"))
 				.sendKeys(Product);
 		//driver.findElement(By.cssSelector("h3.ng-binding")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Test Pr002')]")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Wheat')]")).click();
 		
 
 		driver.findElement(
@@ -127,7 +127,15 @@ public class TC9673_Test {
 
 		Thread.sleep(4000);
 		driver.findElement(By.id("dueDate")).click();
-		driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
+		//driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
+		
+WebElement tblDate=driver.findElement(By.xpath("//table[@class='datepicker__month']"));
+		
+		List<WebElement> tblTds=tblDate.findElements(By.tagName("td"));
+		
+		tblTds.get(25).click();
+		Thread.sleep(2000);
+		
 /*		driver.findElement(By.xpath("//div[2]/button")).click();
 		Thread.sleep(6000);
 		driver.findElement(By.xpath("//span[contains(.,'12')]")).click();

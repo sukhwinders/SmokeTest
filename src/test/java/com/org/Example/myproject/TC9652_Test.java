@@ -1,9 +1,11 @@
 package com.org.Example.myproject;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -59,7 +61,19 @@ public class TC9652_Test {
 		driver.findElement(By.xpath("//a[@title='New']")).click();
 				
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@id='companyName']")).clear();
 		driver.findElement(By.xpath("//input[@id='companyName']")).sendKeys(
 				TPname);

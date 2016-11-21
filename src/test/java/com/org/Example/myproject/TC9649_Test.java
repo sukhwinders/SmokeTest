@@ -49,7 +49,19 @@ public class TC9649_Test {
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//li//a//div[@title='New']")).click();
-		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//input[@id='companyName']")).clear();
 		driver.findElement(By.xpath("//input[@id='companyName']")).sendKeys(
