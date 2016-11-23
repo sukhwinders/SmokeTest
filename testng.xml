@@ -2,37 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" >
   <test name="Test" preserve-order="true">
-    <classes>
-     <class name="com.org.Example.myproject.TC9672_Test" />
-    <class name="com.org.Example.myproject.TC9673_Test" />
-    <class name="com.org.Example.myproject.TC9733_Test" />
-    <class name="com.org.Example.myproject.TC9735_Test" />
+   <classes>
     <class name="com.org.Example.myproject.TC9647_Test" />
     <class name="com.org.Example.myproject.TC9648_Test" />
-    <class name="com.org.Example.myproject.TC9653_Test" />
-    <class name="com.org.Example.myproject.TC9659_Test" />
-    <class name="com.org.Example.myproject.TC9666_Test" />
-    <class name="com.org.Example.myproject.TC9667_Test" />
-    <class name="com.org.Example.myproject.TC10460_Test" />
-    <class name="com.org.Example.myproject.TC10461_Test" />
-    <class name="com.org.Example.myproject.TC10462_Test" />
-    <class name="com.org.Example.myproject.TC10467_Test" />
-    <class name="com.org.Example.myproject.TC10469_Test" />
-    
-    
-    
-    <!--<class name="com.org.Example.myproject.TC10462_Test" />
-    <class name="com.org.Example.myproject.TC9666_Test" />
-    <class name="com.org.Example.myproject.TC9667_Test" /> -->
-    
-    
-   <!-- <class name="com.org.Example.myproject.TC10752_Test"/>
-    <class name="com.org.Example.myproject.TC10753_Test"/>
-    <class name="com.org.Example.myproject.TC10758_Test"/>
-    <class name="com.org.Example.myproject.TC10759_Test"/>
-    <class name="com.org.Example.myproject.TC10760_Test"/>
-    <class name="com.org.Example.myproject.TC10761_Test"/>-->
-    
+    <class name="com.org.Example.myproject.TC9649_Test" />
+    <class name="com.org.Example.myproject.TC9650_Test" />
+    <class name="com.org.Example.myproject.TC9651_Test" />  
+    <class name="com.org.Example.myproject.TC9652_Test" />    
+
 </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

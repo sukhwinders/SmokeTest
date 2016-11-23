@@ -57,8 +57,9 @@ public class TC10460_Test {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
 		//driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
-		WebElement we = driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]"));
+		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		WebElement we = driver.findElement(By.xpath("//a[contains(.,'Trading Partner Groups')]"));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we);
 		
 		Thread.sleep(3000);

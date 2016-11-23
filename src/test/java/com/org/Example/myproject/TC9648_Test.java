@@ -36,16 +36,19 @@ public class TC9648_Test {
 	public void SearchByCompanyName() throws Exception {
 		// Login to the salesforce
 		guitils.loginToPortal(userName1,password1,driver);
-		Thread.sleep(8000);
-		// switchtoLightining();
-		//guitils.LightiningView(driver);
+		Thread.sleep(8000);	
+		guitils.LightiningView(driver);
 		//Thread.sleep(3000);
 		//driver.findElement(By.linkText("ICIX")).click();
 
 		//driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
 		//Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(text(),'Accounts')]")).click();
-		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//span[contains(text(),'Accounts')]")).click();
+		//Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
+		Thread.sleep(5000);
+		
 		// New button
 		/*driver.findElement(
 				By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a"))

@@ -74,9 +74,9 @@ public class TC9650_Test {
 				.getText();*/
 	
 		List<WebElement> Streetlist = driver.findElements(By.xpath("//div[1]//p[@class='slds-text-body--small ng-binding'][1]"));
-		String Stret = Streetlist.get(0).getText();
-		System.out.println(Stret);
-		Assert.assertEquals(Stret, Address);
+		String Street = Streetlist.get(0).getText();
+		System.out.println(Street);
+		Assert.assertEquals(Street, Address);
 		
 		//AssertJUnit.assertEquals(Stret, Address, "Name is not matched");
 

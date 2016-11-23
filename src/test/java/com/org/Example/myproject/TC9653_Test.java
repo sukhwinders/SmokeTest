@@ -47,11 +47,16 @@ public class TC9653_Test {
 		guitils.loginToPortal(userName1,password1,driver);
 		guitils.LightiningView(driver);
 		Thread.sleep(4000);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
+		
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Accounts')]")).click();
+		Thread.sleep(2000);
+		
+		//driver.findElement(By.linkText("ICIX")).click();
+		//driver.findElement(By.cssSelector("div.list > ul > li > a")).click();
+				
 
-		tblAccounts = driver.findElement(By.xpath(sTblAccounts));
-		RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
+		//tblAccounts = driver.findElement(By.xpath(sTblAccounts));
+		//RowsOfTable = tblAccounts.findElements(By.tagName("tr"));
 
 		/*for (int r = 0; r < RowsOfTable.size(); r++) {
 			ColOfTable = RowsOfTable.get(r).findElement(By.tagName("th"));
@@ -75,7 +80,10 @@ public class TC9653_Test {
 		}*/
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("New")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		Thread.sleep(3000);
+		WebElement frame=driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(frame);;
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.findElement(By.cssSelector("input[id=\"companyName\"]")).sendKeys(strTPName);
 		driver.findElement(By.xpath(".//*[@class='slds-button slds-button--brand']")).click();
 		Thread.sleep(3000);

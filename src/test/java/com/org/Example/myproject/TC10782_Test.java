@@ -63,7 +63,8 @@ public class TC10782_Test {
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')]")).click();
 		//driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		//driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		driver.findElement(By.xpath("//a[@title='New']")).click();
 		Thread.sleep(3000);
 		
 		
@@ -108,9 +109,9 @@ public class TC10782_Test {
 		driver.findElement(By.xpath("//button[@ng-click='vm.close()']")).click();
 		Thread.sleep(2000);
 		driver.switchTo().defaultContent();
-		
 		Thread.sleep(1000);
 		
+		/*
 		strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/ul/div[1]/li[2]/div[2]/div")).getText();
 		
 		if (!strIXN.isEmpty())
@@ -119,6 +120,12 @@ public class TC10782_Test {
 		}
 		
 		Assert.assertEquals(IXNFlag,0,"IXN Number must be blank");
+		*/
+		
+		
+		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'ICIX Product ID')]/following::span[2]")).getText().isEmpty() ,"IXN Number must be blank");
+		//Assert.assertEquals(driver.findElement(By.xpath("//span[contains(.,'ICIX Product ID')]/following::span[2]")).getText().isEmpty() ,"IXN Number must be blank");
+
 		
 
 	}

@@ -33,6 +33,14 @@ public class TC10752_Test {
 	WebElement ColOfTable;
 	WebDriver driver;
 	String baseUrl =  "https://login.salesforce.com";
+	
+	String container_Name = "Testcontainer" + d;
+	String Layout_Name = "QA_Testlayout" + d;
+	String Tab_Name = "Testtab" + d;
+	String Section_Name = "Testsection" + d;
+	
+	String FormName=container_Name;
+	String PartialReq = "Testcontainer";
 
 	@BeforeClass
 	public void beforeClass() {
@@ -41,26 +49,33 @@ public class TC10752_Test {
 
 	@AfterClass
 	public void afterClass() {
-		guitils.logoutFromPortal(driver);
-		driver.quit();
+		//guitils.logoutFromPortal(driver);
+		//driver.quit();
 	}
 
 	@Test
 	public void TPG_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
 		guitils.LightiningView(driver);
-		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Trading Partner Group')]")).click();
+		//CreateNewForm();
 		Thread.sleep(3000);
-
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')]")).click();
+		Thread.sleep(3000);
+		
 // Creating New Trading Partner Group 				
 		driver.findElement(By.cssSelector("div[title='New']")).click();	
 		Thread.sleep(5000);
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.manage().deleteAllCookies();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Thread.sleep(5000);
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		Thread.sleep(3000);
 		
 		driver.findElement(By.id("txtGroupName")).sendKeys(tpgName);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(.,'New1')]")).click();
+		driver.findElement(By.xpath("//span[contains(.,'High Risk')]")).click();
 		//driver.findElement(By.xpath("//span[contains(.,'Refresh')]")).click();
 		Thread.sleep(2000);
 		
@@ -76,13 +91,14 @@ public class TC10752_Test {
 		
 //Set Requirements then send	
 		driver.findElement(By.xpath("//a[@title='Set Requirements']")).click();
-		driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("RequestType0")))
 		.selectByVisibleText("All");
 		Thread.sleep(2000);
 		new Select(driver.findElement(By.id("DocType0")))
-		.selectByVisibleText("BSE Statement");
+		.selectByVisibleText(FormName);
 		Thread.sleep(2000);
 		Actions action = new Actions(driver);
 		WebElement we = driver.findElement(By.xpath("html/body/form/div[1]/div[4]/section/div/div/slds-datepicker/div/div[1]/div/input"));
@@ -103,18 +119,27 @@ public class TC10752_Test {
 		guitils.loginToPortal(userName2, password2, driver);
 		guitils.LightiningView(driver);
 		driver.findElement(By.linkText("ICIX")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Requests')]")).click();
-		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
+		Thread.sleep(320000);
 		
 // Search For Requests
-		driver.findElement(By.id("84:2;a")).sendKeys("BSE Statement");
+		System.out.println(FormName);
+		driver.findElement(By.xpath("//input[@title='Search Salesforce']")).sendKeys(FormName);
 		Thread.sleep(3000);
-		WebElement webElement = driver.findElement(By.id("84:2;a"));
-		webElement.sendKeys(Keys.TAB);
+		WebElement webElement = driver.findElement(By.xpath("//input[@title='Search Salesforce']"));
 		Thread.sleep(3000);
 		webElement.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);	
-		driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div[2]/div[2]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/a"))
-				.click();
+		driver.findElement(By.partialLinkText(FormName)).click();
+	}
+	
+	public void CreateNewForm() throws InterruptedException
+	{
+		guitils.CreateContaniner(driver, container_Name);
+		guitils.CreateLayout(driver, Layout_Name);		
+		guitils.AddTab(driver, Tab_Name);
+		guitils.AddSection(driver, Section_Name);
+		guitils.AddLinkedQuestion(driver);
+		guitils.LightiningView(driver);
 	}
 }	

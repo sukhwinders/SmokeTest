@@ -53,7 +53,8 @@ public class TC9652_Test {
 		// New button
 		// driver.findElement(By.xpath("/html/body/div[6]/div[1]/section/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a")).click();
 		//driver.findElement(By.xpath("//div[@class='topRightHeaderRegion']/div/div/ul/li[1]/a")).click();
-		driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		//driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
+		driver.findElement(By.xpath("//li//a//div[@title='New']")).click();
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		driver.findElement(By.xpath("//input[@id='companyName']")).clear();

@@ -124,7 +124,7 @@ public class TC9675_Test {
 		 
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		 
-		robot.delay(500);
+		robot.delay(5000);
 		 
 		robot.keyPress(KeyEvent.VK_ENTER);
 		 
@@ -135,13 +135,13 @@ public class TC9675_Test {
 		
 		// Till here		
 		
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		//driver.findElement(By.xpath("//*[@id='category']")).click();
 		driver.findElement(By.id("category")).click();
 		//driver.findElement(By.xpath("//a[contains(.,'Product Spec')]")).click();
 		driver.findElement(By.xpath("//*[@id='category']/option[1]")).click();
 		
-		driver.findElement(By.className("slds-checkbox--faux")).click();		
+		//driver.findElement(By.className("slds-checkbox--faux")).click();		
 		//driver.findElement(By.xpath("//span[@class='slds-checkbox--faux']")).click();
 		Thread.sleep(2000);
 		//driver.findElement(By.xpath("//button[contains(.,'Save')]")).click();

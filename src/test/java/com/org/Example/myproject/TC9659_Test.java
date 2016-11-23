@@ -54,7 +54,8 @@ public class TC9659_Test {
 		//driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		//driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		driver.findElement(By.xpath("//a[@title='New']")).click();
 		Thread.sleep(3000);
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		WebElement frame=driver.findElement(By.tagName("iframe"));
@@ -75,7 +76,7 @@ public class TC9659_Test {
 		Thread.sleep(5000);
 		driver.findElement(By.id("btnCreateProduct")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys("TEST Product");
+		driver.findElement(By.xpath("//input[@id='ProductName']")).sendKeys("TEST Product" + UPCproduct);
 		Thread.sleep(2000);
 		driver.findElement(By.id("btn_UPRelationship_Next")).click();
 		Thread.sleep(2000);
