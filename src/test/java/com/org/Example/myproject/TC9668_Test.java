@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -52,7 +53,19 @@ public class TC9668_Test {
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",we);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@title='New']")).click();
-		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@id='txtGroupName']")).clear();
 		driver.findElement(By.xpath("//input[@id='txtGroupName']")).sendKeys(
 				Group);

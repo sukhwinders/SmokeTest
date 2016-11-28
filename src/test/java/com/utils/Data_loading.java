@@ -475,7 +475,12 @@ public class Data_loading {
 		txtSrc.sendKeys(Reqname);
 		   Thread.sleep(3000);
 		   txtSrc.sendKeys(Keys.ENTER);
-		   Thread.sleep(3000);   		
+		   Thread.sleep(3000);  	
+		   
+		   driver.findElement(By.linkText("Show More")).click();
+		   Thread.sleep(500);  
+		   driver.findElement(By.linkText("Workflows")).click();
+		   Thread.sleep(3000); 
 
 		WebElement rateElement = driver.findElement(By.linkText(Reqname));
 		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
@@ -486,8 +491,8 @@ public class Data_loading {
 		Thread.sleep(4000);
 		SearchRequest(ObjReq.Reqname);
 		Thread.sleep(4000);
-		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
-		Thread.sleep(4000);
+		//driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		//Thread.sleep(4000);
 		
 		driver.findElement(By.partialLinkText(ObjReq.PartialContainer)).click();
 		Thread.sleep(5000);
@@ -534,6 +539,7 @@ public class Data_loading {
 	
 	public void ApproveRequest() throws InterruptedException
 	{
+		/*
 		driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
 				
 		Thread.sleep(320000);
@@ -547,13 +553,15 @@ public class Data_loading {
 		
 		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
-		
+		*/
 		Thread.sleep(4000);
-		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		SearchRequest(ObjReq.Reqname);
 		Thread.sleep(4000);
+		//driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		//Thread.sleep(4000);
 		 
-		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
-		Thread.sleep(4000);
+		//driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
+		//Thread.sleep(4000);
 		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
 
 		List<WebElement> a = driver.findElements(By.cssSelector(ObjReq.cssSelectorOfSameElements));
@@ -679,9 +687,9 @@ public class Data_loading {
 	//Create Container
 	public void CreateContaniner() throws InterruptedException
 	{
-		driver.findElement(By.xpath(ObjForm.lnkFormList)).click();
+		driver.findElement(By.xpath(ObjForm.lnkFormList)).click();		
 		Thread.sleep(10000);
-		driver.switchTo().frame(0);
+		driver.switchTo().frame(0);		
 		
 		WebElement btnBlock = (new WebDriverWait(driver, 10))
 				   .until(ExpectedConditions.elementToBeClickable(By.id(ObjForm.ButtonsBlock)));

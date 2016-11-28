@@ -3,6 +3,7 @@ import java.util.Date;
 
 public class FormBuilderRepo {
 		
+	public static String aa="new";
 	public String lnkFormList="//span[@class='label slds-truncate slds-text-link'][contains(.,'FormList')]";
 	public String ButtonsBlock="buttonsBlock";
 	public String btnBtn1=".//*[@id='buttonsBlock']/input[1]";

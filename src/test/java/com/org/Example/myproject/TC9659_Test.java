@@ -3,6 +3,7 @@ package com.org.Example.myproject;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -42,7 +43,7 @@ public class TC9659_Test {
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test
@@ -57,8 +58,19 @@ public class TC9659_Test {
 		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
 		Thread.sleep(3000);
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
-		WebElement frame=driver.findElement(By.tagName("iframe"));
-		driver.switchTo().frame(frame);
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).clear();
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).sendKeys(Responder,Keys.TAB);		

@@ -1,6 +1,7 @@
 package com.org.Example.myproject;
 
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -50,8 +51,19 @@ public class TC9667_Test {
 		
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@title='New']")).click();
-		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-		Thread.sleep(2000);
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@id='txtGroupName']")).sendKeys(Group);
 		driver.findElement(By.xpath("//span[@class='slds-checkbox--faux'][1]"))
 				.click();

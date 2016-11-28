@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -59,9 +61,19 @@ public class TC9663_Test {
 		Thread.sleep(4000);
 		driver.findElement(By.linkText("Edit")).click();
 		Thread.sleep(2000);
-		WebElement frame=driver.findElement(By.tagName("iframe"));
-		driver.switchTo().frame(frame);
-		Thread.sleep(4000);
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		//new Select(driver.findElement(By.id("ddl_UURelationship_Status"))).selectByVisibleText("Pending");
 		new Select(driver.findElement(By.xpath("//select[@id='ddl_UURelationship_Type']"))).selectByVisibleText("Cold Storage");
@@ -74,9 +86,19 @@ public class TC9663_Test {
 		driver.switchTo().defaultContent();
 		driver.findElement(By.linkText("Edit")).click();
 		Thread.sleep(2000);
-		frame=driver.findElement(By.tagName("iframe"));
-		driver.switchTo().frame(frame);
-		Thread.sleep(2000);
+		frame1=driver.findElements(By.tagName("iframe"));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		Select drpType=new Select(driver.findElement(By.xpath("//select[@id='ddl_UURelationship_Type']")));
 		WebElement drpFirstOption=drpType.getFirstSelectedOption();
 		String ChangedRelTyp=drpFirstOption.getText();
@@ -88,9 +110,9 @@ public class TC9663_Test {
 		driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
 		
 		Thread.sleep(6000);
-		driver.findElement(By.cssSelector("img.profileTrigger")).click();
-		driver.findElement(By.linkText("Log Out")).click();
-		Thread.sleep(8000);
+		//driver.findElement(By.cssSelector("img.profileTrigger")).click();
+		//driver.findElement(By.linkText("Log Out")).click();
+		//Thread.sleep(8000);
 
 	}
 

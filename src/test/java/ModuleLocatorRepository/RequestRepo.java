@@ -30,7 +30,7 @@ public class RequestRepo {
 	public String lnkRelated="//a[@title='Related']";
 	public String ArrowForMenu="//a[@class='menuTrigger']";
 	public String OpenFormOption="[role='menuitem'][title='Open Form']";
-	public String txtForRespAns="//label[contains(.,' QA Answer1')]/following::input[1]";
+	public String txtForRespAns="//label[contains(.,'QA Answer1')]/following::input[1]";
 	public String btnFormSubmit="//button[@ng-click='vm.onSubmit(vm)']";
 	public String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
 	public String lnkApprove="Approve";

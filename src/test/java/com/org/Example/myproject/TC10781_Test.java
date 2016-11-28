@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -69,9 +70,18 @@ public class TC10781_Test {
 		
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		
-		WebElement frame=driver.findElement(By.tagName("iframe"));
-		driver.switchTo().frame(frame);
-		Thread.sleep(2000);
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+				
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).clear();
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).sendKeys(Responder,Keys.TAB);		
