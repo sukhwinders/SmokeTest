@@ -51,7 +51,7 @@ public class TC10782_Test {
 
 	@AfterClass
 	public void afterClass() {
-		guitils.logoutFromPortal(driver);
+		//guitils.logoutFromPortal(driver);
 		driver.quit();
 	}
 

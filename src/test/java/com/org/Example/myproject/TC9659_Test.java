@@ -43,7 +43,7 @@ public class TC9659_Test {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

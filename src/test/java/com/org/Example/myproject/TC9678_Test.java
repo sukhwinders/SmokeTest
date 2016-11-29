@@ -68,6 +68,7 @@ public class TC9678_Test {
 		Thread.sleep(3000);
 		driver.findElement(By.id("requestName")).clear();
 		driver.findElement(By.id("requestName")).sendKeys(Document);
+		System.out.println(Document);
 		driver.findElement(By.id("recipients")).clear();
 		driver.findElement(By.id("recipients")).sendKeys(Responder,Keys.TAB);		
 		Thread.sleep(3000);

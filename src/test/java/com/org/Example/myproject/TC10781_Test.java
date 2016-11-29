@@ -51,7 +51,7 @@ public class TC10781_Test {
 	@AfterClass
 	public void afterClass() {
 		//guitils.logoutFromPortal(driver);
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
@@ -118,6 +118,7 @@ public class TC10781_Test {
 		//strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/ul/div[1]/li[2]/div[2]/div")).getText();
 		//strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[3]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/div/div[1]/div[2]/div/div[2]/div")).getText();
 		Assert.assertNotEquals(driver.findElement(By.xpath("//span[contains(.,'ICIX Product ID')]/following::span[2]")).getText().isEmpty() ,"IXN Number must not be blank");
+		
 		//Assert.assertNotEquals(actual1, actual2, delta);
 		
 		/*
