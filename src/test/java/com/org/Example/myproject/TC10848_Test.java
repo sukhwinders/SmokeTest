@@ -21,7 +21,7 @@ import com.utils.Data_loading;
 
 import ModuleLocatorRepository.RequestRepo;
 
-public class TC9733_Test {
+public class TC10848_Test {
 	
 	Data_loading guitils = new Data_loading();	
 	String ReqUserName = guitils.getUserName("RequestorUsername");
@@ -41,37 +41,19 @@ public class TC9733_Test {
 	}
 
 	@Test
-	public void Approve_Request() throws Exception {
+	public void CancelRequest() throws Exception {
 				
-	
 		guitils.loginToSalesForce(ReqUserName, ReqPassword);		
 		guitils.SalesForceLightiningView();	
 
 		//guitils.LightiningView(driver);
 
 		CreateNewForm();
-		guitils.SendRequest();
-
-		// code for logout
-		guitils.logoutSalesForce();
-	
-		guitils.loginToSalesForce(RespUserName, RespPassword);
-		guitils.SalesForceLightiningView();
-		guitils.FillFormAndSubmitRequest();
-		// logout responder
-
-		guitils.logoutSalesForce();
-		
-		
-		// login by requester
-		guitils.loginToSalesForce(ReqUserName, ReqPassword);
-		guitils.SalesForceLightiningView();
-		driver=guitils.ApproveRequest();	
-		//driver=guitils.SearchReqAndAssignDriver();
-		
+		guitils.SendRequest();	
+		driver=guitils.CancelRequest();		
 			
 		Assert.assertEquals(driver.findElement(By.xpath("//span[contains(.,'Workflow Status')]/following::span[2]")).getText(), "Closed","Workflow status is not closed");
-		Assert.assertEquals(driver.findElement(By.xpath("//span[contains(.,'Request Status')]/following::span[2]")).getText(), "Approved","Request status is not approved");
+		Assert.assertEquals(driver.findElement(By.xpath("//span[contains(.,'Request Status')]/following::span[2]")).getText(), "Cancelled","Request status is not approved");
 		
 		}	
 	

@@ -389,14 +389,16 @@ public class Data_loading {
 	public void SendRequest() throws InterruptedException
 	{
 		Thread.sleep(5000);
+		
 		//driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'Requests')]")).click();
 		driver.findElement(By.xpath(ObjReq.lnkRequest)).click();
-		Thread.sleep(5000);		
+		
+		Thread.sleep(6000);
 		
 		//driver.findElement(By.xpath("//div[contains(@title,'New')]")).click();
 		//driver.findElement(By.xpath("//a[contains(@title,'New')]")).click();
 		driver.findElement(By.xpath(ObjReq.btnNew)).click();
-		//driver.findElement(By.xpath("//a[contains(.,'New')]/following::div[1]")).click();
+		//driver.findElement(By.xpath("//a[contains(.,'New')]/following::div[1]")).click();		
 		
 		/*
 		WebElement frame=driver.findElement(By.tagName("iframe"));
@@ -406,8 +408,17 @@ public class Data_loading {
 				
 		//List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
 		List<WebElement> frame1=driver.findElements(By.tagName(ObjReq.FrameTag));
-		System.out.println(frame1.size());
-		driver.switchTo().frame(frame1.get(1));
+		//System.out.println(frame1.size());
+		
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
 		Thread.sleep(5000);
 		
 		driver.findElement(By.id(ObjReq.txtReqName)).clear();
@@ -416,8 +427,11 @@ public class Data_loading {
 		driver.findElement(By.id(ObjReq.drpTpName)).sendKeys(Responder);
 		driver.findElement(By.cssSelector(ObjReq.TpCssSelector)).click();
 
-		driver.findElement(By.cssSelector(ObjReq.TpCssSelector1)).click();
-		driver.findElement(By.xpath(ObjReq.TemplateName)).click();
+		//driver.findElement(By.cssSelector(ObjReq.TpCssSelector1)).click();
+		driver.findElement(By.id(ObjReq.btnSelectDocument)).click();
+		
+		//driver.findElement(By.xpath(ObjReq.anchorTemplateCategory)).click();
+		driver.findElement(By.linkText(ObjReq.anchorTemplateCategory)).click();
 		Thread.sleep(2000);
 				
 		WebElement MainDiv=driver.findElement(By.xpath(ObjReq.MainDivForForm));
@@ -430,6 +444,8 @@ public class Data_loading {
 			{
 				//System.out.println(SubDivs.get(counter).getText());
 				if (SubDivs.get(counter).getText().contains(ObjForm.container_Name))
+				//if (SubDivs.get(counter).getText().contains("TestcontainerThu Nov 17 18:04:20 IST 2016"))	
+					
 				{
 					chkFromdiv.get(counter).click();
 					break;
@@ -437,31 +453,38 @@ public class Data_loading {
 			}
 		}		
 		
-		driver.findElement(By.cssSelector(ObjReq.btnFormPopCssSelector1))
-				.click();
-		driver.findElement(By.xpath(ObjReq.btnOnPop)).click();
+		//driver.findElement(By.cssSelector(ObjReq.btnAttachRelatedRequest)).click();
+		driver.findElement(By.id(ObjReq.btnAttachRelatedRequest)).click();
+		
+		//driver.findElement(By.xpath(ObjReq.btnSaveRelatedRequest)).click();
+		driver.findElement(By.id(ObjReq.btnSaveRelatedRequest)).click();
 		
 		Thread.sleep(4000);
 		driver.findElement(By.id(ObjReq.txtDate)).click();
-		WebElement tblDate=driver.findElement(By.xpath(ObjReq.tblMonth));
+		
+		driver.findElement(By.xpath(ObjReq.ArrowNextMonth)).click();
+		Thread.sleep(2000);
+		WebElement tblDate=driver.findElement(By.xpath(ObjReq.tblMonth));		
 		
 		List<WebElement> tblTds=tblDate.findElements(By.tagName(ObjReq.tblElementByTag));
 		
-		tblTds.get(25).click();
+		tblTds.get(30).click();
 		Thread.sleep(2000);
 		//driver.findElement(By.xpath("html/body/div[5]/div/section/div/div/slds-datepicker/div/div[2]/table/tbody/tr[5]/td[6]/span")).click();
 		
 		driver.findElement(By.id(ObjReq.txtComments)).sendKeys(ObjReq.SendReqComments);
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath(ObjReq.btnSend)).click();
+		//driver.findElement(By.xpath(ObjReq.btnSend)).click();
+		driver.findElement(By.id(ObjReq.btnSend)).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath(ObjReq.btnClose)).click();
-		Thread.sleep(30000);
+		//driver.findElement(By.xpath(ObjReq.btnCloseMessage)).click();
+		driver.findElement(By.id(ObjReq.btnCloseMessage)).click();
+		Thread.sleep(10000);
 		driver.navigate().refresh();
 		driver.findElement(By.linkText(ObjReq.Reqname)).click();
-		Thread.sleep(50000);
+		Thread.sleep(10000);
 	}
 	
 	public void SearchRequest(String Reqname) throws InterruptedException
@@ -473,14 +496,14 @@ public class Data_loading {
 		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
 		txtSrc.sendKeys(Reqname);
-		   Thread.sleep(3000);
-		   txtSrc.sendKeys(Keys.ENTER);
-		   Thread.sleep(3000);  	
+		Thread.sleep(3000);
+		txtSrc.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);   
 		   
-		   driver.findElement(By.linkText("Show More")).click();
-		   Thread.sleep(500);  
-		   driver.findElement(By.linkText("Workflows")).click();
-		   Thread.sleep(3000); 
+		driver.findElement(By.linkText("Show More")).click();
+		Thread.sleep(500); 
+		driver.findElement(By.linkText("Workflows")).click();
+		Thread.sleep(1000);
 
 		WebElement rateElement = driver.findElement(By.linkText(Reqname));
 		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
@@ -490,6 +513,8 @@ public class Data_loading {
 	{
 		Thread.sleep(4000);
 		SearchRequest(ObjReq.Reqname);
+		//SearchRequest("AutoTestFri Nov 25 13:15:42 IST 2016");
+		
 		Thread.sleep(4000);
 		//driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
 		//Thread.sleep(4000);
@@ -517,18 +542,34 @@ public class Data_loading {
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector(ObjReq.OpenFormOption)).click();		
 		
-		WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
-		driver.switchTo().frame(frame);
-		Thread.sleep(5000);	
+		//WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
+		//driver.switchTo().frame(frame);
+		//Thread.sleep(5000);	
 		
 		/*
-
 		List<WebElement> RdoNo = driver.findElements(By.xpath(".//label[starts-with(@for,'No')]"));
 
 		RdoNo.get(0).click();
 
 		driver.findElement(By.xpath("//label[contains(.,'Signature')]/following::input[1]")).sendKeys(comment);
-		*/
+		*/	
+		
+		List<WebElement> frame1=driver.findElements(By.tagName(ObjReq.FrameTag));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>0)
+		{
+			if(frame1.size()>1)
+			{
+				driver.switchTo().frame(frame1.get(1));
+			}
+			else
+			{
+				driver.switchTo().frame(frame1.get(0));
+			}			
+		}		
+
+		Thread.sleep(5000);
 		
 		driver.findElement(By.xpath(ObjReq.txtForRespAns)).sendKeys(ObjReq.ResponderComments);
 				
@@ -537,9 +578,8 @@ public class Data_loading {
 		Thread.sleep(80000);
 	}
 	
-	public void ApproveRequest() throws InterruptedException
+	public WebDriver ApproveRequest() throws InterruptedException
 	{
-		/*
 		driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
 				
 		Thread.sleep(320000);
@@ -547,21 +587,29 @@ public class Data_loading {
 		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
 		txtSrc.sendKeys(ObjReq.Reqname);
+		//txtSrc.sendKeys("AutoTestWed Nov 30 13:15:43 IST 2016");
+		
 		Thread.sleep(3000);
 		txtSrc.sendKeys(Keys.ENTER);
 		Thread.sleep(3000); 
 		
+		driver.findElement(By.linkText("Show More")).click();
+		Thread.sleep(500); 
+		driver.findElement(By.linkText("Workflows")).click();
+		Thread.sleep(1000);
+		
+		//WebElement rateElement = driver.findElement(By.linkText("AutoTestWed Nov 30 13:15:43 IST 2016"));
 		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
+		
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		/*
+		Thread.sleep(4000);
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		Thread.sleep(4000);
+		 
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
 		*/
 		Thread.sleep(4000);
-		SearchRequest(ObjReq.Reqname);
-		Thread.sleep(4000);
-		//driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
-		//Thread.sleep(4000);
-		 
-		//driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
-		//Thread.sleep(4000);
 		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
 
 		List<WebElement> a = driver.findElements(By.cssSelector(ObjReq.cssSelectorOfSameElements));
@@ -579,24 +627,25 @@ public class Data_loading {
 		Thread.sleep(6000);
 
 		driver.findElement(By.linkText(ObjReq.lnkApprove)).click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	
 		WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
 		driver.switchTo().frame(frame);
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath(ObjReq.txtAreaForAppRej)).sendKeys(ObjReq.ApproveComments);
+		driver.findElement(By.id(ObjReq.txtAreaForAppRej)).sendKeys(ObjReq.ApproveComments);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(ObjReq.btnSaveAppRej)).click();
+		driver.findElement(By.id(ObjReq.btnSaveAppRej)).click();
 		Thread.sleep(5000);
 		driver.switchTo().defaultContent();
 		Thread.sleep(10000);
 		driver.navigate().refresh();	
 		Thread.sleep(20000);
+		return driver;
 		
 	}
 	
-	public void RejectRequest() throws InterruptedException
+	public void RejectRequest(String RejectComment) throws InterruptedException
 	{
 		driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
 				
@@ -604,19 +653,27 @@ public class Data_loading {
 		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
 		txtSrc.sendKeys(ObjReq.Reqname);
+		//txtSrc.sendKeys("QA_Nov18PrdGrpReq_001");
+		
 		Thread.sleep(3000);
 		txtSrc.sendKeys(Keys.ENTER);
 		Thread.sleep(3000); 
 		
+		driver.findElement(By.linkText("Show More")).click();
+		Thread.sleep(500); 
+		driver.findElement(By.linkText("Workflows")).click();
+		Thread.sleep(1000);
+		
 		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
+		//WebElement rateElement = driver.findElement(By.linkText("QA_Nov18PrdGrpReq_001"));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 		
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
+		//driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		//Thread.sleep(4000);
 		 
-		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
-		Thread.sleep(3000);
+		//driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
+		Thread.sleep(4000);
 		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
 
 		//List<WebElement> a = driver.findElements(By.cssSelector(cssSelectorOfSameElements));
@@ -637,45 +694,55 @@ public class Data_loading {
 		Thread.sleep(6000);
 
 		driver.findElement(By.linkText(ObjReq.lnkReject)).click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	
 		WebElement frame=driver.findElement(By.tagName(ObjReq.FrameTag));
 		driver.switchTo().frame(frame);
 		Thread.sleep(2000);
 		
 		//driver.findElement(By.xpath("//textarea[@id='txt_Comment']")).sendKeys("test comment");
-		driver.findElement(By.xpath(ObjReq.txtRejectComments)).sendKeys(ObjReq.RejectComments);
+		//driver.findElement(By.xpath(ObjReq.txtRejectComments)).sendKeys(ObjReq.RejectComments);
+		driver.findElement(By.id(ObjReq.txtRejectComments)).sendKeys(RejectComment);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(ObjReq.btnSubmit)).click();
+		//driver.findElement(By.xpath(ObjReq.btnSubmit)).click();
+		driver.findElement(By.id(ObjReq.btnSubmit)).click();
 		Thread.sleep(5000);
 	}
 	
-	public WebDriver VerifyWorkFlowAndReqSts() throws InterruptedException
+	public WebDriver SearchReqAndAssignDriver() throws InterruptedException
 	{
 		driver.switchTo().defaultContent();
 		Thread.sleep(10000);
 		driver.navigate().refresh();	
 		Thread.sleep(20000);
 		
-		driver.findElement(By.xpath(ObjReq.lnkRequest)).click();
-		Thread.sleep(350000);
+		//driver.findElement(By.xpath(ObjReq.lnkRequest)).click();
+		//Thread.sleep(350000);
 		
 		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
 		txtSrc.click();
 		txtSrc.sendKeys(ObjReq.Reqname);
 		   Thread.sleep(3000);
 		   txtSrc.sendKeys(Keys.ENTER);
-		   Thread.sleep(3000);   		
+		   Thread.sleep(3000); 
+		   
+		   driver.findElement(By.linkText("Show More")).click();
+			Thread.sleep(500); 
+			driver.findElement(By.linkText("Workflows")).click();
+			Thread.sleep(1000);
 
 		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
 		  ((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 		  
+		  /*
 		Thread.sleep(4000);
 		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
 		Thread.sleep(4000);
 		 
 		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
+		
 		Thread.sleep(3000);
+		*/
 		return driver;
 	}
 	
@@ -687,9 +754,9 @@ public class Data_loading {
 	//Create Container
 	public void CreateContaniner() throws InterruptedException
 	{
-		driver.findElement(By.xpath(ObjForm.lnkFormList)).click();		
+		driver.findElement(By.xpath(ObjForm.lnkFormList)).click();
 		Thread.sleep(10000);
-		driver.switchTo().frame(0);		
+		driver.switchTo().frame(0);
 		
 		WebElement btnBlock = (new WebDriverWait(driver, 10))
 				   .until(ExpectedConditions.elementToBeClickable(By.id(ObjForm.ButtonsBlock)));
@@ -877,5 +944,175 @@ public class Data_loading {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public WebDriver ReviewRequest() throws InterruptedException
+	{
+		//driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
+				
+		Thread.sleep(5000);
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
+		txtSrc.click();
+		txtSrc.sendKeys(ObjReq.Reqname);
+		Thread.sleep(3000);
+		txtSrc.sendKeys(Keys.ENTER);
+		Thread.sleep(3000); 
+		
+		driver.findElement(By.linkText("Show More")).click();
+		Thread.sleep(500); 
+		driver.findElement(By.linkText("Workflows")).click();
+		Thread.sleep(1000);
+		
+		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		/*
+		Thread.sleep(4000);
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		Thread.sleep(4000);
+		 
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
+		*/
+		Thread.sleep(4000);
+		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
+
+		List<WebElement> a = driver.findElements(By.cssSelector(ObjReq.cssSelectorOfSameElements));
+		//System.out.println(a.size());	
+		Thread.sleep(2000);
+		if(a.size()>1)
+		{
+			a.get(1).click();
+		}
+		else
+		{
+			a.get(0).click();
+		}		
+		
+		Thread.sleep(6000);
+
+		driver.findElement(By.linkText(ObjReq.optReview)).click();
+		Thread.sleep(4000);
+		driver.navigate().refresh();
+		Thread.sleep(6000);
+		return driver;
+		
+	}
+	
+	public WebDriver ReAssignRequest() throws InterruptedException
+	{
+		//driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
+				
+		Thread.sleep(5000);
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
+		txtSrc.click();
+		txtSrc.sendKeys(ObjReq.Reqname);
+		Thread.sleep(3000);
+		txtSrc.sendKeys(Keys.ENTER);
+		Thread.sleep(3000); 
+		
+		driver.findElement(By.linkText("Show More")).click();
+		Thread.sleep(500); 
+		driver.findElement(By.linkText("Workflows")).click();
+		Thread.sleep(1000);
+		
+		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		/*
+		Thread.sleep(4000);
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		Thread.sleep(4000);
+		 
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
+		*/
+		Thread.sleep(4000);
+		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
+
+		List<WebElement> a = driver.findElements(By.cssSelector(ObjReq.cssSelectorOfSameElements));
+		//System.out.println(a.size());	
+		Thread.sleep(2000);
+		if(a.size()>1)
+		{
+			a.get(1).click();
+		}
+		else
+		{
+			a.get(0).click();
+		}		
+		
+		Thread.sleep(6000);
+
+		driver.findElement(By.linkText(ObjReq.optReAssign)).click();
+		Thread.sleep(6000);
+		
+		List<WebElement> frame1=driver.findElements(By.tagName(ObjReq.FrameTag));
+		System.out.println(frame1.size());
+		
+		if(frame1.size()>0)
+		{
+			if(frame1.size()>1)
+			{
+				driver.switchTo().frame(frame1.get(1));
+			}
+			else
+			{
+				driver.switchTo().frame(frame1.get(0));
+			}			
+		}		
+
+		Thread.sleep(5000);
+		driver.findElement(By.id(ObjReq.drpReassign)).sendKeys("renudev01");
+		driver.findElement(By.id(ObjReq.btnSubmitReassign)).click();
+		return driver;
+		
+	}
+	
+	public WebDriver CancelRequest() throws InterruptedException
+	{
+		//driver.findElement(By.xpath(ObjReq.lnkWorkflows)).click();
+				
+		Thread.sleep(5000);
+		WebElement txtSrc=driver.findElement(By.xpath(ObjReq.txtGlobalSrc));
+		txtSrc.click();
+		txtSrc.sendKeys(ObjReq.Reqname);
+		Thread.sleep(3000);
+		txtSrc.sendKeys(Keys.ENTER);
+		Thread.sleep(3000); 
+		
+		driver.findElement(By.linkText("Show More")).click();
+		Thread.sleep(500); 
+		driver.findElement(By.linkText("Workflows")).click();
+		Thread.sleep(1000);
+		
+		WebElement rateElement = driver.findElement(By.linkText(ObjReq.Reqname));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		/*
+		Thread.sleep(4000);
+		driver.findElement(By.xpath(ObjReq.lnkRelated)).click();
+		Thread.sleep(4000);
+		 
+		driver.findElement(By.partialLinkText(ObjReq.PartialReq)).click();
+		*/
+		Thread.sleep(4000);
+		//String cssSelectorOfSameElements = "[class='forceIconDeprecated forceIcon'][title='Show more actions for this record']";
+
+		List<WebElement> a = driver.findElements(By.cssSelector(ObjReq.cssSelectorOfSameElements));
+		//System.out.println(a.size());	
+		Thread.sleep(2000);
+		if(a.size()>1)
+		{
+			a.get(1).click();
+		}
+		else
+		{
+			a.get(0).click();
+		}		
+		
+		Thread.sleep(6000);
+
+		driver.findElement(By.linkText(ObjReq.optCancelRequest)).click();
+		Thread.sleep(2000);
+		driver.navigate().refresh();
+		Thread.sleep(6000);
+		return driver;
+		
 	}
 }

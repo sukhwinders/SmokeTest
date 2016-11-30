@@ -28,12 +28,12 @@ public class TC9856_Test {
 	String ReqUserName = guitils.getUserName("RequestorUsername");
 	String ReqPassword = guitils.getPassword("RequestorPassword");	
 	String RespUserName = guitils.getUserName("ResponderUsername");
-	String RespPassword = guitils.getPassword("RequestorPassword");
+	String RespPassword = guitils.getPassword("ResponderPassword");
 	WebDriver driver;	
 
 	@BeforeClass
 	public void beforeClass() {
-		driver = guitils.openBrowser(driver);
+		guitils.InitilizeBrowser();
 	}
 
 	@AfterClass
@@ -62,7 +62,7 @@ public class TC9856_Test {
 			
 			guitils.loginToSalesForce(RespUserName, RespPassword);	
 			Thread.sleep(3000);
-			guitils.LightiningView(driver);
+			guitils.SalesForceLightiningView();	
 			Thread.sleep(5000);
 			
 			RejectComments="Rejection - " + RejectCounter;
@@ -76,25 +76,25 @@ public class TC9856_Test {
 			guitils.loginToSalesForce(ReqUserName, ReqPassword);		
 			guitils.SalesForceLightiningView();	
 			
-			guitils.RejectRequest();
+			guitils.RejectRequest(RejectComments);
 			
-			// logout requester
-			Thread.sleep(3000);
-			guitils.logoutSalesForce();
-			Thread.sleep(5000);
-			
+			if (RejectCounter<=3)
+			{
+				Thread.sleep(3000);
+				guitils.logoutSalesForce();
+				Thread.sleep(5000);
+			}			
 		}		
 				
 		driver.switchTo().defaultContent();
 		Thread.sleep(10000);
 		driver.navigate().refresh();	
-		
-		// login by requester
-		Thread.sleep(4000);
-		guitils.loginToSalesForce(ReqUserName, ReqPassword);		
-		guitils.SalesForceLightiningView();	
-		guitils.VerifyWorkFlowAndReqSts();
-		Thread.sleep(3000);
+			
+		Thread.sleep(6000);
+		//guitils.loginToSalesForce(ReqUserName, ReqPassword);		
+		//guitils.SalesForceLightiningView();	
+		driver=guitils.SearchReqAndAssignDriver();
+		Thread.sleep(5000);
 		
 		//Assert.assertTrue(driver.findElement(By.xpath("//span[contains(.,'Workflow Status')]/following::span[2]")).getText(), "Status is not getting Changed");
 		Assert.assertEquals(driver.findElement(By.xpath("//span[contains(.,'Workflow Status')]/following::span[2]")).getText(), "Closed","Workflow status is not closed");
@@ -111,5 +111,4 @@ public class TC9856_Test {
 		guitils.AddLinkedQuestion();
 		guitils.SalesForceLightiningView();
 	}
-	
-	}
+}

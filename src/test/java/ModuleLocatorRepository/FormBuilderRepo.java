@@ -3,7 +3,6 @@ import java.util.Date;
 
 public class FormBuilderRepo {
 		
-	public static String aa="new";
 	public String lnkFormList="//span[@class='label slds-truncate slds-text-link'][contains(.,'FormList')]";
 	public String ButtonsBlock="buttonsBlock";
 	public String btnBtn1=".//*[@id='buttonsBlock']/input[1]";
@@ -42,8 +41,8 @@ public class FormBuilderRepo {
 	public String Layout_Name = "QA_Testlayout" + d;
 	public String Tab_Name = "Testtab" + d;
 	public String Section_Name = "Testsection" + d;
-	public String QuestionName = "QA Question1";
-	public String AnswerName = "QA Answer1";
+	public String QuestionName = "QAQuestion1";
+	public String AnswerName = "QAAnswer";
 	
 	
 	
