@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suites]" parallel="classes">
+  <test name="Test">
+    <classes>
+      <class name="com.org.Example.myproject.TC9924_Test"/>
+      <class name="com.org.Example.myproject.TC9927_Test"/>
+      <class name="com.org.Example.myproject.TC9926_Test"/>
+      <class name="com.org.Example.myproject.TC9920_Test"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.org.Example.myproject.TC9927_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="CF_Scenario73"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9927_Test -->
+      <class name="com.org.Example.myproject.TC9920_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="BPF_Scenario39"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9920_Test -->
+      <class name="com.org.Example.myproject.TC9924_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="CF_Scenario70"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9924_Test -->
+      <class name="com.org.Example.myproject.TC9926_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="CF_Scenario72"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9926_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suites] -->

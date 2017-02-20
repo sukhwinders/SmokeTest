@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="451898" started-at="2016-10-18T07:15:40Z" finished-at="2016-10-18T07:23:12Z">
+  <suite name="SmokeSuite" duration-ms="262282" started-at="2017-02-20T12:49:22Z" finished-at="2017-02-20T12:53:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="451898" started-at="2016-10-18T07:15:40Z" finished-at="2016-10-18T07:23:12Z">
-      <class name="com.org.Example.myproject.TC9673_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC9673_Test@79569a45]" name="beforeClass" is-config="true" duration-ms="24911" started-at="2016-10-18T12:45:40Z" finished-at="2016-10-18T12:46:05Z">
+    <test name="SmokeSuiteForOrg1" duration-ms="219400" started-at="2017-02-20T12:49:22Z" finished-at="2017-02-20T12:53:01Z">
+      <class name="com.org.Example.myproject.TC10781_Test">
+        <test-method status="PASS" signature="GetTestData(org.testng.ITestContext)[pri:0, instance:com.org.Example.myproject.TC10781_Test@492a9743]" name="GetTestData" is-config="true" duration-ms="67" started-at="2017-02-20T18:19:22Z" finished-at="2017-02-20T18:19:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@88f2363]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetTestData -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC10781_Test@492a9743]" name="beforeClass" is-config="true" duration-ms="98721" started-at="2017-02-20T18:19:22Z" finished-at="2017-02-20T18:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="productTwoactor_workflow()[pri:0, instance:com.org.Example.myproject.TC9673_Test@79569a45]" name="productTwoactor_workflow" duration-ms="426479" started-at="2016-10-18T12:46:05Z" finished-at="2016-10-18T12:53:11Z">
+        <test-method status="PASS" signature="CreateProductWithoutUniversalId()[pri:0, instance:com.org.Example.myproject.TC10781_Test@492a9743]" name="CreateProductWithoutUniversalId" duration-ms="120141" started-at="2017-02-20T18:21:01Z" finished-at="2017-02-20T18:23:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productTwoactor_workflow -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC9673_Test@79569a45]" name="afterClass" is-config="true" duration-ms="430" started-at="2016-10-18T12:53:11Z" finished-at="2016-10-18T12:53:12Z">
+        </test-method> <!-- CreateProductWithoutUniversalId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC10781_Test@492a9743]" name="afterClass" is-config="true" duration-ms="352" started-at="2017-02-20T18:23:01Z" finished-at="2017-02-20T18:23:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.org.Example.myproject.TC9673_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.org.Example.myproject.TC10781_Test -->
+    </test> <!-- SmokeSuiteForOrg1 -->
+    <test name="SmokeSuiteForOrg2" duration-ms="262281" started-at="2017-02-20T12:49:22Z" finished-at="2017-02-20T12:53:44Z">
+      <class name="com.org.Example.myproject.TC10781_Test">
+        <test-method status="PASS" signature="GetTestData(org.testng.ITestContext)[pri:0, instance:com.org.Example.myproject.TC10781_Test@3b87b8e4]" name="GetTestData" is-config="true" duration-ms="67" started-at="2017-02-20T18:19:22Z" finished-at="2017-02-20T18:19:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@63bede95]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetTestData -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.org.Example.myproject.TC10781_Test@3b87b8e4]" name="beforeClass" is-config="true" duration-ms="137660" started-at="2017-02-20T18:19:22Z" finished-at="2017-02-20T18:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="CreateProductWithoutUniversalId()[pri:0, instance:com.org.Example.myproject.TC10781_Test@3b87b8e4]" name="CreateProductWithoutUniversalId" duration-ms="124331" started-at="2017-02-20T18:21:40Z" finished-at="2017-02-20T18:23:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateProductWithoutUniversalId -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.org.Example.myproject.TC10781_Test@3b87b8e4]" name="afterClass" is-config="true" duration-ms="173" started-at="2017-02-20T18:23:44Z" finished-at="2017-02-20T18:23:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.org.Example.myproject.TC10781_Test -->
+    </test> <!-- SmokeSuiteForOrg2 -->
+  </suite> <!-- SmokeSuite -->
 </testng-results>

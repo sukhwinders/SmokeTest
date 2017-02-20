@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuit (0)]">
+  <test name="TP_Compliance">
+    <classes>
+      <class name="com.org.Example.myproject.TC10796_Test"/>
+      <class name="com.org.Example.myproject.TC10797_Test"/>
+      <class name="com.org.Example.myproject.TC10798_Test"/>
+      <class name="com.org.Example.myproject.TC10799_Test"/>
+      <class name="com.org.Example.myproject.TC10804_Test"/>
+    </classes>
+  </test> <!-- TP_Compliance -->
+  <test name="TP_Compliance(failed)">
+    <classes>
+      <class name="com.org.Example.myproject.TC10796_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="RemoveReqAfterRespSubmitted"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10796_Test -->
+      <class name="com.org.Example.myproject.TC10799_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="AutoReqCreationAddTP"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10799_Test -->
+      <class name="com.org.Example.myproject.TC10797_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="VerifySendReqAtRespSide"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10797_Test -->
+      <class name="com.org.Example.myproject.TC10804_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="AutoSendReqsAddMembers"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10804_Test -->
+      <class name="com.org.Example.myproject.TC10798_Test">
+        <methods>
+          <include name="VerifySendReqAtRespSide"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10798_Test -->
+    </classes>
+  </test> <!-- TP_Compliance(failed) -->
+</suite> <!-- Failed suite [RegressionSuit (0)] -->

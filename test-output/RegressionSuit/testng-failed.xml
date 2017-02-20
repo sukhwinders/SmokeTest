@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuit]">
+  <test name="formBuilder">
+    <classes>
+      <class name="com.org.Example.myproject.TC9885_Test"/>
+      <class name="com.org.Example.myproject.TC9890_Test"/>
+      <class name="com.org.Example.myproject.TC9891_Test"/>
+      <class name="com.org.Example.myproject.TC9892_Test"/>
+      <class name="com.org.Example.myproject.TC9878_Test"/>
+      <class name="com.org.Example.myproject.TC9833_Test"/>
+    </classes>
+  </test> <!-- formBuilder -->
+  <test name="formBuilder(failed)">
+    <classes>
+      <class name="com.org.Example.myproject.TC9878_Test">
+        <methods>
+          <include name="CF_Scenario50"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9878_Test -->
+      <class name="com.org.Example.myproject.TC9890_Test">
+        <methods>
+          <include name="CF_Scenario57"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9890_Test -->
+      <class name="com.org.Example.myproject.TC9892_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="CF_Scenario19"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9892_Test -->
+      <class name="com.org.Example.myproject.TC9885_Test">
+        <methods>
+          <include name="CF_Scenario16"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9885_Test -->
+      <class name="com.org.Example.myproject.TC9891_Test">
+        <methods>
+          <include name="CF_Scenario19"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9891_Test -->
+      <class name="com.org.Example.myproject.TC9833_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="BPF_Scenario16"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9833_Test -->
+    </classes>
+  </test> <!-- formBuilder(failed) -->
+</suite> <!-- Failed suite [RegressionSuit] -->

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteThree]" parallel="tests">
+  <test name="Test">
+    <classes>
+      <class name="com.org.Example.myproject.TC10805_Test"/>
+      <class name="com.org.Example.myproject.TC10806_Test"/>
+      <class name="com.org.Example.myproject.TC10807_Test"/>
+      <class name="com.org.Example.myproject.TC10808_Test"/>
+      <class name="com.org.Example.myproject.TC10813_Test"/>
+      <class name="com.org.Example.myproject.TC10814_Test"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.org.Example.myproject.TC10806_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="RemoveMemberApprovedReqReadd"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10806_Test -->
+      <class name="com.org.Example.myproject.TC10813_Test">
+        <methods>
+          <include name="RemoveRejectedReq"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10813_Test -->
+      <class name="com.org.Example.myproject.TC10808_Test">
+        <methods>
+          <include name="SendSameReqDifferentTpg"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10808_Test -->
+      <class name="com.org.Example.myproject.TC10805_Test">
+        <methods>
+          <include name="RemoveReqAfterRespSubmitted"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10805_Test -->
+      <class name="com.org.Example.myproject.TC10807_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="SendMultipleRequirement"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10807_Test -->
+      <class name="com.org.Example.myproject.TC10814_Test">
+        <methods>
+          <include name="RemoveRejectedMemberThenAddSameMember"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10814_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SuiteThree] -->

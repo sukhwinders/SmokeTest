@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
+    <classes>
+      <class name="com.org.Example.myproject.TC10752_Test"/>
+      <class name="com.org.Example.myproject.TC9672_Test"/>
+      <class name="com.org.Example.myproject.TC10799_Test"/>
+      <class name="com.org.Example.myproject.TC10753_Test"/>
+      <class name="com.org.Example.myproject.TC10467_Test"/>
+      <class name="com.org.Example.myproject.TC9733_Test"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.org.Example.myproject.TC10753_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="VerifyRequestClosedAfterRemovingRequirement"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10753_Test -->
+      <class name="com.org.Example.myproject.TC10799_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="AutoReqCreationAddTP"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10799_Test -->
+      <class name="com.org.Example.myproject.TC10467_Test">
+        <methods>
+          <include name="TPG_RelationshipType"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10467_Test -->
+      <class name="com.org.Example.myproject.TC10752_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="VerifySendReqAtRespSide"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC10752_Test -->
+      <class name="com.org.Example.myproject.TC9733_Test">
+        <methods>
+          <include name="Approve_Request"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9733_Test -->
+      <class name="com.org.Example.myproject.TC9672_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="TwoActorWorkFlow"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.org.Example.myproject.TC9672_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

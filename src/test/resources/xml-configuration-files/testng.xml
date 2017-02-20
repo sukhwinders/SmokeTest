@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ICIX Test Cases">
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+<test name="ICIX Test">
+
+<classes>
+
+  <class name="icix.Tests.TC9675_Test"/>
+  <class name="icix.Tests.TC10781_Test"/>
+  <class name="icix.Tests.TC10782_Test"/>
+  <class name="icix.Tests.TC10467_Test"/>
+  <class name="icix.Tests.TC9648_Test"/>
+  
+<!--    <class name="icix.Tests.TC9675_Test_dummy"/> -->
+<!--   <class name="icix.Tests.TC10781_Test_dummy"/> -->
+<!--   <class name="icix.Tests.TC10782_Test_dummy"/> -->
+<!--   <class name="icix.Tests.TC10467_Test_dummy"/> -->
+<!--   <class name="icix.Tests.TC9648_Test_dummy"/> -->
+  
+<!--    <class name="icix.Tests.TC9675_Test_dummy1"/> -->
+<!--   <class name="icix.Tests.TC10781_Test_dummy1"/> -->
+<!--   <class name="icix.Tests.TC10782_Test_dummy1"/> -->
+<!--   <class name="icix.Tests.TC10467_Test_dummy1"/> -->
+<!--   <class name="icix.Tests.TC9648_Test_dummy1"/> -->
+  
+  
+  
+</classes>
+</test>
+ 
+  
+</suite> <!-- Suite -->

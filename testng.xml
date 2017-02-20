@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" >
-  <test name="Test" preserve-order="true">
-    <classes>
-     <class name="com.org.Example.myproject.TC9672_Test" />
-    <class name="com.org.Example.myproject.TC9673_Test" />
-    <class name="com.org.Example.myproject.TC9733_Test" />
-    <class name="com.org.Example.myproject.TC9735_Test" />
-    <class name="com.org.Example.myproject.TC9647_Test" />
-    <class name="com.org.Example.myproject.TC9648_Test" />
-    <class name="com.org.Example.myproject.TC9653_Test" />
-    <class name="com.org.Example.myproject.TC9659_Test" />
-    <class name="com.org.Example.myproject.TC9666_Test" />
-    <class name="com.org.Example.myproject.TC9667_Test" />
-    <class name="com.org.Example.myproject.TC10460_Test" />
-    <class name="com.org.Example.myproject.TC10461_Test" />
-    <class name="com.org.Example.myproject.TC10462_Test" />
-    <class name="com.org.Example.myproject.TC10467_Test" />
-    <class name="com.org.Example.myproject.TC10469_Test" />
-    
-    
-    
-    <!--<class name="com.org.Example.myproject.TC10462_Test" />
-    <class name="com.org.Example.myproject.TC9666_Test" />
-    <class name="com.org.Example.myproject.TC9667_Test" /> -->
-    
-    
-   <!-- <class name="com.org.Example.myproject.TC10752_Test"/>
-    <class name="com.org.Example.myproject.TC10753_Test"/>
-    <class name="com.org.Example.myproject.TC10758_Test"/>
-    <class name="com.org.Example.myproject.TC10759_Test"/>
-    <class name="com.org.Example.myproject.TC10760_Test"/>
-    <class name="com.org.Example.myproject.TC10761_Test"/>-->
-    
-</classes>
-  </test> <!-- Test -->
+<suite name="SmokeSuite" parallel="tests">
+
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+	<test name="SmokeSuiteForOrg1">
+	<parameter name="RequestorUsername" value="harikrishnav@package.org" />
+	<parameter name="RequestorPassword" value="ilove1>god" />
+	<parameter name="ResponderUsername" value="kumar.jayant@package.org" />
+	<parameter name="ResponderPassword" value="icix12345" />
+	<parameter name="TradingPartnerFirstName" value="Jayant" />
+	<parameter name="TPResponder" value="Clean Org 07" />
+	<parameter name="IcixId" value="965" />
+	<parameter name="TpForProductSearch" value="qa" />
+	
+	<classes>
+		<class name="com.org.Example.myproject.TC10781_Test" />
+		<class name="com.org.Example.myproject.TC10782_Test" />
+		<class name="com.org.Example.myproject.TC9648_Test" />
+		<class name="com.org.Example.myproject.TC9649_Test" />
+		<class name="com.org.Example.myproject.TC9667_Test" />
+	</classes>
+	</test> <!-- Test -->
+	
+	<test name="SmokeSuiteForOrg2">
+	<parameter name="RequestorUsername" value="himanshug@package.org" />
+	<parameter name="RequestorPassword" value="q1w2e3r4" />
+	<parameter name="ResponderUsername" value="amrenders.ms@package.org" />
+	<parameter name="ResponderPassword" value="amrenders@2015!" />
+	<parameter name="TradingPartnerFirstName" value="Amrender" />
+	<parameter name="TPResponder" value="Clean Org 07" />
+	<parameter name="IcixId" value="949" />
+	<parameter name="TpForProductSearch" value="qa" />
+	
+	<classes>
+		<class name="com.org.Example.myproject.TC10781_Test" />
+		<class name="com.org.Example.myproject.TC10782_Test" />
+		<class name="com.org.Example.myproject.TC9648_Test" />
+		<class name="com.org.Example.myproject.TC9649_Test" />
+		<class name="com.org.Example.myproject.TC9667_Test" />
+	</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

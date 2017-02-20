@@ -1,12 +1,16 @@
 package com.org.Example.myproject;
 
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -21,7 +25,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.utils.Data_loading;
+import com.utils.Data_loading_Old;
+//Create Product Without Universal Id
 
 public class TC10781_Test {
 	WebDriver driver;
@@ -32,11 +37,10 @@ public class TC10781_Test {
 	String UPCproduct = "1111" + randomNumbers;
 	String firstwindow;
 
-	Data_loading guitils = new Data_loading();
-	String userName1 = guitils.getUserName("RequestorUsername");
-	String password1 = guitils.getPassword("RequestorPassword");
-	String strTPName = guitils.getUserName("TPResponder");
-	String Responder = guitils.getDATA("TradingPartnerName");
+	Data_loading_Old guitils = new Data_loading_Old();
+	String userName1;// = guitils.getUserName("RequestorUsername");
+	String password1;// = guitils.getPassword("RequestorPassword");
+	String Responder;// = guitils.getDATA("TpForProductSearch");
 	String PrdName;
 	String strIXN;
 	int IXNFlag=0;
@@ -49,8 +53,16 @@ public class TC10781_Test {
 
 	@AfterClass
 	public void afterClass() {
-		guitils.logoutFromPortal(driver);
+		//guitils.logoutFromPortal(driver);
 		driver.quit();
+	}
+	
+	@BeforeTest
+	public void GetTestData(ITestContext Context)
+	{
+		userName1=Context.getCurrentXmlTest().getParameter("RequestorUsername");
+		password1=Context.getCurrentXmlTest().getParameter("RequestorPassword");
+		Responder=Context.getCurrentXmlTest().getParameter("TpForProductSearch");		
 	}
 
 	@Test
@@ -61,16 +73,26 @@ public class TC10781_Test {
 		//driver.findElement(By.linkText("ICIX")).click();
 		driver.findElement(By.xpath("//span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')]")).click();
 		//driver.findElement(By.xpath("//a[contains(text(),'ICIX Products')]")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		Thread.sleep(5000);
+		//driver.findElement(By.xpath("//a[@class='forceActionLink']")).click();
+		driver.findElement(By.xpath("//a[@title='New']")).click();
 		Thread.sleep(3000);
 		
 		
 		//driver.switchTo().frame(driver.findElement(By.id("vfFrameId")));
 		
-		WebElement frame=driver.findElement(By.tagName("iframe"));
-		driver.switchTo().frame(frame);
-		Thread.sleep(2000);
+		List<WebElement> frame1=driver.findElements(By.tagName("iframe"));
+				
+		if(frame1.size()>1)
+		{
+			driver.switchTo().frame(frame1.get(1));
+		}
+		else
+		{
+			driver.switchTo().frame(frame1.get(0));
+		}
+		
+		Thread.sleep(3000);
 		
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).clear();
 		driver.findElement(By.id("txt_SearchTermTradingPartner")).sendKeys(Responder,Keys.TAB);		
@@ -97,23 +119,37 @@ public class TC10781_Test {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.id("btn_UPRelationship_Save")).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//button[@ng-click='vm.close()']")).click();
 		Thread.sleep(2000);
 		driver.switchTo().defaultContent();
 		
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[contains(.,'Related')]")).click();
+		Thread.sleep(5000);
+	
+	List<WebElement> ICIXid =driver.findElements(By.xpath("//span[contains(.,'ICIX Product IDs')]"));
+	if (ICIXid.size()>0){
 		
-		strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/ul/div[1]/li[2]/div[2]/div")).getText();
+	}
 		
+		//strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/ul/div[1]/li[2]/div[2]/div")).getText();
+		//strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[3]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/div/div[1]/div[2]/div/div[2]/div")).getText();
+		Assert.assertNotEquals(driver.findElement(By.xpath("//span[contains(.,'ICIX Product ID')]/following::span[2]")).getText().isEmpty() ,"IXN Number must not be blank");
+		
+		//Assert.assertNotEquals(actual1, actual2, delta);
+		
+		/*
+		strIXN=driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[3]/div/div/div[2]/div[1]/div/div/section/div/form/section/div[1]/div/section[1]/div/div[1]/div[2]/div/div[2]/div/span")).getText();
 		if (strIXN.isEmpty())
 		{
 			IXNFlag=1; // Means there must be IXN ID 
 		}
 		
 		Assert.assertEquals(IXNFlag,0,"IXN Number must not be blank");
-		
+		*/
 
 	}
 
 }
+
