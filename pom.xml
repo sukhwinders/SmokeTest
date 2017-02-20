@@ -112,7 +112,7 @@
         <inherited>true</inherited>
         <configuration>
           <suiteXmlFiles>
-          <suiteXmlFile>src/main/resources/xml-configuration-files/testng.xml</suiteXmlFile>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
