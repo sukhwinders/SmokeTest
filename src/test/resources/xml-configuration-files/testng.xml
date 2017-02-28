@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ICIX Test Cases">
+
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+<test name="ICIX Test For sdd">
+<parameter name="ResponderUsername" value="sdd3v06@sd.com1111"></parameter>
+<parameter name="ResponderPassword" value="Test@12345"></parameter>
+<parameter name="RequesterUserName" value="sdd3v05@sd.com"></parameter>
+<parameter name="RequestorPassword" value="Test@12345"></parameter>
+<parameter name="LabUserName" value="feature04@icix.com "></parameter>
+<parameter name="LabPassword" value="Test@1234"></parameter>
+<parameter name="icixId" value="44"></parameter>
+
+<classes>
+<!--   <class name="icix.Tests.TC9675_Test"/> -->
+  <class name="icix.Tests.TC10781_Test"/>
+<!--   <class name="icix.Tests.TC10782_Test"/> -->
+<!--   <class name="icix.Tests.TC10467_Test"/> -->
+<!--   <class name="icix.Tests.TC9648_Test"/> -->
+</classes>
+</test>
+
+<test name="ICIX Test For qa">
+<parameter name="ResponderUsername" value="qadbt02rk@icix.com"></parameter>
+<parameter name="ResponderPassword" value="testing@1234"></parameter>
+<parameter name="RequesterUserName" value="r3lqa03rk@icix.com"></parameter>
+<parameter name="RequestorPassword" value="Test@12345"></parameter>
+<parameter name="LabUserName" value="feature04@icix.com "></parameter>
+<parameter name="LabPassword" value="Test@1234"></parameter>
+
+<classes>
+<!--   <class name="icix.Tests.TC9675_Test"/> -->
+  <class name="icix.Tests.TC10781_Test"/>
+<!--   <class name="icix.Tests.TC10782_Test"/> -->
+<!--   <class name="icix.Tests.TC10467_Test"/> -->
+<!--   <class name="icix.Tests.TC9648_Test"/> -->
+</classes>
+</test>
+
+
+ 
+  
+  
+  
+  
+  
+</suite> <!-- Suite -->
