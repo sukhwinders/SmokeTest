@@ -3,7 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.org.Example.myproject.Rcall_RequestTest"/>
+      <class name="icix.Tests.TC10799_Test"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="icix.Tests.TC10799_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="close"/>
+          <include name="AutoReqCreationAddTP" invocation-numbers="0"/>
+          <include name="initialiseLogFile"/>
+          <include name="initialiseParameters"/>
+        </methods>
+      </class> <!-- icix.Tests.TC10799_Test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

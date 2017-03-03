@@ -1,0 +1,371 @@
+<html>
+<head>
+<title>TestNG:  SmokeSuite</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>SmokeSuite</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/11</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Mar 02 20:56:16 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1968 seconds (1968248 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icix.Tests.TC9672_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9672_Test</td>
+<td><div><pre>java.lang.RuntimeException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; Open quote is expected for attribute &quot;http-equiv&quot; associated with an  element type  &quot;meta&quot;.
+	at io.github.bonigarcia.wdm.BrowserManager.manage(BrowserManager.java:272)
+	at io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:103)
+	at io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:82)
+	at icix.Start.Start.InitilizeBrowser(Start.java:21)
+	at icix.Utils.Common.Init(Common.java:29)
+	at icix.Utils.TestBase.beforeClass(TestBase.java:34)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; Open quote is expected for attribute &quot;http-equiv&quot; associated with an  element type  &quot;meta&quot;.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at io.github.bonigarcia.wdm.BrowserManager.loadXML(BrowserManager.java:482)
+	at io.github.bonigarcia.wdm.BrowserManager.getDriversFromXml(BrowserManager.java:451)
+	at io.github.bonigarcia.wdm.ChromeDriverManager.getDrivers(ChromeDriverManager.java:44)
+	at io.github.bonigarcia.wdm.BrowserManager.manage(BrowserManager.java:209)
+	... 29 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1120867893", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1120867893'><pre>java.lang.RuntimeException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; Open quote is expected for attribute &quot;http-equiv&quot; associated with an  element type  &quot;meta&quot;.
+	at io.github.bonigarcia.wdm.BrowserManager.manage(BrowserManager.java:272)
+	at io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:103)
+	at io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:82)
+	at icix.Start.Start.InitilizeBrowser(Start.java:21)
+	at icix.Utils.Common.Init(Common.java:29)
+	at icix.Utils.TestBase.beforeClass(TestBase.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; Open quote is expected for attribute &quot;http-equiv&quot; associated with an  element type  &quot;meta&quot;.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at io.github.bonigarcia.wdm.BrowserManager.loadXML(BrowserManager.java:482)
+	at io.github.bonigarcia.wdm.BrowserManager.getDriversFromXml(BrowserManager.java:451)
+	at io.github.bonigarcia.wdm.ChromeDriverManager.getDrivers(ChromeDriverManager.java:44)
+	at io.github.bonigarcia.wdm.BrowserManager.manage(BrowserManager.java:209)
+	... 29 more
+</pre></div></td>
+<td>0</td>
+<td>icix.Tests.TC9672_Test@2ef5760b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icix.Tests.TC9667_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9667_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9667_Test@7518e442</td></tr>
+<tr>
+<td title='icix.Tests.TC9649_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9649_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9649_Test@3531e51d</td></tr>
+<tr>
+<td title='icix.Tests.TC9648_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9648_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9648_Test@5eb8ee33</td></tr>
+<tr>
+<td title='icix.Tests.TC10467_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC10467_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC10467_Test@3f1e86da</td></tr>
+<tr>
+<td title='icix.Tests.TC9670_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9670_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9670_Test@6d277295</td></tr>
+<tr>
+<td title='icix.Tests.TC9675_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9675_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9675_Test@38d3cc2f</td></tr>
+<tr>
+<td title='icix.Tests.TC10799_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC10799_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC10799_Test@59023ece</td></tr>
+<tr>
+<td title='icix.Tests.TC9666_Test.beforeClass()'><b>beforeClass</b><br>Test class: icix.Tests.TC9666_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9666_Test@22697409</td></tr>
+<tr>
+<td title='icix.Tests.TC9672_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9672_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9672_Test@2ef5760b</td></tr>
+<tr>
+<td title='icix.Tests.TC9667_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9667_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9667_Test@7518e442</td></tr>
+<tr>
+<td title='icix.Tests.TC9649_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9649_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9649_Test@3531e51d</td></tr>
+<tr>
+<td title='icix.Tests.TC9648_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9648_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9648_Test@5eb8ee33</td></tr>
+<tr>
+<td title='icix.Tests.TC10467_Test.close()'><b>close</b><br>Test class: icix.Tests.TC10467_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC10467_Test@3f1e86da</td></tr>
+<tr>
+<td title='icix.Tests.TC9670_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9670_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9670_Test@6d277295</td></tr>
+<tr>
+<td title='icix.Tests.TC9675_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9675_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9675_Test@38d3cc2f</td></tr>
+<tr>
+<td title='icix.Tests.TC10799_Test.close()'><b>close</b><br>Test class: icix.Tests.TC10799_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC10799_Test@59023ece</td></tr>
+<tr>
+<td title='icix.Tests.TC9666_Test.close()'><b>close</b><br>Test class: icix.Tests.TC9666_Test</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9666_Test@22697409</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icix.Tests.TC10782_Test.TestProductSearchByUniID()'><b>TestProductSearchByUniID</b><br>Test class: icix.Tests.TC10782_Test<br>Parameters: public void icix.Tests.TC10782_Test.TestProductSearchByUniID(java.lang.reflect.Method) throws java.lang.Exception<br/>
+<a href="#Output-881639705" onClick='toggleBox("Output-881639705", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-881639705" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-881639705">
+Test Case Name is: TestProductSearchByUniID<br/>
+<br>Screenshot saved <a href=file:///Users/sukhwinders/Desktop/LatestSuites/Package/new/PackageSmoke/target/screenshots/2017-03-02-20-58-11/Failed/ICIX%20Products%20_%20Salesforce_TestProductSearchByUniID_2017-03-02-21-28-52.png>Screenshot</a><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at icix.Modules.Product.ProductSearchByUniID(Product.java:233)
+	at icix.Tests.TC10782_Test.TestProductSearchByUniID(TC10782_Test.java:27)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace881639705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace881639705'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at icix.Modules.Product.ProductSearchByUniID(Product.java:233)
+	at icix.Tests.TC10782_Test.TestProductSearchByUniID(TC10782_Test.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></div></td>
+<td>1806</td>
+<td>icix.Tests.TC10782_Test@374f2c8b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icix.Tests.TC10781_Test.TestProductSearchWithoutUID()'><b>TestProductSearchWithoutUID</b><br>Test class: icix.Tests.TC10781_Test<br>Parameters: public void icix.Tests.TC10781_Test.TestProductSearchWithoutUID(java.lang.reflect.Method) throws java.lang.Exception<br/>
+<a href="#Output-360639579" onClick='toggleBox("Output-360639579", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-360639579" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-360639579">
+Test Case Name is: TestProductSearchWithoutUID<br/>
+</div>
+</td>
+<td></td>
+<td>88</td>
+<td>icix.Tests.TC10781_Test@36c8c63e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icix.Tests.TC10799_Test.AutoReqCreationAddTP()'><b>AutoReqCreationAddTP</b><br>Test class: icix.Tests.TC10799_Test<br>Parameters: public void icix.Tests.TC10799_Test.AutoReqCreationAddTP(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC10799_Test@59023ece</td></tr>
+<tr>
+<td title='icix.Tests.TC9667_Test.Productgroup()'><b>Productgroup</b><br>Test class: icix.Tests.TC9667_Test<br>Parameters: public void icix.Tests.TC9667_Test.Productgroup(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9667_Test@7518e442</td></tr>
+<tr>
+<td title='icix.Tests.TC9648_Test.SearchByCompanyName()'><b>SearchByCompanyName</b><br>Test class: icix.Tests.TC9648_Test<br>Parameters: public void icix.Tests.TC9648_Test.SearchByCompanyName(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9648_Test@5eb8ee33</td></tr>
+<tr>
+<td title='icix.Tests.TC10467_Test.TPG_RelationshipType()'><b>TPG_RelationshipType</b><br>Test class: icix.Tests.TC10467_Test<br>Parameters: public void icix.Tests.TC10467_Test.TPG_RelationshipType(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC10467_Test@3f1e86da</td></tr>
+<tr>
+<td title='icix.Tests.TC9672_Test.TwoActorWorkFlow()'><b>TwoActorWorkFlow</b><br>Test class: icix.Tests.TC9672_Test<br>Parameters: public void icix.Tests.TC9672_Test.TwoActorWorkFlow(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9672_Test@2ef5760b</td></tr>
+<tr>
+<td title='icix.Tests.TC9675_Test.Upload()'><b>Upload</b><br>Test class: icix.Tests.TC9675_Test<br>Parameters: public void icix.Tests.TC9675_Test.Upload(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9675_Test@38d3cc2f</td></tr>
+<tr>
+<td title='icix.Tests.TC9666_Test.VerifyRequestClosedAfterRemovingRequirement()'><b>VerifyRequestClosedAfterRemovingRequirement</b><br>Test class: icix.Tests.TC9666_Test<br>Parameters: public void icix.Tests.TC9666_Test.VerifyRequestClosedAfterRemovingRequirement(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9666_Test@22697409</td></tr>
+<tr>
+<td title='icix.Tests.TC9666_Test.VerifySendReqAtRespSide()'><b>VerifySendReqAtRespSide</b><br>Test class: icix.Tests.TC9666_Test<br>Parameters: public void icix.Tests.TC9666_Test.VerifySendReqAtRespSide(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9666_Test@22697409</td></tr>
+<tr>
+<td title='icix.Tests.TC9666_Test.VerifySendRequirement()'><b>VerifySendRequirement</b><br>Test class: icix.Tests.TC9666_Test<br>Parameters: public void icix.Tests.TC9666_Test.VerifySendRequirement(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9666_Test@22697409</td></tr>
+<tr>
+<td title='icix.Tests.TC9670_Test.createNew_form()'><b>createNew_form</b><br>Test class: icix.Tests.TC9670_Test<br>Parameters: public void icix.Tests.TC9670_Test.createNew_form(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9670_Test@6d277295</td></tr>
+<tr>
+<td title='icix.Tests.TC9649_Test.testSearchByIcixId()'><b>testSearchByIcixId</b><br>Test class: icix.Tests.TC9649_Test<br>Parameters: public void icix.Tests.TC9649_Test.testSearchByIcixId(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>0</td>
+<td>icix.Tests.TC9649_Test@3531e51d</td></tr>
+</table><p>
+</body>
+</html>

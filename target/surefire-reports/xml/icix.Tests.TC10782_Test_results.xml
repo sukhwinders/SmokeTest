@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SmokeSuite"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="88.546">
+  <properties />
+  
+  
+            <testcase name="TestProductSearchByUniID" time="88.546" classname="icix.Tests.TC10782_Test" />
+      
+</testsuite>

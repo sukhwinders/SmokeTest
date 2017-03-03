@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SmokeSuite"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="3"
+           time="0.000">
+  <properties />
+  
+            <testcase name="beforeClass" time="0.0" classname="icix.Tests.TC9675_Test">
+          <skipped />
+    </testcase>
+            <testcase name="close" time="0.0" classname="icix.Tests.TC9675_Test">
+          <skipped />
+    </testcase>
+            <testcase name="Upload" time="0.0" classname="icix.Tests.TC9675_Test">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

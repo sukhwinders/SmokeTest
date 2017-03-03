@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - SmokeSuite</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>SmokeSuite</h1>
+<p>
+  Test duration: 1967.065s
+</p>
+
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">icix.Tests.TC9672_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.RuntimeException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; Open quote is expected for attribute &quot;http-equiv&quot; associated with an&nbsp; element type&nbsp; &quot;meta&quot;.</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              io.github.bonigarcia.wdm.BrowserManager.manage(BrowserManager.java:272)<br />
+              io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:103)<br />
+              io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:82)<br />
+              icix.Start.Start.InitilizeBrowser(Start.java:21)<br />
+              icix.Utils.Common.Init(Common.java:29)<br />
+              icix.Utils.TestBase.beforeClass(TestBase.java:34)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:601)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 18; Open quote is expected for attribute &quot;http-equiv&quot; associated with an&nbsp; element type&nbsp; &quot;meta&quot;.</a><br />
+        <div class="stackTrace" id="exception-1">
+                      org.apache.xerces.parsers.DOMParser.parse(Unknown Source)<br />
+                      org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)<br />
+                      io.github.bonigarcia.wdm.BrowserManager.loadXML(BrowserManager.java:482)<br />
+                      io.github.bonigarcia.wdm.BrowserManager.getDriversFromXml(BrowserManager.java:451)<br />
+                      io.github.bonigarcia.wdm.ChromeDriverManager.getDrivers(ChromeDriverManager.java:44)<br />
+                      io.github.bonigarcia.wdm.BrowserManager.manage(BrowserManager.java:209)<br />
+                      io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:103)<br />
+                      io.github.bonigarcia.wdm.BrowserManager.setup(BrowserManager.java:82)<br />
+                      icix.Start.Start.InitilizeBrowser(Start.java:21)<br />
+                      icix.Utils.Common.Init(Common.java:29)<br />
+                      icix.Utils.TestBase.beforeClass(TestBase.java:34)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:601)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+                      org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)<br />
+                      org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)<br />
+                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+                      org.testng.TestRunner.run(TestRunner.java:632)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+                      org.testng.TestNG.run(TestNG.java:1064)<br />
+                      org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">icix.Tests.TC10467_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC10799_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9648_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9649_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9666_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9667_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9670_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9672_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">icix.Tests.TC9675_Test</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  close
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+            </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC10782_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  TestProductSearchByUniID
+      </td>
+  <td class="duration">
+    1806.130s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC10782_Test.TestProductSearchByUniID(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+            <div class="testOutput">
+                        Test Case Name is: TestProductSearchByUniID
+                                <br>Screenshot saved <a href=file:///Users/sukhwinders/Desktop/LatestSuites/Package/new/PackageSmoke/target/screenshots/2017-03-02-20-58-11/Failed/ICIX%20Products%20_%20Salesforce_TestProductSearchByUniID_2017-03-02-21-28-52.png>Screenshot</a>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-17', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [true] but found [false]</b></a><br />
+    <div class="stackTrace" id="exception-17">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              org.testng.Assert.failNotEquals(Assert.java:513)<br />
+              org.testng.Assert.assertTrue(Assert.java:42)<br />
+              org.testng.Assert.assertTrue(Assert.java:52)<br />
+              icix.Modules.Product.ProductSearchByUniID(Product.java:233)<br />
+              icix.Tests.TC10782_Test.TestProductSearchByUniID(TC10782_Test.java:27)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:601)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC10467_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  TPG_RelationshipType
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC10467_Test.TPG_RelationshipType(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC10799_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  AutoReqCreationAddTP
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC10799_Test.AutoReqCreationAddTP(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9648_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  SearchByCompanyName
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9648_Test.SearchByCompanyName(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9649_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  testSearchByIcixId
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9649_Test.testSearchByIcixId(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9666_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  VerifyRequestClosedAfterRemovingRequirement
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9666_Test.VerifyRequestClosedAfterRemovingRequirement(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  VerifySendReqAtRespSide
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9666_Test.VerifySendReqAtRespSide(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  VerifySendRequirement
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9666_Test.VerifySendRequirement(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9667_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Productgroup
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9667_Test.Productgroup(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9670_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  createNew_form
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9670_Test.createNew_form(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9672_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  TwoActorWorkFlow
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9672_Test.TwoActorWorkFlow(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC9675_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Upload
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC9675_Test.Upload(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+        
+
+      </td>
+</tr>
+      </table>
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">icix.Tests.TC10781_Test</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  TestProductSearchWithoutUID
+      </td>
+  <td class="duration">
+    88.117s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">public void icix.Tests.TC10781_Test.TestProductSearchWithoutUID(java.lang.reflect.Method) throws java.lang.Exception</span><br />
+    
+            <div class="testOutput">
+                        Test Case Name is: TestProductSearchWithoutUID
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>
