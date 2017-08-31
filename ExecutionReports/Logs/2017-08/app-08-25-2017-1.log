@@ -1,0 +1,1218 @@
+2017-08-25 09:45:14,048 INFO  [main] ? - User info initialized from suite file
+2017-08-25 09:45:39,115 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 09:45:39,115 INFO  [main] ? - Start Log in to application
+2017-08-25 09:45:39,638 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 09:45:40,043 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 09:45:40,063 INFO  [main] ? - Clicking on:Login button
+2017-08-25 09:46:23,847 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 09:46:23,847 INFO  [main] ? - Login as a Responder
+2017-08-25 09:46:23,899 INFO  [main] ? - Opening App Launcher
+2017-08-25 09:46:26,885 INFO  [main] ? - FormList list is clicked
+2017-08-25 09:47:12,278 INFO  [main] ? - Switching to frame: 3
+2017-08-25 09:47:46,280 INFO  [main] ? - New form button is clicked.
+2017-08-25 09:47:47,211 INFO  [main] ? - Set Text value: [Ljava.lang.String;@efcf8a into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 09:47:47,211 INFO  [main] ? - Form name [Ljava.lang.String;@efcf8a added.
+2017-08-25 09:47:52,853 INFO  [main] ? - Container added successfully
+2017-08-25 09:47:56,094 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 09:46:26 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 09:47:56,448 INFO  [main] ? - Layout added successfully.
+2017-08-25 09:48:03,319 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 09:48:05,904 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 09:48:11,163 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 09:48:14,110 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 09:48:17,763 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 09:46:26 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 09:48:18,613 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 09:46:26 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 09:48:18,848 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 09:48:43,134 INFO  [main] ? - Opening App Launcher
+2017-08-25 09:48:44,600 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3000;a">...</span> is not clickable at point (760, 583). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2866;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 71 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5164_25256}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6e804cb11419d78108c536b751051101
+2017-08-25 09:48:53,818 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 09:48:43 IST 2017
+2017-08-25 09:49:04,178 INFO  [main] ? - Switching to frame: 4
+2017-08-25 09:49:06,845 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 09:48:43 IST 2017 into By.id: txtGroupName
+2017-08-25 09:49:06,855 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 09:48:43 IST 2017
+2017-08-25 09:49:07,539 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 09:48:43 IST 2017
+2017-08-25 09:49:33,238 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 09:48:43 IST 2017 element is not present and displayed
+2017-08-25 09:49:33,238 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 09:48:43 IST 2017 is clicked.
+2017-08-25 09:49:33,238 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 09:48:43 IST 2017
+2017-08-25 09:49:33,545 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 09:48:43 IST 2017
+2017-08-25 09:49:33,545 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 09:49:48,964 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 09:49:59,492 INFO  [main] ? - Switching to frame: 4
+2017-08-25 09:50:01,662 INFO  [main] ? - Selecting the Request type
+2017-08-25 09:50:02,395 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@efcf8a
+2017-08-25 09:50:05,049 INFO  [main] ? - Clicking on date
+2017-08-25 09:50:05,532 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 09:50:11,006 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 09:50:11,534 INFO  [main] ? - Clicking on send button.
+2017-08-25 09:50:22,109 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 09:50:25,115 INFO  [main] ? - Requirement saved
+2017-08-25 09:50:25,115 INFO  [main] ? - Edit tpg to add members
+2017-08-25 09:50:46,772 INFO  [main] ? - Switching to frame: 3
+2017-08-25 09:50:52,199 INFO  [main] ? - TP Group Edited
+2017-08-25 09:50:52,199 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 09:50:58,383 INFO  [main] ? - Global search text box clicked.
+2017-08-25 09:50:59,101 INFO  [main] ? - Keyword Automation form Fri Aug 25 09:46:23 IST 2017 entered for searching.
+2017-08-25 09:50:59,838 INFO  [main] ? - Clicked on Automation form Fri Aug 25 09:46:23 IST 2017 in salesforec.
+2017-08-25 09:51:00,095 INFO  [main] ? - Clicked on show more link.
+2017-08-25 09:51:06,597 WARN  [main] ? - element is not present and displayed
+2017-08-25 09:51:11,751 WARN  [main] ? - element is not present and displayed
+2017-08-25 09:51:11,782 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 09:51:11,782 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 09:51:11,791 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 09:51:11,791 INFO  [main] ? - Request tab clicked
+2017-08-25 09:51:12,292 INFO  [main] ? - Automatic Request created sucessfully
+2017-08-25 11:12:38,765 INFO  [main] ? - User info initialized from suite file
+2017-08-25 11:12:56,738 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 11:12:56,739 INFO  [main] ? - Start Log in to application
+2017-08-25 11:12:57,311 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 11:12:57,727 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 11:12:57,749 INFO  [main] ? - Clicking on:Login button
+2017-08-25 11:13:45,282 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 11:13:45,282 INFO  [main] ? - Login as a Responder
+2017-08-25 11:13:51,531 INFO  [main] ? - Global search text box clicked.
+2017-08-25 11:13:52,181 INFO  [main] ? - Keyword REQ-Jul24-Four time reject entered for searching.
+2017-08-25 11:13:52,929 INFO  [main] ? - Clicked on REQ-Jul24-Four time reject in salesforec.
+2017-08-25 11:13:53,269 INFO  [main] ? - Clicked on show more link.
+2017-08-25 11:15:53,449 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //div[@data-aura-class='forceSearchScopesList']/ul/li/a[contains(text(),'Requests')] element is not present and displayed
+2017-08-25 11:16:25,445 INFO  [main] ? - User info initialized from suite file
+2017-08-25 11:16:44,517 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 11:16:44,517 INFO  [main] ? - Start Log in to application
+2017-08-25 11:16:44,933 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 11:16:45,341 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 11:16:45,362 INFO  [main] ? - Clicking on:Login button
+2017-08-25 11:17:31,748 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 11:17:31,749 INFO  [main] ? - Login as a Responder
+2017-08-25 11:17:31,808 INFO  [main] ? - Opening App Launcher
+2017-08-25 11:18:00,433 INFO  [main] ? - Global search text box clicked.
+2017-08-25 11:18:01,040 INFO  [main] ? - Keyword REQ-Jul24-Four time reject entered for searching.
+2017-08-25 11:18:01,768 INFO  [main] ? - Clicked on REQ-Jul24-Four time reject in salesforec.
+2017-08-25 11:18:02,853 INFO  [main] ? - Clicked on show more link.
+2017-08-25 11:18:05,948 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 11:18:05,949 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 11:18:05,966 INFO  [main] ? - Request tab clicked
+2017-08-25 11:18:06,615 INFO  [main] ? - The link: REQ-Jul24-Four time rejectis clicked.
+2017-08-25 11:18:12,616 INFO  [main] ? - Automatic Request created sucessfully
+2017-08-25 11:19:11,656 INFO  [main] ? - User info initialized from suite file
+2017-08-25 11:19:30,003 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 11:19:30,004 INFO  [main] ? - Start Log in to application
+2017-08-25 11:19:30,431 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 11:19:30,822 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 11:19:30,842 INFO  [main] ? - Clicking on:Login button
+2017-08-25 11:20:26,490 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 11:20:26,490 INFO  [main] ? - Login as a Responder
+2017-08-25 11:20:26,547 INFO  [main] ? - Opening App Launcher
+2017-08-25 11:20:30,619 INFO  [main] ? - FormList list is clicked
+2017-08-25 11:20:50,169 INFO  [main] ? - Switching to frame: 3
+2017-08-25 11:21:14,746 INFO  [main] ? - New form button is clicked.
+2017-08-25 11:21:15,535 INFO  [main] ? - Set Text value: [Ljava.lang.String;@c586a8 into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 11:21:15,535 INFO  [main] ? - Form name [Ljava.lang.String;@c586a8 added.
+2017-08-25 11:21:21,208 INFO  [main] ? - Container added successfully
+2017-08-25 11:21:27,593 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 11:20:30 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 11:21:27,933 INFO  [main] ? - Layout added successfully.
+2017-08-25 11:21:37,855 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 11:21:42,533 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 11:21:51,448 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 11:21:54,962 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 11:21:58,030 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 11:20:30 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 11:21:58,803 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 11:20:30 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 11:21:58,987 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 11:22:23,215 INFO  [main] ? - Opening App Launcher
+2017-08-25 11:22:40,350 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 11:22:23 IST 2017
+2017-08-25 11:22:50,403 INFO  [main] ? - Switching to frame: 4
+2017-08-25 11:22:53,060 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 11:22:23 IST 2017 into By.id: txtGroupName
+2017-08-25 11:22:53,070 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 11:22:23 IST 2017
+2017-08-25 11:22:53,629 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 11:22:23 IST 2017
+2017-08-25 11:23:19,446 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 11:22:23 IST 2017 element is not present and displayed
+2017-08-25 11:23:19,446 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 11:22:23 IST 2017 is clicked.
+2017-08-25 11:23:19,446 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 11:22:23 IST 2017
+2017-08-25 11:23:19,766 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 11:22:23 IST 2017
+2017-08-25 11:23:19,766 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 11:23:35,519 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 11:23:45,553 INFO  [main] ? - Switching to frame: 4
+2017-08-25 11:23:47,731 INFO  [main] ? - Selecting the Request type
+2017-08-25 11:23:50,131 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@c586a8
+2017-08-25 11:23:52,819 INFO  [main] ? - Clicking on date
+2017-08-25 11:23:53,283 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 11:23:58,729 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 11:23:59,281 INFO  [main] ? - Clicking on send button.
+2017-08-25 11:24:09,663 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 11:24:12,669 INFO  [main] ? - Requirement saved
+2017-08-25 11:24:12,669 INFO  [main] ? - Edit tpg to add members
+2017-08-25 11:24:35,934 INFO  [main] ? - Switching to frame: 3
+2017-08-25 11:24:41,382 INFO  [main] ? - TP Group Edited
+2017-08-25 11:24:41,382 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 11:24:51,791 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 11:25:46,273 INFO  [main] ? - User info initialized from suite file
+2017-08-25 11:26:21,470 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 11:26:21,471 INFO  [main] ? - Start Log in to application
+2017-08-25 11:26:21,922 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 11:26:22,332 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 11:26:22,354 INFO  [main] ? - Clicking on:Login button
+2017-08-25 11:57:09,729 INFO  [main] ? - User info initialized from suite file
+2017-08-25 11:57:26,697 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 11:57:26,698 INFO  [main] ? - Start Log in to application
+2017-08-25 11:57:27,125 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 11:57:27,530 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 11:57:27,551 INFO  [main] ? - Clicking on:Login button
+2017-08-25 11:57:55,622 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 11:57:55,622 INFO  [main] ? - Login as a Responder
+2017-08-25 11:57:55,716 INFO  [main] ? - Opening App Launcher
+2017-08-25 11:57:59,348 INFO  [main] ? - FormList list is clicked
+2017-08-25 11:58:20,785 INFO  [main] ? - Switching to frame: 3
+2017-08-25 11:58:48,013 INFO  [main] ? - New form button is clicked.
+2017-08-25 11:58:48,873 INFO  [main] ? - Set Text value: [Ljava.lang.String;@1b30c92 into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 11:58:48,874 INFO  [main] ? - Form name [Ljava.lang.String;@1b30c92 added.
+2017-08-25 11:58:55,546 INFO  [main] ? - Container added successfully
+2017-08-25 11:58:59,167 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 11:57:59 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 11:58:59,552 INFO  [main] ? - Layout added successfully.
+2017-08-25 11:59:05,207 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 11:59:07,713 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 11:59:13,947 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 11:59:16,227 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 11:59:18,766 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 11:57:59 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 11:59:19,534 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 11:57:59 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 11:59:19,735 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 11:59:43,982 INFO  [main] ? - Opening App Launcher
+2017-08-25 11:59:47,061 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3006;a">...</span> is not clickable at point (760, 582). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2872;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 76 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5412_7617}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2f928ca556ef0553248a578fc559102d
+2017-08-25 11:59:56,648 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 11:59:43 IST 2017
+2017-08-25 12:00:06,787 INFO  [main] ? - Switching to frame: 4
+2017-08-25 12:00:09,448 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 11:59:43 IST 2017 into By.id: txtGroupName
+2017-08-25 12:00:09,458 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 11:59:43 IST 2017
+2017-08-25 12:00:10,029 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 11:59:43 IST 2017
+2017-08-25 12:00:35,868 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 11:59:43 IST 2017 element is not present and displayed
+2017-08-25 12:00:35,868 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 11:59:43 IST 2017 is clicked.
+2017-08-25 12:00:35,869 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 11:59:43 IST 2017
+2017-08-25 12:00:36,169 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 11:59:43 IST 2017
+2017-08-25 12:00:36,170 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 12:00:50,623 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 12:01:01,175 INFO  [main] ? - Switching to frame: 4
+2017-08-25 12:01:03,351 INFO  [main] ? - Selecting the Request type
+2017-08-25 12:01:05,795 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@1b30c92
+2017-08-25 12:01:08,475 INFO  [main] ? - Clicking on date
+2017-08-25 12:01:08,929 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 12:01:14,371 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 12:01:14,879 INFO  [main] ? - Clicking on send button.
+2017-08-25 12:01:25,653 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 12:01:28,658 INFO  [main] ? - Requirement saved
+2017-08-25 12:01:28,658 INFO  [main] ? - Edit tpg to add members
+2017-08-25 12:01:51,880 INFO  [main] ? - Switching to frame: 3
+2017-08-25 12:01:57,315 INFO  [main] ? - TP Group Edited
+2017-08-25 12:01:57,315 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 12:02:03,502 INFO  [main] ? - Global search text box clicked.
+2017-08-25 12:02:04,273 INFO  [main] ? - Keyword Automation form Fri Aug 25 11:57:55 IST 2017 entered for searching.
+2017-08-25 12:02:05,024 INFO  [main] ? - Clicked on Automation form Fri Aug 25 11:57:55 IST 2017 in salesforec.
+2017-08-25 12:02:05,308 INFO  [main] ? - Clicked on show more link.
+2017-08-25 12:02:11,401 WARN  [main] ? - element is not present and displayed
+2017-08-25 12:02:16,563 WARN  [main] ? - element is not present and displayed
+2017-08-25 12:02:16,599 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 12:02:16,599 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 12:02:16,610 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 12:02:16,611 INFO  [main] ? - Request tab clicked
+2017-08-25 12:02:17,586 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 12:04:47,342 INFO  [main] ? - User info initialized from suite file
+2017-08-25 12:05:07,866 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 12:05:07,866 INFO  [main] ? - Start Log in to application
+2017-08-25 12:05:08,344 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 12:05:08,758 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 12:05:08,778 INFO  [main] ? - Clicking on:Login button
+2017-08-25 12:05:50,102 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 12:05:50,102 INFO  [main] ? - Login as a Responder
+2017-08-25 12:05:50,172 INFO  [main] ? - Opening App Launcher
+2017-08-25 12:05:56,862 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 12:05:57,837 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2500;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2500;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 62 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir4748_29374}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ff68117f30b52be9d526c0dd6691ecae
+2017-08-25 12:06:08,558 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-25 12:06:41,312 INFO  [main] ? - User info initialized from suite file
+2017-08-25 12:06:58,217 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 12:06:58,218 INFO  [main] ? - Start Log in to application
+2017-08-25 12:06:58,641 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 12:06:59,058 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 12:06:59,078 INFO  [main] ? - Clicking on:Login button
+2017-08-25 12:07:56,721 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 12:07:56,721 INFO  [main] ? - Login as a Responder
+2017-08-25 12:07:56,771 INFO  [main] ? - Opening App Launcher
+2017-08-25 12:08:08,180 INFO  [main] ? - Global search text box clicked.
+2017-08-25 12:08:09,017 INFO  [main] ? - Keyword Automation form Fri Aug 25 11:57:55 IST 2017 entered for searching.
+2017-08-25 12:08:09,769 INFO  [main] ? - Clicked on Automation form Fri Aug 25 11:57:55 IST 2017 in salesforec.
+2017-08-25 12:08:10,170 INFO  [main] ? - Clicked on show more link.
+2017-08-25 12:08:48,123 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 12:08:48,123 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 12:08:48,142 INFO  [main] ? - Request tab clicked
+2017-08-25 12:08:48,947 INFO  [main] ? - The link: Automation form Fri Aug 25 11:57:55 IST 2017is clicked.
+2017-08-25 12:09:05,446 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 12:10:30,120 INFO  [main] ? - User info initialized from suite file
+2017-08-25 12:10:51,898 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 12:10:51,898 INFO  [main] ? - Start Log in to application
+2017-08-25 12:10:52,357 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 12:10:52,760 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 12:10:52,781 INFO  [main] ? - Clicking on:Login button
+2017-08-25 12:12:05,777 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 12:12:05,777 INFO  [main] ? - Login as a Responder
+2017-08-25 12:12:05,826 INFO  [main] ? - Opening App Launcher
+2017-08-25 12:12:08,725 INFO  [main] ? - FormList list is clicked
+2017-08-25 12:12:36,291 INFO  [main] ? - Switching to frame: 3
+2017-08-25 12:13:00,025 INFO  [main] ? - New form button is clicked.
+2017-08-25 12:13:00,805 INFO  [main] ? - Set Text value: [Ljava.lang.String;@c586a8 into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 12:13:00,806 INFO  [main] ? - Form name [Ljava.lang.String;@c586a8 added.
+2017-08-25 12:13:06,579 INFO  [main] ? - Container added successfully
+2017-08-25 12:13:10,273 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 12:12:08 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 12:13:10,709 INFO  [main] ? - Layout added successfully.
+2017-08-25 12:13:26,183 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 12:13:28,754 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 12:13:36,059 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 12:13:39,432 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 12:13:42,522 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 12:12:08 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 12:13:43,303 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 12:12:08 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 12:13:44,063 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 12:14:08,276 INFO  [main] ? - Opening App Launcher
+2017-08-25 12:14:12,806 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3015;a">...</span> is not clickable at point (760, 583). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2877;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 82 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5296_27449}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 9b4498235443106068b95df97e8bda3c
+2017-08-25 12:14:33,095 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 12:14:08 IST 2017
+2017-08-25 12:14:43,250 INFO  [main] ? - Switching to frame: 4
+2017-08-25 12:14:45,957 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 12:14:08 IST 2017 into By.id: txtGroupName
+2017-08-25 12:14:45,967 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 12:14:08 IST 2017
+2017-08-25 12:14:46,511 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 12:14:08 IST 2017
+2017-08-25 12:15:12,370 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 12:14:08 IST 2017 element is not present and displayed
+2017-08-25 12:15:12,371 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 12:14:08 IST 2017 is clicked.
+2017-08-25 12:15:12,371 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 12:14:08 IST 2017
+2017-08-25 12:15:12,684 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 12:14:08 IST 2017
+2017-08-25 12:15:12,684 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 12:15:36,321 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 12:15:46,802 INFO  [main] ? - Switching to frame: 4
+2017-08-25 12:15:48,961 INFO  [main] ? - Selecting the Request type
+2017-08-25 12:15:51,734 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@c586a8
+2017-08-25 12:15:54,427 INFO  [main] ? - Clicking on date
+2017-08-25 12:15:54,965 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 12:16:00,419 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 12:16:00,949 INFO  [main] ? - Clicking on send button.
+2017-08-25 12:16:05,695 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 12:16:08,713 INFO  [main] ? - Requirement saved
+2017-08-25 12:16:08,713 INFO  [main] ? - Edit tpg to add members
+2017-08-25 12:16:34,939 INFO  [main] ? - Switching to frame: 3
+2017-08-25 12:16:40,391 INFO  [main] ? - TP Group Edited
+2017-08-25 12:16:40,391 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 12:16:56,610 INFO  [main] ? - Global search text box clicked.
+2017-08-25 12:16:57,469 INFO  [main] ? - Keyword Automation form Fri Aug 25 12:12:05 IST 2017 entered for searching.
+2017-08-25 12:16:58,239 INFO  [main] ? - Clicked on Automation form Fri Aug 25 12:12:05 IST 2017 in salesforec.
+2017-08-25 12:16:58,534 INFO  [main] ? - Clicked on show more link.
+2017-08-25 12:17:06,253 WARN  [main] ? - element is not present and displayed
+2017-08-25 12:17:11,369 WARN  [main] ? - element is not present and displayed
+2017-08-25 12:17:11,392 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 12:17:11,392 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 12:17:11,401 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 12:17:11,402 INFO  [main] ? - Request tab clicked
+2017-08-25 12:17:12,320 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 12:19:35,930 INFO  [main] ? - User info initialized from suite file
+2017-08-25 12:19:59,269 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 12:19:59,269 INFO  [main] ? - Start Log in to application
+2017-08-25 12:19:59,739 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 12:20:00,141 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 12:20:00,162 INFO  [main] ? - Clicking on:Login button
+2017-08-25 12:21:38,544 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 12:21:38,544 INFO  [main] ? - Login as a Responder
+2017-08-25 12:21:38,598 INFO  [main] ? - Opening App Launcher
+2017-08-25 12:21:42,895 INFO  [main] ? - FormList list is clicked
+2017-08-25 12:22:11,054 INFO  [main] ? - Switching to frame: 3
+2017-08-25 12:22:57,770 INFO  [main] ? - New form button is clicked.
+2017-08-25 12:22:58,612 INFO  [main] ? - Set Text value: [Ljava.lang.String;@1a855dd into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 12:22:58,612 INFO  [main] ? - Form name [Ljava.lang.String;@1a855dd added.
+2017-08-25 12:23:03,965 INFO  [main] ? - Container added successfully
+2017-08-25 12:23:07,159 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 12:21:42 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 12:23:07,566 INFO  [main] ? - Layout added successfully.
+2017-08-25 12:23:12,141 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 12:23:14,205 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 12:23:23,161 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 12:23:28,738 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 12:23:33,421 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 12:21:42 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 12:23:34,193 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 12:21:42 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 12:23:34,385 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 12:23:58,605 INFO  [main] ? - Opening App Launcher
+2017-08-25 12:24:01,553 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3007;a">...</span> is not clickable at point (759, 584). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2873;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 66 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir3220_3098}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 4ce7dc595f9cf9d6fedb5b5681e8d870
+2017-08-25 12:24:17,400 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 12:23:58 IST 2017
+2017-08-25 12:24:27,635 INFO  [main] ? - Switching to frame: 4
+2017-08-25 12:24:30,554 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 12:23:58 IST 2017 into By.id: txtGroupName
+2017-08-25 12:24:30,565 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 12:23:58 IST 2017
+2017-08-25 12:24:31,138 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 12:23:58 IST 2017
+2017-08-25 12:24:56,774 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 12:23:58 IST 2017 element is not present and displayed
+2017-08-25 12:24:56,774 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 12:23:58 IST 2017 is clicked.
+2017-08-25 12:24:56,774 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 12:23:58 IST 2017
+2017-08-25 12:24:57,101 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 12:23:58 IST 2017
+2017-08-25 12:24:57,101 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 12:25:13,944 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 12:25:23,973 INFO  [main] ? - Switching to frame: 4
+2017-08-25 12:25:26,140 INFO  [main] ? - Selecting the Request type
+2017-08-25 12:25:28,834 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@1a855dd
+2017-08-25 12:25:31,465 INFO  [main] ? - Clicking on date
+2017-08-25 12:25:32,014 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 12:25:37,454 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 12:25:37,955 INFO  [main] ? - Clicking on send button.
+2017-08-25 12:25:48,454 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 12:25:51,458 INFO  [main] ? - Requirement saved
+2017-08-25 12:25:51,458 INFO  [main] ? - Edit tpg to add members
+2017-08-25 12:26:17,426 INFO  [main] ? - Switching to frame: 3
+2017-08-25 12:26:25,869 INFO  [main] ? - TP Group Edited
+2017-08-25 12:26:25,869 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 12:26:32,064 INFO  [main] ? - Global search text box clicked.
+2017-08-25 12:26:32,894 INFO  [main] ? - Keyword Automation form Fri Aug 25 12:21:38 IST 2017 entered for searching.
+2017-08-25 12:26:33,661 INFO  [main] ? - Clicked on Automation form Fri Aug 25 12:21:38 IST 2017 in salesforec.
+2017-08-25 12:26:33,928 INFO  [main] ? - Clicked on show more link.
+2017-08-25 12:26:40,539 WARN  [main] ? - element is not present and displayed
+2017-08-25 12:26:45,713 WARN  [main] ? - element is not present and displayed
+2017-08-25 12:26:45,736 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 12:26:45,736 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 12:26:45,747 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 12:26:45,747 INFO  [main] ? - Request tab clicked
+2017-08-25 12:26:46,375 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 12:59:49,303 INFO  [main] ? - User info initialized from suite file
+2017-08-25 13:00:07,344 INFO  [main] ? - The testcase name is :VerifySendReqAtRespSide
+2017-08-25 13:00:07,345 INFO  [main] ? - Start Log in to application
+2017-08-25 13:00:07,853 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 13:00:08,258 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 13:00:08,279 INFO  [main] ? - Clicking on:Login button
+2017-08-25 13:00:51,140 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 13:00:51,140 INFO  [main] ? - Login sucessfully
+2017-08-25 13:00:51,198 INFO  [main] ? - Opening App Launcher
+2017-08-25 13:00:55,584 INFO  [main] ? - FormList list is clicked
+2017-08-25 13:01:16,088 INFO  [main] ? - Switching to frame: 3
+2017-08-25 13:01:42,807 INFO  [main] ? - New form button is clicked.
+2017-08-25 13:01:43,603 INFO  [main] ? - Set Text value: [Ljava.lang.String;@76b80a into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 13:01:43,603 INFO  [main] ? - Form name [Ljava.lang.String;@76b80a added.
+2017-08-25 13:01:49,499 INFO  [main] ? - Container added successfully
+2017-08-25 13:01:53,046 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 13:00:55 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 13:01:53,413 INFO  [main] ? - Layout added successfully.
+2017-08-25 13:02:02,807 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 13:02:04,852 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 13:02:17,425 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 13:02:19,754 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 13:02:22,324 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 13:00:55 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 13:02:23,096 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 13:00:55 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 13:02:23,287 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 13:02:47,528 INFO  [main] ? - Opening App Launcher
+2017-08-25 13:03:09,564 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 13:02:47 IST 2017
+2017-08-25 13:03:19,631 INFO  [main] ? - Switching to frame: 4
+2017-08-25 13:03:22,300 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 13:02:47 IST 2017 into By.id: txtGroupName
+2017-08-25 13:03:22,515 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 13:02:47 IST 2017
+2017-08-25 13:03:23,110 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 13:02:47 IST 2017
+2017-08-25 13:03:48,740 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 13:02:47 IST 2017 element is not present and displayed
+2017-08-25 13:03:48,741 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 13:02:47 IST 2017 is clicked.
+2017-08-25 13:03:48,741 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 13:02:47 IST 2017
+2017-08-25 13:03:49,068 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 13:02:47 IST 2017
+2017-08-25 13:03:49,416 INFO  [main] ? - Trading partner Group Cretaed sucessfully
+2017-08-25 13:04:03,894 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 13:04:13,920 INFO  [main] ? - Switching to frame: 4
+2017-08-25 13:04:16,091 INFO  [main] ? - Selecting the Request type
+2017-08-25 13:04:19,097 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@76b80a
+2017-08-25 13:04:21,773 INFO  [main] ? - Clicking on date
+2017-08-25 13:04:22,296 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 13:04:27,778 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 13:04:28,335 INFO  [main] ? - Clicking on send button.
+2017-08-25 13:04:39,226 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 13:04:42,230 INFO  [main] ? - Requiremnt send Sucessfully
+2017-08-25 13:04:51,092 INFO  [main] ? - Logging out the user
+2017-08-25 13:04:59,024 INFO  [main] ? - Start Log in to application
+2017-08-25 13:04:59,436 INFO  [main] ? - Set Text value: feature05@icix.com into By.id: username
+2017-08-25 13:04:59,828 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 13:04:59,848 INFO  [main] ? - Clicking on:Login button
+2017-08-25 13:05:26,580 INFO  [main] ? - Responder logged in successfully.
+2017-08-25 13:05:26,580 INFO  [main] ? - Login  As a Responder
+2017-08-25 13:06:09,763 WARN  [main] ? - element is not present and displayed
+2017-08-25 13:06:09,774 WARN  [main] ? - There is an exception: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Search Salesforce']"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir2492_21773}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a012d41f317f61d10262863fffae6edc
+*** Element info: {Using=xpath, value=//input[@placeholder='Search Salesforce']}
+2017-08-25 13:06:09,776 WARN  [main] ? - TEST FAILED - VerifySendReqAtRespSide
+2017-08-25 13:58:11,943 INFO  [main] ? - User info initialized from suite file
+2017-08-25 13:58:27,892 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 13:58:27,893 INFO  [main] ? - Start Log in to application
+2017-08-25 13:58:28,362 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 13:58:28,784 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 13:58:28,805 INFO  [main] ? - Clicking on:Login button
+2017-08-25 13:59:12,449 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 13:59:12,449 INFO  [main] ? - Login as a Responder
+2017-08-25 13:59:12,504 INFO  [main] ? - Opening App Launcher
+2017-08-25 13:59:14,820 INFO  [main] ? - FormList list is clicked
+2017-08-25 13:59:34,929 INFO  [main] ? - Switching to frame: 3
+2017-08-25 13:59:58,130 INFO  [main] ? - New form button is clicked.
+2017-08-25 13:59:58,922 INFO  [main] ? - Set Text value: [Ljava.lang.String;@95ac9e into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 13:59:58,922 INFO  [main] ? - Form name [Ljava.lang.String;@95ac9e added.
+2017-08-25 14:00:02,468 INFO  [main] ? - Container added successfully
+2017-08-25 14:00:05,129 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 13:59:14 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 14:00:05,530 INFO  [main] ? - Layout added successfully.
+2017-08-25 14:00:10,678 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 14:00:13,771 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 14:00:20,143 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 14:00:22,674 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 14:00:25,230 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 13:59:14 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 14:00:25,930 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 13:59:14 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 14:00:26,166 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 14:00:50,401 INFO  [main] ? - Opening App Launcher
+2017-08-25 14:00:51,842 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3003;a">...</span> is not clickable at point (759, 585). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2869;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 67 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir3280_9493}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ae6ef257552c92d50cbd22d9a10ac0ea
+2017-08-25 14:01:03,515 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 14:00:50 IST 2017
+2017-08-25 14:01:13,560 INFO  [main] ? - Switching to frame: 4
+2017-08-25 14:01:16,258 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 14:00:50 IST 2017 into By.id: txtGroupName
+2017-08-25 14:01:16,268 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 14:00:50 IST 2017
+2017-08-25 14:01:16,839 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 14:00:50 IST 2017
+2017-08-25 14:01:42,739 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 14:00:50 IST 2017 element is not present and displayed
+2017-08-25 14:01:42,739 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 14:00:50 IST 2017 is clicked.
+2017-08-25 14:01:42,739 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 14:00:50 IST 2017
+2017-08-25 14:01:43,031 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 14:00:50 IST 2017
+2017-08-25 14:01:43,031 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 14:01:56,373 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 14:02:06,467 INFO  [main] ? - Switching to frame: 4
+2017-08-25 14:02:08,663 INFO  [main] ? - Selecting the Request type
+2017-08-25 14:02:09,395 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@95ac9e
+2017-08-25 14:02:12,022 INFO  [main] ? - Clicking on date
+2017-08-25 14:02:12,541 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 14:02:18,015 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 14:02:18,543 INFO  [main] ? - Clicking on send button.
+2017-08-25 14:02:29,334 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 14:02:32,339 INFO  [main] ? - Requirement saved
+2017-08-25 14:02:32,339 INFO  [main] ? - Edit tpg to add members
+2017-08-25 14:02:54,699 INFO  [main] ? - Switching to frame: 3
+2017-08-25 14:03:03,129 INFO  [main] ? - TP Group Edited
+2017-08-25 14:03:03,129 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 14:03:09,318 INFO  [main] ? - Global search text box clicked.
+2017-08-25 14:03:10,088 INFO  [main] ? - Keyword Automation form Fri Aug 25 13:59:12 IST 2017 entered for searching.
+2017-08-25 14:03:10,836 INFO  [main] ? - Clicked on Automation form Fri Aug 25 13:59:12 IST 2017 in salesforec.
+2017-08-25 14:03:11,138 INFO  [main] ? - Clicked on show more link.
+2017-08-25 14:03:17,156 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:03:22,322 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:03:22,344 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 14:03:22,344 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 14:03:22,353 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 14:03:22,353 INFO  [main] ? - Request tab clicked
+2017-08-25 14:03:23,312 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 14:41:41,597 INFO  [main] ? - User info initialized from suite file
+2017-08-25 14:42:01,303 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 14:42:01,303 INFO  [main] ? - Start Log in to application
+2017-08-25 14:42:01,742 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 14:42:02,153 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 14:42:02,173 INFO  [main] ? - Clicking on:Login button
+2017-08-25 14:42:58,487 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 14:42:58,487 INFO  [main] ? - Login as a Responder
+2017-08-25 14:42:58,535 INFO  [main] ? - Opening App Launcher
+2017-08-25 14:43:03,659 INFO  [main] ? - FormList list is clicked
+2017-08-25 14:43:35,223 INFO  [main] ? - Switching to frame: 3
+2017-08-25 14:44:14,120 INFO  [main] ? - New form button is clicked.
+2017-08-25 14:44:15,035 INFO  [main] ? - Set Text value: [Ljava.lang.String;@1ed0ff3 into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 14:44:15,035 INFO  [main] ? - Form name [Ljava.lang.String;@1ed0ff3 added.
+2017-08-25 14:44:24,159 INFO  [main] ? - Container added successfully
+2017-08-25 14:44:27,265 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 14:43:03 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 14:44:27,686 INFO  [main] ? - Layout added successfully.
+2017-08-25 14:44:38,177 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 14:44:40,245 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 14:44:55,467 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 14:45:14,231 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 14:45:24,913 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 14:43:03 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 14:45:25,651 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 14:43:03 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 14:45:25,827 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 14:45:50,092 INFO  [main] ? - Opening App Launcher
+2017-08-25 14:45:58,029 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3018;a">...</span> is not clickable at point (760, 580). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2882;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 85 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir2104_11112}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 51a7c0afbfa11d8a4b0450d37cf49740
+2017-08-25 14:46:11,130 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 14:45:50 IST 2017
+2017-08-25 14:46:21,411 INFO  [main] ? - Switching to frame: 4
+2017-08-25 14:46:24,087 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 14:45:50 IST 2017 into By.id: txtGroupName
+2017-08-25 14:46:24,097 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 14:45:50 IST 2017
+2017-08-25 14:46:24,661 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 14:45:50 IST 2017
+2017-08-25 14:46:50,554 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 14:45:50 IST 2017 element is not present and displayed
+2017-08-25 14:46:50,554 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 14:45:50 IST 2017 is clicked.
+2017-08-25 14:46:50,554 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 14:45:50 IST 2017
+2017-08-25 14:46:50,845 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 14:45:50 IST 2017
+2017-08-25 14:46:50,845 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 14:47:08,258 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 14:47:18,403 INFO  [main] ? - Switching to frame: 4
+2017-08-25 14:47:20,578 INFO  [main] ? - Selecting the Request type
+2017-08-25 14:47:23,525 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@1ed0ff3
+2017-08-25 14:47:26,263 INFO  [main] ? - Clicking on date
+2017-08-25 14:47:26,735 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 14:47:32,223 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 14:47:32,733 INFO  [main] ? - Clicking on send button.
+2017-08-25 14:47:43,160 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 14:47:46,165 INFO  [main] ? - Requirement saved
+2017-08-25 14:47:46,165 INFO  [main] ? - Edit tpg to add members
+2017-08-25 14:48:13,550 INFO  [main] ? - Switching to frame: 3
+2017-08-25 14:48:22,020 INFO  [main] ? - TP Group Edited
+2017-08-25 14:48:22,020 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 14:48:28,247 INFO  [main] ? - Global search text box clicked.
+2017-08-25 14:48:29,608 INFO  [main] ? - Keyword Automation form Fri Aug 25 14:42:58 IST 2017 entered for searching.
+2017-08-25 14:48:30,365 INFO  [main] ? - Clicked on Automation form Fri Aug 25 14:42:58 IST 2017 in salesforec.
+2017-08-25 14:48:30,642 INFO  [main] ? - Clicked on show more link.
+2017-08-25 14:48:52,563 INFO  [main] ? - checking for expected search results
+2017-08-25 14:49:03,077 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:49:23,077 INFO  [main] ? - checking for expected search results
+2017-08-25 14:49:33,556 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:49:53,556 INFO  [main] ? - checking for expected search results
+2017-08-25 14:50:04,133 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:50:24,134 INFO  [main] ? - checking for expected search results
+2017-08-25 14:50:38,528 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:50:58,528 INFO  [main] ? - checking for expected search results
+2017-08-25 14:51:13,990 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:51:33,990 INFO  [main] ? - checking for expected search results
+2017-08-25 14:51:49,609 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:52:09,609 INFO  [main] ? - checking for expected search results
+2017-08-25 14:52:25,063 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:52:45,064 INFO  [main] ? - checking for expected search results
+2017-08-25 14:53:00,535 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:53:20,536 INFO  [main] ? - checking for expected search results
+2017-08-25 14:53:36,031 WARN  [main] ? - element is not present and displayed
+2017-08-25 14:53:36,031 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:303469seconds
+2017-08-25 14:53:36,068 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 14:53:36,068 INFO  [main] ? - Request tab clicked
+2017-08-25 14:53:37,459 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 15:37:36,276 INFO  [main] ? - User info initialized from suite file
+2017-08-25 15:37:57,614 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 15:37:57,615 INFO  [main] ? - Start Log in to application
+2017-08-25 15:37:58,058 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 15:37:58,467 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 15:37:58,489 INFO  [main] ? - Clicking on:Login button
+2017-08-25 15:38:49,026 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 15:38:49,026 INFO  [main] ? - Login as a Responder
+2017-08-25 15:38:49,083 INFO  [main] ? - Opening App Launcher
+2017-08-25 15:38:50,892 INFO  [main] ? - FormList list is clicked
+2017-08-25 15:38:56,677 WARN  [main] ? - There is exception: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 11 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir4720_27087}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ae98a08b05acf60d189d2ab0868600b7
+*** Element info: {Using=tag name, value=iframe}
+2017-08-25 15:38:56,719 WARN  [main] ? - There is an exception: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir4720_27087}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ae98a08b05acf60d189d2ab0868600b7
+2017-08-25 15:39:17,502 INFO  [main] ? - User info initialized from suite file
+2017-08-25 15:39:40,049 INFO  [main] ? - The testcase name is :VerifySendReqAtRespSide
+2017-08-25 15:39:40,050 INFO  [main] ? - Start Log in to application
+2017-08-25 15:39:40,535 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 15:39:40,936 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 15:39:40,956 INFO  [main] ? - Clicking on:Login button
+2017-08-25 15:40:11,342 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 15:40:11,342 INFO  [main] ? - Login sucessfully
+2017-08-25 15:40:18,034 INFO  [main] ? - Logging out the user
+2017-08-25 15:40:30,882 INFO  [main] ? - Start Log in to application
+2017-08-25 15:40:31,444 INFO  [main] ? - Set Text value: feature05@icix.com into By.id: username
+2017-08-25 15:40:31,847 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 15:40:31,867 INFO  [main] ? - Clicking on:Login button
+2017-08-25 15:41:12,145 INFO  [main] ? - Responder logged in successfully.
+2017-08-25 15:41:12,145 INFO  [main] ? - Login  As a Responder
+2017-08-25 15:41:18,375 INFO  [main] ? - Global search text box clicked.
+2017-08-25 15:41:19,148 INFO  [main] ? - Keyword Automation form Fri Aug 25 15:41:12 IST 2017 entered for searching.
+2017-08-25 15:41:19,899 INFO  [main] ? - Clicked on Automation form Fri Aug 25 15:41:12 IST 2017 in salesforec.
+2017-08-25 15:41:20,222 INFO  [main] ? - Clicked on show more link.
+2017-08-25 15:45:04,693 INFO  [main] ? - User info initialized from suite file
+2017-08-25 15:45:26,846 INFO  [main] ? - The testcase name is :VerifySendReqAtRespSide
+2017-08-25 15:45:26,846 INFO  [main] ? - Start Log in to application
+2017-08-25 15:45:27,290 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 15:45:27,690 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 15:45:27,710 INFO  [main] ? - Clicking on:Login button
+2017-08-25 15:46:21,316 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 15:46:21,316 INFO  [main] ? - Login sucessfully
+2017-08-25 15:46:21,372 INFO  [main] ? - Opening App Launcher
+2017-08-25 15:46:28,870 INFO  [main] ? - FormList list is clicked
+2017-08-25 15:46:59,434 INFO  [main] ? - Switching to frame: 3
+2017-08-25 15:47:30,491 INFO  [main] ? - New form button is clicked.
+2017-08-25 15:47:31,508 INFO  [main] ? - Set Text value: [Ljava.lang.String;@e6516e into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 15:47:31,508 INFO  [main] ? - Form name [Ljava.lang.String;@e6516e added.
+2017-08-25 15:47:38,171 INFO  [main] ? - Container added successfully
+2017-08-25 15:47:41,849 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 15:46:28 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 15:47:42,269 INFO  [main] ? - Layout added successfully.
+2017-08-25 15:47:50,557 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 15:47:55,554 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 15:48:04,477 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 15:48:07,151 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 15:48:09,806 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 15:46:28 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 15:48:10,681 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 15:46:28 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 15:48:10,877 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 15:48:35,093 INFO  [main] ? - Opening App Launcher
+2017-08-25 15:48:47,646 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 15:48:35 IST 2017
+2017-08-25 15:48:58,185 INFO  [main] ? - Switching to frame: 4
+2017-08-25 15:49:00,870 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 15:48:35 IST 2017 into By.id: txtGroupName
+2017-08-25 15:49:06,124 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 15:48:35 IST 2017
+2017-08-25 15:49:06,961 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 15:48:35 IST 2017
+2017-08-25 15:49:32,559 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 15:48:35 IST 2017 element is not present and displayed
+2017-08-25 15:49:32,559 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 15:48:35 IST 2017 is clicked.
+2017-08-25 15:49:32,559 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 15:48:35 IST 2017
+2017-08-25 15:49:33,011 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 15:48:35 IST 2017
+2017-08-25 15:49:33,437 INFO  [main] ? - Trading partner Group Cretaed sucessfully
+2017-08-25 15:49:49,611 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 15:49:59,645 INFO  [main] ? - Switching to frame: 4
+2017-08-25 15:50:01,864 INFO  [main] ? - Selecting the Request type
+2017-08-25 15:50:04,656 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@e6516e
+2017-08-25 15:50:07,202 INFO  [main] ? - Clicking on date
+2017-08-25 15:50:07,904 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 15:50:13,375 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 15:50:13,939 INFO  [main] ? - Clicking on send button.
+2017-08-25 15:50:24,447 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 15:50:27,452 INFO  [main] ? - Requiremnt send Sucessfully
+2017-08-25 15:50:34,662 INFO  [main] ? - Logging out the user
+2017-08-25 15:50:45,607 INFO  [main] ? - Start Log in to application
+2017-08-25 15:50:46,026 INFO  [main] ? - Set Text value: feature05@icix.com into By.id: username
+2017-08-25 15:50:46,410 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 15:50:46,431 INFO  [main] ? - Clicking on:Login button
+2017-08-25 15:51:28,781 INFO  [main] ? - Responder logged in successfully.
+2017-08-25 15:51:28,782 INFO  [main] ? - Login  As a Responder
+2017-08-25 15:51:34,971 INFO  [main] ? - Global search text box clicked.
+2017-08-25 15:51:35,742 INFO  [main] ? - Keyword Automation form Fri Aug 25 15:46:21 IST 2017 entered for searching.
+2017-08-25 15:51:36,480 INFO  [main] ? - Clicked on Automation form Fri Aug 25 15:46:21 IST 2017 in salesforec.
+2017-08-25 15:51:36,795 INFO  [main] ? - Clicked on show more link.
+2017-08-25 15:53:37,284 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //div[@data-aura-class='forceSearchScopesList']/ul/li/a[contains(text(),'Requests')] element is not present and displayed
+2017-08-25 15:53:42,414 WARN  [main] ? - element is not present and displayed
+2017-08-25 15:53:47,534 WARN  [main] ? - element is not present and displayed
+2017-08-25 15:53:47,558 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 15:53:47,558 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 15:53:47,569 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 15:53:47,570 INFO  [main] ? - Request tab clicked
+2017-08-25 15:53:48,071 INFO  [main] ? - Request send Sucessfully
+2017-08-25 15:58:40,507 INFO  [main] ? - User info initialized from suite file
+2017-08-25 15:58:57,936 INFO  [main] ? - The testcase name is :VerifySendReqAtRespSide
+2017-08-25 15:58:57,936 INFO  [main] ? - Start Log in to application
+2017-08-25 15:58:58,396 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 15:58:58,794 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 15:58:58,814 INFO  [main] ? - Clicking on:Login button
+2017-08-25 15:59:56,034 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 15:59:56,035 INFO  [main] ? - Login sucessfully
+2017-08-25 15:59:56,085 INFO  [main] ? - Opening App Launcher
+2017-08-25 15:59:58,487 INFO  [main] ? - FormList list is clicked
+2017-08-25 16:00:30,927 INFO  [main] ? - Switching to frame: 3
+2017-08-25 16:00:58,067 INFO  [main] ? - New form button is clicked.
+2017-08-25 16:00:58,986 INFO  [main] ? - Set Text value: [Ljava.lang.String;@efcf8a into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 16:00:58,986 INFO  [main] ? - Form name [Ljava.lang.String;@efcf8a added.
+2017-08-25 16:01:04,531 INFO  [main] ? - Container added successfully
+2017-08-25 16:01:07,782 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 15:59:58 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 16:01:08,319 INFO  [main] ? - Layout added successfully.
+2017-08-25 16:01:17,577 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 16:01:20,136 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 16:01:25,878 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 16:01:28,299 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 16:01:33,687 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 15:59:58 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 16:01:34,757 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 15:59:58 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 16:01:34,972 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 16:01:59,179 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:02:02,545 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3021;a">...</span> is not clickable at point (760, 577). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2887;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 120 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir6112_31840}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 225c9cd6e7ec6b1ed96246c63323028e
+2017-08-25 16:02:14,864 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 16:01:59 IST 2017
+2017-08-25 16:02:25,002 INFO  [main] ? - Switching to frame: 4
+2017-08-25 16:02:28,031 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 16:01:59 IST 2017 into By.id: txtGroupName
+2017-08-25 16:02:28,277 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 16:01:59 IST 2017
+2017-08-25 16:02:29,060 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 16:01:59 IST 2017
+2017-08-25 16:02:38,505 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 16:01:59 IST 2017 element is not present and displayed
+2017-08-25 16:02:38,505 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 16:01:59 IST 2017 is clicked.
+2017-08-25 16:02:38,506 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 16:01:59 IST 2017
+2017-08-25 16:02:54,539 WARN  [main] ? - There is an exception: org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir6112_31840}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 225c9cd6e7ec6b1ed96246c63323028e
+2017-08-25 16:02:58,555 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-25 16:03:02,574 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-25 16:04:12,877 INFO  [main] ? - User info initialized from suite file
+2017-08-25 16:04:30,720 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 16:04:30,721 INFO  [main] ? - Start Log in to application
+2017-08-25 16:04:31,179 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 16:04:31,591 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 16:04:31,612 INFO  [main] ? - Clicking on:Login button
+2017-08-25 16:05:11,046 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 16:05:11,046 INFO  [main] ? - Login as a Responder
+2017-08-25 16:05:11,094 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:05:38,800 INFO  [main] ? - Global search text box clicked.
+2017-08-25 16:05:39,885 INFO  [main] ? - Keyword Automation form Fri Aug 25 11:57:55 IST 2017 entered for searching.
+2017-08-25 16:05:40,679 INFO  [main] ? - Clicked on Automation form Fri Aug 25 11:57:55 IST 2017 in salesforec.
+2017-08-25 16:05:41,990 INFO  [main] ? - Clicked on show more link.
+2017-08-25 16:05:44,040 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 16:05:44,040 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 16:05:44,265 INFO  [main] ? - Request tab clicked
+2017-08-25 16:05:45,092 INFO  [main] ? - The link: Automation form Fri Aug 25 11:57:55 IST 2017is clicked.
+2017-08-25 16:06:01,599 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 16:06:33,133 INFO  [main] ? - User info initialized from suite file
+2017-08-25 16:06:50,186 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 16:06:50,187 INFO  [main] ? - Start Log in to application
+2017-08-25 16:06:50,648 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 16:06:51,078 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 16:06:51,099 INFO  [main] ? - Clicking on:Login button
+2017-08-25 16:07:40,052 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 16:07:40,052 INFO  [main] ? - Login as a Responder
+2017-08-25 16:07:40,103 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:07:48,768 INFO  [main] ? - Global search text box clicked.
+2017-08-25 16:07:49,820 INFO  [main] ? - Keyword Automation form Fri Aug 25 11:57:55 IST 2017 entered for searching.
+2017-08-25 16:07:50,653 INFO  [main] ? - Clicked on Automation form Fri Aug 25 11:57:55 IST 2017 in salesforec.
+2017-08-25 16:07:51,090 INFO  [main] ? - Clicked on show more link.
+2017-08-25 16:08:12,953 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 16:08:12,953 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 16:08:12,976 INFO  [main] ? - Request tab clicked
+2017-08-25 16:08:13,793 INFO  [main] ? - The link: Automation form Fri Aug 25 11:57:55 IST 2017is clicked.
+2017-08-25 16:08:19,793 INFO  [main] ? - Automatic Request created sucessfully
+2017-08-25 16:13:49,039 INFO  [main] ? - User info initialized from suite file
+2017-08-25 16:14:05,777 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 16:14:05,778 INFO  [main] ? - Start Log in to application
+2017-08-25 16:14:06,217 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 16:14:06,634 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 16:14:06,654 INFO  [main] ? - Clicking on:Login button
+2017-08-25 16:14:58,120 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 16:14:58,120 INFO  [main] ? - Login as a Responder
+2017-08-25 16:14:58,179 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:15:01,250 INFO  [main] ? - FormList list is clicked
+2017-08-25 16:15:28,467 INFO  [main] ? - Switching to frame: 3
+2017-08-25 16:15:52,108 INFO  [main] ? - New form button is clicked.
+2017-08-25 16:15:53,958 INFO  [main] ? - Set Text value: [Ljava.lang.String;@9e6faf into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 16:15:53,958 INFO  [main] ? - Form name [Ljava.lang.String;@9e6faf added.
+2017-08-25 16:16:01,523 INFO  [main] ? - Container added successfully
+2017-08-25 16:16:08,601 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 16:15:01 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 16:16:10,509 INFO  [main] ? - Layout added successfully.
+2017-08-25 16:16:18,129 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 16:16:20,721 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 16:16:28,414 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 16:16:35,313 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 16:16:40,692 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 16:15:01 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 16:16:41,984 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 16:15:01 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 16:16:42,197 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 16:17:06,512 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:17:09,533 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3005;a">...</span> is not clickable at point (760, 578). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2871;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 104 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5716_27836}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: af865154e2c70ceac6ef1651042e3d47
+2017-08-25 16:17:22,020 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 16:17:06 IST 2017
+2017-08-25 16:17:32,504 INFO  [main] ? - Switching to frame: 4
+2017-08-25 16:17:35,246 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 16:17:06 IST 2017 into By.id: txtGroupName
+2017-08-25 16:17:35,256 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 16:17:06 IST 2017
+2017-08-25 16:17:35,865 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 16:17:06 IST 2017
+2017-08-25 16:18:01,702 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 16:17:06 IST 2017 element is not present and displayed
+2017-08-25 16:18:01,702 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 16:17:06 IST 2017 is clicked.
+2017-08-25 16:18:01,702 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 16:17:06 IST 2017
+2017-08-25 16:18:02,016 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 16:17:06 IST 2017
+2017-08-25 16:18:02,016 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 16:18:17,046 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 16:18:27,535 INFO  [main] ? - Switching to frame: 4
+2017-08-25 16:18:29,694 INFO  [main] ? - Selecting the Request type
+2017-08-25 16:18:32,261 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@9e6faf
+2017-08-25 16:18:35,197 INFO  [main] ? - Clicking on date
+2017-08-25 16:18:35,792 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 16:18:41,245 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 16:18:41,765 INFO  [main] ? - Clicking on send button.
+2017-08-25 16:18:52,662 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 16:18:55,666 INFO  [main] ? - Requirement saved
+2017-08-25 16:18:55,666 INFO  [main] ? - Edit tpg to add members
+2017-08-25 16:19:19,527 INFO  [main] ? - Switching to frame: 3
+2017-08-25 16:19:28,036 INFO  [main] ? - TP Group Edited
+2017-08-25 16:19:28,036 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 16:19:34,236 INFO  [main] ? - Global search text box clicked.
+2017-08-25 16:19:35,224 INFO  [main] ? - Keyword Automation form Fri Aug 25 16:14:58 IST 2017 entered for searching.
+2017-08-25 16:19:36,033 INFO  [main] ? - Clicked on Automation form Fri Aug 25 16:14:58 IST 2017 in salesforec.
+2017-08-25 16:19:36,371 INFO  [main] ? - Clicked on show more link.
+2017-08-25 16:19:42,874 WARN  [main] ? - element is not present and displayed
+2017-08-25 16:19:47,992 WARN  [main] ? - element is not present and displayed
+2017-08-25 16:19:48,016 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 16:19:48,016 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 16:19:48,027 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 16:19:48,028 INFO  [main] ? - Request tab clicked
+2017-08-25 16:19:48,529 INFO  [main] ? - Automatic Request created sucessfully
+2017-08-25 16:24:24,177 INFO  [main] ? - User info initialized from suite file
+2017-08-25 16:24:40,431 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 16:24:40,431 INFO  [main] ? - Start Log in to application
+2017-08-25 16:24:40,881 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 16:24:41,288 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 16:24:41,308 INFO  [main] ? - Clicking on:Login button
+2017-08-25 16:25:20,959 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 16:25:20,959 INFO  [main] ? - Login as a Responder
+2017-08-25 16:25:21,008 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:25:25,459 INFO  [main] ? - FormList list is clicked
+2017-08-25 16:25:51,854 INFO  [main] ? - Switching to frame: 3
+2017-08-25 16:26:13,718 INFO  [main] ? - New form button is clicked.
+2017-08-25 16:26:14,536 INFO  [main] ? - Set Text value: [Ljava.lang.String;@56812e into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 16:26:14,537 INFO  [main] ? - Form name [Ljava.lang.String;@56812e added.
+2017-08-25 16:26:19,963 INFO  [main] ? - Container added successfully
+2017-08-25 16:26:23,214 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 16:25:25 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 16:26:23,584 INFO  [main] ? - Layout added successfully.
+2017-08-25 16:26:29,729 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 16:26:31,787 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 16:26:37,513 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 16:26:39,983 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 16:26:42,612 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 16:25:25 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 16:26:43,481 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 16:25:25 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 16:26:43,686 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 16:27:07,961 INFO  [main] ? - Opening App Launcher
+2017-08-25 16:27:11,319 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:2998;a">...</span> is not clickable at point (760, 579). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2864;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 100 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir1540_8256}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: eb3a1a91ff3c3b591eb248d126df2155
+2017-08-25 16:27:23,373 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 16:27:07 IST 2017
+2017-08-25 16:27:33,568 INFO  [main] ? - Switching to frame: 4
+2017-08-25 16:27:36,319 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 16:27:07 IST 2017 into By.id: txtGroupName
+2017-08-25 16:27:36,329 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 16:27:07 IST 2017
+2017-08-25 16:27:36,973 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 16:27:07 IST 2017
+2017-08-25 16:28:02,372 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 16:27:07 IST 2017 element is not present and displayed
+2017-08-25 16:28:02,372 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 16:27:07 IST 2017 is clicked.
+2017-08-25 16:28:02,372 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 16:27:07 IST 2017
+2017-08-25 16:28:02,706 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 16:27:07 IST 2017
+2017-08-25 16:28:02,706 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 16:28:22,223 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 16:28:32,662 INFO  [main] ? - Switching to frame: 4
+2017-08-25 16:28:34,821 INFO  [main] ? - Selecting the Request type
+2017-08-25 16:28:37,590 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@56812e
+2017-08-25 16:28:40,389 INFO  [main] ? - Clicking on date
+2017-08-25 16:28:40,897 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 16:28:46,331 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 16:28:46,861 INFO  [main] ? - Clicking on send button.
+2017-08-25 16:28:57,684 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 16:29:00,686 INFO  [main] ? - Requirement saved
+2017-08-25 16:29:00,686 INFO  [main] ? - Edit tpg to add members
+2017-08-25 16:29:24,481 INFO  [main] ? - Switching to frame: 3
+2017-08-25 16:29:33,990 INFO  [main] ? - TP Group Edited
+2017-08-25 16:29:33,990 INFO  [main] ? - Search for TP Compliance Request
+2017-08-25 16:29:40,195 INFO  [main] ? - Global search text box clicked.
+2017-08-25 16:29:41,066 INFO  [main] ? - Keyword Automation form Fri Aug 25 16:25:20 IST 2017 entered for searching.
+2017-08-25 16:29:41,856 INFO  [main] ? - Clicked on Automation form Fri Aug 25 16:25:20 IST 2017 in salesforec.
+2017-08-25 16:29:42,160 INFO  [main] ? - Clicked on show more link.
+2017-08-25 16:29:48,438 WARN  [main] ? - element is not present and displayed
+2017-08-25 16:29:53,565 WARN  [main] ? - element is not present and displayed
+2017-08-25 16:29:53,590 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 16:29:53,591 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 16:29:53,600 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 16:29:53,929 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 17:11:01,498 INFO  [main] ? - User info initialized from suite file
+2017-08-25 17:11:27,388 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 17:11:27,388 INFO  [main] ? - Start Log in to application
+2017-08-25 17:11:27,873 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 17:11:28,294 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 17:11:28,315 INFO  [main] ? - Clicking on:Login button
+2017-08-25 17:12:21,159 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 17:12:21,159 INFO  [main] ? - Login as a Responder
+2017-08-25 17:12:21,208 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:12:25,306 INFO  [main] ? - FormList list is clicked
+2017-08-25 17:12:57,158 INFO  [main] ? - Switching to frame: 3
+2017-08-25 17:13:26,317 INFO  [main] ? - New form button is clicked.
+2017-08-25 17:13:27,308 INFO  [main] ? - Set Text value: [Ljava.lang.String;@a2b17b into By.id: j_id0:form:containerBlock:containerNew:inputContainerName
+2017-08-25 17:13:27,309 INFO  [main] ? - Form name [Ljava.lang.String;@a2b17b added.
+2017-08-25 17:13:36,137 INFO  [main] ? - Container added successfully
+2017-08-25 17:13:40,409 INFO  [main] ? - Set Text value: QA_TestlayoutFri Aug 25 17:12:25 IST 2017 into By.id: j_id0:form:layoutBlock:layoutNew:inputLayoutName
+2017-08-25 17:13:40,870 INFO  [main] ? - Layout added successfully.
+2017-08-25 17:13:55,980 INFO  [main] ? - Set Text value: QA Test Tab1 into By.id: j_id0:form:tabBlock:tabSection:tabTable:0:j_id47
+2017-08-25 17:14:01,700 INFO  [main] ? - Tab 1 added successfully.
+2017-08-25 17:14:12,650 INFO  [main] ? - Set Text value: QA Test Section1 into By.id: j_id0:form:sectionBlock:sectionSection:sectionTable:0:j_id74
+2017-08-25 17:14:16,200 INFO  [main] ? - Section 1 added successfully.
+2017-08-25 17:14:21,012 INFO  [main] ? - Set Text value: QA 1Fri Aug 25 17:12:25 IST 2017 into By.id: j_id0:form:newElementWithQuestion:newQuestionBlock:inputQuestionName
+2017-08-25 17:14:21,921 INFO  [main] ? - Set Text value: QA Test Question 1Fri Aug 25 17:12:25 IST 2017 into By.xpath: //textarea[contains(@id,'inputQuestionQuestionText')]
+2017-08-25 17:14:22,139 INFO  [main] ? - Quesion 1 added successfully.
+2017-08-25 17:14:46,401 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:14:49,753 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:2995;a">...</span> is not clickable at point (760, 578). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2861;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 88 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir528_726}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d66cbfa45da8ba4b86a5f15603f381aa
+2017-08-25 17:15:08,887 INFO  [main] ? - Adding new TP Group: VerifySendRequirement Fri Aug 25 17:14:46 IST 2017
+2017-08-25 17:15:18,959 INFO  [main] ? - Switching to frame: 4
+2017-08-25 17:15:21,712 INFO  [main] ? - Set Text value: VerifySendRequirement Fri Aug 25 17:14:46 IST 2017 into By.id: txtGroupName
+2017-08-25 17:15:21,722 INFO  [main] ? - Tag added successfully in VerifySendRequirement Fri Aug 25 17:14:46 IST 2017
+2017-08-25 17:15:22,287 INFO  [main] ? - Saving VerifySendRequirement Fri Aug 25 17:14:46 IST 2017
+2017-08-25 17:15:47,790 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 17:14:46 IST 2017 element is not present and displayed
+2017-08-25 17:15:47,790 INFO  [main] ? - The link VerifySendRequirement Fri Aug 25 17:14:46 IST 2017 is clicked.
+2017-08-25 17:15:47,790 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 17:14:46 IST 2017
+2017-08-25 17:15:48,090 INFO  [main] ? - Opening TP Group VerifySendRequirement Fri Aug 25 17:14:46 IST 2017
+2017-08-25 17:15:48,090 INFO  [main] ? - Trading Partner Created sucessfully
+2017-08-25 17:16:04,809 INFO  [main] ? - Clicking on the down arrow to click set requirement.
+2017-08-25 17:16:15,252 INFO  [main] ? - Switching to frame: 4
+2017-08-25 17:16:17,408 INFO  [main] ? - Selecting the Request type
+2017-08-25 17:16:20,444 INFO  [main] ? - Selecting the form: [Ljava.lang.String;@a2b17b
+2017-08-25 17:16:32,277 INFO  [main] ? - Clicking on date
+2017-08-25 17:16:42,471 WARN  [main] ? - [[ChromeDriver: chrome on WIN8 (d66cbfa45da8ba4b86a5f15603f381aa)] -> tag name: td]element is not present and displayed
+2017-08-25 17:16:53,042 INFO  [main] ? - Selecting the due date for full filling the requirement.
+2017-08-25 17:16:58,500 INFO  [main] ? - Selecting the Requirment as approval
+2017-08-25 17:16:59,054 INFO  [main] ? - Clicking on send button.
+2017-08-25 17:17:09,719 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 17:17:12,723 INFO  [main] ? - Requirement saved
+2017-08-25 17:17:12,723 INFO  [main] ? - Edit tpg to add members
+2017-08-25 17:18:16,630 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //a[@title='Edit'] element is not present and displayed
+2017-08-25 17:18:27,061 INFO  [main] ? - Switching to frame: 3
+2017-08-25 17:18:39,280 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[contains(.,'Tag13June')] element is not present and displayed
+2017-08-25 17:19:30,433 INFO  [main] ? - User info initialized from suite file
+2017-08-25 17:19:48,381 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 17:19:48,382 INFO  [main] ? - Start Log in to application
+2017-08-25 17:19:48,983 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 17:19:49,380 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 17:19:49,401 INFO  [main] ? - Clicking on:Login button
+2017-08-25 17:20:52,264 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 17:20:52,264 INFO  [main] ? - Login as a Responder
+2017-08-25 17:20:52,342 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:21:23,667 INFO  [main] ? - Global search text box clicked.
+2017-08-25 17:21:24,815 INFO  [main] ? - Keyword Automation form Fri Aug 25 11:57:55 IST 2017 entered for searching.
+2017-08-25 17:21:25,649 INFO  [main] ? - Clicked on Automation form Fri Aug 25 11:57:55 IST 2017 in salesforec.
+2017-08-25 17:21:26,972 INFO  [main] ? - Clicked on show more link.
+2017-08-25 17:21:29,701 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 17:21:29,701 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 17:21:29,734 INFO  [main] ? - Request tab clicked
+2017-08-25 17:21:30,505 INFO  [main] ? - The link: Automation form Fri Aug 25 11:57:55 IST 2017is clicked.
+2017-08-25 17:21:47,001 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 17:23:10,345 INFO  [main] ? - User info initialized from suite file
+2017-08-25 17:23:26,435 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 17:23:26,435 INFO  [main] ? - Start Log in to application
+2017-08-25 17:23:26,895 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 17:23:27,312 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 17:23:27,332 INFO  [main] ? - Clicking on:Login button
+2017-08-25 17:24:09,158 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 17:24:09,158 INFO  [main] ? - Login as a Responder
+2017-08-25 17:24:09,211 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:24:19,041 INFO  [main] ? - Global search text box clicked.
+2017-08-25 17:24:36,851 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 17:24:37,167 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 17:24:38,511 INFO  [main] ? - Clicked on show more link.
+2017-08-25 17:24:45,802 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:24:51,026 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:24:56,301 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:25:01,533 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:25:01,562 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 17:25:01,563 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 17:25:01,580 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 17:25:01,921 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 17:25:55,789 INFO  [main] ? - User info initialized from suite file
+2017-08-25 17:26:15,049 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 17:26:15,049 INFO  [main] ? - Start Log in to application
+2017-08-25 17:26:15,499 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 17:26:15,897 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 17:26:15,917 INFO  [main] ? - Clicking on:Login button
+2017-08-25 17:26:57,545 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 17:26:57,545 INFO  [main] ? - Login as a Responder
+2017-08-25 17:26:57,595 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:27:21,026 INFO  [main] ? - Global search text box clicked.
+2017-08-25 17:27:21,493 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 17:27:22,279 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 17:27:23,468 INFO  [main] ? - Clicked on show more link.
+2017-08-25 17:27:30,322 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:27:35,553 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:27:40,846 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:27:46,059 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:27:46,088 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 17:27:46,088 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 17:27:46,106 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 17:27:46,466 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 17:31:07,764 INFO  [main] ? - User info initialized from suite file
+2017-08-25 17:31:26,974 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 17:31:26,975 INFO  [main] ? - Start Log in to application
+2017-08-25 17:31:27,455 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 17:31:27,884 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 17:31:27,904 INFO  [main] ? - Clicking on:Login button
+2017-08-25 17:32:37,049 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 17:32:37,049 INFO  [main] ? - Login as a Responder
+2017-08-25 17:32:37,096 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:33:16,856 INFO  [main] ? - Global search text box clicked.
+2017-08-25 17:33:17,337 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 17:33:18,124 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 17:33:19,441 INFO  [main] ? - Clicked on show more link.
+2017-08-25 17:33:26,671 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:33:31,879 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:33:37,163 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:33:42,395 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:33:42,455 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 17:33:42,455 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 17:33:42,473 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 17:33:42,801 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 17:47:20,735 INFO  [main] ? - User info initialized from suite file
+2017-08-25 17:47:42,841 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 17:47:42,841 INFO  [main] ? - Start Log in to application
+2017-08-25 17:47:43,277 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 17:47:43,683 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 17:47:43,703 INFO  [main] ? - Clicking on:Login button
+2017-08-25 17:48:38,646 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 17:48:38,646 INFO  [main] ? - Login as a Responder
+2017-08-25 17:48:38,692 INFO  [main] ? - Opening App Launcher
+2017-08-25 17:49:23,754 INFO  [main] ? - Global search text box clicked.
+2017-08-25 17:49:24,116 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 17:49:24,871 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 17:49:25,985 INFO  [main] ? - Clicked on show more link.
+2017-08-25 17:49:32,829 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:49:38,008 WARN  [main] ? - element is not present and displayed
+2017-08-25 17:49:38,035 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 17:49:38,035 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 17:49:38,045 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 17:49:38,394 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 18:00:37,841 INFO  [main] ? - User info initialized from suite file
+2017-08-25 18:01:00,261 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 18:01:00,261 INFO  [main] ? - Start Log in to application
+2017-08-25 18:01:00,703 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 18:01:01,117 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 18:01:01,137 INFO  [main] ? - Clicking on:Login button
+2017-08-25 18:01:45,422 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 18:01:45,422 INFO  [main] ? - Login as a Responder
+2017-08-25 18:01:45,472 INFO  [main] ? - Opening App Launcher
+2017-08-25 18:02:15,704 INFO  [main] ? - Global search text box clicked.
+2017-08-25 18:02:16,080 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 18:02:16,815 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 18:02:17,946 INFO  [main] ? - Clicked on show more link.
+2017-08-25 18:02:24,611 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:02:29,792 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:02:29,829 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 18:02:29,829 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 18:02:29,840 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 18:02:29,840 INFO  [main] ? - Request tab clicked
+2017-08-25 18:02:30,803 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 18:03:47,386 INFO  [main] ? - User info initialized from suite file
+2017-08-25 18:04:05,511 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 18:04:05,511 INFO  [main] ? - Start Log in to application
+2017-08-25 18:04:05,986 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 18:04:06,402 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 18:04:06,422 INFO  [main] ? - Clicking on:Login button
+2017-08-25 18:04:47,338 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 18:04:47,338 INFO  [main] ? - Login as a Responder
+2017-08-25 18:04:47,387 INFO  [main] ? - Opening App Launcher
+2017-08-25 18:05:14,175 INFO  [main] ? - Global search text box clicked.
+2017-08-25 18:05:14,552 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 18:05:15,308 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 18:05:16,440 INFO  [main] ? - Clicked on show more link.
+2017-08-25 18:05:23,118 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:05:28,295 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:05:28,332 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 18:05:28,333 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 18:05:28,343 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 18:05:28,344 INFO  [main] ? - Request tab clicked
+2017-08-25 18:05:29,303 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 18:12:13,552 INFO  [main] ? - User info initialized from suite file
+2017-08-25 18:12:30,193 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 18:12:30,194 INFO  [main] ? - Start Log in to application
+2017-08-25 18:12:30,667 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 18:12:31,086 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 18:12:31,106 INFO  [main] ? - Clicking on:Login button
+2017-08-25 18:13:14,902 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 18:13:14,902 INFO  [main] ? - Login as a Responder
+2017-08-25 18:13:14,957 INFO  [main] ? - Opening App Launcher
+2017-08-25 18:13:29,215 INFO  [main] ? - Global search text box clicked.
+2017-08-25 18:13:29,958 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 18:13:31,329 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 18:14:09,377 INFO  [main] ? - Clicked on show more link.
+2017-08-25 18:14:15,064 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:14:20,281 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:14:20,347 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 18:14:20,347 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 18:14:20,366 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 18:14:20,366 INFO  [main] ? - Request tab clicked
+2017-08-25 18:14:21,335 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 18:16:54,446 INFO  [main] ? - User info initialized from suite file
+2017-08-25 18:17:15,981 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 18:17:15,982 INFO  [main] ? - Start Log in to application
+2017-08-25 18:17:16,431 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 18:17:16,833 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 18:17:16,853 INFO  [main] ? - Clicking on:Login button
+2017-08-25 18:18:13,333 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 18:18:13,333 INFO  [main] ? - Login as a Responder
+2017-08-25 18:18:13,381 INFO  [main] ? - Opening App Launcher
+2017-08-25 18:18:41,862 INFO  [main] ? - Global search text box clicked.
+2017-08-25 18:18:42,434 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 18:18:43,233 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 18:18:44,505 INFO  [main] ? - Clicked on show more link.
+2017-08-25 18:18:50,966 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:18:56,192 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:18:56,256 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 18:18:56,257 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 18:18:56,275 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 18:18:56,275 INFO  [main] ? - Request tab clicked
+2017-08-25 18:18:57,221 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP
+2017-08-25 18:39:19,085 INFO  [main] ? - User info initialized from suite file
+2017-08-25 18:39:34,108 INFO  [main] ? - The Testcase name is :AutoReqCreationAddTP
+2017-08-25 18:39:34,108 INFO  [main] ? - Start Log in to application
+2017-08-25 18:39:34,610 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-25 18:39:35,010 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-25 18:39:35,030 INFO  [main] ? - Clicking on:Login button
+2017-08-25 18:40:16,833 INFO  [main] ? - Requestor logged in successfully.
+2017-08-25 18:40:16,833 INFO  [main] ? - Login as a Responder
+2017-08-25 18:40:16,882 INFO  [main] ? - Opening App Launcher
+2017-08-25 18:40:48,185 INFO  [main] ? - Global search text box clicked.
+2017-08-25 18:40:48,697 INFO  [main] ? - Keyword 5847852222 entered for searching.
+2017-08-25 18:40:49,461 INFO  [main] ? - Clicked on 5847852222 in salesforec.
+2017-08-25 18:40:50,619 INFO  [main] ? - Clicked on show more link.
+2017-08-25 18:40:56,603 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:41:01,909 WARN  [main] ? - element is not present and displayed
+2017-08-25 18:41:01,976 INFO  [main] ? - Request has reflected on responder side
+2017-08-25 18:41:01,976 INFO  [main] ? - Total Time taken while looking for request in Request Search Results:0seconds
+2017-08-25 18:41:01,997 WARN  [main] ? - Request has not been reflected on reponder side within 5 minutes
+2017-08-25 18:41:01,997 INFO  [main] ? - Request tab clicked
+2017-08-25 18:41:02,973 WARN  [main] ? - TEST FAILED - AutoReqCreationAddTP

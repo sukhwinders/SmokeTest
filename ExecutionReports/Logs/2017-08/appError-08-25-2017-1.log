@@ -1,0 +1,131 @@
+2017-08-25 09:48:44,600 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3000;a">...</span> is not clickable at point (760, 583). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2866;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 71 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5164_25256}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6e804cb11419d78108c536b751051101
+2017-08-25 09:49:33,238 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 09:48:43 IST 2017 element is not present and displayed
+2017-08-25 09:50:22,109 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 11:15:53,449 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //div[@data-aura-class='forceSearchScopesList']/ul/li/a[contains(text(),'Requests')] element is not present and displayed
+2017-08-25 11:23:19,446 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 11:22:23 IST 2017 element is not present and displayed
+2017-08-25 11:24:09,663 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 11:59:47,061 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3006;a">...</span> is not clickable at point (760, 582). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2872;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 76 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5412_7617}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2f928ca556ef0553248a578fc559102d
+2017-08-25 12:00:35,868 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 11:59:43 IST 2017 element is not present and displayed
+2017-08-25 12:01:25,653 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 12:05:57,837 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2500;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2500;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 62 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir4748_29374}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ff68117f30b52be9d526c0dd6691ecae
+2017-08-25 12:06:08,558 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-25 12:14:12,806 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3015;a">...</span> is not clickable at point (760, 583). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2877;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 82 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5296_27449}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 9b4498235443106068b95df97e8bda3c
+2017-08-25 12:15:12,370 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 12:14:08 IST 2017 element is not present and displayed
+2017-08-25 12:16:05,695 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 12:24:01,553 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3007;a">...</span> is not clickable at point (759, 584). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2873;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 66 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir3220_3098}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 4ce7dc595f9cf9d6fedb5b5681e8d870
+2017-08-25 12:24:56,774 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 12:23:58 IST 2017 element is not present and displayed
+2017-08-25 12:25:48,454 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 13:03:48,740 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 13:02:47 IST 2017 element is not present and displayed
+2017-08-25 13:04:39,226 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 14:00:51,842 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3003;a">...</span> is not clickable at point (759, 585). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2869;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 67 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir3280_9493}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ae6ef257552c92d50cbd22d9a10ac0ea
+2017-08-25 14:01:42,739 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 14:00:50 IST 2017 element is not present and displayed
+2017-08-25 14:02:29,334 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 14:45:58,029 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3018;a">...</span> is not clickable at point (760, 580). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2882;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 85 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir2104_11112}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 51a7c0afbfa11d8a4b0450d37cf49740
+2017-08-25 14:46:50,554 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 14:45:50 IST 2017 element is not present and displayed
+2017-08-25 14:47:43,160 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 15:49:32,559 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 15:48:35 IST 2017 element is not present and displayed
+2017-08-25 15:50:24,447 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 15:53:37,284 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //div[@data-aura-class='forceSearchScopesList']/ul/li/a[contains(text(),'Requests')] element is not present and displayed
+2017-08-25 16:02:02,545 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3021;a">...</span> is not clickable at point (760, 577). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2887;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 120 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir6112_31840}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 225c9cd6e7ec6b1ed96246c63323028e
+2017-08-25 16:02:38,505 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 16:01:59 IST 2017 element is not present and displayed
+2017-08-25 16:02:58,555 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-25 16:03:02,574 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-25 16:17:09,533 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3005;a">...</span> is not clickable at point (760, 578). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2871;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 104 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5716_27836}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: af865154e2c70ceac6ef1651042e3d47
+2017-08-25 16:18:01,702 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 16:17:06 IST 2017 element is not present and displayed
+2017-08-25 16:18:52,662 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 16:27:11,319 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:2998;a">...</span> is not clickable at point (760, 579). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2864;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 100 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir1540_8256}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: eb3a1a91ff3c3b591eb248d126df2155
+2017-08-25 16:28:02,372 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 16:27:07 IST 2017 element is not present and displayed
+2017-08-25 16:28:57,684 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 17:14:49,753 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:2995;a">...</span> is not clickable at point (760, 578). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2861;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 88 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir528_726}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d66cbfa45da8ba4b86a5f15603f381aa
+2017-08-25 17:15:47,790 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Fri Aug 25 17:14:46 IST 2017 element is not present and displayed
+2017-08-25 17:17:09,719 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-25 17:18:16,630 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //a[@title='Edit'] element is not present and displayed
+2017-08-25 17:18:39,280 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[contains(.,'Tag13June')] element is not present and displayed

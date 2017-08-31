@@ -1,0 +1,334 @@
+2017-08-22 12:39:48,497 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Tue Aug 22 12:37:15 IST 2017 element is not present and displayed
+2017-08-22 12:40:46,410 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-22 12:48:34,576 ERROR [main] ? - Error on:Login button
+2017-08-22 12:48:34,580 ERROR [main] ? - There is exception: timeout
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.15 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir2456_30234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: cd62bdce30db8ae70ef567d705a0e432
+2017-08-22 12:48:46,157 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-22 12:48:56,476 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-22 13:01:58,797 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Tue Aug 22 12:59:56 IST 2017 element is not present and displayed
+2017-08-22 13:02:46,284 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-22 13:09:10,805 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[@class='ng-binding'][contains(.,'Active')] element is not present and displayed
+2017-08-22 13:11:08,987 ERROR [main] ? - There is exception: java.lang.Exception: By.id: icnMoveRight element is not present and displayed
+2017-08-22 17:29:12,817 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Tue Aug 22 17:28:05 IST 2017 element is not present and displayed
+2017-08-22 17:29:59,129 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-23 17:54:10,608 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:191;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2372;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2372;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 67 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5960_5089}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 67c096e464c21c90ef5d05bd2d19ccb7
+2017-08-23 17:54:20,978 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 17:57:02,236 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:414;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:414;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 63 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir4932_4480}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6153bd820c61c1eaea6fe813e96c1ec5
+2017-08-23 17:57:12,763 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 18:12:30,529 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[@class='ng-binding'][contains(.,'Active')] element is not present and displayed
+2017-08-23 18:15:06,799 ERROR [main] ? - There is exception: java.lang.Exception: By.id: icnMoveRight element is not present and displayed
+2017-08-23 18:20:18,865 ERROR [main] ? - There is exception: java.lang.Exception: By.id: documentDialogSaveButton element is not present and displayed
+2017-08-23 18:20:50,566 ERROR [main] ? - There is exception: java.lang.Exception: By.id: uploadButton element is not present and displayed
+2017-08-23 18:27:24,817 ERROR [main] ? - There is exception: java.lang.Exception: By.id: documentDialogSaveButton element is not present and displayed
+2017-08-23 18:28:54,251 ERROR [main] ? - There is exception: java.lang.Exception: By.id: uploadButton element is not present and displayed
+2017-08-23 18:28:58,353 ERROR [main] ? - There is exception: java.lang.Exception: By.id: btn_ShowMore1 element is not present and displayed
+2017-08-23 18:29:18,593 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-23 18:29:22,606 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 18:32:46,209 ERROR [main] ? - There is exception: java.lang.Exception: By.id: documentDialogSaveButton element is not present and displayed
+2017-08-23 18:34:46,687 ERROR [main] ? - There is exception: java.lang.Exception: By.id: uploadButton element is not present and displayed
+2017-08-23 18:36:47,051 ERROR [main] ? - There is exception: java.lang.Exception: By.id: btn_ShowMore1 element is not present and displayed
+2017-08-23 18:41:47,381 ERROR [main] ? - There is exception: java.lang.Exception: By.id: documentDialogSaveButton element is not present and displayed
+2017-08-23 18:43:45,245 ERROR [main] ? - There is exception: java.lang.Exception: By.id: btn_ShowMore1 element is not present and displayed
+2017-08-23 18:43:50,206 ERROR [main] ? - There is exception: java.lang.Exception: By.id: uploadButton element is not present and displayed
+2017-08-23 18:43:54,224 ERROR [main] ? - There is exception: java.lang.Exception: By.id: btn_ShowMore1 element is not present and displayed
+2017-08-23 18:44:05,821 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-23 18:44:10,133 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 18:44:15,639 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-23 18:44:19,904 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 18:47:50,560 ERROR [main] ? - There is exception: java.lang.Exception: By.id: btn_ShowMore1 element is not present and displayed
+2017-08-23 18:51:55,635 ERROR [main] ? - There is exception: java.lang.Exception: By.id: documentDialogSaveButton element is not present and displayed
+2017-08-23 18:57:36,047 ERROR [main] ? - There is exception: java.lang.Exception: By.id: btn_ShowMore1 element is not present and displayed
+2017-08-23 18:57:56,658 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 19:09:06,648 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3010;a">...</span> is not clickable at point (760, 582). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2876;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 70 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7556_12640}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d0edf6e8ba41ba36243fbddb06afb45a
+2017-08-23 19:09:16,926 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 19:09:39,641 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7556_12640}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d0edf6e8ba41ba36243fbddb06afb45a
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 19:09:40,931 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2876;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2876;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 62 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7556_12640}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d0edf6e8ba41ba36243fbddb06afb45a
+2017-08-23 19:09:51,372 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 19:14:01,426 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3003;a">...</span> is not clickable at point (759, 583). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2869;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 79 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir6224_14527}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a763418e6649b1c21d595c0f4146516d
+2017-08-23 19:14:11,716 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 19:14:34,436 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 9 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir6224_14527}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a763418e6649b1c21d595c0f4146516d
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 19:14:35,583 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2869;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2869;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 64 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir6224_14527}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a763418e6649b1c21d595c0f4146516d
+2017-08-23 19:14:45,831 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 19:51:15,438 ERROR [main] ? - There is exception: java.lang.Exception: By.id: j_id0:form:createTab element is not present and displayed
+2017-08-23 19:54:34,061 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3001;a">...</span> is not clickable at point (759, 584). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2867;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 73 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7424_10258}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 0ef2ddf1994a887e9a4b306c39c80e5a
+2017-08-23 19:54:44,331 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 19:55:07,102 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7424_10258}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 0ef2ddf1994a887e9a4b306c39c80e5a
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 19:55:08,470 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2867;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2867;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7424_10258}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 0ef2ddf1994a887e9a4b306c39c80e5a
+2017-08-23 19:55:18,702 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 20:02:09,106 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3000;a">...</span> is not clickable at point (760, 583). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2866;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 69 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5476_12612}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 9a3916a62406a156731eadf3df651ea3
+2017-08-23 20:02:19,366 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 20:05:49,371 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:574;a">...</span> is not clickable at point (759, 584). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:440;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 72 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7600_19949}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: df01c08cece0c4fb94ad26eed2e3853f
+2017-08-23 20:05:59,666 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 20:06:22,467 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 7 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir7600_19949}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: df01c08cece0c4fb94ad26eed2e3853f
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 20:10:05,156 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:574;a">...</span> is not clickable at point (759, 585). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:440;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 66 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir2164_707}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5eabe5b78c703ba04e7493daa7dfcd88
+2017-08-23 20:10:15,455 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 20:10:43,207 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir2164_707}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5eabe5b78c703ba04e7493daa7dfcd88
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 20:14:54,891 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3000;a">...</span> is not clickable at point (760, 577). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2866;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 68 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir1632_8080}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 42c5959e18905b80fae73e23535d4d1a
+2017-08-23 20:15:05,162 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 20:15:27,449 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir1632_8080}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 42c5959e18905b80fae73e23535d4d1a
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 20:15:28,637 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2866;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2866;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 58 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir1632_8080}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 42c5959e18905b80fae73e23535d4d1a
+2017-08-23 20:20:28,871 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3004;a">...</span> is not clickable at point (1010, 580). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2870;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 85 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5936_29743}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 8ecb53e60de4c55e33f668fac1afacd3
+2017-08-23 20:20:59,190 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //div[@class='slds-truncate'][@title='New'] element is not present and displayed
+2017-08-23 20:21:14,756 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5936_29743}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 8ecb53e60de4c55e33f668fac1afacd3
+*** Element info: {Using=id, value=requestName}
+2017-08-23 20:26:48,845 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:2992;a">...</span> is not clickable at point (760, 579). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2858;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 78 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5944_12100}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 8eac0529bfb4829e6c523d9f3800ab58
+2017-08-23 20:26:59,120 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 20:27:21,606 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5944_12100}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 8eac0529bfb4829e6c523d9f3800ab58
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 20:31:19,234 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:3000;a">...</span> is not clickable at point (760, 578). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2866;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 111 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5620_15173}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 63acb3f3d64a87d6786efa53bd5c1c2c
+2017-08-23 20:31:29,508 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div[title='New'] element is not present and displayed
+2017-08-23 20:31:52,338 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"txtGroupName"}
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5620_15173}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 63acb3f3d64a87d6786efa53bd5c1c2c
+*** Element info: {Using=id, value=txtGroupName}
+2017-08-23 20:31:53,665 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <img data-aura-rendered-by="169:190;a" src="https://feature04-dev-ed--c.na30.content.force.com/profilephoto/005/T/1" class="profileTrigger" alt=""> is not clickable at point (1317, 25). Other element would receive the click: <div class="panel slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="title_624:2866;a" tabindex="-1" role="dialog" data-aura-rendered-by="640:2866;a" style="opacity: 1;">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 71 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5620_15173}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 63acb3f3d64a87d6786efa53bd5c1c2c
+2017-08-23 20:32:04,277 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-23 20:36:14,331 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[@class='label slds-truncate slds-text-link'][contains(.,'Trading Partner Groups')] element is not present and displayed
+2017-08-23 20:36:45,776 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[contains(.,'Organic')] element is not present and displayed
+2017-08-23 20:37:34,143 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Wed Aug 23 20:36:00 IST 2017 element is not present and displayed
+2017-08-23 20:38:25,278 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-23 20:39:18,696 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //a[@title='Edit'] element is not present and displayed
+2017-08-23 20:39:41,530 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[contains(.,'Kosher')] element is not present and displayed
+2017-08-23 20:39:51,793 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //span[contains(.,'QATag_1')] element is not present and displayed
+2017-08-23 20:40:52,260 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //button[contains(@text,'Save')] element is not present and displayed
+2017-08-23 20:49:24,391 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Wed Aug 23 20:48:20 IST 2017 element is not present and displayed
+2017-08-23 20:50:14,173 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed
+2017-08-23 20:55:04,458 ERROR [main] ? - There is exception: org.openqa.selenium.WebDriverException: unknown error: Element <span class="label slds-truncate slds-text-link" data-aura-rendered-by="10:2998;a">...</span> is not clickable at point (759, 582). Other element would receive the click: <div class="modal-container slds-modal__container" data-aura-rendered-by="641:2864;a">...</div>
+  (Session info: chrome=60.0.3112.101)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.2.9200 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 77 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDN-271', ip: '172.10.100.59', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\RISHUK~1\AppData\Local\Temp\scoped_dir5368_23412}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 52d11c224b7ff918f01dcededf9f7cd5
+2017-08-23 20:55:56,437 ERROR [main] ? - There is exception: java.lang.Exception: By.partialLinkText: VerifySendRequirement Wed Aug 23 20:55:01 IST 2017 element is not present and displayed
+2017-08-23 20:56:49,482 ERROR [main] ? - There is exception: java.lang.Exception: By.cssSelector: div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand element is not present and displayed

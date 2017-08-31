@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ICIX Test For sdd"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="4"
+           time="0.008">
+  <properties />
+  
+            <testcase name="close" time="0.0" classname="icix.Tests.TC10782_Test">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="icix.Tests.TC10782_Test">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="icix.Tests.TC10782_Test">
+          <skipped />
+    </testcase>
+            <testcase name="TestProductSearchByUniID" time="0.0" classname="icix.Tests.TC10782_Test">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

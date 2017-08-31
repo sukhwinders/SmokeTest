@@ -1,0 +1,49 @@
+History of scripts running
+------------------------------
+#TC10467-> Scenario - Verify user is able to create Trading Partner group with the combination of tag,status and Type
+17-08-17-working
+............................. 
+
+#TC9648-> Scenario: Verify Trading partner search by using Trading partner Company Name
+ 10/08/17-Working
+...................................... 
+
+#10781-> Create Product Without Universal Id
+21-08-17 - Working
+
+..........................................
+
+#10782-> Create Product With Universal Id
+21-08-17 - Working
+
+..........................................
+#TC9649-> Verify Trading partner search by using trading partner icix id
+21-08-17 - Working
+
+..........................................
+
+#TC9666-> Verify User able to send the Requirements to the trading partner group Members
+21-08-17 - Working
+
+..........................................
+#TC9675-> Verify Upload New Public document in ICIX Document library
+23-08-17 - Working
+
+..........................................
+#TC9667-> Verify Create a New Product Group
+23-08-17 - Working
+
+..........................................
+
+
+#TC9670-> Verify Create a New  From using form Builder
+23-08-17 - Working
+
+..........................................
+..........................................
+#TC10799-> Tp Group Compliance - Automatic request creation by adding a member automatically to a group
+23-08-17 - Working
+
+..........................................
+
+

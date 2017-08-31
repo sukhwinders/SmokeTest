@@ -1,0 +1,381 @@
+2017-08-30 13:18:50,088 INFO  [main] ? - User info initialized from suite file
+2017-08-30 13:26:17,457 INFO  [main] ? - User info initialized from suite file
+2017-08-30 13:27:02,980 INFO  [main] ? - User info initialized from suite file
+2017-08-30 13:27:46,029 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 13:27:46,030 INFO  [main] ? - Log in to application
+2017-08-30 13:27:46,046 INFO  [main] ? - Start Log in to application
+2017-08-30 13:28:06,325 WARN  [main] ? - element is not present and displayed
+2017-08-30 13:28:06,367 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"usernames"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.10.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.dWOtYD}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 40bd8362a3299e40b64e507c579b0f16
+*** Element info: {Using=id, value=usernames}
+2017-08-30 13:28:07,687 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 13:28:19,190 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 13:28:29,647 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 13:28:53,339 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 13:28:53,360 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 13:28:53,360 INFO  [main] ? - Start Log in to application
+2017-08-30 13:29:13,548 WARN  [main] ? - element is not present and displayed
+2017-08-30 13:29:13,559 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"usernames"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b),platform=Mac OS X 10.10.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488774 (7e15618d1bf16df8bf0ecf2914ed1964a387ba0b), userDataDir=/var/folders/5w/rkpdbz5j2pl0_8k8234bdfkh0000gw/T/.org.chromium.Chromium.iRyTKy}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 80d2fd77b9028a75da5500ff20905213
+*** Element info: {Using=id, value=usernames}
+2017-08-30 13:29:14,239 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 13:29:25,111 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 13:29:35,567 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 13:31:18,827 INFO  [main] ? - User info initialized from suite file
+2017-08-30 13:31:32,924 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 13:31:32,926 INFO  [main] ? - Log in to application
+2017-08-30 13:31:32,944 INFO  [main] ? - Start Log in to application
+2017-08-30 13:31:34,114 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-30 13:31:34,595 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-30 13:31:34,618 INFO  [main] ? - Clicking on:Login button
+2017-08-30 13:32:15,780 INFO  [main] ? - Requestor logged in successfully.
+2017-08-30 13:32:15,780 INFO  [main] ? - Create product Without UID
+2017-08-30 13:32:15,912 INFO  [main] ? - Opening App Launcher
+2017-08-30 13:32:16,168 INFO  [main] ? - Clicking on:ICIX Product
+2017-08-30 13:32:18,842 INFO  [main] ? - Clicking on:New Product
+2017-08-30 13:32:42,673 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_SearchTermTradingPartner
+2017-08-30 13:32:48,808 INFO  [main] ? - Set Text value: Product Testing into By.xpath: //input[@id='ProductName']
+2017-08-30 13:32:49,722 INFO  [main] ? - Set Text value: Product Testing into By.id: ProductDesc
+2017-08-30 13:32:52,297 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_UPTardingPartner_Name
+2017-08-30 13:33:43,435 WARN  [main] ? - element is not present and displayed
+2017-08-30 13:34:33,775 WARN  [main] ? - element is not present and displayed
+2017-08-30 13:34:57,153 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 13:34:57,208 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 13:34:57,209 INFO  [main] ? - Start Log in to application
+2017-08-30 13:34:57,728 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-30 13:34:58,157 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-30 13:34:58,179 INFO  [main] ? - Clicking on:Login button
+2017-08-30 13:35:38,762 INFO  [main] ? - Requestor logged in successfully.
+2017-08-30 13:35:38,832 INFO  [main] ? - Opening App Launcher
+2017-08-30 13:36:07,780 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_SearchTermTradingPartner
+2017-08-30 13:36:10,726 INFO  [main] ? - Set Text value: 1116023938760 into By.id: txt_SearchTerm
+2017-08-30 13:36:17,339 WARN  [main] ? - element is not present and displayed
+2017-08-30 13:36:18,068 INFO  [main] ? - Set Text value: Product Testing into By.xpath: //input[@id='ProductName']
+2017-08-30 13:36:18,872 INFO  [main] ? - Set Text value: 12312312316023938760 into By.id: txt_product_UniversalId_Value0
+2017-08-30 13:36:19,468 INFO  [main] ? - Set Text value: Product Testing into By.id: ProductDesc
+2017-08-30 13:36:21,403 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_UPTardingPartner_Name
+2017-08-30 15:39:24,825 INFO  [main] ? - User info initialized from suite file
+2017-08-30 15:39:30,473 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 15:39:30,475 INFO  [main] ? - Log in to application
+2017-08-30 15:39:30,490 INFO  [main] ? - Start Log in to application
+2017-08-30 15:39:31,501 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-30 15:39:31,732 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-30 15:39:31,755 INFO  [main] ? - Clicking on:Login button
+2017-08-30 15:39:52,343 INFO  [main] ? - Requestor logged in successfully.
+2017-08-30 15:39:52,343 INFO  [main] ? - Create product Without UID
+2017-08-30 15:39:52,579 INFO  [main] ? - App Launcher icon is not visible, seems like page is not on Lightning view
+2017-08-30 15:39:52,583 INFO  [main] ? - Clicking on:ICIX Product
+2017-08-30 15:40:23,251 ERROR [main] ? - Error on:ICIX Product
+2017-08-30 15:40:23,252 ERROR [main] ? - There is exception: By.xpath: //span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')] element is not present and displayed
+2017-08-30 15:40:33,388 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 15:40:43,499 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 16:00:33,891 INFO  [main] ? - User info initialized from suite file
+2017-08-30 16:00:38,323 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 16:00:38,325 INFO  [main] ? - Log in to application
+2017-08-30 16:00:38,326 INFO  [main] ? - Start Log in to application
+2017-08-30 16:00:39,161 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-30 16:00:39,390 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-30 16:00:39,416 INFO  [main] ? - Clicking on:Login button
+2017-08-30 16:00:59,819 INFO  [main] ? - Requestor logged in successfully.
+2017-08-30 16:00:59,820 INFO  [main] ? - Create product Without UID
+2017-08-30 16:01:00,088 INFO  [main] ? - App Launcher icon is not visible, seems like page is not on Lightning view
+2017-08-30 16:01:00,091 INFO  [main] ? - Clicking on:ICIX Product
+2017-08-30 16:01:30,779 ERROR [main] ? - Error on:ICIX Product
+2017-08-30 16:01:30,779 ERROR [main] ? - There is exception: By.xpath: //span[@class='label slds-truncate slds-text-link'][contains(.,'ICIX Products')] element is not present and displayed
+2017-08-30 16:01:41,275 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 16:01:51,383 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 16:05:59,722 INFO  [main] ? - User info initialized from suite file
+2017-08-30 16:06:43,716 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 16:06:43,717 INFO  [main] ? - Log in to application
+2017-08-30 16:06:43,729 INFO  [main] ? - Start Log in to application
+2017-08-30 16:06:44,890 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-30 16:06:45,356 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-30 16:06:45,382 INFO  [main] ? - Clicking on:Login button
+2017-08-30 16:07:29,052 INFO  [main] ? - Requestor logged in successfully.
+2017-08-30 16:07:29,052 INFO  [main] ? - Create product Without UID
+2017-08-30 16:07:29,191 INFO  [main] ? - Opening App Launcher
+2017-08-30 16:07:29,381 INFO  [main] ? - Clicking on:ICIX Product
+2017-08-30 16:07:31,341 INFO  [main] ? - Clicking on:New Product
+2017-08-30 16:07:59,046 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_SearchTermTradingPartner
+2017-08-30 16:08:05,103 INFO  [main] ? - Set Text value: Product Testing into By.xpath: //input[@id='ProductName']
+2017-08-30 16:08:05,946 INFO  [main] ? - Set Text value: Product Testing into By.id: ProductDesc
+2017-08-30 16:08:09,020 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_UPTardingPartner_Name
+2017-08-30 16:08:59,779 WARN  [main] ? - element is not present and displayed
+2017-08-30 16:09:50,171 WARN  [main] ? - element is not present and displayed
+2017-08-30 16:10:13,397 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 16:10:13,421 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 16:10:13,421 INFO  [main] ? - Start Log in to application
+2017-08-30 16:10:13,957 INFO  [main] ? - Set Text value: feature04@icix.com into By.id: username
+2017-08-30 16:10:14,377 INFO  [main] ? - Set Text value: test@1234 into By.id: password
+2017-08-30 16:10:14,399 INFO  [main] ? - Clicking on:Login button
+2017-08-30 16:10:57,179 INFO  [main] ? - Requestor logged in successfully.
+2017-08-30 16:10:57,230 INFO  [main] ? - Opening App Launcher
+2017-08-30 16:11:25,006 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_SearchTermTradingPartner
+2017-08-30 16:11:27,460 INFO  [main] ? - Set Text value: 1116768948229 into By.id: txt_SearchTerm
+2017-08-30 16:11:34,114 WARN  [main] ? - element is not present and displayed
+2017-08-30 16:11:34,850 INFO  [main] ? - Set Text value: Product Testing into By.xpath: //input[@id='ProductName']
+2017-08-30 16:11:35,652 INFO  [main] ? - Set Text value: 12312312316768948229 into By.id: txt_product_UniversalId_Value0
+2017-08-30 16:11:36,295 INFO  [main] ? - Set Text value: Product Testing into By.id: ProductDesc
+2017-08-30 16:11:38,762 INFO  [main] ? - Set Text value: StagingPKG02 into By.id: txt_UPTardingPartner_Name
+2017-08-30 16:24:36,638 INFO  [main] ? - User info initialized from suite file
+2017-08-30 16:24:46,663 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 16:24:46,665 INFO  [main] ? - Log in to application
+2017-08-30 16:24:46,680 INFO  [main] ? - Start Log in to application
+2017-08-30 16:25:07,367 WARN  [main] ? - element is not present and displayed
+2017-08-30 16:25:07,569 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:36909","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/a25bb730-8d71-11e7-a833-0ba9a3c09c9d/element"}}
+Command duration or timeout: 199 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a25bb730-8d71-11e7-a833-0ba9a3c09c9d
+*** Element info: {Using=id, value=username}
+2017-08-30 16:25:07,824 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 16:25:18,479 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 16:25:28,505 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 16:25:37,862 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 16:25:37,882 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 16:25:37,883 INFO  [main] ? - Start Log in to application
+2017-08-30 16:25:58,504 WARN  [main] ? - element is not present and displayed
+2017-08-30 16:25:58,702 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:7488","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/c10fd2b0-8d71-11e7-aaae-5dc539c06579/element"}}
+Command duration or timeout: 195 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c10fd2b0-8d71-11e7-aaae-5dc539c06579
+*** Element info: {Using=id, value=username}
+2017-08-30 16:25:58,906 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 16:26:09,262 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 16:26:19,271 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 16:59:37,537 INFO  [main] ? - User info initialized from suite file
+2017-08-30 16:59:43,211 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 16:59:43,212 INFO  [main] ? - Log in to application
+2017-08-30 16:59:43,221 INFO  [main] ? - Start Log in to application
+2017-08-30 16:59:43,291 WARN  [main] ? - element is not present and displayed
+2017-08-30 16:59:43,292 ERROR [main] ? - There is an exception in setting a text value: java.lang.NullPointerException
+2017-08-30 16:59:43,314 WARN  [main] ? - There is an exception: java.lang.NullPointerException
+2017-08-30 16:59:43,314 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 16:59:43,315 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:01:48,517 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:01:53,753 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 17:01:53,754 INFO  [main] ? - Log in to application
+2017-08-30 17:01:53,755 INFO  [main] ? - Start Log in to application
+2017-08-30 17:02:14,113 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:02:14,344 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:1729","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/d1ed80f0-8d76-11e7-8e72-852d3d7c7fef/element"}}
+Command duration or timeout: 208 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d1ed80f0-8d76-11e7-8e72-852d3d7c7fef
+*** Element info: {Using=id, value=username}
+2017-08-30 17:02:14,693 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 17:02:25,633 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:02:35,749 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:02:44,716 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:02:44,741 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:02:44,741 INFO  [main] ? - Start Log in to application
+2017-08-30 17:03:04,988 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:03:05,203 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:47613","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/f06f41d0-8d76-11e7-9bca-432ccb969b8d/element"}}
+Command duration or timeout: 214 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f06f41d0-8d76-11e7-9bca-432ccb969b8d
+*** Element info: {Using=id, value=username}
+2017-08-30 17:03:05,440 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 17:03:15,869 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:03:25,913 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:04:09,077 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:04:13,334 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 17:04:13,335 INFO  [main] ? - Log in to application
+2017-08-30 17:04:13,336 INFO  [main] ? - Start Log in to application
+2017-08-30 17:04:34,057 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:04:34,255 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:25843","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/25218d70-8d77-11e7-bb25-1f8eccaf12a4/element"}}
+Command duration or timeout: 195 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 25218d70-8d77-11e7-bb25-1f8eccaf12a4
+*** Element info: {Using=id, value=username}
+2017-08-30 17:04:34,573 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 17:04:45,409 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:04:55,460 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:05:04,734 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:05:04,756 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:05:04,757 INFO  [main] ? - Start Log in to application
+2017-08-30 17:05:25,440 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:05:25,642 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:29225","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/43e38ba0-8d77-11e7-8e49-4776f92b0e06/element"}}
+Command duration or timeout: 201 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 43e38ba0-8d77-11e7-8e49-4776f92b0e06
+*** Element info: {Using=id, value=username}
+2017-08-30 17:05:25,867 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 17:05:36,266 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:05:46,311 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:07:36,089 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:07:40,441 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 17:07:40,442 INFO  [main] ? - Log in to application
+2017-08-30 17:07:40,442 INFO  [main] ? - Start Log in to application
+2017-08-30 17:08:00,507 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:08:00,713 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:9104","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/a08f9b00-8d77-11e7-9969-b75f27e31699/element"}}
+Command duration or timeout: 203 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a08f9b00-8d77-11e7-9969-b75f27e31699
+*** Element info: {Using=id, value=username}
+2017-08-30 17:08:00,962 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 17:08:11,801 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:08:21,827 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:08:41,804 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:08:41,820 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:08:41,821 INFO  [main] ? - Start Log in to application
+2017-08-30 17:09:02,525 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:09:02,728 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:22386","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/bf1a0e70-8d77-11e7-a85c-09ba1aff01c7/element"}}
+Command duration or timeout: 200 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: bf1a0e70-8d77-11e7-a85c-09ba1aff01c7
+*** Element info: {Using=id, value=username}
+2017-08-30 17:09:02,981 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 17:09:13,358 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:09:23,456 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:13:33,096 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:13:37,765 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 17:13:37,766 INFO  [main] ? - Log in to application
+2017-08-30 17:13:37,780 INFO  [main] ? - Start Log in to application
+2017-08-30 17:13:57,819 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:13:58,024 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:22427","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/758a7690-8d78-11e7-a149-c538def41977/element"}}
+Command duration or timeout: 202 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 758a7690-8d78-11e7-a149-c538def41977
+*** Element info: {Using=id, value=username}
+2017-08-30 17:13:58,328 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 17:14:09,199 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:14:19,247 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:14:28,956 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:14:28,971 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:14:28,971 INFO  [main] ? - Start Log in to application
+2017-08-30 17:14:49,040 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:14:49,239 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:24773","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/9421e250-8d78-11e7-9cb6-2f8f98b474c7/element"}}
+Command duration or timeout: 196 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9421e250-8d78-11e7-9cb6-2f8f98b474c7
+*** Element info: {Using=id, value=username}
+2017-08-30 17:14:49,513 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 17:15:00,151 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:15:10,376 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:17:10,375 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:17:14,571 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 17:17:14,572 INFO  [main] ? - Log in to application
+2017-08-30 17:17:14,573 INFO  [main] ? - Start Log in to application
+2017-08-30 17:17:34,612 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:17:34,811 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:1651","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/f6cc3720-8d78-11e7-bd69-3340c9b10558/element"}}
+Command duration or timeout: 195 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f6cc3720-8d78-11e7-bd69-3340c9b10558
+*** Element info: {Using=id, value=username}
+2017-08-30 17:17:35,102 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 17:17:45,908 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:17:55,955 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:18:05,655 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:18:05,674 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:18:05,674 INFO  [main] ? - Start Log in to application
+2017-08-30 17:18:25,685 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:18:25,879 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:14937","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/154d5bc0-8d79-11e7-8b7d-656f99a38829/element"}}
+Command duration or timeout: 193 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 154d5bc0-8d79-11e7-8b7d-656f99a38829
+*** Element info: {Using=id, value=username}
+2017-08-30 17:18:26,178 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 17:18:36,612 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:18:46,678 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:35:01,860 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:35:07,719 INFO  [main] ? - Test Case Name is: CreateProductWithoutUID
+2017-08-30 17:35:07,720 INFO  [main] ? - Log in to application
+2017-08-30 17:35:07,739 INFO  [main] ? - Start Log in to application
+2017-08-30 17:35:27,882 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:35:28,114 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:16117","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/763b2190-8d7b-11e7-aa49-b15312e814b5/element"}}
+Command duration or timeout: 213 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 763b2190-8d7b-11e7-aa49-b15312e814b5
+*** Element info: {Using=id, value=username}
+2017-08-30 17:35:28,430 WARN  [main] ? - TEST FAILED - CreateProductWithoutUID
+2017-08-30 17:35:39,687 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:35:49,843 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:35:59,500 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:35:59,508 INFO  [main] ? - Test Case Name is: TestProductSearchByUniID
+2017-08-30 17:35:59,509 INFO  [main] ? - Start Log in to application
+2017-08-30 17:36:19,839 WARN  [main] ? - element is not present and displayed
+2017-08-30 17:36:20,038 ERROR [main] ? - There is an exception in setting a text value: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with id 'username'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"33","Content-Type":"application/json; charset=utf-8","Host":"localhost:8397","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_60)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"id\",\"value\":\"username\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/9565a590-8d7b-11e7-9149-03b3c0c23b78/element"}}
+Command duration or timeout: 197 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'SDMMAC-F60.local', ip: '172.24.3.181', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=1.9.7, platform=MAC, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.1.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9565a590-8d7b-11e7-9149-03b3c0c23b78
+*** Element info: {Using=id, value=username}
+2017-08-30 17:36:20,312 WARN  [main] ? - TEST FAILED - TestProductSearchByUniID
+2017-08-30 17:36:30,736 ERROR [main] ? - There is exception: java.lang.Exception: By.xpath: //img[contains(@class,'profileTrigger')] element is not present and displayed
+2017-08-30 17:36:40,869 ERROR [main] ? - There is exception: java.lang.Exception: By.linkText: Log Out element is not present and displayed
+2017-08-30 17:48:38,969 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:49:56,436 INFO  [main] ? - User info initialized from suite file
+2017-08-30 17:57:46,593 INFO  [main] ? - User info initialized from suite file
+2017-08-30 18:04:51,258 INFO  [main] ? - User info initialized from suite file
+2017-08-30 18:17:50,865 INFO  [main] ? - Default User info initialized
+2017-08-30 18:33:23,165 INFO  [main] ? - Default User info initialized

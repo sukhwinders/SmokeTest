@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ICIX Test Cases]">
+  <parameter name="LabUserName" value="feature04@icix.com "/>
+  <parameter name="icixId" value="44"/>
+  <parameter name="RequesterUserName" value="feature04@icix.com"/>
+  <parameter name="LabPassword" value="Test@1234"/>
+  <parameter name="ResponderUsername" value="feature05@icix.com"/>
+  <parameter name="ResponderPassword" value="test@1234"/>
+  <parameter name="RequestorPassword" value="test@1234"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="ICIX Test For sdd">
+    <parameter name="LabUserName" value="feature04@icix.com "/>
+    <parameter name="icixId" value="44"/>
+    <parameter name="RequesterUserName" value="feature04@icix.com"/>
+    <parameter name="LabPassword" value="Test@1234"/>
+    <parameter name="ResponderUsername" value="feature05@icix.com"/>
+    <parameter name="ResponderPassword" value="test@1234"/>
+    <parameter name="RequestorPassword" value="test@1234"/>
+    <classes>
+      <class name="icix.Tests.TC10781_Test"/>
+      <class name="icix.Tests.TC10782_Test"/>
+    </classes>
+  </test> <!-- ICIX Test For sdd -->
+  <test name="ICIX Test For sdd(failed)">
+    <parameter name="LabUserName" value="feature04@icix.com "/>
+    <parameter name="icixId" value="44"/>
+    <parameter name="RequesterUserName" value="feature04@icix.com"/>
+    <parameter name="LabPassword" value="Test@1234"/>
+    <parameter name="ResponderUsername" value="feature05@icix.com"/>
+    <parameter name="ResponderPassword" value="test@1234"/>
+    <parameter name="RequestorPassword" value="test@1234"/>
+    <classes>
+      <class name="icix.Tests.TC10781_Test">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="CreateProductWithoutUID"/>
+          <include name="initialiseParameters"/>
+          <include name="RemoveExistingScreenShots"/>
+        </methods>
+      </class> <!-- icix.Tests.TC10781_Test -->
+      <class name="icix.Tests.TC10782_Test">
+        <methods>
+          <include name="TestProductSearchByUniID"/>
+        </methods>
+      </class> <!-- icix.Tests.TC10782_Test -->
+    </classes>
+  </test> <!-- ICIX Test For sdd(failed) -->
+</suite> <!-- Failed suite [ICIX Test Cases] -->

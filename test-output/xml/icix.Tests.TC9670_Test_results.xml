@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ICIX Test For sdd"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="122.247">
+  <properties />
+  
+  
+            <testcase name="createNew_form" time="122.247" classname="icix.Tests.TC9670_Test" />
+      
+</testsuite>
